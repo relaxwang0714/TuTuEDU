@@ -1,2 +1,0 @@
-private int v
-int v =1£»
