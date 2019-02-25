@@ -9254,6 +9254,36 @@
 			    quid       	"5C50523E01D7")
 			(object State "$UNNAMED$354"
 			    quid       	"5C5052500305"
+			    type       	"EndState")
+			(object ActivityState "NewActivity4"
+			    quid       	"5C73419E0288")
+			(object ActivityState "后台管理员登录"
+			    quid       	"5C73428500A0")
+			(object ActivityState "查询访问权限表"
+			    quid       	"5C7344BA0262")
+			(object ActivityState "返回可访问模块结果集"
+			    quid       	"5C7344EB0190")
+			(object ActivityState "选择可访问模块"
+			    quid       	"5C7345260252")
+			(object ActivityState "NewActivity5"
+			    quid       	"5C73455202F5")
+			(object ActivityState "执行CRUD操作"
+			    quid       	"5C7349220212")
+			(object ActivityState "Zuul网关鉴权"
+			    quid       	"5C734933038E")
+			(object ActivityState "查询操作权限表"
+			    quid       	"5C7349500350")
+			(object ActivityState "服务器获取token"
+			    quid       	"5C73499103C0")
+			(object Decision "$UNNAMED$355"
+			    quid       	"5C7349AB0362")
+			(object ActivityState "NewActivity6"
+			    quid       	"5C7349B70161")
+			(object State "操作成功"
+			    quid       	"5C7349BD0304"
+			    type       	"EndState")
+			(object State "访问拒绝"
+			    quid       	"5C7349CD02D2"
 			    type       	"EndState"))
 		    partitions 	(list Partitions
 			(object Partition "后台管理员"
@@ -9275,8 +9305,23 @@
 			    quid       	"5C4DCE5F0226"
 			    persistence 	"Transient"
 			    creationObj 	FALSE
+			    multi      	FALSE)
+			(object Partition "NewSwimlane2"
+			    quid       	"5C734198038D"
+			    persistence 	"Transient"
+			    creationObj 	FALSE
+			    multi      	FALSE)
+			(object Partition "后台"
+			    quid       	"5C7342640184"
+			    persistence 	"Transient"
+			    creationObj 	FALSE
 			    multi      	FALSE))
-		    objects    	(list Objects)
+		    objects    	(list Objects
+			(object Object "$UNNAMED$356"
+			    quid       	"5C73418C03DC"
+			    persistence 	"Transient"
+			    creationObj 	FALSE
+			    multi      	FALSE))
 		    transitions 	(list transition_list
 			(object State_Transition
 			    quid       	"5C3D687A025B"
@@ -11615,7 +11660,133 @@
 			    client     	"Use Case View::活动图::State/Activity Model::查看课程访问量"
 			    client_quidu 	"5C50523E01D7"
 			    sendEvent  	(object sendEvent
-				quid       	"5C50525A0079")))
+				quid       	"5C50525A0079"))
+			(object State_Transition
+			    quid       	"5C7341A402AE"
+			    supplier   	"Use Case View::活动图::State/Activity Model::NewActivity4"
+			    supplier_quidu 	"5C73419E0288"
+			    client     	"$UNNAMED$312"
+			    client_quidu 	"5C3D6868004D"
+			    sendEvent  	(object sendEvent
+				quid       	"5C7341A402B1"))
+			(object State_Transition
+			    quid       	"5C73428C0031"
+			    supplier   	"Use Case View::活动图::State/Activity Model::后台管理员登录"
+			    supplier_quidu 	"5C73428500A0"
+			    client     	"$UNNAMED$312"
+			    client_quidu 	"5C3D6868004D"
+			    sendEvent  	(object sendEvent
+				quid       	"5C73428C0034"))
+			(object State_Transition
+			    quid       	"5C7344CC00DB"
+			    supplier   	"Use Case View::活动图::State/Activity Model::查询访问权限表"
+			    supplier_quidu 	"5C7344BA0262"
+			    client     	"Use Case View::活动图::State/Activity Model::后台管理员登录"
+			    client_quidu 	"5C73428500A0"
+			    sendEvent  	(object sendEvent
+				quid       	"5C7344CC00DE"))
+			(object State_Transition
+			    quid       	"5C7344EF03B3"
+			    supplier   	"Use Case View::活动图::State/Activity Model::返回可访问模块结果集"
+			    supplier_quidu 	"5C7344EB0190"
+			    client     	"Use Case View::活动图::State/Activity Model::查询访问权限表"
+			    client_quidu 	"5C7344BA0262"
+			    sendEvent  	(object sendEvent
+				quid       	"5C7344EF03B6"))
+			(object State_Transition
+			    quid       	"5C73453101FA"
+			    supplier   	"Use Case View::活动图::State/Activity Model::选择可访问模块"
+			    supplier_quidu 	"5C7345260252"
+			    client     	"Use Case View::活动图::State/Activity Model::返回可访问模块结果集"
+			    client_quidu 	"5C7344EB0190"
+			    sendEvent  	(object sendEvent
+				quid       	"5C73453101FD"))
+			(object State_Transition
+			    quid       	"5C7345570272"
+			    supplier   	"Use Case View::活动图::State/Activity Model::NewActivity5"
+			    supplier_quidu 	"5C73455202F5"
+			    client     	"Use Case View::活动图::State/Activity Model::选择可访问模块"
+			    client_quidu 	"5C7345260252"
+			    sendEvent  	(object sendEvent
+				quid       	"5C7345570275"))
+			(object State_Transition
+			    quid       	"5C7349320198"
+			    supplier   	"Use Case View::活动图::State/Activity Model::执行CRUD操作"
+			    supplier_quidu 	"5C7349220212"
+			    client     	"Use Case View::活动图::State/Activity Model::选择可访问模块"
+			    client_quidu 	"5C7345260252"
+			    sendEvent  	(object sendEvent
+				quid       	"5C734932019B"))
+			(object State_Transition
+			    quid       	"5C7349380171"
+			    supplier   	"Use Case View::活动图::State/Activity Model::Zuul网关鉴权"
+			    supplier_quidu 	"5C734933038E"
+			    client     	"Use Case View::活动图::State/Activity Model::执行CRUD操作"
+			    client_quidu 	"5C7349220212"
+			    sendEvent  	(object sendEvent
+				quid       	"5C7349380174"))
+			(object State_Transition
+			    quid       	"5C7349540371"
+			    supplier   	"Use Case View::活动图::State/Activity Model::查询操作权限表"
+			    supplier_quidu 	"5C7349500350"
+			    client     	"Use Case View::活动图::State/Activity Model::Zuul网关鉴权"
+			    client_quidu 	"5C734933038E"
+			    sendEvent  	(object sendEvent
+				quid       	"5C7349540374"))
+			(object State_Transition
+			    quid       	"5C7349960251"
+			    supplier   	"Use Case View::活动图::State/Activity Model::服务器获取token"
+			    supplier_quidu 	"5C73499103C0"
+			    client     	"Use Case View::活动图::State/Activity Model::后台管理员登录"
+			    client_quidu 	"5C73428500A0"
+			    sendEvent  	(object sendEvent
+				quid       	"5C7349960254"))
+			(object State_Transition
+			    quid       	"5C7349A202C1"
+			    supplier   	"Use Case View::活动图::State/Activity Model::查询访问权限表"
+			    supplier_quidu 	"5C7344BA0262"
+			    client     	"Use Case View::活动图::State/Activity Model::服务器获取token"
+			    client_quidu 	"5C73499103C0"
+			    sendEvent  	(object sendEvent
+				quid       	"5C7349A202C4"))
+			(object State_Transition
+			    quid       	"5C7349AE01C1"
+			    supplier   	"Use Case View::活动图::State/Activity Model::查询操作权限表"
+			    supplier_quidu 	"5C7349500350"
+			    client     	"$UNNAMED$355"
+			    client_quidu 	"5C7349AB0362"
+			    sendEvent  	(object sendEvent
+				quid       	"5C7349AE01C4"))
+			(object State_Transition
+			    quid       	"5C7349B40169"
+			    supplier   	"$UNNAMED$355"
+			    supplier_quidu 	"5C7349AB0362"
+			    client     	"Use Case View::活动图::State/Activity Model::查询操作权限表"
+			    client_quidu 	"5C7349500350"
+			    sendEvent  	(object sendEvent
+				quid       	"5C7349B4016C"))
+			(object State_Transition
+			    quid       	"5C7349C201D1"
+			    label      	""
+			    supplier   	"Use Case View::活动图::State/Activity Model::操作成功"
+			    supplier_quidu 	"5C7349BD0304"
+			    client     	"$UNNAMED$355"
+			    client_quidu 	"5C7349AB0362"
+			    Event      	(object Event "有权限"
+				quid       	"5C7349C201D2")
+			    sendEvent  	(object sendEvent
+				quid       	"5C7349C201D4"))
+			(object State_Transition
+			    quid       	"5C7349D2024A"
+			    label      	""
+			    supplier   	"Use Case View::活动图::State/Activity Model::访问拒绝"
+			    supplier_quidu 	"5C7349CD02D2"
+			    client     	"$UNNAMED$355"
+			    client_quidu 	"5C7349AB0362"
+			    Event      	(object Event "没有权限"
+				quid       	"5C7349D2024B")
+			    sendEvent  	(object sendEvent
+				quid       	"5C7349D2024D")))
 		    objectflows 	(list objectflow_list)
 		    statediagrams 	(list StateDiagrams
 			(object ActivityDiagram "后台登录活动图"
@@ -21063,13 +21234,1378 @@
 					(1567, 655)
 					(1066, 818))
 				    line_style 	0
+				    x_offset   	FALSE)))
+			(object ActivityDiagram "权限验证活动图"
+			    quid       	"5C734163025F"
+			    title      	"权限验证活动图"
+			    zoom       	100
+			    max_height 	28350
+			    max_width  	21600
+			    origin_x   	0
+			    origin_y   	0
+			    items      	(list diagram_item_list
+				(object Swimlane "后台管理员" @984
+				    line_color 	3342489
+				    quidu      	"5C4ACAEA0117"
+				    width      	584)
+				(object StateView "StartState" "$UNNAMED$312" @985
+				    Parent_View 	@984
+				    location   	(304, 176)
+				    icon_style 	"Icon"
+				    line_color 	3342489
+				    quidu      	"5C3D6868004D"
+				    autoResize 	TRUE)
+				(object ActivityStateView "后台管理员登录" @986
+				    Parent_View 	@984
+				    location   	(304, 352)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    label      	(object ItemLabel
+					Parent_View 	@986
+					location   	(304, 355)
+					fill_color 	13434879
+					anchor_loc 	1
+					nlines     	2
+					max_width  	269
+					justify    	0
+					label      	"后台管理员登录")
+				    icon_style 	"Icon"
+				    line_color 	3342489
+				    fill_color 	13434879
+				    quidu      	"5C73428500A0"
+				    height     	106
+				    annotation 	1
+				    autoResize 	TRUE)
+				(object TransView "" @987
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5C73428C0031"
+				    client     	@985
+				    supplier   	@986
+				    vertices   	(list Points
+					(304, 206)
+					(304, 299))
+				    line_style 	0
+				    x_offset   	FALSE)
+				(object ActivityStateView "返回可访问模块结果集" @988
+				    Parent_View 	@984
+				    location   	(304, 608)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    label      	(object ItemLabel
+					Parent_View 	@988
+					location   	(304, 611)
+					fill_color 	13434879
+					anchor_loc 	1
+					nlines     	2
+					max_width  	269
+					justify    	0
+					label      	"返回可访问模块结果集")
+				    icon_style 	"Icon"
+				    line_color 	3342489
+				    fill_color 	13434879
+				    quidu      	"5C7344EB0190"
+				    height     	106
+				    annotation 	1
+				    autoResize 	TRUE)
+				(object ActivityStateView "选择可访问模块" @989
+				    Parent_View 	@984
+				    location   	(304, 800)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    label      	(object ItemLabel
+					Parent_View 	@989
+					location   	(304, 803)
+					fill_color 	13434879
+					anchor_loc 	1
+					nlines     	2
+					max_width  	269
+					justify    	0
+					label      	"选择可访问模块")
+				    icon_style 	"Icon"
+				    line_color 	3342489
+				    fill_color 	13434879
+				    quidu      	"5C7345260252"
+				    height     	106
+				    annotation 	1
+				    autoResize 	TRUE)
+				(object TransView "" @990
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5C73453101FA"
+				    client     	@988
+				    supplier   	@989
+				    vertices   	(list Points
+					(304, 661)
+					(304, 747))
+				    line_style 	0
+				    x_offset   	FALSE)
+				(object ActivityStateView "执行CRUD操作" @991
+				    Parent_View 	@984
+				    location   	(304, 992)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    label      	(object ItemLabel
+					Parent_View 	@991
+					location   	(304, 995)
+					fill_color 	13434879
+					anchor_loc 	1
+					nlines     	2
+					max_width  	269
+					justify    	0
+					label      	"执行CRUD操作")
+				    icon_style 	"Icon"
+				    line_color 	3342489
+				    fill_color 	13434879
+				    quidu      	"5C7349220212"
+				    height     	106
+				    annotation 	1
+				    autoResize 	TRUE)
+				(object TransView "" @992
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5C7349320198"
+				    client     	@989
+				    supplier   	@991
+				    vertices   	(list Points
+					(304, 853)
+					(304, 939))
+				    line_style 	0
+				    x_offset   	FALSE)
+				(object DecisionView "$UNNAMED$355" @993
+				    Parent_View 	@984
+				    location   	(304, 1168)
+				    icon_style 	"Icon"
+				    line_color 	3342489
+				    fill_color 	13434879
+				    quidu      	"5C7349AB0362"
+				    autoResize 	TRUE)
+				(object StateView "EndState" "操作成功" @994
+				    Parent_View 	@984
+				    location   	(102, 1344)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    label      	(object SegLabel @995
+					Parent_View 	@994
+					location   	(156, 1302)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	TRUE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					nlines     	2
+					max_width  	600
+					justify    	1
+					label      	"操作成功"
+					pctDist    	1.000000
+					height     	0
+					orientation 	0)
+				    icon_style 	"Icon"
+				    line_color 	3342489
+				    quidu      	"5C7349BD0304"
+				    autoResize 	TRUE)
+				(object TransView "" @996
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    label      	(object SegLabel @997
+					Parent_View 	@996
+					location   	(217, 1260)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					anchor_loc 	1
+					nlines     	1
+					max_width  	450
+					justify    	0
+					label      	"有权限"
+					pctDist    	0.500000
+					height     	45
+					orientation 	0)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5C7349C201D1"
+				    client     	@993
+				    supplier   	@994
+				    vertices   	(list Points
+					(229, 1168)
+					(132, 1302))
+				    line_style 	0
+				    x_offset   	FALSE)
+				(object StateView "EndState" "访问拒绝" @998
+				    Parent_View 	@984
+				    location   	(432, 1344)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    label      	(object SegLabel @999
+					Parent_View 	@998
+					location   	(486, 1302)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	TRUE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					nlines     	2
+					max_width  	600
+					justify    	1
+					label      	"访问拒绝"
+					pctDist    	1.000000
+					height     	0
+					orientation 	0)
+				    icon_style 	"Icon"
+				    line_color 	3342489
+				    quidu      	"5C7349CD02D2"
+				    autoResize 	TRUE)
+				(object Swimlane "后台" @1000
+				    location   	(584, 0)
+				    line_color 	3342489
+				    quidu      	"5C7342640184"
+				    width      	560)
+				(object ActivityStateView "查询访问权限表" @1001
+				    Parent_View 	@1000
+				    location   	(864, 512)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    label      	(object ItemLabel
+					Parent_View 	@1001
+					location   	(864, 515)
+					fill_color 	13434879
+					anchor_loc 	1
+					nlines     	2
+					max_width  	269
+					justify    	0
+					label      	"查询访问权限表")
+				    icon_style 	"Icon"
+				    line_color 	3342489
+				    fill_color 	13434879
+				    quidu      	"5C7344BA0262"
+				    height     	106
+				    annotation 	1
+				    autoResize 	TRUE)
+				(object TransView "" @1002
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5C7344EF03B3"
+				    client     	@1001
+				    supplier   	@988
+				    vertices   	(list Points
+					(701, 539)
+					(466, 580))
+				    line_style 	0
+				    x_offset   	FALSE)
+				(object ActivityStateView "Zuul网关鉴权" @1003
+				    Parent_View 	@1000
+				    location   	(880, 992)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    label      	(object ItemLabel
+					Parent_View 	@1003
+					location   	(880, 995)
+					fill_color 	13434879
+					anchor_loc 	1
+					nlines     	2
+					max_width  	269
+					justify    	0
+					label      	"Zuul网关鉴权")
+				    icon_style 	"Icon"
+				    line_color 	3342489
+				    fill_color 	13434879
+				    quidu      	"5C734933038E"
+				    height     	106
+				    annotation 	1
+				    autoResize 	TRUE)
+				(object TransView "" @1004
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5C7349380171"
+				    client     	@991
+				    supplier   	@1003
+				    vertices   	(list Points
+					(475, 992)
+					(709, 992))
+				    line_style 	0
+				    x_offset   	FALSE)
+				(object ActivityStateView "查询操作权限表" @1005
+				    Parent_View 	@1000
+				    location   	(880, 1168)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    label      	(object ItemLabel
+					Parent_View 	@1005
+					location   	(880, 1171)
+					fill_color 	13434879
+					anchor_loc 	1
+					nlines     	2
+					max_width  	269
+					justify    	0
+					label      	"查询操作权限表")
+				    icon_style 	"Icon"
+				    line_color 	3342489
+				    fill_color 	13434879
+				    quidu      	"5C7349500350"
+				    height     	106
+				    annotation 	1
+				    autoResize 	TRUE)
+				(object TransView "" @1006
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5C7349540371"
+				    client     	@1003
+				    supplier   	@1005
+				    vertices   	(list Points
+					(880, 1045)
+					(880, 1115))
+				    line_style 	0
+				    x_offset   	FALSE)
+				(object TransView "" @1007
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5C7349B40169"
+				    client     	@1005
+				    supplier   	@993
+				    vertices   	(list Points
+					(709, 1168)
+					(379, 1168))
+				    line_style 	0
+				    x_offset   	FALSE)
+				(object ActivityStateView "服务器获取token" @1008
+				    Parent_View 	@1000
+				    location   	(864, 352)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    label      	(object ItemLabel
+					Parent_View 	@1008
+					location   	(864, 355)
+					fill_color 	13434879
+					anchor_loc 	1
+					nlines     	2
+					max_width  	269
+					justify    	0
+					label      	"服务器获取token")
+				    icon_style 	"Icon"
+				    line_color 	3342489
+				    fill_color 	13434879
+				    quidu      	"5C73499103C0"
+				    height     	106
+				    annotation 	1
+				    autoResize 	TRUE)
+				(object TransView "" @1009
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5C7349960251"
+				    client     	@986
+				    supplier   	@1008
+				    vertices   	(list Points
+					(475, 352)
+					(693, 352))
+				    line_style 	0
+				    x_offset   	FALSE)
+				(object TransView "" @1010
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5C7349A202C1"
+				    client     	@1008
+				    supplier   	@1001
+				    vertices   	(list Points
+					(864, 405)
+					(864, 459))
+				    line_style 	0
+				    x_offset   	FALSE)
+				(object Swimlane "" @1011
+				    location   	(1144, 0)
+				    line_color 	3342489
+				    width      	450)
+				(object TransView "" @1012
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    label      	(object SegLabel @1013
+					Parent_View 	@1012
+					location   	(380, 1221)
+					font       	(object Font
+					    size       	10
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					anchor_loc 	1
+					nlines     	1
+					max_width  	450
+					justify    	0
+					label      	"没有权限"
+					pctDist    	0.500000
+					height     	45
+					orientation 	0)
+				    stereotype 	TRUE
+				    line_color 	3342489
+				    quidu      	"5C7349D2024A"
+				    client     	@993
+				    supplier   	@998
+				    vertices   	(list Points
+					(304, 1205)
+					(390, 1298))
+				    line_style 	0
 				    x_offset   	FALSE)))))
 		logical_presentations 	(list unit_reference_list))
 	    (object Class_Category "顺序图"
 		quid       	"5C3C1CEA030A"
 		exportControl 	"Public"
-		logical_models 	(list unit_reference_list)
-		logical_presentations 	(list unit_reference_list)))
+		logical_models 	(list unit_reference_list
+		    (object Mechanism @1014
+			logical_models 	(list unit_reference_list
+			    (object Object "$UNNAMED$357"
+				quid       	"5C7385EF000A"
+				class      	"Use Case View::用例图::管理员"
+				quidu      	"5C3D854C01AF"
+				persistence 	"Transient"
+				creationObj 	TRUE
+				multi      	FALSE)
+			    (object Object "学校教务系统"
+				quid       	"5C7386170265"
+				persistence 	"Transient"
+				creationObj 	FALSE
+				multi      	FALSE)
+			    (object Object "$UNNAMED$358"
+				quid       	"5C73861E0063"
+				class      	"Use Case View::用例图::学生"
+				quidu      	"5C3C30FF0372"
+				persistence 	"Transient"
+				creationObj 	TRUE
+				multi      	FALSE)
+			    (object Object "后台"
+				quid       	"5C73863603C7"
+				collaborators 	(list link_list
+				    (object Link
+					quid       	"5C7386590320"
+					supplier   	"学校教务系统"
+					quidu      	"5C7386170265"
+					messages   	(list Messages
+					    (object Message "爬取课表信息"
+						quid       	"5C7386590338"
+						frequency  	"Aperiodic"
+						synchronization 	"Simple"
+						dir        	"FromClientToSupplier"
+						sequence   	"1"
+						ordinal    	0
+						quidu      	"000000000000"
+						creation   	FALSE)
+					    (object Message "数据更新"
+						quid       	"5C738676009B"
+						frequency  	"Aperiodic"
+						synchronization 	"Return"
+						dir        	"ToClientFromSupplier"
+						sequence   	"1.1"
+						ordinal    	1
+						quidu      	"000000000000"
+						creation   	FALSE)))
+				    (object Link
+					quid       	"5C73868A02C2"
+					supplier   	"$UNNAMED$358"
+					quidu      	"5C73861E0063"
+					messages   	(list Messages
+					    (object Message "推送课表信息至学生"
+						quid       	"5C73868A02C3"
+						frequency  	"Aperiodic"
+						synchronization 	"Simple"
+						dir        	"FromClientToSupplier"
+						sequence   	"2"
+						ordinal    	2
+						quidu      	"000000000000"
+						creation   	FALSE)))
+				    (object Link
+					quid       	"5C73868F00A0"
+					supplier   	"$UNNAMED$357"
+					quidu      	"5C7385EF000A"
+					messages   	(list Messages
+					    (object Message "管理员查询课表信息"
+						quid       	"5C7386D200BA"
+						frequency  	"Aperiodic"
+						synchronization 	"Simple"
+						dir        	"ToClientFromSupplier"
+						sequence   	"3"
+						ordinal    	3
+						quidu      	"000000000000"
+						creation   	FALSE))))
+				persistence 	"Transient"
+				creationObj 	FALSE
+				multi      	FALSE)))
+		    (object Mechanism @1015
+			logical_models 	(list unit_reference_list))
+		    (object Mechanism @1016
+			logical_models 	(list unit_reference_list
+			    (object Object "$UNNAMED$359"
+				quid       	"5C7392860060"
+				collaborators 	(list link_list
+				    (object Link
+					quid       	"5C7392BA010C"
+					supplier   	"后台"
+					quidu      	"5C7392AC025E"
+					messages   	(list Messages
+					    (object Message "对课程发布评价"
+						quid       	"5C7392BA010D"
+						frequency  	"Aperiodic"
+						synchronization 	"Simple"
+						dir        	"FromClientToSupplier"
+						sequence   	"1"
+						ordinal    	0
+						quidu      	"000000000000"
+						creation   	FALSE))))
+				class      	"Use Case View::用例图::学生"
+				quidu      	"5C3C30FF0372"
+				persistence 	"Transient"
+				creationObj 	TRUE
+				multi      	FALSE)
+			    (object Object "后台"
+				quid       	"5C7392AC025E"
+				collaborators 	(list link_list
+				    (object Link
+					quid       	"5C7392CB00DB"
+					supplier   	"后台"
+					quidu      	"5C7392AC025E"
+					messages   	(list Messages
+					    (object Message "统计"
+						quid       	"5C7392CB00DC"
+						frequency  	"Aperiodic"
+						synchronization 	"Simple"
+						dir        	"FromClientToSupplier"
+						sequence   	"1.1"
+						ordinal    	1
+						quidu      	"000000000000"
+						creation   	FALSE)))
+				    (object Link
+					quid       	"5C7392F700FA"
+					supplier   	"$UNNAMED$360"
+					quidu      	"5C7392F303B7"
+					messages   	(list Messages
+					    (object Message "反馈教学考评内容"
+						quid       	"5C7392F700FB"
+						frequency  	"Aperiodic"
+						synchronization 	"ProcedureCall"
+						dir        	"FromClientToSupplier"
+						sequence   	"1.1.1"
+						ordinal    	2
+						quidu      	"000000000000"
+						creation   	FALSE))))
+				persistence 	"Transient"
+				creationObj 	FALSE
+				multi      	FALSE)
+			    (object Object "$UNNAMED$360"
+				quid       	"5C7392F303B7"
+				class      	"Use Case View::用例图::教师用户"
+				quidu      	"5C5026E9020A"
+				persistence 	"Transient"
+				creationObj 	FALSE
+				multi      	FALSE)
+			    (object Object "$UNNAMED$361"
+				quid       	"5C739306021E"
+				collaborators 	(list link_list
+				    (object Link
+					quid       	"5C73930B0024"
+					supplier   	"$UNNAMED$359"
+					quidu      	"5C7392860060"
+					messages   	(list Messages
+					    (object Message "查看教学考评情况"
+						quid       	"5C73930B0025"
+						frequency  	"Aperiodic"
+						synchronization 	"Simple"
+						dir        	"FromClientToSupplier"
+						sequence   	"2"
+						ordinal    	3
+						quidu      	"000000000000"
+						creation   	FALSE))))
+				class      	"Use Case View::用例图::管理员"
+				quidu      	"5C3D854C01AF"
+				persistence 	"Transient"
+				creationObj 	FALSE
+				multi      	FALSE))))
+		logical_presentations 	(list unit_reference_list
+		    (object InteractionDiagram "课表流程图"
+			mechanism_ref 	@1014
+			quid       	"5C73411D0129"
+			title      	"课表流程图"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	0
+			items      	(list diagram_item_list
+			    (object InterObjView "学校教务系统" @1017
+				location   	(704, 224)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	TRUE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@1017
+				    location   	(704, 224)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	282
+				    justify    	0
+				    label      	"学校教务系统")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"5C7386170265"
+				width      	300
+				height     	628
+				icon_height 	0
+				icon_width 	0
+				icon_y_offset 	0
+				annotation 	1
+				Focus_Of_Control 	(object Focus_Of_Control "" @1018
+				    location   	(704, 352)
+				    line_color 	3342489
+				    InterObjView 	@1017
+				    height     	105
+				    y_coord    	15
+				    Nested     	FALSE))
+			    (object InterObjView "后台" @1019
+				location   	(176, 224)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	TRUE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@1019
+				    location   	(176, 224)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	282
+				    justify    	0
+				    label      	"后台")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"5C73863603C7"
+				width      	300
+				height     	628
+				icon_height 	0
+				icon_width 	0
+				icon_y_offset 	0
+				annotation 	1
+				Focus_Of_Control 	(object Focus_Of_Control "" @1020
+				    location   	(176, 352)
+				    line_color 	3342489
+				    InterObjView 	@1019
+				    height     	300
+				    y_coord    	210
+				    Nested     	FALSE)
+				Focus_Of_Control 	(object Focus_Of_Control "" @1021
+				    location   	(176, 464)
+				    line_color 	3342489
+				    InterObjView 	@1019
+				    height     	1
+				    y_coord    	-89
+				    Nested     	TRUE)
+				Focus_Of_Control 	(object Focus_Of_Control "" @1022
+				    location   	(176, 672)
+				    line_color 	3342489
+				    InterObjView 	@1019
+				    height     	90
+				    y_coord    	0
+				    Nested     	FALSE))
+			    (object InterObjView "$UNNAMED$358" @1023
+				location   	(1120, 336)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	TRUE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@1023
+				    location   	(1120, 361)
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	324
+				    justify    	0
+				    label      	"")
+				icon       	"Actor"
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"5C73861E0063"
+				width      	300
+				height     	516
+				icon_height 	150
+				icon_width 	108
+				icon_y_offset 	0
+				annotation 	1
+				Focus_Of_Control 	(object Focus_Of_Control "" @1024
+				    location   	(1120, 416)
+				    line_color 	3342489
+				    InterObjView 	@1023
+				    height     	204
+				    y_coord    	114
+				    Nested     	FALSE)
+				Focus_Of_Control 	(object Focus_Of_Control "" @1025
+				    location   	(1120, 560)
+				    line_color 	3342489
+				    InterObjView 	@1023
+				    height     	90
+				    y_coord    	0
+				    Nested     	TRUE))
+			    (object InterObjView "$UNNAMED$357" @1026
+				location   	(1488, 336)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	TRUE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@1026
+				    location   	(1488, 361)
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	324
+				    justify    	0
+				    label      	"")
+				icon       	"Actor"
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"5C7385EF000A"
+				width      	300
+				height     	516
+				icon_height 	150
+				icon_width 	108
+				icon_y_offset 	0
+				annotation 	1
+				Focus_Of_Control 	(object Focus_Of_Control "" @1027
+				    location   	(1488, 416)
+				    line_color 	3342489
+				    InterObjView 	@1026
+				    height     	90
+				    y_coord    	0
+				    Nested     	FALSE)
+				Focus_Of_Control 	(object Focus_Of_Control "" @1028
+				    location   	(1488, 672)
+				    line_color 	3342489
+				    InterObjView 	@1026
+				    height     	85
+				    y_coord    	-5
+				    Nested     	FALSE))
+			    (object InterMessView "爬取课表信息" @1029
+				location   	(16, 352)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @1030
+				    Parent_View 	@1029
+				    location   	(439, 308)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    quidu      	"5C7386590338"
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	273
+				    justify    	0
+				    label      	"爬取课表信息"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				line_color 	3342489
+				client     	@1019
+				supplier   	@1017
+				Focus_Src  	@1020
+				Focus_Entry 	@1018
+				origin     	(191, 352)
+				terminus   	(688, 352)
+				ordinal    	0)
+			    (object InterMessView "数据更新" @1031
+				location   	(16, 457)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @1032
+				    Parent_View 	@1031
+				    location   	(440, 413)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    quidu      	"5C738676009B"
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	185
+				    justify    	0
+				    label      	"数据更新"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	1)
+				line_color 	3342489
+				client     	@1017
+				supplier   	@1019
+				Focus_Src  	@1018
+				Focus_Entry 	@1021
+				origin     	(688, 457)
+				terminus   	(192, 457)
+				ordinal    	1)
+			    (object InterMessView "推送课表信息至学生" @1033
+				location   	(16, 562)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @1034
+				    Parent_View 	@1033
+				    location   	(647, 518)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    quidu      	"5C73868A02C3"
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	404
+				    justify    	0
+				    label      	"推送课表信息至学生"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				line_color 	3342489
+				client     	@1019
+				supplier   	@1023
+				Focus_Src  	@1020
+				Focus_Entry 	@1025
+				origin     	(191, 562)
+				terminus   	(1104, 562)
+				ordinal    	2)
+			    (object InterMessView "管理员查询课表信息" @1035
+				location   	(16, 667)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @1036
+				    Parent_View 	@1035
+				    location   	(832, 623)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    quidu      	"5C7386D200BA"
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	404
+				    justify    	0
+				    label      	"管理员查询课表信息"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	1)
+				line_color 	3342489
+				client     	@1026
+				supplier   	@1019
+				Focus_Src  	@1028
+				Focus_Entry 	@1022
+				origin     	(1472, 667)
+				terminus   	(192, 667)
+				ordinal    	3)))
+		    (object InteractionDiagram "考试流程图"
+			mechanism_ref 	@1015
+			quid       	"5C738FDC02D9"
+			title      	"考试流程图"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	0
+			items      	(list diagram_item_list))
+		    (object InteractionDiagram "教学考评流程图"
+			mechanism_ref 	@1016
+			quid       	"5C7392620120"
+			title      	"教学考评流程图"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	0
+			items      	(list diagram_item_list
+			    (object InterObjView "$UNNAMED$359" @1037
+				location   	(288, 304)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	TRUE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@1037
+				    location   	(288, 329)
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	324
+				    justify    	0
+				    label      	"")
+				icon       	"Actor"
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"5C7392860060"
+				width      	300
+				height     	660
+				icon_height 	150
+				icon_width 	108
+				icon_y_offset 	0
+				annotation 	1
+				Focus_Of_Control 	(object Focus_Of_Control "" @1038
+				    location   	(288, 384)
+				    line_color 	3342489
+				    InterObjView 	@1037
+				    height     	138
+				    y_coord    	48
+				    Nested     	FALSE)
+				Focus_Of_Control 	(object Focus_Of_Control "" @1039
+				    location   	(288, 784)
+				    line_color 	3342489
+				    InterObjView 	@1037
+				    height     	90
+				    y_coord    	0
+				    Nested     	FALSE))
+			    (object InterObjView "后台" @1040
+				location   	(688, 224)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	TRUE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@1040
+				    location   	(688, 224)
+				    fill_color 	13434879
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	282
+				    justify    	0
+				    label      	"后台")
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"5C7392AC025E"
+				width      	300
+				height     	740
+				icon_height 	0
+				icon_width 	0
+				icon_y_offset 	0
+				annotation 	1
+				Focus_Of_Control 	(object Focus_Of_Control "" @1041
+				    location   	(688, 432)
+				    line_color 	3342489
+				    InterObjView 	@1040
+				    height     	195
+				    y_coord    	105
+				    Nested     	FALSE)
+				Focus_Of_Control 	(object Focus_Of_Control "" @1042
+				    location   	(688, 560)
+				    line_color 	3342489
+				    InterObjView 	@1040
+				    height     	197
+				    y_coord    	107
+				    Nested     	TRUE))
+			    (object InterObjView "$UNNAMED$360" @1043
+				location   	(1152, 272)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	TRUE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@1043
+				    location   	(1152, 297)
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	324
+				    justify    	0
+				    label      	"")
+				icon       	"Actor"
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"5C7392F303B7"
+				width      	300
+				height     	692
+				icon_height 	150
+				icon_width 	108
+				icon_y_offset 	0
+				annotation 	1
+				Focus_Of_Control 	(object Focus_Of_Control "" @1044
+				    location   	(1152, 672)
+				    line_color 	3342489
+				    InterObjView 	@1043
+				    height     	90
+				    y_coord    	0
+				    Nested     	FALSE))
+			    (object InterObjView "$UNNAMED$361" @1045
+				location   	(1520, 224)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	TRUE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@1045
+				    location   	(1520, 249)
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	324
+				    justify    	0
+				    label      	"")
+				icon       	"Actor"
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"5C739306021E"
+				width      	300
+				height     	740
+				icon_height 	150
+				icon_width 	108
+				icon_y_offset 	0
+				annotation 	1
+				Focus_Of_Control 	(object Focus_Of_Control "" @1046
+				    location   	(1520, 784)
+				    line_color 	3342489
+				    InterObjView 	@1045
+				    height     	90
+				    y_coord    	0
+				    Nested     	FALSE))
+			    (object InterMessView "对课程发布评价" @1047
+				location   	(16, 432)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @1048
+				    Parent_View 	@1047
+				    location   	(487, 388)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    quidu      	"5C7392BA010D"
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	316
+				    justify    	0
+				    label      	"对课程发布评价"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				line_color 	3342489
+				client     	@1037
+				supplier   	@1040
+				Focus_Src  	@1038
+				Focus_Entry 	@1041
+				origin     	(303, 432)
+				terminus   	(672, 432)
+				ordinal    	0)
+			    (object SelfMessView "统计" @1049
+				location   	(16, 537)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @1050
+				    Parent_View 	@1049
+				    location   	(779, 493)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    quidu      	"5C7392CB00DC"
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	98
+				    justify    	0
+				    label      	"统计"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				line_color 	3342489
+				client     	@1040
+				supplier   	@1040
+				Focus_Src  	@1041
+				Focus_Entry 	@1042
+				origin     	(704, 537)
+				terminus   	(854, 537)
+				ordinal    	1)
+			    (object InterMessView "反馈教学考评内容" @1051
+				location   	(16, 667)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @1052
+				    Parent_View 	@1051
+				    location   	(919, 623)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    quidu      	"5C7392F700FB"
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	360
+				    justify    	0
+				    label      	"反馈教学考评内容"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	0)
+				line_color 	3342489
+				client     	@1040
+				supplier   	@1043
+				Focus_Src  	@1042
+				Focus_Entry 	@1044
+				origin     	(703, 667)
+				terminus   	(1136, 667)
+				ordinal    	2)
+			    (object InterMessView "查看教学考评情况" @1053
+				location   	(16, 784)
+				font       	(object Font
+				    size       	10
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object SegLabel @1054
+				    Parent_View 	@1053
+				    location   	(904, 740)
+				    font       	(object Font
+					size       	10
+					face       	"Arial"
+					bold       	FALSE
+					italics    	FALSE
+					underline  	FALSE
+					strike     	FALSE
+					color      	0
+					default_color 	TRUE)
+				    quidu      	"5C73930B0025"
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	360
+				    justify    	0
+				    label      	"查看教学考评情况"
+				    pctDist    	0.500000
+				    height     	45
+				    orientation 	1)
+				line_color 	3342489
+				client     	@1045
+				supplier   	@1037
+				Focus_Src  	@1046
+				Focus_Entry 	@1039
+				origin     	(1504, 784)
+				terminus   	(304, 784)
+				ordinal    	3))))))
 	logical_presentations 	(list unit_reference_list
 	    (object UseCaseDiagram "Main"
 		quid       	"39C9261001B7"
@@ -21117,7 +22653,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object CategoryView "Logical View::java" @984
+		    (object CategoryView "Logical View::java" @1055
 			location   	(208, 272)
 			font       	(object Font
 			    size       	10
@@ -21129,7 +22665,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@984
+			    Parent_View 	@1055
 			    location   	(64, 188)
 			    nlines     	2
 			    max_width  	288
@@ -21141,7 +22677,7 @@
 			quidu      	"39C92661003B"
 			width      	300
 			height     	180)
-		    (object CategoryView "Logical View::javax" @985
+		    (object CategoryView "Logical View::javax" @1056
 			location   	(656, 272)
 			font       	(object Font
 			    size       	10
@@ -21153,7 +22689,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@985
+			    Parent_View 	@1056
 			    location   	(512, 188)
 			    nlines     	2
 			    max_width  	288
@@ -21165,7 +22701,7 @@
 			quidu      	"39C926610018"
 			width      	300
 			height     	180)
-		    (object CategoryView "Logical View::org" @986
+		    (object CategoryView "Logical View::org" @1057
 			location   	(1104, 272)
 			font       	(object Font
 			    size       	10
@@ -21177,7 +22713,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@986
+			    Parent_View 	@1057
 			    location   	(960, 188)
 			    nlines     	2
 			    max_width  	288
@@ -21198,7 +22734,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object NoteView @987
+		    (object NoteView @1058
 			location   	(224, 624)
 			font       	(object Font
 			    size       	10
@@ -21213,7 +22749,7 @@
 			fill_color 	12632256
 			width      	300
 			height     	132)
-		    (object NoteView @988
+		    (object NoteView @1059
 			location   	(704, 624)
 			font       	(object Font
 			    size       	10
@@ -21228,7 +22764,7 @@
 			fill_color 	8421631
 			width      	300
 			height     	132)
-		    (object NoteView @989
+		    (object NoteView @1060
 			location   	(1200, 624)
 			font       	(object Font
 			    size       	10
@@ -21243,7 +22779,7 @@
 			fill_color 	12615680
 			width      	300
 			height     	132)
-		    (object NoteView @990
+		    (object NoteView @1061
 			location   	(1664, 624)
 			font       	(object Font
 			    size       	10
@@ -21258,7 +22794,7 @@
 			fill_color 	16777215
 			width      	300
 			height     	132)
-		    (object Label @991
+		    (object Label @1062
 			location   	(81, 369)
 			font       	(object Font
 			    size       	12
@@ -21273,7 +22809,7 @@
 			max_width  	1163
 			justify    	1
 			label      	"J2EE: Java 2 Platform, Enterprise Edition - v 1.2.1")
-		    (object Label @992
+		    (object Label @1063
 			location   	(96, 608)
 			font       	(object Font
 			    size       	10
@@ -21288,7 +22824,7 @@
 			max_width  	268
 			justify    	1
 			label      	"Abstract Class")
-		    (object Label @993
+		    (object Label @1064
 			location   	(592, 608)
 			font       	(object Font
 			    size       	10
@@ -21303,7 +22839,7 @@
 			max_width  	225
 			justify    	1
 			label      	"Final Class")
-		    (object Label @994
+		    (object Label @1065
 			location   	(1104, 608)
 			font       	(object Font
 			    size       	10
@@ -21318,7 +22854,7 @@
 			max_width  	206
 			justify    	1
 			label      	"Interface")
-		    (object Label @995
+		    (object Label @1066
 			location   	(1552, 608)
 			font       	(object Font
 			    size       	10
@@ -21404,7 +22940,7 @@
 			origin_x   	0
 			origin_y   	0
 			items      	(list diagram_item_list
-			    (object ModView "Component View::组件图::NewComponent2" "NotAModuleType" "NotAModulePart" @996
+			    (object ModView "Component View::组件图::NewComponent2" "NotAModuleType" "NotAModulePart" @1067
 				location   	(928, 256)
 				font       	(object Font
 				    size       	10
@@ -21416,7 +22952,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@996
+				    Parent_View 	@1067
 				    location   	(883, 231)
 				    fill_color 	13434879
 				    anchor_loc 	3
@@ -21432,7 +22968,7 @@
 				autoResize 	TRUE
 				width      	302
 				height     	162)
-			    (object ModView "Component View::组件图::NewComponent3" "NotAModuleType" "NotAModulePart" @997
+			    (object ModView "Component View::组件图::NewComponent3" "NotAModuleType" "NotAModulePart" @1068
 				location   	(384, 528)
 				font       	(object Font
 				    size       	10
@@ -21444,7 +22980,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@997
+				    Parent_View 	@1068
 				    location   	(339, 503)
 				    fill_color 	13434879
 				    anchor_loc 	3
@@ -21460,7 +22996,7 @@
 				autoResize 	TRUE
 				width      	302
 				height     	162)
-			    (object ModView "Component View::组件图::NewComponent4" "NotAModuleType" "NotAModulePart" @998
+			    (object ModView "Component View::组件图::NewComponent4" "NotAModuleType" "NotAModulePart" @1069
 				location   	(928, 512)
 				font       	(object Font
 				    size       	10
@@ -21472,7 +23008,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@998
+				    Parent_View 	@1069
 				    location   	(883, 487)
 				    fill_color 	13434879
 				    anchor_loc 	3
@@ -21488,7 +23024,7 @@
 				autoResize 	TRUE
 				width      	302
 				height     	162)
-			    (object ModView "Component View::组件图::NewComponent5" "NotAModuleType" "NotAModulePart" @999
+			    (object ModView "Component View::组件图::NewComponent5" "NotAModuleType" "NotAModulePart" @1070
 				location   	(1488, 496)
 				font       	(object Font
 				    size       	10
@@ -21500,7 +23036,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@999
+				    Parent_View 	@1070
 				    location   	(1443, 471)
 				    fill_color 	13434879
 				    anchor_loc 	3
@@ -21516,32 +23052,32 @@
 				autoResize 	TRUE
 				width      	302
 				height     	162)
-			    (object ModVisView "" @1000
+			    (object ModVisView "" @1071
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"5C5C40800053"
-				client     	@996
-				supplier   	@997
+				client     	@1067
+				supplier   	@1068
 				vertices   	(list Points
 				    (777, 327)
 				    (530, 451))
 				line_style 	0)
-			    (object ModVisView "" @1001
+			    (object ModVisView "" @1072
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"5C5C408203E3"
-				client     	@996
-				supplier   	@998
+				client     	@1067
+				supplier   	@1069
 				vertices   	(list Points
 				    (928, 334)
 				    (928, 432))
 				line_style 	0)
-			    (object ModVisView "" @1002
+			    (object ModVisView "" @1073
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"5C5C40850123"
-				client     	@996
-				supplier   	@999
+				client     	@1067
+				supplier   	@1070
 				vertices   	(list Points
 				    (1074, 316)
 				    (1337, 429))
