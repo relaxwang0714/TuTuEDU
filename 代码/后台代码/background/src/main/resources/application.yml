@@ -1,6 +1,6 @@
 spring:
   application:
-    name: micro-provider-business
+    name: micro-comsumer-background
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://120.79.42.249:3306/paotui?useUnicode=true&&characterEncoding=utf8&&useSSL=false
