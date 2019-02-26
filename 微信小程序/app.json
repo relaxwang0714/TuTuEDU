@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/main/main",
-    "pages/logs/logs",
     "pages/schedule/schedule",    
+    "pages/logs/logs",    
+    "pages/main/main",
     "pages/mine/mine"    
   ],
   "window": {
