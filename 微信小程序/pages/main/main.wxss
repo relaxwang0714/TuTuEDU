@@ -1,0 +1,41 @@
+/* pages/main/main.wxss */
+ @import"../../templates/nav.wxss"; 
+.Main{
+  display: flex;
+  flex-direction: column;
+}
+.top{
+  width: 100%;
+  height: 220rpx;
+  display: flex;
+  flex-direction: row;
+}
+.UserName{
+  margin-left:80rpx;
+  margin-top: 100rpx; 
+  font-size: 1.3em;
+}
+.UserPic{
+  margin-left: 180rpx;
+  
+  margin-top:35rpx;
+}
+.UserPic{
+  width: 170rpx;
+  height: 170rpx;
+}
+.MainButton{
+  display: flex;
+  flex-direction: row;
+  /* margin-left: 20rpx; */
+  justify-content: center;
+}
+.Course{
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx 40rpx 10rpx 40rpx;
+}
+.course_text{
+  font-size: 1.3em;
+  margin-bottom: 20rpx; 
+}
