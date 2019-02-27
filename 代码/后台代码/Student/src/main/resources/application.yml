@@ -8,19 +8,17 @@ spring:
     password: uAiqwVwjJ8-i
   thymeleaf:
     cache: false
+    content-type: text/html
     mode: LEGACYHTML5
-    servlet:
-      content-type: text/html
   redis:
     host: 127.0.0.1
     port: 6379
     timeout: 0
-    jedis:
-      pool:
-        max-active: 8
-        max-idle: 8
-        max-wait: -1
-        min-idle: 0
+    pool:
+      max-active: 8
+      max-idle: 8
+      max-wait: -1
+      min-idle: 0
 eureka:
   client:
     service-url:
@@ -28,7 +26,7 @@ eureka:
   instance:
     prefer-ip-address: true
 server:
-  port: 8814
+  port: 8812
 mybatis:
   config-location: classpath:mybatis-config.xml
   mapper-locations: classpath:mapper/*Mapper.xml
