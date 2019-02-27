@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/class_management.css" />
+	</head>
+	<body>
+		<div class="header">
+                <ul>
+                    <li><a href="#"><div class="top_nav1"><b>班级信息管理</b></div></a></li>
+                </ul>
+       </div>
+        <a href="add_waste.html" target="con"><div class="out_order">数据更新</div></a>
+		
+		<form method="post">
+		<div style="width: 100%;height: 94px;background-color: white;">
+			
+			<span class="student_management_name"><b>&nbsp;班级号：</b></span>
+			<input type="text" class="student_management_title" placeholder="&nbsp;&nbsp;班级号">
+			
+			
+			
+			<span class="student_management_name"><b>&nbsp;所属专业：</b></span>
+			<select class="student_management_select_3" id="numbers">
+				<option value=""></option>
+                <option value="1">计算机科学与技术</option>
+            	<option value="2">软件工程</option>
+				<option value="3">物联网</option>
+            </select>
+			<input type="submit" class="brush_7" value="">
+		</div>
+		</form>
+		
+		<div class="background"></div>
+		
+		<!--订单-->
+		<div id="wait_top">
+			<div class="top_left"><input type="checkbox" onclick="swapCheck()" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;全选</div>
+			<div class="top_right">
+				<a href="#"><div class="top_right_1">Excel导出</div></a>
+			</div>
+		</div>
+		
+		<!--表格-->
+		<table border="1" cellspacing="20"> 
+			<th>
+				<td class="th_font">图片</td>
+				<td class="th_font">标题</td>
+				<td class="th_font">类目</td>
+				<td class="th_font">单价</td>
+				<td class="th_font">详情</td>
+				<td class="th_font">State</td>
+			</th>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td><img src="img/pic.png"/></td>  
+	            <td>dahaodh1da</td>  
+	            <td>塑料瓶</td> 
+	            <td>12.5 元</td>
+	            <td>企业王国低气压王大全的</td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	        </tr>  
+	         
+	    </table>  
+	    
+	    
+	    <script type="text/javascript"  
+        src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>  
+  
+    <script type="text/javascript">  
+        //checkbox 全选/取消全选  
+        var isCheckAll = false;  
+        function swapCheck() {  
+            if (isCheckAll) {  
+                $("input[type='checkbox']").each(function() {  
+                    this.checked = false;  
+                });  
+                isCheckAll = false;  
+            } else {  
+                $("input[type='checkbox']").each(function() {  
+                    this.checked = true;  
+                });  
+                isCheckAll = true;  
+            }  
+        }  
+    </script>  
+		
+	</body>
+</html>
