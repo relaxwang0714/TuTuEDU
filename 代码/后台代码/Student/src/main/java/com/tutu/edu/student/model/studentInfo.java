@@ -1,4 +1,4 @@
-package model;
+package com.tutu.edu.student.model;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,7 +10,7 @@ import java.util.List;
 */
 public class studentInfo implements Serializable {
 
-    private static final long serialVersionUID = 1551245624168L;
+    private static final long serialVersionUID = 1551246198057L;
 
 
     /**
@@ -81,9 +81,9 @@ public class studentInfo implements Serializable {
     private java.time.LocalDateTime dataModified;
 
 
-    public void set  Id(Long   id){this.  id =   id;}
+    public void setId(Long   id){this.  id =   id;}
 
-    public Long get  Id(){return this.  id;}
+    public Long getId(){return this.  id;}
 
     public void setStudentNum(Integer studentNum){this.studentNum = studentNum;}
 
@@ -188,15 +188,15 @@ public class studentInfo implements Serializable {
 
         private List<Long>   idList;
 
-        public List<Long> get  IdList(){return this.  idList;}
+        public List<Long> getIdList(){return this.  idList;}
 
         private Long   idSt;
 
         private Long   idEd;
 
-        public Long get  IdSt(){return this.  idSt;}
+        public Long getIdSt(){return this.  idSt;}
 
-        public Long get  IdEd(){return this.  idEd;}
+        public Long getIdEd(){return this.  idEd;}
 
         private List<Integer> studentNumList;
 
@@ -339,7 +339,7 @@ public class studentInfo implements Serializable {
 
 
         public QueryBuilder   id(Long   id){
-            set  Id(  id);
+            setId(  id);
             return this;
         }
 
@@ -353,12 +353,12 @@ public class studentInfo implements Serializable {
             return this;
         }
 
-        public QueryBuilder fetch  Id(){
+        public QueryBuilder fetchId(){
             setFetchFields("fetchFields","  id");
             return this;
         }
 
-        public QueryBuilder exclude  Id(){
+        public QueryBuilder excludeId(){
             setFetchFields("excludeFields","  id");
             return this;
         }
@@ -829,15 +829,15 @@ public class studentInfo implements Serializable {
     public static class ConditionBuilder{
         private List<Long>   idList;
 
-        public List<Long> get  IdList(){return this.  idList;}
+        public List<Long> getIdList(){return this.  idList;}
 
         private Long   idSt;
 
         private Long   idEd;
 
-        public Long get  IdSt(){return this.  idSt;}
+        public Long getIdSt(){return this.  idSt;}
 
-        public Long get  IdEd(){return this.  idEd;}
+        public Long getIdEd(){return this.  idEd;}
 
         private List<Integer> studentNumList;
 
@@ -1283,7 +1283,7 @@ public class studentInfo implements Serializable {
         }
 
         public Builder   id(Long   id){
-            this.obj.set  Id(  id);
+            this.obj.setId(  id);
             return this;
         }
         public Builder studentNum(Integer studentNum){

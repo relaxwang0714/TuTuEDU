@@ -4,8 +4,8 @@
 <mapper namespace="com.tutu.edu.student.mapper.read.base.studentInfoBaseReadMapper">
 
 
-    <resultMap type="model.studentInfo" id="studentInfoMap">
-        <result property="  id" column="  id"/>
+    <resultMap type="com.tutu.edu.student.model.studentInfo" id="studentInfoMap">
+        <result property="id" column="  id"/>
         <result property="studentNum" column="student_num"/>
         <result property="studentName" column="student_name"/>
         <result property="studentSex" column="student_sex"/>
@@ -57,7 +57,7 @@
             <if test="dataModified != null">
                 `data_modified` = #{dataModified} and
             </if>
-            <if test = "(_parameter instanceof model.studentInfo$QueryBuilder) == true">
+            <if test = "(_parameter instanceof com.tutu.edu.student.model.studentInfo$QueryBuilder) == true">
                 <if test="  idList != null">
                     `  id` in
                     <foreach collection="  idList" close=")" open="(" separator="," item="item">
@@ -256,7 +256,7 @@
             <if test="dataModified != null">
                 `data_modified` = #{dataModified} and
             </if>
-            <if test = "(_parameter instanceof model.studentInfo$QueryBuilder) == true">
+            <if test = "(_parameter instanceof com.tutu.edu.student.model.studentInfo$QueryBuilder) == true">
                     <if test="  idList != null">
                         `  id` in
                         <foreach collection="  idList" close=")" open="(" separator="," item="item">
@@ -438,7 +438,7 @@
 
     <sql id="baseResult">
         <trim suffixOverrides=",">
-            <if test = "(_parameter instanceof model.studentInfo$QueryBuilder) == true">
+            <if test = "(_parameter instanceof com.tutu.edu.student.model.studentInfo$QueryBuilder) == true">
 
                 <if test="fetchFields==null">
                     <include refid="allResult"></include>
@@ -527,7 +527,7 @@
                     </if>
                 </if>
             </if>
-            <if test="(_parameter instanceof model.studentInfo$QueryBuilder) == false" >
+            <if test="(_parameter instanceof com.tutu.edu.student.model.studentInfo$QueryBuilder) == false" >
                 <include refid="allResult"></include>
             </if>
 

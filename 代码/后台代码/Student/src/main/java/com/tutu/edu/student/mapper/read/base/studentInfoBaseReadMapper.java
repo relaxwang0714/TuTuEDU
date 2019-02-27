@@ -1,8 +1,8 @@
-package mapper.read.base;
+package com.tutu.edu.student.mapper.read.base;
 
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
-import model.studentInfo;
+import com.tutu.edu.student.model.studentInfo;
 /**
 *  @author wang
 */
