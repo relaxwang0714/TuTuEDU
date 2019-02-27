@@ -1,0 +1,46 @@
+<template name="nav1">
+  <view class='main_check_choose'>
+      <image class='shelf-nav-item-img' src='{{circle_image}}'></image>
+      <text class='shelf-nav-item-txt'>{{name}}</text>
+  </view>
+</template>
+<template name="list1">
+  <view class='course_list'>
+    <image src='{{pic}}' class='course_pic'></image>
+    <view class='course_right'>
+      <text class='course_name'>{{name}}</text>
+      <text class='course_teacher'>{{teacher}}</text>
+      <view class='course_star'>
+        <block wx:for="{{star}}">
+          <image src='../../images/little/star1.png' class='course_star1'></image>
+        </block>
+        <text class='course_grade'>{{grade}}</text>
+      </view>
+    </view>
+  </view>
+</template>
+<template name="list2">
+  <view class='book_list'>
+    <image src='{{book_pic}}' class='book_pic'></image>
+    <view class='book_right'>
+      <text class='book_name'>{{book_name}}</text>
+      <text class='book_author'>{{book_author}}</text>
+      <view class='book_star'>
+        <block wx:for="{{book_star}}">
+          <image src='../../images/little/star1.png' class='book_star1'></image>
+        </block>
+        <text class='book_grade'>{{book_grade}}</text>
+      </view>
+      <text class='book_content'>{{book_content}}</text>
+    </view>
+  </view>
+</template>
+<template name="list3">
+  <view class='popular_list'>
+    <image src='{{popular_pic}}' class='popular_pic'></image>
+    <view class='popular_right'>
+      <text class='popular_name'>{{popular_name}}</text>
+      <text class='popular_number'>{{popular_number}}粉丝</text>
+    </view>
+  </view>
+</template>

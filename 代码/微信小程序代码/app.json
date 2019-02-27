@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/logs/logs",
+    "pages/schedule/schedule",    
+    "pages/mine/mine"    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar":{
+    "backgroundColor": "white",
+    "color": "black",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black",
+  "list":[{
+    "selectedIconPath":"images/little/button-home2.png",
+    "iconPath":"images/little/button-home.png",
+    "pagePath":"pages/main/main",
+    "text":"首页"
+      },
+      {
+        "selectedIconPath": "images/little/button-group2.png",
+        "iconPath": "images/little/button-group.png",
+        "pagePath": "pages/logs/logs",
+        "text": "小组"
+      },
+      {
+        "selectedIconPath": "images/little/button-schedule2.png",
+        "iconPath": "images/little/button-schedule.png",
+        "pagePath": "pages/schedule/schedule",
+        "text": "课表"
+      },
+      {
+        "selectedIconPath": "images/little/button-mine2.png",
+        "iconPath": "images/little/button-mine.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+  ]
+  }
+}
