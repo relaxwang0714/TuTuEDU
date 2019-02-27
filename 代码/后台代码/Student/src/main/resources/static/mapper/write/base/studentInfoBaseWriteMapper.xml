@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tutu.edu.student.mapper.write.base.studentInfoBaseWriteMapper">
+
+
+    <insert id="insertstudentInfo"  useGeneratedKeys="true" keyProperty="  id">
+        INSERT INTO `studentInfo`
+        (
+        <trim suffixOverrides=",">
+                    <if test="  id!=null">
+                        `  id`,
+                    </if>
+                    <if test="studentNum!=null">
+                        `student_num`,
+                    </if>
+                    <if test="studentName!=null">
+                        `student_name`,
+                    </if>
+                    <if test="studentSex!=null">
+                        `student_sex`,
+                    </if>
+                    <if test="studentPhone!=null">
+                        `student_phone`,
+                    </if>
+                    <if test="collegeId!=null">
+                        `college_id`,
+                    </if>
+                    <if test="specialtyId!=null">
+                        `specialty_id`,
+                    </if>
+                    <if test="facultyId!=null">
+                        `faculty_id`,
+                    </if>
+                    <if test="classId!=null">
+                        `class_id`,
+                    </if>
+                    <if test="dataCreate!=null">
+                        `data_create`,
+                    </if>
+                    <if test="dataModified!=null">
+                        `data_modified`,
+                    </if>
+        </trim>
+        )
+        VALUES
+        (
+        <trim suffixOverrides=",">
+                <if test="  id!=null">
+                    #{  id},
+                </if>
+                <if test="studentNum!=null">
+                    #{studentNum},
+                </if>
+                <if test="studentName!=null">
+                    #{studentName},
+                </if>
+                <if test="studentSex!=null">
+                    #{studentSex},
+                </if>
+                <if test="studentPhone!=null">
+                    #{studentPhone},
+                </if>
+                <if test="collegeId!=null">
+                    #{collegeId},
+                </if>
+                <if test="specialtyId!=null">
+                    #{specialtyId},
+                </if>
+                <if test="facultyId!=null">
+                    #{facultyId},
+                </if>
+                <if test="classId!=null">
+                    #{classId},
+                </if>
+                <if test="dataCreate!=null">
+                    #{dataCreate},
+                </if>
+                <if test="dataModified!=null">
+                    #{dataModified},
+                </if>
+        </trim>
+        )
+    </insert>
+
+
+
+
+    <update id="updatestudentInfo">
+        UPDATE `studentInfo`
+        SET
+        <trim suffixOverrides=",">
+            <if test="studentNum != null">
+                `student_num` = #{studentNum},
+            </if>
+            <if test="studentName != null and studentName!=''">
+                `student_name` = #{studentName},
+            </if>
+            <if test="studentSex != null and studentSex!=''">
+                `student_sex` = #{studentSex},
+            </if>
+            <if test="studentPhone != null and studentPhone!=''">
+                `student_phone` = #{studentPhone},
+            </if>
+            <if test="collegeId != null">
+                `college_id` = #{collegeId},
+            </if>
+            <if test="specialtyId != null">
+                `specialty_id` = #{specialtyId},
+            </if>
+            <if test="facultyId != null">
+                `faculty_id` = #{facultyId},
+            </if>
+            <if test="classId != null">
+                `class_id` = #{classId},
+            </if>
+            <if test="dataCreate != null">
+                `data_create` = #{dataCreate},
+            </if>
+            <if test="dataModified != null">
+                `data_modified` = #{dataModified},
+            </if>
+        </trim>
+        WHERE
+        <trim suffixOverrides="and">
+                `  id` = #{  id} and
+        </trim>
+    </update>
+
+    <update id="update">
+        UPDATE `studentInfo`
+        SET
+        <trim suffixOverrides=",">
+        <if test="set.studentNum != null">
+            `student_num` = #{set.studentNum},
+        </if>
+        <if test="set.studentName != null and set.studentName!=''">
+            `student_name` = #{set.studentName},
+        </if>
+        <if test="set.studentSex != null and set.studentSex!=''">
+            `student_sex` = #{set.studentSex},
+        </if>
+        <if test="set.studentPhone != null and set.studentPhone!=''">
+            `student_phone` = #{set.studentPhone},
+        </if>
+        <if test="set.collegeId != null">
+            `college_id` = #{set.collegeId},
+        </if>
+        <if test="set.specialtyId != null">
+            `specialty_id` = #{set.specialtyId},
+        </if>
+        <if test="set.facultyId != null">
+            `faculty_id` = #{set.facultyId},
+        </if>
+        <if test="set.classId != null">
+            `class_id` = #{set.classId},
+        </if>
+        <if test="set.dataCreate != null">
+            `data_create` = #{set.dataCreate},
+        </if>
+        <if test="set.dataModified != null">
+            `data_modified` = #{set.dataModified},
+        </if>
+        </trim>
+        <trim prefix="where" suffixOverrides="and | or">
+                <if test="where.  idList != null">
+                    `  id` in
+                    <foreach collection="where.  idList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+            <if test="where.  idSt !=null">
+                `  id` >= #{where.  idSt} and
+            </if>
+            <if test="where.  idEd!=null">
+                `  id` &lt;= #{where.  idEd} and
+            </if>
+                <if test="where.studentNumList != null">
+                    `student_num` in
+                    <foreach collection="where.studentNumList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+            <if test="where.studentNumSt !=null">
+                `student_num` >= #{where.studentNumSt} and
+            </if>
+            <if test="where.studentNumEd!=null">
+                `student_num` &lt;= #{where.studentNumEd} and
+            </if>
+                <if test="where.studentNameList != null">
+                    `student_name` in
+                    <foreach collection="where.studentNameList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+            <if test ="where.fuzzyStudentName!=null and where.fuzzyStudentName.size()>0">
+                (
+                <foreach collection="where.fuzzyStudentName"  separator="or" item="item">
+                    `Student_name` like concat('%',#{item},'%')
+                </foreach>
+                ) and
+            </if>
+            <if test ="where.rightFuzzyStudentName!=null and where.rightFuzzyStudentName.size()>0">
+                (
+                <foreach collection="where.rightFuzzyStudentName"  separator="or" item="item">
+                    `Student_name` like concat(#{item},'%')
+                </foreach>
+                ) and
+            </if>
+                <if test="where.studentSexList != null">
+                    `student_sex` in
+                    <foreach collection="where.studentSexList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+            <if test ="where.fuzzyStudentSex!=null and where.fuzzyStudentSex.size()>0">
+                (
+                <foreach collection="where.fuzzyStudentSex"  separator="or" item="item">
+                    `Student_sex` like concat('%',#{item},'%')
+                </foreach>
+                ) and
+            </if>
+            <if test ="where.rightFuzzyStudentSex!=null and where.rightFuzzyStudentSex.size()>0">
+                (
+                <foreach collection="where.rightFuzzyStudentSex"  separator="or" item="item">
+                    `Student_sex` like concat(#{item},'%')
+                </foreach>
+                ) and
+            </if>
+                <if test="where.studentPhoneList != null">
+                    `student_phone` in
+                    <foreach collection="where.studentPhoneList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+            <if test ="where.fuzzyStudentPhone!=null and where.fuzzyStudentPhone.size()>0">
+                (
+                <foreach collection="where.fuzzyStudentPhone"  separator="or" item="item">
+                    `Student_phone` like concat('%',#{item},'%')
+                </foreach>
+                ) and
+            </if>
+            <if test ="where.rightFuzzyStudentPhone!=null and where.rightFuzzyStudentPhone.size()>0">
+                (
+                <foreach collection="where.rightFuzzyStudentPhone"  separator="or" item="item">
+                    `Student_phone` like concat(#{item},'%')
+                </foreach>
+                ) and
+            </if>
+                <if test="where.collegeIdList != null">
+                    `college_id` in
+                    <foreach collection="where.collegeIdList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+            <if test="where.collegeIdSt !=null">
+                `college_id` >= #{where.collegeIdSt} and
+            </if>
+            <if test="where.collegeIdEd!=null">
+                `college_id` &lt;= #{where.collegeIdEd} and
+            </if>
+                <if test="where.specialtyIdList != null">
+                    `specialty_id` in
+                    <foreach collection="where.specialtyIdList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+            <if test="where.specialtyIdSt !=null">
+                `specialty_id` >= #{where.specialtyIdSt} and
+            </if>
+            <if test="where.specialtyIdEd!=null">
+                `specialty_id` &lt;= #{where.specialtyIdEd} and
+            </if>
+                <if test="where.facultyIdList != null">
+                    `faculty_id` in
+                    <foreach collection="where.facultyIdList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+            <if test="where.facultyIdSt !=null">
+                `faculty_id` >= #{where.facultyIdSt} and
+            </if>
+            <if test="where.facultyIdEd!=null">
+                `faculty_id` &lt;= #{where.facultyIdEd} and
+            </if>
+                <if test="where.classIdList != null">
+                    `class_id` in
+                    <foreach collection="where.classIdList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+            <if test="where.classIdSt !=null">
+                `class_id` >= #{where.classIdSt} and
+            </if>
+            <if test="where.classIdEd!=null">
+                `class_id` &lt;= #{where.classIdEd} and
+            </if>
+                <if test="where.dataCreateList != null">
+                    `data_create` in
+                    <foreach collection="where.dataCreateList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+            <if test="where.dataCreateSt !=null">
+                `data_create` >= #{where.dataCreateSt} and
+            </if>
+            <if test="where.dataCreateEd!=null">
+                `data_create` &lt;= #{where.dataCreateEd} and
+            </if>
+                <if test="where.dataModifiedList != null">
+                    `data_modified` in
+                    <foreach collection="where.dataModifiedList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+            <if test="where.dataModifiedSt !=null">
+                `data_modified` >= #{where.dataModifiedSt} and
+            </if>
+            <if test="where.dataModifiedEd!=null">
+                `data_modified` &lt;= #{where.dataModifiedEd} and
+            </if>
+        </trim>
+    </update>
+
+
+</mapper>

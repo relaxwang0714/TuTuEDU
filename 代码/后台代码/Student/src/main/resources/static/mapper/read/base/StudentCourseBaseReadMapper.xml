@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tutu.edu.student.mapper.read.base.StudentCourseBaseReadMapper">
+
+
+    <resultMap type="com.tutu.edu.student.model.StudentCourse" id="StudentCourseMap">
+        <result property="id" column="id"/>
+        <result property="courseId" column="course_id"/>
+        <result property="studentNum" column="student_num"/>
+        <result property="className" column="class_name"/>
+        <result property="classTeacher" column="class_teacher"/>
+        <result property="dataCreate" column="data_create"/>
+        <result property="dataModified" column="data_modified"/>
+    </resultMap>
+
+
+    <select id="queryStudentCourse" resultMap="StudentCourseMap">
+        select
+        <include refid="baseResult"></include>
+        from  `student_course`
+        <trim prefix="where" suffixOverrides="and | or">
+            <if test="id != null">
+                `id` = #{id} and
+            </if>
+            <if test="courseId != null">
+                `course_id` = #{courseId} and
+            </if>
+            <if test="studentNum != null">
+                `student_num` = #{studentNum} and
+            </if>
+            <if test="className != null and className!=''">
+                `class_name` = #{className} and
+            </if>
+            <if test="classTeacher != null and classTeacher!=''">
+                `class_teacher` = #{classTeacher} and
+            </if>
+            <if test="dataCreate != null">
+                `data_create` = #{dataCreate} and
+            </if>
+            <if test="dataModified != null">
+                `data_modified` = #{dataModified} and
+            </if>
+            <if test = "(_parameter instanceof com.tutu.edu.student.model.StudentCourse$QueryBuilder) == true">
+                <if test="idList != null">
+                    `id` in
+                    <foreach collection="idList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+                <if test="idSt !=null">
+                    `id` >= #{idSt} and
+                </if>
+                <if test="idEd!=null">
+                    `id` &lt;= #{idEd} and
+                </if>
+                <if test="courseIdList != null">
+                    `course_id` in
+                    <foreach collection="courseIdList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+                <if test="courseIdSt !=null">
+                    `course_id` >= #{courseIdSt} and
+                </if>
+                <if test="courseIdEd!=null">
+                    `course_id` &lt;= #{courseIdEd} and
+                </if>
+                <if test="studentNumList != null">
+                    `student_num` in
+                    <foreach collection="studentNumList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+                <if test="studentNumSt !=null">
+                    `student_num` >= #{studentNumSt} and
+                </if>
+                <if test="studentNumEd!=null">
+                    `student_num` &lt;= #{studentNumEd} and
+                </if>
+                <if test="classNameList != null">
+                    `class_name` in
+                    <foreach collection="classNameList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+                <if test ="fuzzyClassName!=null and fuzzyClassName.size()>0">
+                    (
+                    <foreach collection="fuzzyClassName"  separator="or" item="item">
+                        `Class_name` like concat('%',#{item},'%')
+                    </foreach>
+                    ) and
+                </if>
+                <if test ="rightFuzzyClassName!=null and rightFuzzyClassName.size()>0">
+                    (
+                    <foreach collection="rightFuzzyClassName"  separator="or" item="item">
+                        `Class_name` like concat(#{item},'%')
+                    </foreach>
+                    ) and
+                </if>
+                <if test="classTeacherList != null">
+                    `class_teacher` in
+                    <foreach collection="classTeacherList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+                <if test ="fuzzyClassTeacher!=null and fuzzyClassTeacher.size()>0">
+                    (
+                    <foreach collection="fuzzyClassTeacher"  separator="or" item="item">
+                        `Class_teacher` like concat('%',#{item},'%')
+                    </foreach>
+                    ) and
+                </if>
+                <if test ="rightFuzzyClassTeacher!=null and rightFuzzyClassTeacher.size()>0">
+                    (
+                    <foreach collection="rightFuzzyClassTeacher"  separator="or" item="item">
+                        `Class_teacher` like concat(#{item},'%')
+                    </foreach>
+                    ) and
+                </if>
+                <if test="dataCreateList != null">
+                    `data_create` in
+                    <foreach collection="dataCreateList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+                <if test="dataCreateSt !=null">
+                    `data_create` >= #{dataCreateSt} and
+                </if>
+                <if test="dataCreateEd!=null">
+                    `data_create` &lt;= #{dataCreateEd} and
+                </if>
+                <if test="dataModifiedList != null">
+                    `data_modified` in
+                    <foreach collection="dataModifiedList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+                <if test="dataModifiedSt !=null">
+                    `data_modified` >= #{dataModifiedSt} and
+                </if>
+                <if test="dataModifiedEd!=null">
+                    `data_modified` &lt;= #{dataModifiedEd} and
+                </if>
+            </if>
+        </trim>
+    </select>
+
+    <select id="queryStudentCourseLimit1" resultMap="StudentCourseMap">
+        select
+        <include refid="baseResult"></include>
+        from  `student_course`
+        <trim prefix="where" suffixOverrides="and | or">
+            <if test="id != null">
+                `id` = #{id} and
+            </if>
+            <if test="courseId != null">
+                `course_id` = #{courseId} and
+            </if>
+            <if test="studentNum != null">
+                `student_num` = #{studentNum} and
+            </if>
+            <if test="className != null and className!=''">
+                `class_name` = #{className} and
+            </if>
+            <if test="classTeacher != null and classTeacher!=''">
+                `class_teacher` = #{classTeacher} and
+            </if>
+            <if test="dataCreate != null">
+                `data_create` = #{dataCreate} and
+            </if>
+            <if test="dataModified != null">
+                `data_modified` = #{dataModified} and
+            </if>
+            <if test = "(_parameter instanceof com.tutu.edu.student.model.StudentCourse$QueryBuilder) == true">
+                    <if test="idList != null">
+                        `id` in
+                        <foreach collection="idList" close=")" open="(" separator="," item="item">
+                            #{item}
+                        </foreach> and
+                    </if>
+                <if test="idSt !=null">
+                    `id` >= #{idSt} and
+                </if>
+                <if test="idEd!=null">
+                    `id` &lt;= #{idEd} and
+                </if>
+                    <if test="courseIdList != null">
+                        `course_id` in
+                        <foreach collection="courseIdList" close=")" open="(" separator="," item="item">
+                            #{item}
+                        </foreach> and
+                    </if>
+                <if test="courseIdSt !=null">
+                    `course_id` >= #{courseIdSt} and
+                </if>
+                <if test="courseIdEd!=null">
+                    `course_id` &lt;= #{courseIdEd} and
+                </if>
+                    <if test="studentNumList != null">
+                        `student_num` in
+                        <foreach collection="studentNumList" close=")" open="(" separator="," item="item">
+                            #{item}
+                        </foreach> and
+                    </if>
+                <if test="studentNumSt !=null">
+                    `student_num` >= #{studentNumSt} and
+                </if>
+                <if test="studentNumEd!=null">
+                    `student_num` &lt;= #{studentNumEd} and
+                </if>
+                    <if test="classNameList != null">
+                        `class_name` in
+                        <foreach collection="classNameList" close=")" open="(" separator="," item="item">
+                            #{item}
+                        </foreach> and
+                    </if>
+                <if test ="fuzzyClassName!=null and fuzzyClassName.size()>0">
+                    (
+                    <foreach collection="fuzzyClassName"  separator="or" item="item">
+                        `Class_name` like concat('%',#{item},'%')
+                    </foreach>
+                    ) and
+                </if>
+                <if test ="rightFuzzyClassName!=null and rightFuzzyClassName.size()>0">
+                    (
+                    <foreach collection="rightFuzzyClassName"  separator="or" item="item">
+                        `Class_name` like concat(#{item},'%')
+                    </foreach>
+                    ) and
+                </if>
+                    <if test="classTeacherList != null">
+                        `class_teacher` in
+                        <foreach collection="classTeacherList" close=")" open="(" separator="," item="item">
+                            #{item}
+                        </foreach> and
+                    </if>
+                <if test ="fuzzyClassTeacher!=null and fuzzyClassTeacher.size()>0">
+                    (
+                    <foreach collection="fuzzyClassTeacher"  separator="or" item="item">
+                        `Class_teacher` like concat('%',#{item},'%')
+                    </foreach>
+                    ) and
+                </if>
+                <if test ="rightFuzzyClassTeacher!=null and rightFuzzyClassTeacher.size()>0">
+                    (
+                    <foreach collection="rightFuzzyClassTeacher"  separator="or" item="item">
+                        `Class_teacher` like concat(#{item},'%')
+                    </foreach>
+                    ) and
+                </if>
+                    <if test="dataCreateList != null">
+                        `data_create` in
+                        <foreach collection="dataCreateList" close=")" open="(" separator="," item="item">
+                            #{item}
+                        </foreach> and
+                    </if>
+                <if test="dataCreateSt !=null">
+                    `data_create` >= #{dataCreateSt} and
+                </if>
+                <if test="dataCreateEd!=null">
+                    `data_create` &lt;= #{dataCreateEd} and
+                </if>
+                    <if test="dataModifiedList != null">
+                        `data_modified` in
+                        <foreach collection="dataModifiedList" close=")" open="(" separator="," item="item">
+                            #{item}
+                        </foreach> and
+                    </if>
+                <if test="dataModifiedSt !=null">
+                    `data_modified` >= #{dataModifiedSt} and
+                </if>
+                <if test="dataModifiedEd!=null">
+                    `data_modified` &lt;= #{dataModifiedEd} and
+                </if>
+            </if>
+        </trim>
+        limit 1
+    </select>
+
+    <sql id="allResult">
+        <trim suffixOverrides=",">
+        `id`,
+        `course_id`,
+        `student_num`,
+        `class_name`,
+        `class_teacher`,
+        `data_create`,
+        `data_modified`,
+        </trim>
+    </sql>
+
+
+
+    <sql id="baseResult">
+        <trim suffixOverrides=",">
+            <if test = "(_parameter instanceof com.tutu.edu.student.model.StudentCourse$QueryBuilder) == true">
+
+                <if test="fetchFields==null">
+                    <include refid="allResult"></include>
+                </if>
+                <if test="fetchFields!=null">
+                    <if test="fetchFields.AllFields !=null">
+                        <include refid="allResult"></include>
+                    </if>
+                    <if test="fetchFields.AllFields ==null and fetchFields.fetchFields==null and fetchFields.excludeFields==null and fetchFields.otherFields==null">
+                        <include refid="allResult"></include>
+                    </if>
+                    <if test="fetchFields.AllFields==null and fetchFields.fetchFields!=null">
+                    <if test="fetchFields.fetchFields.id==true">
+                        `id`,
+                    </if>
+                    <if test="fetchFields.fetchFields.courseId==true">
+                        `course_id`,
+                    </if>
+                    <if test="fetchFields.fetchFields.studentNum==true">
+                        `student_num`,
+                    </if>
+                    <if test="fetchFields.fetchFields.className==true">
+                        `class_name`,
+                    </if>
+                    <if test="fetchFields.fetchFields.classTeacher==true">
+                        `class_teacher`,
+                    </if>
+                    <if test="fetchFields.fetchFields.dataCreate==true">
+                        `data_create`,
+                    </if>
+                    <if test="fetchFields.fetchFields.dataModified==true">
+                        `data_modified`,
+                    </if>
+                    </if>
+                    <if test="fetchFields.AllFields==null and fetchFields.excludeFields!=null">
+                    <if test="fetchFields.excludeFields.id==null">
+                        `id`,
+                    </if>
+                    <if test="fetchFields.excludeFields.courseId==null">
+                        `course_id`,
+                    </if>
+                    <if test="fetchFields.excludeFields.studentNum==null">
+                        `student_num`,
+                    </if>
+                    <if test="fetchFields.excludeFields.className==null">
+                        `class_name`,
+                    </if>
+                    <if test="fetchFields.excludeFields.classTeacher==null">
+                        `class_teacher`,
+                    </if>
+                    <if test="fetchFields.excludeFields.dataCreate==null">
+                        `data_create`,
+                    </if>
+                    <if test="fetchFields.excludeFields.dataModified==null">
+                        `data_modified`,
+                    </if>
+                    </if>
+                    <if test="fetchFields.otherFields!=null and fetchFields.otherFields.size>0">
+                        <foreach collection="fetchFields.otherFields" index="index" item="item" separator=",">
+                        `#{item}`
+                        </foreach>
+                    </if>
+                </if>
+            </if>
+            <if test="(_parameter instanceof com.tutu.edu.student.model.StudentCourse$QueryBuilder) == false" >
+                <include refid="allResult"></include>
+            </if>
+
+        </trim>
+    </sql>
+
+
+
+</mapper>
