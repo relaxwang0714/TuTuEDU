@@ -140,7 +140,7 @@ public class studentInfo implements Serializable {
                 "dataModified='" + dataModified + '\'' +
             '}';
     }
-
+    //构造函数
     public static Builder Build(){return new Builder();}
 
     public static ConditionBuilder ConditionBuild(){return new ConditionBuilder();}
