@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/main/main",
     "pages/talk/talk",    
     "pages/team/team",    
     "pages/logs/logs",
     "pages/mine/mine",
-    "pages/schedule/schedule",
-    "pages/main/main"
+    "pages/schedule/schedule"
   ],
   "window": {
     "backgroundTextStyle": "light",
