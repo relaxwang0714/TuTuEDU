@@ -3,6 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/course_management.css" />
+		<link rel="stylesheet" type="text/css" href="css/zxf_page.css"/>
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="js/zxf_page.js"></script>
 		<title></title>
 	</head>
 	<body>
@@ -59,31 +62,113 @@
 		<!--表格-->
 		<table border="1" cellspacing="20"> 
 			<th>
-				<td class="th_font">图片</td>
-				<td class="th_font">标题</td>
-				<td class="th_font">类目</td>
-				<td class="th_font">单价</td>
-				<td class="th_font">详情</td>
-				<td class="th_font">State</td>
+				<td class="th_font"><b>课程号</b></td>
+				<td class="th_font"><b>课程名称</b></td>
+				<td class="th_font"><b>所属院系</b></td>
+				<td class="th_font"><b>所属专业</b></td>
+				<td class="th_font"><b>教师工号</b></td>
+				<td class="th_font"><b>操作</b></td>
 			</th>
 	        <tr>  
 	            <td class="tr_input"><input type="checkbox" /></td>  
-	            <td><img src="img/pic.png"/></td>  
-	            <td>dahaodh1da</td>  
-	            <td>塑料瓶</td> 
-	            <td>12.5 元</td>
-	            <td>企业王国低气压王大全的</td>
-	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
-	        </tr>  
-	         
+	            <td>80001001</td>  
+	            <td>马克思主义哲学原理</td>  
+	            <td>哲学系</td> 
+	            <td>马克思主义哲学</td>
+	            <td>11110001</td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	        </tr>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>80002001</td>  
+	            <td>政治经济学原理</td>  
+	            <td>经济学系</td> 
+	            <td>政治经济学</td>
+	            <td>11120001</td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	        </tr>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>80007001</td>  
+	            <td>计算机导论</td>  
+	            <td>计算机系</td> 
+	            <td>计算机科学与技术</td>
+	            <td>11170001</td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	        </tr>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>80007002</td>  
+	            <td>程序设计基础（Java语言）</td>  
+	            <td>计算机系</td> 
+	            <td>计算机科学与技术</td>
+	            <td>11170002</td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	        </tr>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>80007003</td>  
+	            <td>网页与网站开发基础</td>  
+	            <td>计算机系</td> 
+	            <td>计算机科学与技术</td>
+	            <td>11170003</td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	        </tr>
+	        <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>80007004</td>  
+	            <td>计算机组装时间</td>  
+	            <td>计算机系</td> 
+	            <td>计算机科学与技术</td>
+	            <td>11170001</td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	        </tr>
+	        <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>80007005</td>  
+	            <td>数据库系统应用与管理</td>  
+	            <td>计算机系</td> 
+	            <td>计算机科学与技术</td>
+	            <td>11170008</td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	        </tr>
+	        <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>80007006</td>  
+	            <td>Android开发基础</td>  
+	            <td>计算机系</td> 
+	            <td>计算机科学与技术</td>
+	            <td>11170011</td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	        </tr>
+	        <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>80007007</td>  
+	            <td>电子线路实习</td>  
+	            <td>计算机系</td> 
+	            <td>计算机科学与技术</td>
+	            <td>11170010</td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	        </tr>
+	        <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>80007008</td>  
+	            <td>JSP程序设计课程实践</td>  
+	            <td>计算机系</td> 
+	            <td>计算机科学与技术</td>
+	            <td>11170015</td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	        </tr>
 	    </table>  
+	    <div class="zxf_pagediv"></div>
 	    
-	    
-	    <script type="text/javascript"  
-        src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>  
-  
-    <script type="text/javascript">  
-        //checkbox 全选/取消全选  
+	    <!--<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>-->
+	    <script type="text/javascript">
+		//翻页
+		$(".zxf_pagediv").createPage({
+			pageNum: 20,
+			current: 1,
+			backfun: function(e) {
+				//console.log(e);//回调
+			}
+		});
+		
+		//checkbox 全选/取消全选  
         var isCheckAll = false;  
         function swapCheck() {  
             if (isCheckAll) {  
@@ -98,7 +183,7 @@
                 isCheckAll = true;  
             }  
         }  
-    </script>  
+	</script>
 		
 	</body>
 </html>
