@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/course_management.css" />
+		<title></title>
+	</head>
+	<body>
+		
+		<!--刷选框-->
+		<form method="post">
+		<div id="brush_teacher">
+			<div class="brush_1">
+				教师工号<input type="text" class="text" style="margin-left: 10px;">
+			</div>
+			<div class="brush_2">
+				教师姓名<input type="text" class="text">
+			</div>
+			<div class="brush_3">
+				课程名称<input type="text" class="text_1">
+			</div>
+			
+			<div class="brush_7">
+				<select name="city" lay-verify="" value="" placeholder="请选择设备标签">
+					<option value=""></option>
+					<option value="2016-2017">&nbsp;&nbsp;&nbsp;2016-2017</option>
+					<option value="2017-2018">&nbsp;&nbsp;&nbsp;2017-2018</option>
+					<option value="2018-2019">&nbsp;&nbsp;&nbsp;2018-2019</option>
+				</select> 
+				学年第
+			</div>
+			<div class="brush_8">
+				<select name="city" lay-verify="" value="" placeholder="请选择设备标签">
+					<option value=""></option>
+					<option value="1">&nbsp;&nbsp;&nbsp;1</option>
+					<option value="2">&nbsp;&nbsp;&nbsp;2</option>
+				</select>
+				学期教师个人课程表
+			</div>
+			<div class="brush_teacher">
+				<input type="submit" class="brush_s" value="">
+					
+			</div>
+			<!--</a>-->
+			<!--<img src="img/search.png" />
+					<input type="submit" class="brush_7" value="">-->
+		</div>
+		</form>
+		
+		<!--订单-->
+		<div id="wait_top">
+			<div class="top_left"><input type="checkbox" onclick="swapCheck()" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;全选</div>
+			<div class="top_right">
+				<a href="#"><div class="top_right_1">Excel导出</div></a>
+			</div>
+		</div>
+		
+		<!--表格-->
+		<table border="1" cellspacing="20"> 
+			<th>
+				<td class="th_font">图片</td>
+				<td class="th_font">标题</td>
+				<td class="th_font">类目</td>
+				<td class="th_font">单价</td>
+				<td class="th_font">详情</td>
+				<td class="th_font">State</td>
+			</th>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td><img src="img/pic.png"/></td>  
+	            <td>dahaodh1da</td>  
+	            <td>塑料瓶</td> 
+	            <td>12.5 元</td>
+	            <td>企业王国低气压王大全的</td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	        </tr>  
+	         
+	    </table>  
+	    
+	    
+	    <script type="text/javascript"  
+        src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>  
+  
+    <script type="text/javascript">  
+        //checkbox 全选/取消全选  
+        var isCheckAll = false;  
+        function swapCheck() {  
+            if (isCheckAll) {  
+                $("input[type='checkbox']").each(function() {  
+                    this.checked = false;  
+                });  
+                isCheckAll = false;  
+            } else {  
+                $("input[type='checkbox']").each(function() {  
+                    this.checked = true;  
+                });  
+                isCheckAll = true;  
+            }  
+        }  
+    </script>  
+		
+	</body>
+</html>

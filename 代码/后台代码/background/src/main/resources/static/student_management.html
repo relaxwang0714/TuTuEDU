@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/zxf_page.css"/>
+	<link rel="stylesheet" href="css/student_management.css" />
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/zxf_page.js"></script>
+</head>
+<body>
+<div class="header">
+	<ul>
+		<li><a href="#"><div class="top_nav1"><b>学生信息管理</b></div></a></li>
+	</ul>
+</div>
+<a href="add_waste.html" target="con"><div class="out_order">数据更新</div></a>
+
+<form method="post">
+	<div style="width: 100%;height: 160px;background-color: white;">
+
+		<span class="student_management_name"><b>&nbsp;学号：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span>
+		<input type="text" class="student_management_title" placeholder="&nbsp;&nbsp;学号">
+
+		<span class="student_management_name"><b>&nbsp;学生姓名：</b></span>
+		<input type="text" class="student_management_title" placeholder="&nbsp;&nbsp;学生姓名">
+
+		<span class="student_management_name"><b>&nbsp;学生性别：</b></span>
+		<select class="student_management_select" id="numbers">
+			                <option value="man">男</option>
+			            	<option value="female">女</option>
+			            </select>
+
+		<span class="student_management_name"><b>&nbsp;学生电话：</b></span>
+		<input type="text" class="student_management_title" placeholder="&nbsp;&nbsp;学生电话">
+
+		<br /><br />
+		<span class="student_management_name"><b>&nbsp;所属院校：</b></span>
+		<select class="student_management_select_2" id="numbers" disabled="disabled">
+			<option value="">清华大学</option>
+			                <option value="1">北京大学</option>
+			            	<option value="2">清华大学</option>
+			<option value="3">浙江大学</option>
+			            </select>
+
+		<span class="student_management_name"><b>&nbsp;所属院系：</b></span>
+		<select class="student_management_select_3" id="numbers">
+			<option value=""></option>
+			                <option value="1">计算机系</option>
+			            	<option value="2">金融系</option>
+			<option value="3">英语系</option>
+			            </select>
+
+		<span class="student_management_name"><b>&nbsp;所属专业：</b></span>
+		<select class="student_management_select_3" id="numbers">
+			<option value=""></option>
+			                <option value="1">计算机科学与技术</option>
+			            	<option value="2">软件工程</option>
+			<option value="3">物联网</option>
+			            </select>
+
+		<span class="student_management_name"><b>&nbsp;所属班级：</b></span>
+		<select class="student_management_select_3" id="numbers">
+			<option value=""></option>
+			                <option value="1">计算机科学与技术1班</option>
+			            	<option value="2">计算机科学与技术2班</option>
+			<option value="3">计算机科学与技术3班</option>
+			            </select>
+
+		<input type="submit" class="brush_7" value="">
+	</div>
+</form>
+
+<div class="background"></div>
+
+<!--订单-->
+<div id="wait_top">
+	<div class="top_left"><input type="checkbox" onclick="swapCheck()" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;全选</div>
+	<div class="top_right">
+		<a href="#"><div class="top_right_1">Excel导出</div></a>
+	</div>
+</div>
+
+<!--表格-->
+<table border="1" cellspacing="20">
+	<th>
+	<td class="th_font"><b>学号</b></td>
+	<td class="th_font"><b>姓名</b></td>
+	<td class="th_font"><b>性别</b></td>
+	<td class="th_font"><b>所属院系</b></td>
+	<td class="th_font"><b>所属班级</b></td>
+	<td class="th_font"><b>操作</b></td>
+	</th>
+	<tr>
+		<td class="tr_input"><input type="checkbox" /></td>
+		<td>11110001</td>
+		<td>艾同学</td>
+		<td>男</td>
+		<td>金融系</td>
+		<td>金融1班</td>
+		<td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	</tr>
+	<tr>
+		<td class="tr_input"><input type="checkbox" /></td>
+		<td>11110002</td>
+		<td>包同学</td>
+		<td>男</td>
+		<td>金融系</td>
+		<td>金融1班</td>
+		<td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	</tr>
+	<tr>
+		<td class="tr_input"><input type="checkbox" /></td>
+		<td>11110003</td>
+		<td>毕同学</td>
+		<td>男</td>
+		<td>金融系</td>
+		<td>金融1班</td>
+		<td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	</tr>
+	<tr>
+		<td class="tr_input"><input type="checkbox" /></td>
+		<td>11110004</td>
+		<td>毕同学</td>
+		<td>女</td>
+		<td>金融系</td>
+		<td>金融1班</td>
+		<td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	</tr>
+	<tr>
+		<td class="tr_input"><input type="checkbox" /></td>
+		<td>11110005</td>
+		<td>鲍同学</td>
+		<td>男</td>
+		<td>金融系</td>
+		<td>金融1班</td>
+		<td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	</tr>
+	<tr>
+		<td class="tr_input"><input type="checkbox" /></td>
+		<td>11110006</td>
+		<td>白同学</td>
+		<td>女</td>
+		<td>金融系</td>
+		<td>金融1班</td>
+		<td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	</tr>
+	<tr>
+		<td class="tr_input"><input type="checkbox" /></td>
+		<td>11110007</td>
+		<td>百同学</td>
+		<td>女</td>
+		<td>金融系</td>
+		<td>金融1班</td>
+		<td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	</tr>
+	<tr>
+		<td class="tr_input"><input type="checkbox" /></td>
+		<td>11110008</td>
+		<td>曹同学</td>
+		<td>男</td>
+		<td>金融系</td>
+		<td>金融1班</td>
+		<td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	</tr>
+	<tr>
+		<td class="tr_input"><input type="checkbox" /></td>
+		<td>11110009</td>
+		<td>蔡同学</td>
+		<td>男</td>
+		<td>金融系</td>
+		<td>金融1班</td>
+		<td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	</tr>
+	<tr>
+		<td class="tr_input"><input type="checkbox" /></td>
+		<td>11110010</td>
+		<td>苍同学</td>
+		<td>女</td>
+		<td>金融系</td>
+		<td>金融1班</td>
+		<td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	</tr>
+
+
+</table>
+<div class="zxf_pagediv"></div>
+
+<!--<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>-->
+<script type="text/javascript">
+    //翻页
+    $(".zxf_pagediv").createPage({
+        pageNum: 20,
+        current: 1,
+        backfun: function(e) {
+            //console.log(e);//回调
+        }
+    });
+
+    //checkbox 全选/取消全选
+    var isCheckAll = false;
+    function swapCheck() {
+        if (isCheckAll) {
+            $("input[type='checkbox']").each(function() {
+                this.checked = false;
+            });
+            isCheckAll = false;
+        } else {
+            $("input[type='checkbox']").each(function() {
+                this.checked = true;
+            });
+            isCheckAll = true;
+        }
+    }
+</script>
+
+</body>
+</html>
