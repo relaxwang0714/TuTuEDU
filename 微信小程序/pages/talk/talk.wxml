@@ -1,0 +1,63 @@
+<!--pages/talk/talk.wxml-->
+<view class='bar'>
+  <view class='box'>
+    <image class='box_img' src='../../images/little/plun.png'></image>
+    <text class='box_txt'>1</text>
+  </view>
+  <view class='box'>
+    <image class='box_img' src='../../images/little/zan.png'></image>
+    <text class='box_txt'>2</text>
+  </view>
+  <view class='box'>
+    <image class='box_img' src='../../images/little/shouc.png'></image>
+    <text class='box_txt'>3</text>
+  </view>
+  <view class='box'>
+    <image class='box_img' src='../../images/little/share.png'></image>
+    <text class='box_txt'>4</text>
+  </view>
+</view>
+<view class='content'>
+  <view class='content_top'>
+    <text class='team'>数学自由小组</text>
+    <text class='title'>不亚于陀思妥耶夫斯基的数学</text>
+  </view>
+  <view class='user_bar'>
+    <image src='../../images/mainPic/8.png' class='user_img'></image>
+    <view class='user_detail'>
+      <text class='user_name'>lsjfldsjl</text>
+      <text class='user_sc'>杭州电子科技大学</text>
+    </view>
+    <text class='user_time'>3天前</text>
+  </view>
+  <view class='content_article'>
+    <text style='font-size:50rpx;'>
+    宫崎学长预约巴黎93省Bobigny长居3个月以后，终于来到了警察局的27号窗口前，整个流程在1分钟内结束，像是他从日超买好了食材，花了3个小时准备丰盛的料理，然后一个人5分钟内吃完了便当，看着灶台上没有成就感的尖头筷子。
+
+93省是巴黎郊区的移民大省，难民，黑户，按照萨科齐的说法：社会渣滓，让这里成了恐袭和骚乱的代名词。尽管预约时间是当天早上十点，宫崎依然等到下午四点才挪到窗口前，这期间他百无聊赖地看着大屏幕上滚动的传唤数字，警局改造后如何高效便捷的好评，撩开胸脯给孩子喂奶的撒哈拉以南，捧着可兰经不知道嘀咕什么的撒哈拉以北。六个小时后，他贴着玻璃对着像在坐监的工作人员，听口音像是外省来的法国中年妇女喊话，递材料那一刻，他不知道谁的手里
+瘫痪着谁的自由。
+
+“想干的事还多得很，不想死。不过，肯定不行了！明天早晨就没命喽！这回可是运算错误。” 
+
+据说这是冈洁的遗言。我不知道冈洁是怎样的人，但他看起来真真像个白痴，高中时因为想看看不刷牙有什么后果，索性整个三年都没刷过牙。福楼拜能写出《庸见词典》在于相比那些“半吊子的白痴”，他是真真“家庭的白痴”。世上真真有梅什金公爵这样的人吗？读者一度以为他是个基督式的人物，无条件地娶纳斯塔霞为妻，直到他领悟到基督的爱对这个世界也毫无作用。
+    </text>
+    <text style='font-size:35rpx;color:#909090;'>@版权归作者所有，任何形式转载请联系作者 </text>
+  </view>
+  <text style='margin-top:20rpx;margin-bottom:20rpx;margin-left: 40rpx;margin-right: 40rpx;'>评论（1）</text>
+  <view class='msg'>
+    <view class='msg_left'>
+      <image src='../../images/mainPic/8.png' class='msg_img'></image>
+      <text class='msg_name'>卷个浪</text>
+    </view>
+    <view class='msg_right'>
+      <text class='msg_response'>
+        不过一道题算了一百遍也没有解出来，多少也有些让人沮丧啊。你现在做的论文是你最喜欢的法国作家吗？让我猜一猜，司汤达？
+        </text>
+      <view class='msg_time'>
+        <text>评论</text>
+        <text class='msg_time_color'>3小时以前</text>
+      </view>
+    </view>
+  </view>
+
+</view>
