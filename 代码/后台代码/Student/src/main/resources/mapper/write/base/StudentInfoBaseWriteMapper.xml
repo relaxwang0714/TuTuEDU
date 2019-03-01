@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.tutu.edu.student.mapper.write.base.studentInfoBaseWriteMapper">
+<mapper namespace="com.tutu.edu.student.mapper.write.base.StudentInfoBaseWriteMapper">
 
 
-    <insert id="insertstudentInfo"  useGeneratedKeys="true" keyProperty="  id">
+    <insert id="insertStudentInfo"  useGeneratedKeys="true" keyProperty="id">
         INSERT INTO `studentInfo`
         (
         <trim suffixOverrides=",">
-                    <if test="  id!=null">
-                        `  id`,
+                    <if test="id!=null">
+                        `id`,
                     </if>
                     <if test="studentNum!=null">
                         `student_num`,
@@ -46,8 +46,8 @@
         VALUES
         (
         <trim suffixOverrides=",">
-                <if test="  id!=null">
-                    #{  id},
+                <if test="id!=null">
+                    #{id},
                 </if>
                 <if test="studentNum!=null">
                     #{studentNum},
@@ -86,7 +86,7 @@
 
 
 
-    <update id="updatestudentInfo">
+    <update id="updateStudentInfo">
         UPDATE `studentInfo`
         SET
         <trim suffixOverrides=",">
@@ -99,7 +99,7 @@
             <if test="studentSex != null and studentSex!=''">
                 `student_sex` = #{studentSex},
             </if>
-            <if test="studentPhone != null and studentPhone!=''">
+            <if test="studentPhone != null">
                 `student_phone` = #{studentPhone},
             </if>
             <if test="collegeId != null">
@@ -123,7 +123,7 @@
         </trim>
         WHERE
         <trim suffixOverrides="and">
-                `  id` = #{  id} and
+                `id` = #{id} and
         </trim>
     </update>
 
@@ -140,7 +140,7 @@
         <if test="set.studentSex != null and set.studentSex!=''">
             `student_sex` = #{set.studentSex},
         </if>
-        <if test="set.studentPhone != null and set.studentPhone!=''">
+        <if test="set.studentPhone != null">
             `student_phone` = #{set.studentPhone},
         </if>
         <if test="set.collegeId != null">
@@ -163,17 +163,17 @@
         </if>
         </trim>
         <trim prefix="where" suffixOverrides="and | or">
-                <if test="where.  idList != null">
-                    `  id` in
-                    <foreach collection="where.  idList" close=")" open="(" separator="," item="item">
+                <if test="where.idList != null">
+                    `id` in
+                    <foreach collection="where.idList" close=")" open="(" separator="," item="item">
                         #{item}
                     </foreach> and
                 </if>
-            <if test="where.  idSt !=null">
-                `  id` >= #{where.  idSt} and
+            <if test="where.idSt !=null">
+                `id` >= #{where.idSt} and
             </if>
-            <if test="where.  idEd!=null">
-                `  id` &lt;= #{where.  idEd} and
+            <if test="where.idEd!=null">
+                `id` &lt;= #{where.idEd} and
             </if>
                 <if test="where.studentNumList != null">
                     `student_num` in
@@ -233,19 +233,11 @@
                         #{item}
                     </foreach> and
                 </if>
-            <if test ="where.fuzzyStudentPhone!=null and where.fuzzyStudentPhone.size()>0">
-                (
-                <foreach collection="where.fuzzyStudentPhone"  separator="or" item="item">
-                    `Student_phone` like concat('%',#{item},'%')
-                </foreach>
-                ) and
+            <if test="where.studentPhoneSt !=null">
+                `student_phone` >= #{where.studentPhoneSt} and
             </if>
-            <if test ="where.rightFuzzyStudentPhone!=null and where.rightFuzzyStudentPhone.size()>0">
-                (
-                <foreach collection="where.rightFuzzyStudentPhone"  separator="or" item="item">
-                    `Student_phone` like concat(#{item},'%')
-                </foreach>
-                ) and
+            <if test="where.studentPhoneEd!=null">
+                `student_phone` &lt;= #{where.studentPhoneEd} and
             </if>
                 <if test="where.collegeIdList != null">
                     `college_id` in
