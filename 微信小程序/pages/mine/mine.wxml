@@ -1,2 +1,76 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+  <view class='top'>
+      <image src='../../images/minePic/set.png' class='set'></image>
+     <view class='UserPic1'><image src='../../images/mainPic/UserPic.png'                   class='UserPic'></image></view>              
+    <view class='UserName'><text>{{UserName}}</text>
+    <image src='../../images/minePic/modify.png' class='modifyPic'></image></view>
+    <view class='intro'><text>{{intro}}</text></view>
+  </view> 
+
+  <view>
+    <view  class='MineTop'>我的数据</view>
+    <scroll-view scroll-x="true" class="scroll-box">
+      <view  class='Minedata1'>
+        <view class='Circle1'></view>
+        <view class='font-top'>今日学习完整度</view>
+        <view class='font-top'>1/5</view>
+      </view>
+      <view  class='Minedata1'>
+        <view class='Circle2'></view>
+        <view class='font-top'>本周目标</view>
+        <view class='font-top'>0/5</view>
+      </view>
+      <view  class='Minedata1'>
+        <view class='Circle3'></view>
+        <view class='font-top'>连续打卡</view>
+        <view class='font-top'>28天</view>
+      </view>
+    </scroll-view>
+     <view  class='Minedata2'>
+        <view class='benzhoupaim'>本周排名 <image src='../../images/minePic/return.png' class='return'></image></view>
+        
+        <view class='font-black'>学校<text class='righta'>10</text></view>
+        <view class='font-black'>全国<text class='righta'>3892</text></view>
+      </view>
+  </view>
+
+<view>
+  <view class='MineTop'>校园功能</view>
+  <view class='school-row'>
+    <view class='school-fuction'>
+      <image src='../../images/minePic/evaluate.png' class='evaluate' ></image>
+      <text class='school-font'>教学考评</text>
+    </view>
+    <view class='school-fuction'>
+      <image src='../../images/minePic/classrooms.png' class='evaluate'></image>
+      <text class='school-font'>空教室</text>
+    </view>
+    <view class='school-fuction'>
+      <image src='../../images/minePic/garde1.png' class='evaluate'></image>
+      <text class='school-font'>我的成绩</text>
+    </view>
+    <view class='school-fuction'>
+      <image src='../../images/minePic/test.png' class='evaluate'></image>
+      <text class='school-font'>我的考试</text>  
+    </view> 
+</view>
+
+    <view class='school-row'>
+    <view class='school-fuction'>
+      <image src='../../images/minePic/course.png' class='evaluate'></image>
+      <text class='school-font'>我的课程</text>
+    </view>
+    <view class='school-fuction'>
+      <image src='../../images/minePic/collocation.png' class='evaluate'></image>
+      <text class='school-font'>我的收藏</text>
+    </view>
+    <view class='school-fuction'>
+      <image src='../../images/minePic/Subscribe.png' class='evaluate'></image>
+      <text class='school-font'>我的订阅</text>
+    </view>
+    <view class='school-fuction'>
+      <image src='../../images/minePic/focus.png' class='evaluate'></image>
+      <text class='school-font'>我的关注</text>  
+    </view> 
+  </view>
+</view>
