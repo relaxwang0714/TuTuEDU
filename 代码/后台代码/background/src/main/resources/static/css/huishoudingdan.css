@@ -1,0 +1,10 @@
+	* {
+    padding: 0px;
+    margin: 0px;
+	}
+	body{
+		background-color: #F1F2F8;
+	}
+	td{
+		width: 230px;
+	}

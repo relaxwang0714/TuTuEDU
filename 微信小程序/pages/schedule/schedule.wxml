@@ -1,2 +1,23 @@
 <!--pages/schedule/schedule.wxml-->
-<text>pages/schedule/schedule.wxml</text>
+<import src="../../templates/nav.wxml" />
+<view class='search_bar'>
+  <input class='search'></input>
+  <image src='../../images/little/more.png' class='more'></image>
+</view>
+<view class='navBar'>
+  <block wx:for="{{navDatas}}" wx:for-index="DataId" wx:key="DataId">
+    <view class="navItem {{currentTab == DataId ?'active':''}}" data-current="{{DataId}}" bindtap="navbarTap">{{item.navData}}</view>
+  </block>
+</view>
+<!--热门-->
+<view hidden="{{currentTab!==0}}" style='margin-left:40rpx;margin-right:40rpx;'>
+  <block wx:for="{{MainCourse}}" key="course_id">
+    <template is="list1" data="{{...item}}" />
+  </block>
+</view>
+<!--TED-->
+<view hidden="{{currentTab!==1}}" style='margin-left:40rpx;margin-right:40rpx;'>
+  <block wx:for="{{MainCourse}}" key="course_id">
+    <template is="list1" data="{{...item}}" />
+  </block>
+</view>

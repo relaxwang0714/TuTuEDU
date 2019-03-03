@@ -1,4 +1,5 @@
-<!--pages/mine/mine.wxml-->
+﻿<!--pages/mine/mine.wxml-->
+
   <view class='top'>
       <image src='../../images/minePic/set.png' class='set'></image>
      <view class='UserPic1'><image src='../../images/mainPic/UserPic.png'                   class='UserPic'></image></view>              
@@ -74,3 +75,4 @@
     </view> 
   </view>
 </view>
+

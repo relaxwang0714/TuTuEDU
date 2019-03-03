@@ -1,0 +1,57 @@
+/* pages/team/team.wxss */
+@import"../../templates/nav.wxss"; 
+page{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.mainteam{
+  display: flex;
+  flex-direction: row;
+  padding: 40rpx;
+  box-shadow: 6rpx 6rpx 12rpx #f0f0f0;
+}
+.mainteam .teamleft{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.teamleft .teamname{
+  font-size: 25rpx;
+  font-weight: bold;
+}
+.teamleft .teamnumber{
+  font-size: 23rpx;
+  color: #909090;
+}
+.teamleft .teamcontent{
+  font-size: 23rpx;
+  color: #909090;
+}
+.mainteam .teamright{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+}
+.teamright .teampic{
+  height: 128rpx;
+  width: 128rpx;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+  margin-top: 5rpx;
+}
+.teamright .teamtxt{
+  box-shadow: 6rpx 6rpx 12rpx #f0f0f0;
+  height: 50rpx;
+  width: 165rpx;
+  border-radius: 40rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #909090;
+}
+.maintalk{
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}

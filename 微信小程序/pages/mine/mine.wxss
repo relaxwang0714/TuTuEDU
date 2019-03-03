@@ -1,5 +1,4 @@
 /* pages/mine/mine.wxss */
-/* pages/main/main.wxss */
 
 
 .top{
@@ -163,3 +162,4 @@
   flex-direction:row;
   margin-bottom: 30rpx;
 }
+
