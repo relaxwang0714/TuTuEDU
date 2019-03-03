@@ -2,13 +2,29 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="css/course_management.css" />
+		<link rel="stylesheet" href="css/course_management_all.css" />
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<style>
+			table{
+				display: none;
+			}
+		</style>
+		<script>
+			$(function(){
+					//加鼠标单击事件
+					$(".brush_s").click(function(){
+						$(".exam_teacher").css({'display':'block'});
+					})
+				
+			})	
+		
+		</script>
 		<title></title>
 	</head>
 	<body>
 		
 		<!--刷选框-->
-		<form method="post">
+		<!--<form method="post">-->
 		<div id="brush_teacher">
 			<div class="brush_1">
 				教师工号<input type="text" class="text" style="margin-left: 10px;">
@@ -25,13 +41,12 @@
 					<option value=""></option>
 					<option value="2016-2017">&nbsp;&nbsp;&nbsp;2016-2017</option>
 					<option value="2017-2018">&nbsp;&nbsp;&nbsp;2017-2018</option>
-					<option value="2018-2019">&nbsp;&nbsp;&nbsp;2018-2019</option>
+					<option value="2018-2019" selected="selected">&nbsp;&nbsp;&nbsp;2018-2019</option>
 				</select> 
 				学年第
 			</div>
 			<div class="brush_8">
 				<select name="city" lay-verify="" value="" placeholder="请选择设备标签">
-					<option value=""></option>
 					<option value="1">&nbsp;&nbsp;&nbsp;1</option>
 					<option value="2">&nbsp;&nbsp;&nbsp;2</option>
 				</select>
@@ -45,7 +60,7 @@
 			<!--<img src="img/search.png" />
 					<input type="submit" class="brush_7" value="">-->
 		</div>
-		</form>
+		<!--</form>-->
 		
 		<!--订单-->
 		<div id="wait_top">
@@ -56,23 +71,21 @@
 		</div>
 		
 		<!--表格-->
-		<table border="1" cellspacing="20"> 
+		<table border="1" cellspacing="20" class="exam_teacher"> 
 			<th>
-				<td class="th_font">图片</td>
-				<td class="th_font">标题</td>
-				<td class="th_font">类目</td>
-				<td class="th_font">单价</td>
-				<td class="th_font">详情</td>
-				<td class="th_font">State</td>
+				<td class="th_font"><b>教师工号</b></td>
+				<td class="th_font"><b>教师姓名</b></td>
+				<td class="th_font"><b>监考科目</b></td>
+				<td class="th_font"><b>监考地点</b></td>
+				<td class="th_font"><b>监考时间</b></td>
 			</th>
 	        <tr>  
 	            <td class="tr_input"><input type="checkbox" /></td>  
-	            <td><img src="img/pic.png"/></td>  
-	            <td>dahaodh1da</td>  
-	            <td>塑料瓶</td> 
-	            <td>12.5 元</td>
-	            <td>企业王国低气压王大全的</td>
-	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	            <td>11170022</td>  
+	            <td>赵老师</td>  
+	            <td>高等数学A</td> 
+	            <td>厚德楼203</td>
+	            <td>2019/1/10/8：00-10：00</td>
 	        </tr>  
 	         
 	    </table>  

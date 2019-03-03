@@ -69,24 +69,13 @@
 	}
 	
 	/*表格*/
-	table,th,tr,td{
-		border: none;
-	}
+	
 	table{
+		display: none;
 		margin-top: 20px;
-		margin-left: 18px;
+		margin-left: 38px;
+		margin-bottom: 20px;
 	}
-	.th_font{
-		/*color: #D3D4D3;*/
-		width: 220px;
-	}
-	.tr_input input{
-		width: 18px;
-		height: 18px;
-		-webkit-appearance:none;
-		background-color: #B7B7BA;
-	}
-	.tr_input input:checked{-webkit-appearance:checkbox;background-color: #B7B7BA;}
 	
 /*筛选框*/
 	#brush{
