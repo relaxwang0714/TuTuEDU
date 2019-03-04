@@ -1,0 +1,126 @@
+<!--pages/calendar/calendar.wxml-->
+<view class='calendar_box'>
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="bindDateChange">
+    <view class='calendar_adds'>
+      <image src='../../images/little/add.png' class='calendar_add'></image>
+    </view>
+  </picker>
+
+  <view class='calendar'>
+    <view class='calendar_month'>{{NowMon}}月</view>
+    <view class='calendar_week'>
+      <view style='display: flex;flex-direction: row;'>
+        <block wx:for='{{ weekArr }}'>
+          <view style='margin-right:45rpx;width:35rpx;text-align:center;'>
+            {{item}}
+          </view>
+        </block>
+      </view>
+      <view style='display: flex;flex-direction: row;'>
+        <block wx:for='{{weekDay}}'>
+          <view style='margin-right:45rpx;width:35rpx;text-align:center;' class='{{ item ==  getDate ? "dateOn" : ""}}'>
+            {{item}}
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='containers'>
+  <view class='item'>
+    <view class='item_bar'>
+      <view class='item_title'>
+        我的Flag
+      </view>
+      <view class='item_flag'>
+        <text class='item_flag_txt'>每天早起读英语十分钟</text>
+        <image class='item_flag_img' src='../../images/little/modify.png'></image>
+      </view>
+    </view>
+    <view class='item_ka'>
+      <view class='item_ka_btn'>打卡</view>
+      <text class='item_ka_txt'>今日打卡人数：1920</text>
+    </view>
+  </view>
+
+  <view class='im'>
+    <text class='im_title'>学校</text>
+    <view class='im_bar'>
+      <view class='im_bar_statusBar'>
+        <view class='im_statusBar'>
+          <view class='im_status'></view>
+          <view class='im_time'>8:00-9:55</view>
+        </view>
+        <view class='im_class'>
+          <text class='im_class_name'>计算机应用基础</text>
+          <text class='im_class_teacher'>E203 陈云</text>
+        </view>
+      </view>
+      <view class='im_ka'>
+        <view class='im_ka_btn'>下课打卡</view>
+        <text class='im_ka_txt'>0:30:00后可打卡</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='im'>
+    <text class='im_title'>学校</text>
+    <view class='im_bar'>
+      <view class='im_bar_statusBar'>
+        <view class='im_statusBar'>
+          <view class='im_status1'></view>
+          <view class='im_time'>13:20-15:05</view>
+        </view>
+        <view class='im_class'>
+          <text class='im_class_name'>应用文写作</text>
+          <text class='im_class_teacher'>E242 陈丰</text>
+        </view>
+      </view>
+      <view class='im_ka'>
+        <view class='im_ka_btn'>上课打卡</view>
+        <text class='im_ka_txt'></text>
+      </view>
+    </view>
+  </view>
+
+  <view class='im'>
+    <text class='im_title1'>网课</text>
+    <view class='im_bar'>
+      <view class='im_bar_statusBar'>
+        <view class='im_statusBar'>
+          <view class='im_status1'></view>
+          <view class='im_time'>15:05-16:45</view>
+        </view>
+        <view class='im_class'>
+          <text class='im_class_name'>电工与电子技术</text>
+          <text class='im_class_teacher'>何科文</text>
+        </view>
+      </view>
+      <view class='im_ka'>
+        <view class='im_ka_btn1'>开始学习</view>
+        <text class='im_ka_txt'></text>
+      </view>
+    </view>
+  </view>
+
+  <view class='im'>
+    <text class='im_title1'>网课</text>
+    <view class='im_bar'>
+      <view class='im_bar_statusBar'>
+        <view class='im_statusBar'>
+          <view class='im_status1'></view>
+          <view class='im_time'>18:20-20:00</view>
+        </view>
+        <view class='im_class'>
+          <text class='im_class_name'>企业网综合管理</text>
+          <text class='im_class_teacher'>E242 董枫树</text>
+        </view>
+      </view>
+      <view class='im_ka'>
+        <view class='im_ka_btn'>上课打卡</view>
+        <text class='im_ka_txt'></text>
+      </view>
+    </view>
+  </view>
+  
+</view>
