@@ -3,12 +3,29 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/exam_management.css" />
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<style>
+			.scor_student{
+				display: none;
+			}
+		</style>
+		<script>
+			$(function(){
+					//加鼠标单击事件
+					$(".brush_s").click(function(){
+						$(".scor_student").css({'display':'block'});
+					})
+				
+			})	
+		
+		</script>
+		
 		<title></title>
 	</head>
 	<body>
 		
 		<!--刷选框-->
-		<form method="post">
+		<!--<form method="post">-->
 		<div id="brush_class">
 			<div class="brush_1">
 				学号<input type="text" class="text" style="margin-left: 10px;">
@@ -18,16 +35,14 @@
 			</div>
 			<div class="brush_score1">
 				<select name="city" lay-verify="" value="" placeholder="请选择设备标签">
-					<option value=""></option>
 					<option value="2016-2017">&nbsp;&nbsp;&nbsp;2016-2017</option>
 					<option value="2017-2018">&nbsp;&nbsp;&nbsp;2017-2018</option>
-					<option value="2018-2019">&nbsp;&nbsp;&nbsp;2018-2019</option>
+					<option value="2018-2019" selected="selected">&nbsp;&nbsp;&nbsp;2018-2019</option>
 				</select> 
 				学年第
 			</div>
 			<div class="brush_score2">
 				<select name="city" lay-verify="" value="" placeholder="请选择设备标签">
-					<option value=""></option>
 					<option value="1">&nbsp;&nbsp;&nbsp;1</option>
 					<option value="2">&nbsp;&nbsp;&nbsp;2</option>
 				</select>
@@ -41,7 +56,7 @@
 			<!--<img src="img/search.png" />
 					<input type="submit" class="brush_7" value="">-->
 		</div>
-		</form>
+		<!--</form>-->
 		
 		<!--订单-->
 		<div id="wait_top">
@@ -52,25 +67,88 @@
 		</div>
 		
 		<!--表格-->
-		<table border="1" cellspacing="20"> 
+		<table border="1" cellspacing="20" class="scor_student"> 
 			<th>
-				<td class="th_font">图片</td>
-				<td class="th_font">标题</td>
-				<td class="th_font">类目</td>
-				<td class="th_font">单价</td>
-				<td class="th_font">详情</td>
-				<td class="th_font">State</td>
+				<td class="th_font"><b>学号</b></td>
+				<td class="th_font"><b>考试代码</b></td>
+				<td class="th_font"><b>学生姓名</b></td>
+				<td class="th_font"><b>性别</b></td>
+				<td class="th_font"><b>考试科目</b></td>
+				<td class="th_font"><b>考试成绩</b></td>
 			</th>
 	        <tr>  
 	            <td class="tr_input"><input type="checkbox" /></td>  
-	            <td><img src="img/pic.png"/></td>  
-	            <td>dahaodh1da</td>  
-	            <td>塑料瓶</td> 
-	            <td>12.5 元</td>
-	            <td>企业王国低气压王大全的</td>
-	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	            <td>11107028</td>
+				<td>07007001</td>
+				<td>赵同学</td>
+	            <td>女</td>
+	            <td>高等数学A</td> 
+	            <td>90</td>
 	        </tr>  
-	         
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>
+	            <td>11107028</td>
+				<td>07007002</td>
+	            <td>赵同学</td>
+	            <td>女</td>
+	            <td>大学英语（三）</td> 
+	            <td>88</td>
+	        </tr> 
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>
+	            <td>11107028</td>
+				<td>07007003</td>
+	            <td>赵同学</td>
+	            <td>女</td>
+	            <td>计算机科学与技术导论</td> 
+	            <td>93</td>
+	        </tr> 
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>11107028</td>
+				<td>07007004</td>
+	            <td>赵同学</td>  
+	            <td>女</td>
+	            <td>形势与政策（一）</td> 
+	            <td>88</td>
+	        </tr> 
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>11107028</td>
+				<td>07007005</td>
+	            <td>赵同学</td>  
+	            <td>女</td>
+	            <td>计算机网络</td> 
+	            <td>88</td>
+	        </tr> 
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>11107028</td>
+				<td>07007006</td>
+	            <td>赵同学</td>  
+	            <td>女</td>
+	            <td>思想道德修养与法律基础</td> 
+	            <td>93</td>
+	        </tr> 
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>11107028</td>
+				<td>07007007</td>
+	            <td>赵同学</td>  
+	            <td>女</td>
+	            <td>军事理论</td> 
+	            <td>95</td>
+	        </tr> 
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>11107028</td>
+				<td>07007008</td>
+	            <td>赵同学</td>  
+	            <td>女</td>
+	            <td>程序设计技术</td> 
+	            <td>91</td>
+	        </tr> 
+	                 
 	    </table>  
 	    
 	    
@@ -95,5 +173,5 @@
         }  
     </script>  
 		
-	</body>
+		</body>
 </html>
