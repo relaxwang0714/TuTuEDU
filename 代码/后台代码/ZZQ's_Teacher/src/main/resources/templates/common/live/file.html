@@ -7,12 +7,12 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="shortcut icon" href="favicon.ico">
+    <link href="/css/zzqback.css" rel="stylesheet">
     <link href="/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
     <link href="/css/font-awesome.css?v=4.4.0" rel="stylesheet">
     <link href="/css/animate.css" rel="stylesheet">
     <link href="/css/layui.css" rel="stylesheet">
     <link href="/css/style.css?v=4.1.0" rel="stylesheet">
-    <link href="/css/zzqback.css" rel="stylesheet">
     <style>
         .aactive {
             color: #13b5b7 !important;
@@ -25,10 +25,10 @@
 <body class="gray-bg">
 <div class="wrapper wrapper-content" id="app">
     <div>
-        <h2  class="class_top">&nbsp;&nbsp;&nbsp;课程管理中心</h2>
+        <h2  class="class_top">&nbsp;&nbsp;&nbsp;直播间管理中心</h2>
         <div class="class_upload">
             <button type="button" class="layui-btn" onclick="add()">
-                <i class="fa fa-cloud"></i>创建课程
+                <i class="fa fa-cloud"></i>创建直播
             </button>
         </div>
     </div>
@@ -47,29 +47,29 @@
         <div class="col-sm-12 animated fadeInRight">
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="file-box" v-for="row in rows">
-                        <div class="file">
+                    <div class="file-box">
+
                             <a href="#">
-                                <span class="corner"></span>
-                                <div class="image">
-                                    <img src="../img/class_1.jpg">
+                                    <span class="corner"></span>
+                                    <div class="image123 image">
+                                        <img src="../img/blank.png" class="blankpic">
+                                    </div>
+                                    <div class="file-name">
+                                        <br/>
+                                    <h3></h3>
+                                    <h5></h5>
                                 </div>
-                                <div class="file-name">
-                                    <br/>
-                                    <h3>JavaScript版 数据结构与算法</h3>
-                                    <h5>实战&nbsp; &nbsp; &nbsp; 中级&nbsp; &nbsp; &nbsp; 已选人数：847</h5>
-                                </div>
-                                <div class="class_bottom">
+                               <!-- <div class="class_bottom">
                                         &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
                                     &nbsp; &nbsp; &nbsp; <button
                                             class="btn btn-warning btn-xs copy" :url="row.url">编辑课程
                                     </button>&nbsp; &nbsp; &nbsp; &nbsp;<button class="btn btn-danger btn-xs"
                                                                                 @click="remove(row.id)">删除课程
                                     </button>
-                                </div>
+                                </div>-->
                             </a>
                         </div>
-                    </div>
+
                     <div id="incomeNum"></div>
                 </div>
             </div>
@@ -92,7 +92,7 @@
 <script src="/js/vue.min.js"></script>
 
 <script>
-    var app = new Vue({
+/*    var app = new Vue({
         el: '#app',
         data: {
             limit: 12,
@@ -175,7 +175,7 @@
         created: function () {
             this.changeType('')
         }
-    });
+    });*/
 </script>
 <script type="text/javascript">
     var clipboard = new Clipboard('button.copy', {
@@ -210,7 +210,7 @@
     function add() {
         layer.open({
             type : 2,
-            title : '创建课程',
+            title : '增加',
             maxmin : true,
             shadeClose : false, // 点击遮罩关闭层
             area : [ '800px', '520px' ],

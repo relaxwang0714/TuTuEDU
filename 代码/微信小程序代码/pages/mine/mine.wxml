@@ -1,4 +1,4 @@
-﻿<!--pages/mine/mine.wxml-->
+<!--pages/mine/mine.wxml-->
 
   <view class='top'>
       <image src='../../images/minePic/set.png' class='set'></image>
@@ -39,15 +39,15 @@
   <view class='MineTop'>校园功能</view>
   <view class='school-row'>
     <view class='school-fuction'>
-      <image src='../../images/minePic/evaluate.png' class='evaluate' ></image>
+      <image src='../../images/minePic/evaluate.png' class='evaluate1' ></image>
       <text class='school-font'>教学考评</text>
     </view>
     <view class='school-fuction'>
-      <image src='../../images/minePic/classrooms.png' class='evaluate'></image>
+      <image src='../../images/minePic/classrooms.png' class='evaluate2'></image>
       <text class='school-font'>空教室</text>
     </view>
     <view class='school-fuction'>
-      <image src='../../images/minePic/garde1.png' class='evaluate'></image>
+      <image src='../../images/minePic/garde1.png' class='evaluate3'></image>
       <text class='school-font'>我的成绩</text>
     </view>
     <view class='school-fuction'>
@@ -62,15 +62,15 @@
       <text class='school-font'>我的课程</text>
     </view>
     <view class='school-fuction'>
-      <image src='../../images/minePic/collocation.png' class='evaluate'></image>
+      <image src='../../images/minePic/collocation.png' class='evaluate6'></image>
       <text class='school-font'>我的收藏</text>
     </view>
     <view class='school-fuction'>
-      <image src='../../images/minePic/Subscribe.png' class='evaluate'></image>
+      <image src='../../images/minePic/Subscribe.png' class='evaluate7'></image>
       <text class='school-font'>我的订阅</text>
     </view>
     <view class='school-fuction'>
-      <image src='../../images/minePic/focus.png' class='evaluate'></image>
+      <image src='../../images/minePic/focus.png' class='evaluate8'></image>
       <text class='school-font'>我的关注</text>  
     </view> 
   </view>

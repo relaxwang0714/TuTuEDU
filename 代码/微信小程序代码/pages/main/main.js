@@ -4,6 +4,12 @@ Page({
   /**
    * 页面的初始数据
    */
+  btnclick: function () {
+    console.log('123');
+    wx.navigateTo({
+      url: '../onlinevedio/onlinevedio'
+    })
+  },
   data: {
     UserName:'Shawn',
     MainButton:[

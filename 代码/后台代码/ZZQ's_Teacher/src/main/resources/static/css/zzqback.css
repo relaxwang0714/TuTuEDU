@@ -1,10 +1,18 @@
 .class_upload{
     display: inline-block;
-    margin-left: 1150px;
+    margin-left: 1135px;
 }
 .class_top{
     display: inline-block;
 }
 .class_bottom{
     height: 20px;
+}
+.blankpic{
+    width: 1440px;
+    height: 610px;
+}
+.file .icon, .file .image123 {
+    height: 600px !important;
+    width: 1500px;
 }

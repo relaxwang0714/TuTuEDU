@@ -1,0 +1,170 @@
+/* pages/onlinevedio/onlinevedio.wxss */
+.video{
+  width: 100%;
+  height: 290rpx;
+  border-radius: 10px
+}
+.live_top{
+  margin-top:27rpx;
+  font-size:32rpx;
+  font-weight:bold;
+}
+.video_bottom{
+  margin-left: 40rpx;
+}
+.live_teacher{
+  margin-top:25rpx;
+  font-size:26rpx;
+  color:#959595;
+}
+.course_star{
+  display: flex;
+  flex-direction: row;
+  margin-top: 25rpx;
+}
+.course_grade{
+  font-size: 30rpx;
+}
+.course_star1{
+  width: 25rpx;
+  height: 25rpx;
+  justify-content: center;
+  margin-right: 10rpx;
+}
+.navBar{
+    height: 80rpx;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top:40rpx;
+    color: #878787;
+}
+.navItem{
+  margin-right: 30rpx;
+  width: 30%;
+  height: 60rpx;
+  text-align: center;
+  box-shadow: 3rpx 3rpx 12rpx #f0f0f0;
+  border-radius: 170rpx;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navItem.active{
+  color: white;
+  background-color: #eeb478;
+}
+.live_box{
+  margin-top:40rpx;
+  margin-left:0rpx;
+  box-shadow:3px 3px 6px #f0f0f0;
+  border-radius:10rpx;
+  width:651rpx;
+  padding-left:0rpx;
+  padding-right:20rpx;
+}
+.live_top_font{
+  margin-top:27rpx;
+  font-size:31rpx;
+  font-weight:bold;
+}
+.live_small_font{
+  font-size:31rpx;
+}
+.live_injoin_button{
+  width:260rpx;
+  height:84rpx;
+  background-color:#eeb478;
+  border-radius:50rpx;
+  font-size:38rpx;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-left:356rpx;
+
+}
+.live_box_class{
+  margin-top:25rpx;
+  margin-left:0rpx;
+  box-shadow:3px 3px 6px #f0f0f0;
+  border-radius:10rpx;
+  width:651rpx;
+  padding:20rpx;
+  height: 130rpx;
+  font-size:31rpx;
+  margin-bottom: 30rpx;
+}
+.box_row{
+  display: flex;
+  flex-direction: row;
+}
+.comment_right1{
+  display: flex;
+  flex-direction: row;
+  height: 60rpx;
+  width: 60rpx;
+  background-color: rgb(107, 107, 240);
+  border-radius: 200rpx;
+}
+.comment_right2{
+  display: flex;
+  flex-direction: row;
+  height: 60rpx;
+  width: 60rpx;
+  background-color: rgb(22, 197, 6);
+  border-radius: 200rpx;
+}
+.comment_left{
+  display: flex;
+  flex-direction: column;
+  margin-left: 15rpx;
+}
+.comment_pupil{
+  font-size:26rpx;
+  color:#959595;
+}
+.comment_content{
+  font-size: 32rpx;
+}
+.comment_huifubox{
+  margin-top:25rpx;
+  margin-left:39rpx;
+  box-shadow:3px 3px 6px #f0f0f0;
+  border-radius:10rpx;
+  padding:20rpx;
+  height: 130rpx;
+  font-size:31rpx;
+  background-color:#fcf9f6;
+}
+.live_box_comment{
+  margin-top:25rpx;
+  margin-left:0rpx;
+  box-shadow:3px 3px 6px #f0f0f0;
+  border-radius:10rpx;
+  width:651rpx;
+  padding:20rpx;
+  font-size:31rpx;
+  margin-bottom: 30rpx;
+}
+.huifu_pepo_font{
+  font-size: 26rpx;
+  color: #f5c694;
+  margin-bottom: 20rpx;
+}
+.huifu_content_font{
+  font-size: 26rpx;
+}
+.plun{
+  height:30rpx;
+  width:40rpx;
+  margin-left: 20rpx;
+  margin-right: 10rpx;
+  padding: 2rpx;
+}
+.navbottom{
+  margin-left: 400rpx;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+}
