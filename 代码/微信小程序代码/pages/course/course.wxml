@@ -1,0 +1,20 @@
+<!--pages/course/course.wxml-->
+<view class='course'>
+  <view class='course_name'>
+    <text style='font-size:48rpx;'>计算机应用基础</text>
+    <image src='../../images/little/modify.png' class='course_edit'></image>
+  </view>
+  <text style='font-size:32rpx;'>E203 陈云</text>
+  <text style='font-size:24rpx;margin-top:40rpx'>2019年3月3日 周日</text>
+  <text style='font-size:24rpx;'>上午8:00-9:55</text>
+</view>
+<view class='event'>
+  <text style='font-size:32rpx;'>事件</text>
+  <view class='toEdit'>
+    <text class='event_name'>学校</text>
+    <image src='../../images/little/return.png' class='return'></image>
+  </view>
+</view>
+<view class='delete'>
+  <view class='delete_course'>删除事件</view>
+</view>

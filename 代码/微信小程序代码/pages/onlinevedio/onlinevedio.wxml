@@ -1,0 +1,116 @@
+<!--pages/onlinevedio/onlinevedio.wxml-->
+<video src="https://apd-279e0de1c083fc38dbf26df3e2dda116.v.smtcdns.com/vedu.tc.qq.com/AngXw-tBWLGU-AAjYzDDVDaId-xjmEk-Hj3XayeW31n4/k1412yk19hu.p701.1.mp4?sha=EC821E1C74576B1F63BF8A80DAA92E2EE17366CD&sdtfrom=v1101&guid=9787852fa9ea421b57c69a282ca48b83&vkey=6DCFD42A1558C441052068680888333F07099411C6608F519F439AF9C6EC6DD81071A1F176C41943EF382C5158A8B596DBD764864F54B626B2961E7FE33ABC1C369CBEF9BC421EBD648F5A2EBCDC1064D6E315C5E8076BD909F093CA245A354F346E2A54DCDE87136D847B9B93E44DC7&ocid=359817993&ocid=3405256876&ocid=2299869450" binderror="videoErrorCallback" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls class='video'></video>
+
+<view class='video_bottom'>
+  <view class='live_top'>计算机二级Office高级应用之文字处理专题</view>
+  <view class='live_teacher'>小黑课堂小黑老师</view>
+  <view class='course_star'>
+    <image src='../../images/little/star1.png' class='course_star1'></image>
+    <image src='../../images/little/star1.png' class='course_star1'></image>
+    <image src='../../images/little/star1.png' class='course_star1'></image>
+    <image src='../../images/little/star1.png' class='course_star1'></image>
+    <image src='../../images/little/star1.png' class='course_star1'></image>
+    <text class='course_grade'>4.9</text>
+  </view>
+
+  <view class='navBar'>
+    <block wx:for="{{navDatas}}" wx:for-index="DataId" wx:key="DataId">
+      <view class="navItem {{currentTab == DataId ?'active':''}}" data-current="{{DataId}}" bindtap="navbarTap">{{item.navData}}</view>
+    </block>
+  </view>
+
+  <view hidden="{{currentTab!==0}}">
+    <view class='live_box'>
+        <view class='live_top_font'>适用人群</view>
+        <view class='live_small_font'>经常使用Excel办公，希望系统学习Excel，提升工作效率的企业用户</view>
+        <view class='live_top_font'>课程概述</view>
+        <view class='live_small_font'>1800分钟巨制Excel视频教程：认识Excel、Excel企业应用、Excel常用功能、Excel表格设计、Excel美化、Excel数据透视表、Excel函数、Excel图表、Excel动态图表。</view>
+        <view class='live_small_font'>本套课程案例全部采集自真实企业环境中的应用。并您系统的规划好了每次课程的学时间共24讲</view>
+        <view class='live_injoin_button'>加入课程</view>
+    </view>
+  </view>
+
+  <view hidden="{{currentTab!==1}}">
+    <view class='live_top_font'>第一章 Word-01 Word篇课前导读</view>
+    <view class='live_box_class'>
+      <view bindtap="getclass1">课时1 【视频】01别说你会Word，你可能用错了！</view>
+      <view>14:08</view>
+    </view>
+    <view class='live_box_class'>
+      <view>课时2 【视频】02别说你会Word，你可能用错了！</view>
+      <view>14:08</view>
+    </view>
+
+    <view class='live_top_font'>第二章 Word-02 活动策划书，这样做简单又有范</view>
+    <view class='live_box_class'>
+      <view>课时3 【视频】01三步搞定活动策划书排版</view>
+      <view>14:08</view>
+    </view>
+    <view class='live_box_class'>
+      <view>课时2 【视频】02-2注重页面细节才专业</view>
+      <view>14:08</view>
+    </view>
+  </view>
+
+  <view hidden="{{currentTab!==2}}">
+      <view class='live_box_comment'>
+        <view class='box_row'>
+          <view class='comment_right1'></view>
+          <view class='comment_left'>
+              <text class='comment_pupil'>床前明月光</text>
+              <text class='comment_pupil'>02.20</text>
+              <text class='comment_content'>老师讲的课不要太精彩！</text>
+          </view>
+         </view>
+        <view class='comment_huifubox'>
+            <view class='box_row'>
+              <text class='huifu_pepo_font'>快乐的女大学生：</text>
+              <text class='huifu_content_font'>考计算机二级，这个课有用吗？</text>
+            </view>
+            <view class='box_row'>
+              <text class='huifu_pepo_font'>鸡蛋壳：</text>
+              <text class='huifu_content_font'>真的吗？</text>        
+            </view>
+        </view>
+            <view class='navbottom'>
+              <text>回复</text>
+              <image src='../../images/little/plun.png' class='plun'></image>
+              <text>2</text>
+              <image src='../../images/little/yizan.png' class='plun'></image>
+              <text>1</text>
+            </view>
+        </view>
+
+        <view class='live_box_comment'>
+        <view class='box_row'>
+          <view class='comment_right2'></view>
+          <view class='comment_left'>
+              <text class='comment_pupil'>睡了吃吃</text>
+              <text class='comment_pupil'>02.17</text>
+              <text class='comment_content'>第二次上这个老师的课，哈哈</text>
+          </view>
+         </view>
+        <view class='comment_huifubox'>
+            <view class='box_row'>
+              <text class='huifu_pepo_font'>按时吃饭：</text>
+              <text class='huifu_content_font'>怎么样？</text>
+            </view>
+            <view class='box_row'>
+              <text class='huifu_pepo_font'>睡了吃吃：</text>
+              <text class='huifu_content_font'>回复</text>   
+              <text class='huifu_pepo_font' space="emsp"> 鸡蛋壳：</text>
+              <text class='huifu_content_font'>挺好的啊！</text>        
+            </view>    
+        </view>
+          <view class='navbottom'>
+              <text>回复</text>
+              <image src='../../images/little/plun.png' class='plun'></image>
+              <text>2</text>
+              <image src='../../images/little/yizan.png' class='plun'></image>
+              <text>1</text>
+            </view>
+        </view>
+    </view>
+</view>
+
+

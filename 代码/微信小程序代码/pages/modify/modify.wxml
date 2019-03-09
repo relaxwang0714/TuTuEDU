@@ -1,0 +1,42 @@
+<!--pages/calendar/calendar.wxml-->
+<view class='event'>
+  <text style='font-size:32rpx;'>课程标题</text>
+  <view class='toEdit'>
+    <image src='../../images/little/open.png' class='return'></image>
+  </view>
+</view>
+
+<view class='event'>
+  <text style='font-size:32rpx;'>位置</text>
+</view>
+
+<view class='event'>
+  <text style='font-size:32rpx;'>老师</text>
+</view>
+
+<view class='event'>
+  <text style='font-size:32rpx;'>时间</text>
+  <view class='toEdit'>
+    <text class='event_name1'>8:00-9:55</text>
+    <image src='../../images/little/add.png' class='return'></image>
+  </view>
+</view>
+
+<view class='event'>
+  <text style='font-size:32rpx;'>持续时间</text>
+  <view class='toEdit'>
+    <text class='event_name1'>1-8周 每周周日</text>
+  </view>
+</view>
+
+<view class='event'>
+  <text style='font-size:32rpx;'>事件</text>
+  <view class='toEdit'>
+    <text class='event_name'>学校</text>
+    <image src='../../images/little/return.png' class='return'></image>
+  </view>
+</view>
+
+<view class='save'>
+  <view class='save_course'>保存</view>
+</view>

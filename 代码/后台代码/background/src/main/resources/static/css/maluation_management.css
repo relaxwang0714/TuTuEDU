@@ -1,0 +1,314 @@
+	* {
+    padding: 0px;
+    margin: 0px;
+	}
+	a{
+		text-decoration: none;
+	}
+	/*订单*/
+	#wait_top{
+		position: relative;
+		width: 100%;
+		height: 55px;
+		margin-top: 5px;
+		background-color: #F1F2F8;
+		border-top: 1px solid #DBDDE5;
+		border-bottom: 1px solid #DBDDE5;
+	}
+	#wait_top .top_left{
+		position: absolute;
+		top: 19px;
+		left: 50px;
+		font-size: 15px;
+		letter-spacing: 1px;
+	}
+	#wait_top .top_left input{
+		position: absolute;
+		top:1.5px;
+		width: 18px;
+		height: 18px;
+		-webkit-appearance:none;
+		background-color: #B7B7BA;
+	}
+	#wait_top .top_left input:checked{-webkit-appearance:checkbox;background-color: #B7B7BA;}
+	#wait_top .top_right .top_right_1{
+		position: absolute;
+		top: 9px;
+		left: 135px;
+		width: 88px;
+		height: 38px;
+		color: black;
+		text-align: center;
+		line-height: 40px;
+		background-color: white;
+		border: 1px solid #DBDDE5;
+	}
+	#wait_top .top_right .top_right_2{
+		position: absolute;
+		top: 9px;
+		left: 250px;
+		width: 88px;
+		height: 38px;
+		color: black;
+		text-align: center;
+		line-height: 40px;
+		background-color: white;
+		border: 1px solid #DBDDE5;
+	}
+	#wait_top .top_right .top_right_3{
+		position: absolute;
+		top: 9px;
+		left: 365px;
+		width: 88px;
+		height: 38px;
+		color: black;
+		text-align: center;
+		line-height: 40px;
+		background-color: white;
+		border: 1px solid #DBDDE5;
+	}
+	
+	/*表格*/
+	table,th,tr,td{
+		border: none;
+	}
+	table{
+		margin-top: 20px;
+		margin-left: 18px;
+	}
+	.th_font{
+		/*color: #D3D4D3;*/
+		width: 220px;
+	}
+	.tr_input input{
+		width: 18px;
+		height: 18px;
+		-webkit-appearance:none;
+		background-color: #B7B7BA;
+	}
+	.tr_input input:checked{-webkit-appearance:checkbox;background-color: #B7B7BA;}
+	
+/*筛选框*/
+	#brush{
+		position: relative;
+		width: 100%;
+		height: 140px;
+		background-color: #F1F2F8;
+		border-bottom: 1px solid #DBDDE5;
+	}
+	#brush_teacher,#brush_student,#brush_class{
+		position: relative;
+		width: 100%;
+		height: 80px;
+		background-color: #F1F2F8;
+		border-bottom: 1px solid #DBDDE5;
+	}
+	.brush_1{
+		position: absolute;
+		top: 8px;
+		left: 50px;
+		width: 225px;
+		height: 60px;
+		line-height: 60px;
+		/*background-color: red;*/
+	}
+	.brush_2{
+		position: absolute;
+		top: 8px;
+		left: 300px;
+		width: 225px;
+		height: 60px;
+		line-height: 60px;
+		/*background-color: red;*/
+	}
+	.brush_3{
+		position: absolute;
+		top: 8px;
+		left: 550px;
+		width: 250px;
+		height: 60px;
+		line-height: 60px;
+		/*background-color: red;*/
+	}
+	.brush_4{
+		position: absolute;
+		top: 72px;
+		left: 50px;
+		width: 225px;
+		height: 60px;
+		line-height: 60px;
+		/*background-color: red;*/
+	}
+	.brush_5{
+		position: absolute;
+		top: 72px;
+		left: 300px;
+		width: 225px;
+		height: 60px;
+		line-height: 60px;
+		/*background-color: red;*/
+	}
+	.brush_7{
+		position: absolute;
+		top: 8px;
+		left: 830px;
+		width: 245px;
+		height: 60px;
+		line-height: 60px;
+		/*background-color: red;*/
+	}
+	
+	.brush_8{
+		position: absolute;
+		top: 8px;
+		left: 1010px;
+		width: 260px;
+		height: 60px;
+		line-height: 60px;
+		/*background-color: red;*/
+	}
+	
+	.brush_class1{
+		position: absolute;
+		top: 8px;
+		left: 550px;
+		width: 245px;
+		height: 60px;
+		line-height: 60px;
+		/*background-color: red;*/
+	}
+	
+	.brush_class2{
+		position: absolute;
+		top: 8px;
+		left: 730px;
+		width: 290px;
+		height: 60px;
+		line-height: 60px;
+		/*background-color: red;*/
+	}
+	.brush_6{
+		position: absolute;
+		top: 87px;
+		left: 600px;
+		width: 70px;
+		height: 30px;
+		/*background-color: white;
+		border: 1px solid black;
+		border-radius: 8px;*/
+	}
+	.brush_teacher,.brush_maluation{
+		position: absolute;
+		top: 23px;
+    	right: 120px;
+		width: 70px;
+		height: 30px;
+		/*background-color: white;
+		border: 1px solid black;
+		border-radius: 8px;*/
+	}
+	.brush_class{
+		position: absolute;
+		top: 23px;
+    	left: 620px;
+		width: 70px;
+		height: 30px;
+		/*background-color: white;
+		border: 1px solid black;
+		border-radius: 8px;*/
+	}
+	.brush_class3{
+		position: absolute;
+		top: 23px;
+    	left: 1080px;
+		width: 70px;
+		height: 30px;
+		/*background-color: white;
+		border: 1px solid black;
+		border-radius: 8px;*/
+	}
+	.brush_1 input{
+		width: 125px;
+		height: 30px;
+		margin-left: 45px;
+	}
+	.brush_2 input{
+		width: 125px;
+		height: 30px;
+		margin-left: 15px;
+	}
+	.brush_3 .text_1{
+		width: 150px;
+		height: 30px;
+		margin-left: 15px;
+		margin-right: 10px;
+	}
+	.brush_4 input{
+		width: 125px;
+		height: 30px;
+		margin-left: 31px;
+	}
+	.brush_5 input{
+		width: 125px;
+		height: 30px;
+		margin-left: 15px;
+	}
+	select{
+		width: 125px;
+		height: 34px;
+		margin-left: 15px;
+		color: gray;
+		background-color: white;
+	}
+	.brush_8 select{
+		width: 55px;
+		height: 34px;
+		margin-left: 15px;
+		color: gray;
+		background-color: white;
+	}
+	select option{
+		color: black;
+	}
+	.brush_7 input{
+		width: 135px;
+		height: 30px;
+		margin-left: 15px;
+	}
+	.brush_8 input{
+		width: 135px;
+		height: 30px;
+		margin-left: 15px;
+	}
+	/*.brush_6 img{
+		width: 55px;
+		height: 25px;
+		margin-top: 3px;
+		margin-left: 9px;
+	}*/
+	/*.brush_6 .submit{
+		width: 55px;
+		height: 25px;
+		margin-top: 3px;
+		margin-left: 9px;
+		background-image: url(../img/search.png);
+	}*/
+	.brush_s{
+		margin-left: -50px;
+		width: 70px;
+		height: 32px;
+		background-color: white;
+		border: 1px solid black;
+		background-image: url(../img/search.png);
+		background-size: 56px 28px;
+		background-position-x: 5px;
+		background-position-y: 4px;
+		border-radius: 10px;
+	}
+	
+	.brush_s:hover{
+		cursor: pointer;
+	}
+	.brush_s:active{
+		background-color: black;
+	}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/course_management.css" />
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<style>
+			div.zxf_pagediv{
+				float: left;
+				margin-left: 150px;
+			}
+		</style>
+		<script>
+			$(function(){
+					//加鼠标单击事件
+					$(".brush_s").click(function(){
+						$(".course").css({'display':'block','border':'none'});
+					})
+				
+			})	
+		
+		</script>
+		<title></title>
+	</head>
+	<body>
+		
+		<!--刷选框-->
+		<!--<form method="post">-->
+		<div id="brush_student">
+			<div class="brush_1">
+				学号<input type="text" class="text" style="margin-left: 28px;">
+			</div>
+			<div class="brush_2">
+				学生姓名<input type="text" class="text">
+			</div>
+			<div class="brush_3">
+				课程名称<input type="text" class="text_1">
+			</div>
+			<div class="brush_7">
+				<select name="city" lay-verify="" value="" placeholder="请选择设备标签">
+					<option value="2016-2017">&nbsp;&nbsp;&nbsp;2016-2017</option>
+					<option value="2017-2018">&nbsp;&nbsp;&nbsp;2017-2018</option>
+					<option value="2018-2019" selected="selected">&nbsp;&nbsp;&nbsp;2018-2019</option>
+				</select> 
+				学年第
+			</div>
+			<div class="brush_8">
+				<select name="city" lay-verify="" value="" placeholder="请选择设备标签">
+					<option value="1">&nbsp;&nbsp;&nbsp;1</option>
+					<option value="2">&nbsp;&nbsp;&nbsp;2</option>
+				</select>
+				学期学生个人课程表
+			</div>
+			<div class="brush_student">
+				<input type="submit" class="brush_s" value="">
+					
+			</div>
+			<!--</a>-->
+			<!--<img src="img/search.png" />
+					<input type="submit" class="brush_7" value="">-->
+		</div>
+		<!--</form>-->
+		
+		<!--订单-->
+		<div id="wait_top">
+			<div class="top_left"><input type="checkbox" onclick="swapCheck()" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;全选</div>
+			<div class="top_right">
+				<a href="#"><div class="top_right_1">Excel导出</div></a>
+			</div>
+		</div>
+		
+		<!--表格-->
+		<table class="course"  frame=box border=1 align=center   cellpadding=0 cellspacing=0 bordercolor=black >
+		    <caption>
+		    	<strong style="float: left;">学号：11107028</strong>
+		    	<strong style="float:left;margin-left:50px ;">学生姓名：赵同学</strong>
+		    	<strong style="float:left;margin-left:230px ;">2018-2019学年第1学期课程表</strong>
+		    </caption>
+		  <tr>
+		    <th colspan="2" align="center">节次</th>
+		    <th align="center" width="180">星期一</th>
+		    <th align="center" width="180">星期二</th>
+		    <th align="center" width="180">星期三</th>
+		    <th align="center" width="180">期期四</th>
+		    <th align="center" width="180">星期五</th>
+		    <th align="center" width="180">星期六</th>
+		    <th align="center" width="180">星期日</th>
+		  </tr>
+		  <tr>
+		    <td rowspan="4" align=center >上午</td>
+		    <td align="center">第<br />一<br />节</td>
+		    <td rowspan="2">
+		    	高等数学A<br />
+		                     杨老师<br />
+		                     善德楼<br />
+		        110<br />
+		        1-16周上（1-2节）
+		    </td>
+		    <td rowspan="2">
+		    	大学英语(三）<br />
+		                     孙老师<br />
+		                     静心楼<br />
+		        210<br />
+		        1-16周上（1-2节）
+		    </td>
+		    <td rowspan="2">
+		    	体育（一）<br />
+		    	蒋老师<br />
+		    	操场1<br />
+		    	1-16周上（1-2节）
+		    </td>
+		    <td rowspan="2">
+		    	高等数学A<br />
+		                     杨老师<br />
+		                     善德楼<br />
+		        110<br />
+		        1-16周上（1-2节）
+		    </td>
+		    <td rowspan="2"></td><!--无课-->
+		    <td rowspan="2"></td><!--无课-->
+		    <td rowspan="2"></td><!--无课-->
+		  </tr>
+		  <tr>
+		    <td align="center">第<br />二<br />节</td>
+		  </tr>
+		  <tr>
+		    <td align="center">第<br />三<br />节</td>
+		    <td rowspan="2"></td><!--无课-->
+		    <td rowspan="2"></td><!--无课-->
+		    <td rowspan="2">
+		    	高等数学A<br />
+		                     杨老师<br />
+		                     善德楼<br />
+		        110<br />
+		        1-16周上（3-4节）
+		    </td>
+		    <td rowspan="2" ></td><!--无课-->
+		    <td rowspan="2">
+		    	计算机科学与技术导论<br />
+		    	唐老师<br />
+		    	厚德楼<br />
+		        105<br />
+		        1-16周上（3-4节）
+		    </td>
+		    <td rowspan="2"></td><!--无课-->
+		    <td rowspan="2"></td> <!--无课-->
+		  </tr>
+		  <tr>
+		    <td align="center">第<br />四<br />节</td>
+		  </tr>
+		  <tr>
+		    <td rowspan="4" align=center>下午</td>
+		    <td align="center">第<br />五<br />节</td>
+		    <td  rowspan="2"></td><!--无课-->
+		    <td  rowspan="2">
+		    	形势与政策（一）<br />
+		    	朱老师<br />
+		                     善德楼<br />
+		        310<br />
+		        1-8周上（5-6节）
+		    </td>
+		    <td  rowspan="2"></td>
+		    <td  rowspan="2">
+		    	思想道德修养与法律基础<br />
+		                     洺老师<br />
+		                     善德楼<br />
+		        213<br />
+		        1-16周上（5-6节）
+		    <td  rowspan="2">
+		    	大学英语(三）<br />
+		                     孙老师<br />
+		                     静心楼<br />
+		        210<br />
+		        1-16周上（5-6节）
+		    </td>
+		    <td rowspan="2" ></td> <!--无课-->
+		    <td rowspan="2" ></td> <!--无课-->
+		  </tr>
+		  <tr>
+		    <td align="center">第<br />六<br />节</td>
+		  </tr>
+		  <tr>
+		    <td align="center">第<br />七<br />节</td>
+		    <td rowspan="2">
+		    	英语听力（三）<br />
+		                     孙老师<br />
+		                     静心楼<br />
+		        105<br />
+		        8-16周上（7-8节）
+		    </td>
+		    <td rowspan="2">
+		    	计算机科学与技术导论<br />
+		                     唐老师<br />
+		    	厚德楼<br />
+		        105<br />
+		        1-16周上（7-8节）
+		    </td>
+		    <td rowspan="2"></td> <!--无课-->
+		    <td rowspan="2"></td> <!--无课-->
+		    <td rowspan="2">
+		    	军事理论<br />
+		                     苏老师<br />
+		                     镜铭楼<br />
+		        411<br />
+		        1-8周上（7-8节）
+		    </td>
+		    <td rowspan="2"></td> <!--无课-->
+		    <td rowspan="2"></td> <!--无课-->
+		  </tr>
+		  <tr>
+		    <td align="center">第<br />八<br />节</td>
+		  </tr>
+		  <tr>
+		    <td rowspan="3" align=center>晚上</td>
+		    <td align="center">第<br />九<br />节</td>
+		    <td rowspan="2"></td>
+		    <td rowspan="2">
+		    	程序设计技术<br />
+		      	夏老师<br />
+		                     厚德楼<br />
+		        401<br />
+		        1-16周上（9-10节）
+		    </td>
+		    <td rowspan="2"></td>
+		    <td rowspan="2">
+		    	程序设计技术<br />
+		      	夏老师<br />
+		                     厚德楼<br />
+		        401<br />
+		        1-16周上（9-10节）
+		    </td>
+		    <td rowspan="2" ></td><!--无课-->
+		    <td rowspan="2"></td> <!--无课-->
+		    <td rowspan="2"></td>  <!--无课-->
+		  </tr>
+		  <tr>
+		    <td align="center">第<br />十<br />节</td>
+		  </tr>
+		  <tr>
+		    <td align="center">第<br />十<br />一<br />节</td>
+		    <td></td>
+		    <td></td>
+		    <td></td>
+		    <td></td>
+		    <td></td>
+		    <td></td>
+		    <td></td>
+		  </tr>
+		</table>	
+	</body>
+</html>

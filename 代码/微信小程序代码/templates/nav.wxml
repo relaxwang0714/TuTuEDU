@@ -1,11 +1,16 @@
 <template name="nav1">
   <view class='main_check_choose'>
-      <image class='shelf-nav-item-img' src='{{circle_image}}'></image>
-      <text class='shelf-nav-item-txt'>{{name}}</text>
+    <image class='shelf-nav-item-img' src='{{circle_image}}'></image>
+    <text class='shelf-nav-item-txt'>{{name}}</text>
   </view>
 </template>
+<view class='navBar'>
+  <block wx:for="{{navDatas}}" wx:for-index="DataId" wx:key="DataId">
+    <view class="navItem {{currentTab == DataId ?'active':''}}" data-current="{{DataId}}" bindtap="navbarTap">{{item.navData}}</view>
+  </block>
+</view>
 <template name="list1">
-  <view class='course_list'>
+  <view class='course_list'  bindtap="btnclick">
     <image src='{{pic}}' class='course_pic'></image>
     <view class='course_right'>
       <text class='course_name'>{{name}}</text>
@@ -18,6 +23,7 @@
       </view>
     </view>
   </view>
+  <view style='height:30rpx;'></view>
 </template>
 <template name="list2">
   <view class='book_list'>
@@ -43,4 +49,52 @@
       <text class='popular_number'>{{popular_number}}粉丝</text>
     </view>
   </view>
+</template>
+<template name="list4">
+  <view style='height:20rpx;'></view>
+  <view style='display:flex;flex-direction: column; box-shadow: 6rpx 6rpx 12rpx #f0f0f0;border-radius:18rpx;'>
+    <view style='display:flex;flex-direction: row;'>
+      <image src='{{photo}}' style='width:85rpx;height:85rpx;margin:20rpx;'></image>
+      <view style='display:flex;flex-direction: column;justify-content: center; '>
+        <text style='font-size: 24rpx;'>{{name}}</text>
+        <text style='font-size: 20rpx;color:#959595'>{{types}}</text>
+      </view>
+    </view>
+    <view style='display:flex;flex-direction: row;margin:0rpx 20rpx 20rpx 20rpx;'>
+      <view style='display:flex;flex-direction: column;width:60%;'>
+        <text style='font-size: 24rpx;font-weight:bold'>{{title}}</text>
+        <text style='font-size: 20rpx;color:#959595'>{{content}}</text>
+      </view>
+      <view style='display:flex;flex-direction: column;width:30%;margin-left:60rpx;'>
+        <image src='{{pic}}' style='height:110rpx;width:160rpx;margin-top:-10rpx;'></image>
+        <text style='font-size: 22rpx;color:#909090;margin-top:20rpx;'>{{answer}}回复 {{time}}分钟前</text>
+      </view>
+    </view>
+  </view>
+  <view style='height:20rpx;'></view>
+</template>
+<template name="team">
+  <view style='width:50%; box-shadow: 6rpx 6rpx 12rpx #f0f0f0;border-radius:18rpx;display:inline-block;margin-right:30rpx;'>
+    <view style='display:flex;flex-direction:row;'>
+      <image src='{{photo}}' style='width:85rpx;height:85rpx;margin:20rpx;'></image>
+      <view style='display:flex;flex-direction: column;justify-content: center; '>
+        <text style='font-size: 24rpx;margin-left:20rpx;'>{{name}}</text>
+        <text style='font-size: 20rpx;color:#959595;margin-left:20rpx;'>{{num}}成员</text>
+      </view>
+    </view>
+  </view>
+</template>
+<template name="talk">
+  <view style='height:20rpx;'></view>
+  <view style='display:flex;flex-direction: row;margin:0rpx 10rpx 20rpx 10rpx; box-shadow: 6rpx 6rpx 12rpx #f0f0f0;border-radius:18rpx;padding:30rpx 10rpx 0rpx 30rpx;'>
+    <view style='display:flex;flex-direction: column;width:60%;'>
+      <text style='font-size: 24rpx;font-weight:bold'>{{title}}</text>
+      <text style='font-size: 20rpx;color:#959595'>{{content}}</text>
+    </view>
+    <view style='display:flex;flex-direction: column;width:30%;margin-left:60rpx;'>
+      <image src='{{pic}}' style='height:110rpx;width:160rpx;margin-top:-10rpx;'></image>
+      <text style='font-size: 22rpx;color:#909090;margin-top:20rpx;'>{{answer}}回复 {{time}}分钟前</text>
+    </view>
+  </view>
+  <view style='height:20rpx;'></view>
 </template>

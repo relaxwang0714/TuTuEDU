@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/course_management_all.css" />
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<style>
+			table{
+				display: none;
+			}
+		</style>
+		<script>
+			$(function(){
+					//加鼠标单击事件
+					$(".brush_s").click(function(){
+						$(".exam_student").css({'display':'block'});
+					})
+				
+			})	
+		
+		</script>
+		<title></title>
+	</head>
+	<body>
+		
+		<!--刷选框-->
+		<!--<form method="post">-->
+		<div id="brush_student">
+			<div class="brush_1">
+				学号<input type="text" class="text" style="margin-left: 28px;">
+			</div>
+			<div class="brush_2">
+				学生姓名<input type="text" class="text">
+			</div>
+			<div class="brush_3">
+				课程名称<input type="text" class="text_1">
+			</div>
+			<div class="brush_7">
+				<select name="city" lay-verify="" value="" placeholder="请选择设备标签">
+					<option value="2016-2017">&nbsp;&nbsp;&nbsp;2016-2017</option>
+					<option value="2017-2018">&nbsp;&nbsp;&nbsp;2017-2018</option>
+					<option value="2018-2019" selected="selected">&nbsp;&nbsp;&nbsp;2018-2019</option>
+				</select> 
+				学年第
+			</div>
+			<div class="brush_8">
+				<select name="city" lay-verify="" value="" placeholder="请选择设备标签">
+					<option value="1">&nbsp;&nbsp;&nbsp;1</option>
+					<option value="2">&nbsp;&nbsp;&nbsp;2</option>
+				</select>
+				学期学生个人考试安排表
+			</div>
+			<div class="brush_student">
+				<input type="submit" class="brush_s" value="">
+					
+			</div>
+			<!--</a>-->
+			<!--<img src="img/search.png" />
+					<input type="submit" class="brush_7" value="">-->
+		</div>
+		<!--</form>-->
+		
+		<!--订单-->
+		<div id="wait_top">
+			<div class="top_left"><input type="checkbox" onclick="swapCheck()" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;全选</div>
+			<div class="top_right">
+				<a href="#"><div class="top_right_1">Excel导出</div></a>
+			</div>
+		</div>
+		
+		<!--表格-->
+		<table border="1" cellspacing="20" class="exam_student"> 
+			<th>
+				<td class="th_font"><b>学号</b></td>
+				<td class="th_font"><b>学生姓名</b></td>
+				<td class="th_font"><b>考试科目</b></td>
+				<td class="th_font"><b>考试地点</b></td>
+				<td class="th_font"><b>考试时间</b></td>
+			</th>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>11107028</td>  
+	            <td>赵同学</td>  
+	            <td>高等数学A</td> 
+	            <td>厚德楼203</td>
+	            <td>2019/1/10/8：00-10：00</td>
+	        </tr>  
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>11107028</td>  
+	            <td>赵同学</td>  
+	            <td>大学英语（三）</td> 
+	            <td>厚德楼105</td>
+	            <td>2019/1/11/8：00-10：00</td>
+	        </tr> 
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>11107028</td>  
+	            <td>赵同学</td>  
+	            <td>计算机科学与技术导论</td>
+	            <td>善德楼305</td>
+	            <td>2019/1/11/13：30-15：30</td>
+	        </tr> 
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>11107028</td>  
+	            <td>赵同学</td>  
+	            <td>形势与政策（一）</td> 
+	            <td>善德楼209</td>
+	            <td>2019/1/12/8：00-10：00</td>
+	        </tr> 
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>11107028</td>  
+	            <td>赵同学</td>  
+	            <td>思想道德修养与法律基础</td> 
+	            <td>厚德楼402</td>
+	            <td>2019/1/12/13：30-15：30</td>
+	        </tr> 
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>11107028</td>  
+	            <td>赵同学</td>  
+	            <td>军事理论</td> 
+	            <td>静心楼310</td>
+	            <td>2019/1/13/13：30-15：30</td>
+	        </tr> 
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>11107028</td>  
+	            <td>赵同学</td>  
+	            <td>程序设计技术</td> 
+	            <td>厚德楼408</td>
+	            <td>2019/1/14/13：30-15：30</td>
+	        </tr>
+	    </table>  
+	    
+	    
+	    <script type="text/javascript"  
+        src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>  
+  
+    <script type="text/javascript">  
+        //checkbox 全选/取消全选  
+        var isCheckAll = false;  
+        function swapCheck() {  
+            if (isCheckAll) {  
+                $("input[type='checkbox']").each(function() {  
+                    this.checked = false;  
+                });  
+                isCheckAll = false;  
+            } else {  
+                $("input[type='checkbox']").each(function() {  
+                    this.checked = true;  
+                });  
+                isCheckAll = true;  
+            }  
+        }  
+    </script>  
+		
+	</body>
+</html>
