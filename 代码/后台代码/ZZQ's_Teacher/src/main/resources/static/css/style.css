@@ -4594,7 +4594,8 @@ ul.notes li div {
 /* FILE MANAGER */
 .file-box {
     float: left;
-    width: 220px;
+    width: 350px;
+    height: 100%;
 }
 
 .file-manager h5 {
@@ -4692,7 +4693,7 @@ ul.notes li div {
 }
 
 .file .icon, .file .image {
-    height: 100px;
+    height: 180px;
     overflow: hidden;
 }
 
@@ -4717,7 +4718,8 @@ ul.notes li div {
 }
 
 .file .file-name {
-    padding: 10px;
+    padding-left: 30px;
+    padding-bottom: 15px;
     background-color: #f8f8f8;
     border-top: 1px solid #e7eaec;
 }

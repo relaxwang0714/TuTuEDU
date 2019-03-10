@@ -9,7 +9,7 @@ function load() {
 		.bootstrapTable(
 			{
 				method : 'get', // 服务器数据的请求方式 get or post
-				url : prefix + "/selfList", // 服务器数据的加载地址
+				url : prefix + "/list", // 服务器数据的加载地址
 				//	showRefresh : true,
 				//	showToggle : true,
 				//	showColumns : true,
@@ -48,7 +48,7 @@ function load() {
 						checkbox : true
 					},
 					{
-						visible : false,
+						visible : true,
 						field : 'id',
 						title : '编号'
 					},
@@ -60,42 +60,35 @@ function load() {
 					{
 						field : 'title',
 						width: '20%',
-						title : '标题',
+                        title : '考试名称',
 						formatter:function (value,row,index) {
                             return '<a href="#" onclick="read(\''+ row.id+ '\')">'+row.title+'</a>';
                         }
 					},
 					{
 						field : 'content',
-						width: '30%',
-						title : '内容'
+						width: '20%',
+						title : '考试地点'
 					},
 					{
-						visible : false,
+						visible : true,
 						field : 'files',
-						title : '附件'
+						title : '授课老师'
 					},
 					{
-						field : 'isRead',
-						title : '状态',
+						field : 'status',
+						title : '考试持续时间',
 						align :'center',
-						formatter : function(value, row, index){
-							if(value==0){
-								return '<span class="label label-warning">未读</span>';
-							}else if(value==1){
-								return '<span class="label label-primary">已读</span>';
-							}
-						}
 					},
 					{
-						visible : false,
+						visible : true,
 						field : 'createBy',
-						title : '创建者'
+						title : '考试人数'
 					},
 					{
-						visible : false,
+						visible : true,
 						field : 'createDate',
-						title : '创建时间'
+						title : '考试时间'
 					},
 					{
 						visible : false,
@@ -109,7 +102,7 @@ function load() {
 					},
 					{
 						field : 'remarks',
-						title : '备注信息'
+						title : '监考老师'
 					},
 					{
 						visible : false,

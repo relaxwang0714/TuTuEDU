@@ -10,7 +10,7 @@
   </block>
 </view>
 <template name="list1">
-  <view class='course_list'>
+  <view class='course_list'  bindtap="btnclick">
     <image src='{{pic}}' class='course_pic'></image>
     <view class='course_right'>
       <text class='course_name'>{{name}}</text>

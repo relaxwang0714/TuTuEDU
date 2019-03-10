@@ -56,7 +56,7 @@ public class FileController extends BaseController {
 	@GetMapping("/add")
 	// @RequiresPermissions("common:bComments")
 	String add() {
-		return "common/sysFile/add";
+		return "common/file/add";
 	}
 
 	@GetMapping("/edit")

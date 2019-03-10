@@ -1,14 +1,16 @@
 {
   "pages": [
     "pages/calendar/calendar",
+    "pages/main/main",
     "pages/logs/logs",
     "pages/team/team",
     "pages/talk/talk",
     "pages/mine/mine",
     "pages/modify/modify",    
     "pages/course/course",    
-    "pages/main/main",
-    "pages/schedule/schedule"
+    "pages/schedule/schedule",  
+    "pages/onlinevedio/onlinevedio",
+    "pages/class01/class01"
   ],
   
   "window": {

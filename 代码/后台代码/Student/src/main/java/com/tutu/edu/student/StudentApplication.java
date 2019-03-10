@@ -10,11 +10,11 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 //@EnableDiscoveryClient
 //微服务feign组件支持
-@EnableFeignClients
+//@EnableFeignClients
 //微服务Hystrix组件支持
 //@EnableHystrixDashboard
-@EnableEurekaClient
-@EnableCircuitBreaker
+//@EnableEurekaClient
+//@EnableCircuitBreaker
 @SpringBootApplication
 @MapperScan("com.tutu.edu.student.mapper")
 public class StudentApplication {
