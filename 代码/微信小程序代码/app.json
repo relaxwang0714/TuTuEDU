@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/calendar/calendar",
     "pages/logs/logs",
     "pages/team/team",
     "pages/talk/talk",
     "pages/mine/mine",
     "pages/modify/modify",    
     "pages/course/course",    
-    "pages/calendar/calendar",  
     "pages/main/main",
     "pages/schedule/schedule"
   ],

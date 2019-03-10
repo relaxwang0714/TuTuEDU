@@ -12,7 +12,6 @@
     const year = date.getFullYear()
     const month = date.getMonth() + 1
     const day = date.getDate()
-
     return [year, month, day].map(formatNumber).join('-')
   }
   function getDates(days, todate) {
@@ -32,7 +31,9 @@
     let yearDate = date.getFullYear();
     let month = ((date.getMonth() + 1) < 10 ? ("0" + (date.getMonth() + 1)) : date.getMonth() + 1);
     let dayFormate = (date.getDate() < 10 ? ("0" + date.getDate()) : date.getDate());
-    dateObj.time = yearDate + '-' + month + '-' + dayFormate;
+    dateObj.yearDate = yearDate
+    dateObj.month = month 
+    dateObj.dayFormate = dayFormate;
     dateObj.week = show_day[day];
     return dateObj;
   }

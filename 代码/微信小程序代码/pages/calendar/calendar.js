@@ -1,7 +1,9 @@
 // pages/calendar/calendar.js
 var util = require('../../utils/util.js');
+var weekArr =  ['日', '一', '二', '三', '四', '五', '六'];
+var weekDay = [];
+var flag = "";
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -10,7 +12,11 @@ Page({
     weekDay:[],
     firstDay:null,
     NowMon:null,
-    NowDay:null
+    NowDay:null,
+    num:1920,
+    ka:false,
+    Flag: '每天早起读英语十分钟',
+    isFlag:false
   },
   bindDateChange(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -30,7 +36,44 @@ Page({
       weekDay:weekDay
     })
     console.log('month携带值为', weekDay)
-    
+  },
+  choose:function(e){
+    console.log('choose_e携带值为', e)
+    var j = parseInt(e.currentTarget.dataset.id);
+    console.log('choose_j携带值为', j)
+    this.setData({
+      j:j
+    })   
+  },
+  ka:function(){
+    this.setData({
+      ka:true,
+      num:this.data.num+1
+    })
+  },
+  modifyFlag:function(){
+    this.setData({
+      isFlag:true
+    })
+  },
+  ModifyInputEvent: function (e) {
+    console.log("Input:", e)
+    flag = e.detail.value
+    this.setData({
+      Flag: flag
+    }) 
+  },
+  ModifySure:function(e){
+    console.log("Flag:",e)
+    this.setData({
+      Flag:flag,
+      isFlag:false
+    })
+  },
+  ModifyCancle:function(){
+    this.setData({
+      isFlag: false
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -38,76 +81,49 @@ Page({
   onLoad: function (options) {
     //获取日历日期
     var DATE = util.formatDate(new Date());
-    let date = util.getDates(7, DATE);
+    let date = util.getDates(7,DATE );
     console.log(date);
 
-    var str = DATE;
-    var Dates = str.split("-");
-    var year = parseInt(Dates[0]);
-    var month = parseInt(Dates[1]);
-    var day = parseInt(Dates[2]);
-
-    var weekDay = [];
-
- 
-    for (var i = day; i < day + 7; i++) {
+    var month = parseInt(date[0].month);
+    var dayFormate = parseInt(date[0].dayFormate);
+    var week = date[0].week;
+    console.log("dayFormate:",dayFormate);
+    var j;
+    for(j = 0; j < 7; j++){
+      if (week == weekArr[j]){
+        console.log("weekArr:", weekArr[j]);
+        this.setData({
+          j:j
+        })   
+        break;
+      }
+    }
+    console.log("j:", j); 
+    console.log("dayformate:", dayFormate);
+    j = this.data.j+1;     
+    for (var i = dayFormate; ;i--) {
+      j-=1
+      weekDay.push(i);      
+      if(j==0){
+        break;
+      }
+    }
+    weekDay.reverse();
+    j = this.data.j+1
+    for (var i = dayFormate + 1;; i++) {
+      if(j==7){
+        break
+      }
+      j += 1
       weekDay.push(i);
     }
+    console.log(weekDay);
     this.setData({
       date: DATE,
       NowMon: month,
-      NowDay: day,
+      NowDay: dayFormate,
       weekDay: weekDay
     })   
     
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

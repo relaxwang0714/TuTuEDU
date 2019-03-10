@@ -1,0 +1,5 @@
+/* components/scheduleContent/scheduleContent.wxss */
+.containers{
+  display: flex;
+  flex-direction: column;
+}
