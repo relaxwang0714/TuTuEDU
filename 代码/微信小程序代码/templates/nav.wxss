@@ -17,9 +17,9 @@
 .course_list{
   display: flex;
   flex-direction: row;
-  margin-bottom: 20rpx;
+  padding: 10rpx;
   border-radius: 18rpx;
-  box-shadow: 10rpx 10rpx 12rpx #f0f0f0;
+  box-shadow:  6rpx 6rpx 70rpx #f0f0f0;   
 }
 .course_pic{
   width: 150rpx;
@@ -41,6 +41,7 @@
   font-size: 24rpx;
   color: #959595;
 }
+
 .course_star{
   display: flex;
   flex-direction: row;
@@ -55,11 +56,16 @@
   justify-content: center;
   margin-right: 10rpx;
 }
+.course_content{
+  font-size: 24rpx;
+  color: #959595;
+}
 .book_list{
   display: flex;
   flex-direction: row;
   margin-bottom: 20rpx;
-  box-shadow: 3rpx 3rpx 12rpx #f0f0f0;
+  padding: 10rpx;
+  box-shadow:  6rpx 6rpx 70rpx #f0f0f0;   
 }
 .book_pic{
   width: 280rpx;
@@ -105,7 +111,7 @@
   margin-bottom: 20rpx;
   margin-right: 15rpx;
   width: 100%;
-  box-shadow: 3rpx 3rpx 12rpx #f0f0f0;
+  box-shadow:  6rpx 6rpx 70rpx #f0f0f0;   
 }
 .popular_pic{
   width: 130rpx;
