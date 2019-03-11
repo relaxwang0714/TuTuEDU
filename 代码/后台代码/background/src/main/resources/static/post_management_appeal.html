@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/post_management_appeal.css" />
+		<link rel="stylesheet" type="text/css" href="css/zxf_page.css"/>
+		<link rel="stylesheet" href="layui/css/layui.css" media="all"/>
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="js/zxf_page.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<div class="layui-tab">
+		  <ul class="layui-tab-title">
+		    <li class="layui-this">未处理申诉</li>
+		    <li>已处理申诉</li>
+		  </ul>
+		  <div class="layui-tab-content">
+		    <div class="layui-tab-item layui-show">
+		    	<!--表格-->
+				<div class="auditing">
+				<table border="1" cellspacing="20" class="scor_student" style="border-collapse:separate; border-spacing:0px 20px;"> 
+					<th>
+						<td class="th_font"><b>用户ID</b></td>
+						<td class="th_font"><b>申诉人</b></td>
+						<td class="th_font"><b>申诉话题</b></td>
+						<td class="th_font"><b>申诉原因</b></td>
+						<td class="th_font"><b>申诉时间</b></td>
+						<td class="th_font"><b>操作</b></td>
+					</th>
+			        <tr>  
+			            <td class="tr_input"><input type="checkbox" /></td>  
+			            <td>300012001</td> 
+			            <td>王同学</td>
+			            <td>学习讨论</td>  
+			            <td>这是大家一起学习的平台，是给热爱学习的同学们一个交流知识的平台。</td>
+			            <td>2019-03-15 13：02：34</td>
+			            <td>
+			            	<a href="#"><div class="cz1">同意</div></a>
+			            	<a href="#"><div class="cz2">驳回</div></a>
+			            </td>
+			        </tr>
+			            
+			    </table>  
+			    <div class="zxf_pagediv"></div>
+			  </div>
+		    </div>
+		    <div class="layui-tab-item">
+		    	<!--表格-->
+				<div class="auditing">
+				<table border="1" cellspacing="20" class="scor_student" style="border-collapse:separate; border-spacing:0px 20px;"> 
+					<th>
+						<td class="th_font"><b>用户ID</b></td>
+						<td class="th_font"><b>申诉人</b></td>
+						<td class="th_font"><b>申诉话题</b></td>
+						<td class="th_font"><b>申诉原因</b></td>
+						<td class="th_font"><b>申诉时间</b></td>
+						<td class="th_font"><b>处理时间</b></td>
+						<td class="th_font"><b>结果</b></td>
+						<td class="th_font"><b>操作人</b></td>
+					</th>
+			        <tr>  
+			            <td class="tr_input"><input type="checkbox" /></td>  
+			            <td>300012001</td> 
+			            <td>王同学</td>
+			            <td>电子竞技</td>  
+			            <td>这是一群喜欢玩游戏的玩家聚集地，大家交流游戏心得，互相刷装备</td>
+			            <td>2019-03-12 15：45：06</td>
+			            <td>2019-03-13 09：25：36</td>
+			            <td>
+			            	<font style="color: gray;font-size: 20px;">驳回</font>
+			            </td>
+			            <td>
+			            	<font style="font-size: 15px;">管理员1</font>
+			            </td>
+			        </tr>
+			        <tr>  
+			            <td class="tr_input"><input type="checkbox" /></td>  
+			            <td>300012001</td> 
+			            <td>王同学</td>
+			            <td>学习资料</td>  
+			            <td>这里会提供给组内成员学习上的辅导书集资料。</td>
+			            <td>2019-03-14 10：05：56</td>
+			            <td>2019-03-14 11：15：16</td>
+			            <td>
+			            	<font style="color: gray;font-size: 20px;">通过</font>
+			            </td>
+			            <td>
+			            	<font style="font-size: 15px;">管理员1</font>
+			            </td>
+			        </tr>
+			            
+			    </table>  
+			    <div class="zxf_pagediv"></div>
+			  </div>
+		    </div>
+		  </div>
+		</div>
+ 
+
+	</body>
+	<script src="layui/layui.js"></script>
+	<script>
+		//注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+		layui.use('element', function(){
+		  var element = layui.element;
+		  
+		  //…
+		});
+		layui.use('laydate', function(){
+		  var laydate = layui.laydate;
+		  
+		  //执行一个laydate实例
+		  laydate.render({
+		    elem: '#test1' //指定元素
+		  });
+		});
+	</script>
+	    <script type="text/javascript">
+		//翻页
+		$(".zxf_pagediv").createPage({
+			pageNum: 1,
+			current: 1,
+			backfun: function(e) {
+				//console.log(e);//回调
+			}
+		});
+		
+		//checkbox 全选/取消全选  
+        var isCheckAll = false;  
+        function swapCheck() {  
+            if (isCheckAll) {  
+                $("input[type='checkbox']").each(function() {  
+                    this.checked = false;  
+                });  
+                isCheckAll = false;  
+            } else {  
+                $("input[type='checkbox']").each(function() {  
+                    this.checked = true;  
+                });  
+                isCheckAll = true;  
+            }  
+        }  
+	</script>
+</html>

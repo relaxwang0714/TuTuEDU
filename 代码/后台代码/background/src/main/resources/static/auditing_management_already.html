@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/auditing_management.css" />
+		<link rel="stylesheet" type="text/css" href="css/zxf_page.css"/>
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="js/zxf_page.js"></script>
+		<style>
+			.auditing{
+				display: none;
+			}
+		</style>
+		<script>
+			$(function(){
+					//加鼠标单击事件
+					$(".brush_s").click(function(){
+						$(".auditing").css({'display':'block'});
+					})
+				
+			})	
+		
+		</script>
+		
+		<title></title>
+	</head>
+	<body>
+		
+		<!--刷选框-->
+		<!--<form method="post">-->
+		<div id="brush_class">
+			<div class="brush_1">
+				课程号<input type="text" class="text" style="margin-left: 10px;">
+			</div>
+			<div class="brush_2">
+				课时号<input type="text" class="text">
+			</div>
+			<div class="brush_3">
+				申请人<input type="text" class="text">
+			</div>
+			<div class="brush_score3">
+				<input type="submit" class="brush_s" value="">
+					
+			</div>
+			<!--</a>-->
+			<!--<img src="img/search.png" />
+					<input type="submit" class="brush_7" value="">-->
+		</div>
+		<!--</form>-->
+		
+		<!--订单-->
+		<div id="wait_top">
+			<div class="top_left"><input type="checkbox" onclick="swapCheck()" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;全选</div>
+			<div class="top_right">
+				<a href="#"><div class="top_right_1">Excel导出</div></a>
+			</div>
+		</div>
+		
+		<!--表格-->
+		<div class="auditing">
+		<table border="1" cellspacing="20" class="scor_student"> 
+			<th>
+				<td class="th_font"><b>课程号</b></td>
+				<td class="th_font"><b>课时号</b></td>
+				<td class="th_font"><b>对应章节</b></td>
+				<td class="th_font"><b>课时简介</b></td>
+				<td class="th_font"><b>申请人</b></td>
+				<td class="th_font"><b>申请状态</b></td>
+				<td class="th_font"><b>操作</b></td>
+			</th>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>00103001</td>  
+	            <td>00103001101</td>  
+	            <td>第一章：绪论</td>
+	            <td>机器学习的定义</td> 
+	            <td>王老师</td> 
+	            <td><b><font style="color: grey;">已审核</font></b></td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
+	        </tr>  
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>00103001</td>  
+	            <td>00103001102</td>  
+	            <td>第一章</td>
+	            <td>与数据挖掘的区别与联系</td> 
+	            <td>王老师</td> 
+	            <td><b><font style="color: grey;">已审核</font></b></td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
+	        </tr> 
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>00103001</td>  
+	            <td>00103001201</td>  
+	            <td>第二章：模型评估</td>
+	            <td>评估方法</td> 
+	            <td>王老师</td> 
+	            <td><b><font style="color: grey;">已审核</font></b></td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
+	        </tr>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>00103001</td>  
+	            <td>00103001202</td>  
+	            <td>第二章：模型评估</td>
+	            <td>评估指标</td> 
+	            <td>王老师</td> 
+	            <td><b><font style="color: grey;">已审核</font></b></td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
+	        </tr> 
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>00103001</td>  
+	            <td>00103001203</td>  
+	            <td>第二章：模型评估</td>
+	            <td>比较检验</td> 
+	            <td>王老师</td> 
+	            <td><b><font style="color: grey;">已审核</font></b></td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
+	        </tr> 
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>00103001</td>  
+	            <td>00103001301</td>  
+	            <td>第三章：线性学习</td>
+	            <td>线性回归</td> 
+	            <td>王老师</td> 
+	            <td><b><font style="color: grey;">已审核</font></b></td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
+	        </tr>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>00103001</td>  
+	            <td>00103001302</td>  
+	            <td>第三章：线性学习</td>
+	            <td>广义线性回归</td> 
+	            <td>王老师</td> 
+	            <td><b><font style="color: grey;">已审核</font></b></td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
+	        </tr>
+	    </table>  
+	    <div class="zxf_pagediv"></div>
+	    </div>
+	    
+	    <script type="text/javascript">
+		//翻页
+		$(".zxf_pagediv").createPage({
+			pageNum: 1,
+			current: 1,
+			backfun: function(e) {
+				//console.log(e);//回调
+			}
+		});
+		
+		//checkbox 全选/取消全选  
+        var isCheckAll = false;  
+        function swapCheck() {  
+            if (isCheckAll) {  
+                $("input[type='checkbox']").each(function() {  
+                    this.checked = false;  
+                });  
+                isCheckAll = false;  
+            } else {  
+                $("input[type='checkbox']").each(function() {  
+                    this.checked = true;  
+                });  
+                isCheckAll = true;  
+            }  
+        }  
+	</script>
+		
+		</body>
+</html>

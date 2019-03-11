@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/auditing_management.css" />
+		<link rel="stylesheet" type="text/css" href="css/zxf_page.css"/>
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="js/zxf_page.js"></script>
+		<style>
+			.auditing{
+				display: none;
+			}
+		</style>
+		<script>
+			$(function(){
+					//加鼠标单击事件
+					$(".brush_s").click(function(){
+						$(".auditing").css({'display':'block'});
+					})
+				
+			})	
+		
+		</script>
+		
+		<title></title>
+	</head>
+	<body>
+		
+		<!--刷选框-->
+		<!--<form method="post">-->
+		<div id="brush_class">
+			<div class="brush_1">
+				课程号<input type="text" class="text" style="margin-left: 10px;">
+			</div>
+			<div class="brush_2">
+				课程名<input type="text" class="text">
+			</div>
+			<div class="brush_3">
+				教师<input type="text" class="text">
+			</div>
+			<div class="brush_score3">
+				<input type="submit" class="brush_s" value="">
+					
+			</div>
+			<!--</a>-->
+			<!--<img src="img/search.png" />
+					<input type="submit" class="brush_7" value="">-->
+		</div>
+		<!--</form>-->
+		
+		<!--订单-->
+		<div id="wait_top">
+			<div class="top_left"><input type="checkbox" onclick="swapCheck()" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;全选</div>
+			<div class="top_right">
+				<a href="#"><div class="top_right_1">Excel导出</div></a>
+			</div>
+		</div>
+		
+		<!--表格-->
+		<div class="auditing">
+		<table border="1" cellspacing="20" class="scor_student"> 
+			<th>
+				<td class="th_font"><b>课程号</b></td>
+				<td class="th_font"><b>课程名称</b></td>
+				<td class="th_font"><b>教师</b></td>
+				<td class="th_font"><b>申请时间</b></td>
+				<td class="th_font"><b>申请状态</b></td>
+				<td class="th_font"><b>操作</b></td>
+			</th>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>00103021</td>  
+	            <td>数据结构</td>  
+	            <td>王老师</td>
+	            <td>2019-02-28</td>
+	            <td><b><font style="color: red;">未审核</font></b></td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
+	        </tr>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>00103022</td>  
+	            <td>Python语言程序设计</td>  
+	            <td>王老师</td>
+	            <td>2019-02-28</td>
+	            <td><b><font style="color: red;">未审核</font></b></td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
+	        </tr>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>00103023</td>  
+	            <td>计算机网络系统</td>  
+	            <td>王老师</td>
+	            <td>2019-02-28</td>
+	            <td><b><font style="color: red;">未审核</font></b></td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
+	        </tr>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>00103024</td>  
+	            <td>多媒体技术及应用</td>  
+	            <td>王老师</td>
+	            <td>2019-02-28</td>
+	            <td><b><font style="color: red;">未审核</font></b></td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
+	        </tr>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>00103025</td>  
+	            <td>软件项目管理</td>  
+	            <td>王老师</td>
+	            <td>2019-02-28</td>
+	            <td><b><font style="color: red;">未审核</font></b></td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
+	        </tr>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>00103026</td>  
+	            <td>离散结构</td>  
+	            <td>王老师</td>
+	            <td>2019-02-28</td>
+	            <td><b><font style="color: red;">未审核</font></b></td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
+	        </tr>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>00103027</td>  
+	            <td>大学计算机</td>  
+	            <td>王老师</td>
+	            <td>2019-02-28</td>
+	            <td><b><font style="color: red;">未审核</font></b></td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
+	        </tr>
+	        
+	    </table>  
+	    <div class="zxf_pagediv"></div>
+	   </div>
+	    
+	    <script type="text/javascript">
+		//翻页
+		$(".zxf_pagediv").createPage({
+			pageNum: 10,
+			current: 1,
+			backfun: function(e) {
+				//console.log(e);//回调
+			}
+		});
+		
+		//checkbox 全选/取消全选  
+        var isCheckAll = false;  
+        function swapCheck() {  
+            if (isCheckAll) {  
+                $("input[type='checkbox']").each(function() {  
+                    this.checked = false;  
+                });  
+                isCheckAll = false;  
+            } else {  
+                $("input[type='checkbox']").each(function() {  
+                    this.checked = true;  
+                });  
+                isCheckAll = true;  
+            }  
+        }  
+	</script>
+		
+		</body>
+</html>

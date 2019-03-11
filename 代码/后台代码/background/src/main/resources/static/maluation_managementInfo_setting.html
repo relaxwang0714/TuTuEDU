@@ -28,7 +28,7 @@
 		</style>
 	</head>
 	<body>
-		<form class="layui-form">
+		<!--<form class="layui-form">-->
 		<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
 		  <legend>设置教评时间</legend>
 		</fieldset>
@@ -46,55 +46,29 @@
 	      		<input type="text" name="title" required  lay-verify="required" placeholder="请输入提问" autocomplete="off" class="layui-input">
 		    </div>
 		</div>
-		<div class="layui-form-item">
-	    <label class="layui-form-label"><b>选项</b></label>
-	    <div class="layui-input-block">
-	      	<input type="radio" name="1" value="优秀" title="优秀">
-	      	<input type="radio" name="1" value="优良" title="优良">
-	      	<input type="radio" name="1" value="良好" title="良好">
-	      	<input type="radio" name="1" value="合格" title="合格">
-	      	<input type="radio" name="1" value="不合格" title="不合格">
-	    </div>
-	    </div>
+
 	    <div class="layui-form-item">
 			<label class="layui-form-label"><b>提问2</b></label>
 	    	<div class="layui-input-block question">
 	      		<input type="text" name="title" required  lay-verify="required" placeholder="请输入提问" autocomplete="off" class="layui-input">
 		    </div>
 		</div>
-		<div class="layui-form-item">
-	    <label class="layui-form-label"><b>选项</b></label>
-	    <div class="layui-input-block">
-	      	<input type="radio" name="2" value="优秀" title="优秀">
-	      	<input type="radio" name="2" value="优良" title="优良">
-	      	<input type="radio" name="2" value="良好" title="良好">
-	      	<input type="radio" name="2" value="合格" title="合格">
-	      	<input type="radio" name="2" value="不合格" title="不合格">
-	    </div>
-	    </div>
+
 	    <div class="layui-form-item">
 			<label class="layui-form-label"><b>提问3</b></label>
 	    	<div class="layui-input-block question">
 	      		<input type="text" name="title" required  lay-verify="required" placeholder="请输入提问" autocomplete="off" class="layui-input">
 		    </div>
 		</div>
-		<div class="layui-form-item">
-	    <label class="layui-form-label"><b>选项</b></label>
-	    <div class="layui-input-block">
-	      	<input type="radio" name="3" value="优秀" title="优秀">
-	      	<input type="radio" name="3" value="优良" title="优良">
-	      	<input type="radio" name="3" value="良好" title="良好">
-	      	<input type="radio" name="3" value="合格" title="合格">
-	      	<input type="radio" name="3" value="不合格" title="不合格">
-	    </div>
-	    </div>
+		<div class="ques3" style="float: left;"></div>
 	    <div class="layui-form-item setting_button">
 		    <button class="layui-btn" lay-submit="" lay-filter="demo2">保存并提交</button>
-		    <button class="layui-btn layui-btn-danger" lay-submit="" lay-filter="demo2">+增加问题</button>	
+		    <button class="layui-btn layui-btn-warm" lay-submit="" lay-filter="demo2" id="opbtn">+增加问题</button>
+			<button class="layui-btn layui-btn-danger" lay-submit="" lay-filter="demo2" id="devopbtn">-删除问题</button>
 		</div>
 	    
 	    </div>
-		</form>
+		<!--</form>-->
 		<script src="layui/layui.js"></script>
 		<script>
 			layui.use(['form','laydate'], function(){
@@ -116,6 +90,24 @@
 			  });
 			});
 			</script>
+		<script>
+            $(function(){
+                var num = 3;
+                $("#opbtn").click(function(){
+                    num = num + 1;
+                    $('.ques3').append('<div  class="layui-form-item ques"><label class="layui-form-label"><b>提问'+num+'</b></label><div class="layui-input-block question "><input type="text" name="title" required  lay-verify="required" placeholder="请输入提问" autocomplete="off" class="layui-input"></div></div>');
+                })
+                $("#devopbtn").click(function(){
+//						num = num + 1;
+                    if(num > 3){
+                        $(".ques").last().remove();
+                        num = num - 1;
+                    }
+
+                })
+
+            });
+		</script>
 	</body>
 </html>
 
