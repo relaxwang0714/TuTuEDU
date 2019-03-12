@@ -2,7 +2,6 @@
 @import"../../templates/nav.wxss"; 
 page{
   width: 100%;
-  height: 100%;
   box-sizing: border-box;
 }
 .mainteam{

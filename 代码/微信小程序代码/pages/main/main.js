@@ -4,12 +4,6 @@ Page({
   /**
    * 页面的初始数据
    */
-  btnclick: function () {
-    console.log('123');
-    wx.navigateTo({
-      url: '../onlinevedio/onlinevedio'
-    })
-  },
   data: {
     UserName:'Shawn',
     MainButton:[
@@ -33,6 +27,17 @@ Page({
       { popular_id: 0, popular_pic: '../../images/mainPic/5.png', popular_name: '小黑老师', popular_number: 9890},
       { popular_id: 1, popular_pic: '../../images/mainPic/6.png', popular_name: '陈萨v', popular_number: 4490 }
     ]
+  },
+  btnclick: function () {
+    wx.navigateTo({
+      url: '../onlinevedio/onlinevedio'
+    })
+  },
+  mainBtn: function(e){
+    console.log("e的值",e)
+    // wx.navigateTo({
+    //   url: '../onlinevedio/onlinevedio'
+    // })
   },
   // zhouqi:function(){
   //   wx:wx.navigateTo({

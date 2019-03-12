@@ -36,6 +36,10 @@
   font-size: 24rpx;
   margin-bottom: 10rpx;
   font-weight: bold;
+  width: 350rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .course_teacher{
   font-size: 24rpx;
