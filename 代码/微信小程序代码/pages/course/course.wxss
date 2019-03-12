@@ -35,7 +35,7 @@ page{
   align-items: center;
 }
 .toEdit .event_name{
-  color: #f4d7b8;
+  color: #27a20a;
   font-size: 32rpx;
 }
 .toEdit .return{

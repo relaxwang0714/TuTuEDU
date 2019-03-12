@@ -1,17 +1,17 @@
 <!--pages/course/course.wxml-->
 <view class='course'>
   <view class='course_name'>
-    <text style='font-size:48rpx;'>计算机应用基础</text>
+    <text style='font-size:48rpx;'>电工与电子技术</text>
     <image src='../../images/little/modify.png' class='course_edit'></image>
   </view>
-  <text style='font-size:32rpx;'>E203 陈云</text>
-  <text style='font-size:24rpx;margin-top:40rpx'>2019年3月3日 周日</text>
-  <text style='font-size:24rpx;'>上午8:00-9:55</text>
+  <text style='font-size:32rpx;'>何科文</text>
+  <text style='font-size:24rpx;margin-top:40rpx'>2019年3月12日 周二</text>
+  <text style='font-size:24rpx;'>下午15:05-16:45</text>
 </view>
-<view class='event'>
+<view class='event' bindtap='modify'>
   <text style='font-size:32rpx;'>事件</text>
   <view class='toEdit'>
-    <text class='event_name'>学校</text>
+    <text class='event_name'>网课</text>
     <image src='../../images/little/return.png' class='return'></image>
   </view>
 </view>
