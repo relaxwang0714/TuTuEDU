@@ -1,5 +1,9 @@
 {
   "pages": [    
+    "pages/calendar/calendar",
+    "pages/modify/modify",
+    "pages/course/course",
+    
     "pages/main/main",
     "pages/schedule/schedule",
     "pages/schedule1/schedule1",
@@ -11,10 +15,6 @@
     "pages/logs/logs",
     "pages/team/team",
     "pages/talk/talk",
-
-    "pages/calendar/calendar",
-    "pages/modify/modify",
-    "pages/course/course",
     
     "pages/mine/mine"
   ],

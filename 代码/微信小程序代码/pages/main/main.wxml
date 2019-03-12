@@ -10,7 +10,7 @@
     </view>
   </view>
   <view class='MainButton'>
-    <block wx:for="{{MainButton}}" key="id">
+    <block wx:for="{{MainButton}}" wx:for-index="id" key="id">
       <template is="nav1" data="{{...item}}" />
     </block>
   </view>

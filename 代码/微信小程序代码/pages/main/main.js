@@ -7,10 +7,10 @@ Page({
   data: {
     UserName:'Shawn',
     MainButton:[
-      { id: 0, circle_image:'../../images/little/top-ecourse.png',name:'精品网课'},
-      { id: 1, circle_image: '../../images/little/top-ebook.png',name:'在线图书' },
-      { id: 2, circle_image: '../../images/little/top-liveshow.png',name:'名师直播'},
-      { id: 3, circle_image: '../../images/little/top-FMradio.png', name: 'FM电台' }
+      { id: 0, mainBtnUrl:"../schedule/schedule", circle_image:'../../images/little/top-ecourse.png',name:'精品网课'},
+      { id: 1, mainBtnUrl: "../schedule2/schedule2",  circle_image: '../../images/little/top-ebook.png',name:'在线图书' },
+      { id: 2, mainBtnUrl: "../schedule1/schedule1",  circle_image: '../../images/little/top-liveshow.png',name:'名师直播'},
+      { id: 3, mainBtnUrl: "../schedule3/schedule3",  circle_image: '../../images/little/top-FMradio.png', name: 'FM电台' }
     ],
     MainCourse:[
       { course_id: 0, pic: '../../images/mainPic/1.png', name: '计算机二级Office高级应用之文字处理专题', teacher: '小黑课堂小黑老师', star: 5, grade: '4.9'},

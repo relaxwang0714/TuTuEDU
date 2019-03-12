@@ -25,8 +25,8 @@ Component({
       value:""
     },
     isStatus: {
-      type: Boolean,
-      value: true
+      type: Number,
+      value: 0
     },
     kaTime: {
       type: String,
@@ -45,7 +45,17 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    courseDetail:function(){
+      wx.navigateTo({
+        url: '../../pages/course/course',
+      })
+    },
+    startLearn: function () {
+      this.setData({
+        isStatus:1,
+        kaTime:'1:40:00'
+      })
+    }
   },
 
   lifetimes:{
