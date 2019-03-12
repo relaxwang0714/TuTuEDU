@@ -1,5 +1,5 @@
 <template name="nav1">
-  <view class='main_check_choose'>
+  <view class='main_check_choose' bindtap='mainBtn'>
     <image class='shelf-nav-item-img' src='{{circle_image}}'></image>
     <text class='shelf-nav-item-txt'>{{name}}</text>
   </view>

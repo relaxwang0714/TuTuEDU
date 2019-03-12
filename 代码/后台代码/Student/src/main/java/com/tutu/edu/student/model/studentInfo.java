@@ -8,9 +8,9 @@ import java.util.List;
 *
 *  @author wang
 */
-public class studentInfo implements Serializable {
+public class StudentInfo implements Serializable {
 
-    private static final long serialVersionUID = 1551246198057L;
+    private static final long serialVersionUID = 1551322618600L;
 
 
     /**
@@ -18,7 +18,7 @@ public class studentInfo implements Serializable {
     * 
     * isNullAble:0
     */
-    private Long   id;
+    private Long id;
 
     /**
     * 
@@ -42,7 +42,7 @@ public class studentInfo implements Serializable {
     * 
     * isNullAble:0
     */
-    private String studentPhone;
+    private Long studentPhone;
 
     /**
     * 
@@ -81,9 +81,9 @@ public class studentInfo implements Serializable {
     private java.time.LocalDateTime dataModified;
 
 
-    public void setId(Long   id){this.  id =   id;}
+    public void setId(Long id){this.id = id;}
 
-    public Long getId(){return this.  id;}
+    public Long getId(){return this.id;}
 
     public void setStudentNum(Integer studentNum){this.studentNum = studentNum;}
 
@@ -97,9 +97,9 @@ public class studentInfo implements Serializable {
 
     public String getStudentSex(){return this.studentSex;}
 
-    public void setStudentPhone(String studentPhone){this.studentPhone = studentPhone;}
+    public void setStudentPhone(Long studentPhone){this.studentPhone = studentPhone;}
 
-    public String getStudentPhone(){return this.studentPhone;}
+    public Long getStudentPhone(){return this.studentPhone;}
 
     public void setCollegeId(Long collegeId){this.collegeId = collegeId;}
 
@@ -126,8 +126,8 @@ public class studentInfo implements Serializable {
     public java.time.LocalDateTime getDataModified(){return this.dataModified;}
     @Override
     public String toString() {
-        return "studentInfo{" +
-                "  id='" +   id + '\'' +
+        return "StudentInfo{" +
+                "id='" + id + '\'' +
                 "studentNum='" + studentNum + '\'' +
                 "studentName='" + studentName + '\'' +
                 "studentSex='" + studentSex + '\'' +
@@ -151,16 +151,16 @@ public class studentInfo implements Serializable {
 
     public static class UpdateBuilder {
 
-        private studentInfo set;
+        private StudentInfo set;
 
         private ConditionBuilder where;
 
-        public UpdateBuilder set(studentInfo set){
+        public UpdateBuilder set(StudentInfo set){
             this.set = set;
             return this;
         }
 
-        public studentInfo getSet(){
+        public StudentInfo getSet(){
             return this.set;
         }
 
@@ -178,7 +178,7 @@ public class studentInfo implements Serializable {
         }
     }
 
-    public static class QueryBuilder extends studentInfo{
+    public static class QueryBuilder extends StudentInfo{
         /**
         * 需要返回的列
         */
@@ -186,17 +186,17 @@ public class studentInfo implements Serializable {
 
         public Map<String,Object> getFetchFields(){return this.fetchFields;}
 
-        private List<Long>   idList;
+        private List<Long> idList;
 
-        public List<Long> getIdList(){return this.  idList;}
+        public List<Long> getIdList(){return this.idList;}
 
-        private Long   idSt;
+        private Long idSt;
 
-        private Long   idEd;
+        private Long idEd;
 
-        public Long getIdSt(){return this.  idSt;}
+        public Long getIdSt(){return this.idSt;}
 
-        public Long getIdEd(){return this.  idEd;}
+        public Long getIdEd(){return this.idEd;}
 
         private List<Integer> studentNumList;
 
@@ -234,18 +234,18 @@ public class studentInfo implements Serializable {
         private List<String> rightFuzzyStudentSex;
 
         public List<String> getRightFuzzyStudentSex(){return this.rightFuzzyStudentSex;}
-        private List<String> studentPhoneList;
+        private List<Long> studentPhoneList;
 
-        public List<String> getStudentPhoneList(){return this.studentPhoneList;}
+        public List<Long> getStudentPhoneList(){return this.studentPhoneList;}
 
+        private Long studentPhoneSt;
 
-        private List<String> fuzzyStudentPhone;
+        private Long studentPhoneEd;
 
-        public List<String> getFuzzyStudentPhone(){return this.fuzzyStudentPhone;}
+        public Long getStudentPhoneSt(){return this.studentPhoneSt;}
 
-        private List<String> rightFuzzyStudentPhone;
+        public Long getStudentPhoneEd(){return this.studentPhoneEd;}
 
-        public List<String> getRightFuzzyStudentPhone(){return this.rightFuzzyStudentPhone;}
         private List<Long> collegeIdList;
 
         public List<Long> getCollegeIdList(){return this.collegeIdList;}
@@ -322,44 +322,44 @@ public class studentInfo implements Serializable {
             this.fetchFields = new HashMap<>();
         }
 
-        public QueryBuilder   idBetWeen(Long   idSt,Long   idEd){
-            this.  idSt =   idSt;
-            this.  idEd =   idEd;
+        public QueryBuilder idBetWeen(Long idSt,Long idEd){
+            this.idSt = idSt;
+            this.idEd = idEd;
             return this;
         }
 
-        public QueryBuilder   idGreaterEqThan(Long   idSt){
-            this.  idSt =   idSt;
+        public QueryBuilder idGreaterEqThan(Long idSt){
+            this.idSt = idSt;
             return this;
         }
-        public QueryBuilder   idLessEqThan(Long   idEd){
-            this.  idEd =   idEd;
-            return this;
-        }
-
-
-        public QueryBuilder   id(Long   id){
-            setId(  id);
+        public QueryBuilder idLessEqThan(Long idEd){
+            this.idEd = idEd;
             return this;
         }
 
-        public QueryBuilder   idList(Long ...   id){
-            this.  idList = solveNullList(  id);
+
+        public QueryBuilder id(Long id){
+            setId(id);
             return this;
         }
 
-        public QueryBuilder   idList(List<Long>   id){
-            this.  idList =   id;
+        public QueryBuilder idList(Long ... id){
+            this.idList = solveNullList(id);
+            return this;
+        }
+
+        public QueryBuilder idList(List<Long> id){
+            this.idList = id;
             return this;
         }
 
         public QueryBuilder fetchId(){
-            setFetchFields("fetchFields","  id");
+            setFetchFields("fetchFields","id");
             return this;
         }
 
         public QueryBuilder excludeId(){
-            setFetchFields("excludeFields","  id");
+            setFetchFields("excludeFields","id");
             return this;
         }
 
@@ -494,37 +494,33 @@ public class studentInfo implements Serializable {
             return this;
         }
 
-        public QueryBuilder fuzzyStudentPhone (List<String> fuzzyStudentPhone){
-            this.fuzzyStudentPhone = fuzzyStudentPhone;
+        public QueryBuilder studentPhoneBetWeen(Long studentPhoneSt,Long studentPhoneEd){
+            this.studentPhoneSt = studentPhoneSt;
+            this.studentPhoneEd = studentPhoneEd;
             return this;
         }
 
-        public QueryBuilder fuzzyStudentPhone (String ... fuzzyStudentPhone){
-            this.fuzzyStudentPhone = solveNullList(fuzzyStudentPhone);
+        public QueryBuilder studentPhoneGreaterEqThan(Long studentPhoneSt){
+            this.studentPhoneSt = studentPhoneSt;
+            return this;
+        }
+        public QueryBuilder studentPhoneLessEqThan(Long studentPhoneEd){
+            this.studentPhoneEd = studentPhoneEd;
             return this;
         }
 
-        public QueryBuilder rightFuzzyStudentPhone (List<String> rightFuzzyStudentPhone){
-            this.rightFuzzyStudentPhone = rightFuzzyStudentPhone;
-            return this;
-        }
 
-        public QueryBuilder rightFuzzyStudentPhone (String ... rightFuzzyStudentPhone){
-            this.rightFuzzyStudentPhone = solveNullList(rightFuzzyStudentPhone);
-            return this;
-        }
-
-        public QueryBuilder studentPhone(String studentPhone){
+        public QueryBuilder studentPhone(Long studentPhone){
             setStudentPhone(studentPhone);
             return this;
         }
 
-        public QueryBuilder studentPhoneList(String ... studentPhone){
+        public QueryBuilder studentPhoneList(Long ... studentPhone){
             this.studentPhoneList = solveNullList(studentPhone);
             return this;
         }
 
-        public QueryBuilder studentPhoneList(List<String> studentPhone){
+        public QueryBuilder studentPhoneList(List<Long> studentPhone){
             this.studentPhoneList = studentPhone;
             return this;
         }
@@ -822,22 +818,22 @@ public class studentInfo implements Serializable {
             this.fetchFields.put(key,fields);
         }
 
-        public studentInfo build(){return this;}
+        public StudentInfo build(){return this;}
     }
 
 
     public static class ConditionBuilder{
-        private List<Long>   idList;
+        private List<Long> idList;
 
-        public List<Long> getIdList(){return this.  idList;}
+        public List<Long> getIdList(){return this.idList;}
 
-        private Long   idSt;
+        private Long idSt;
 
-        private Long   idEd;
+        private Long idEd;
 
-        public Long getIdSt(){return this.  idSt;}
+        public Long getIdSt(){return this.idSt;}
 
-        public Long getIdEd(){return this.  idEd;}
+        public Long getIdEd(){return this.idEd;}
 
         private List<Integer> studentNumList;
 
@@ -875,18 +871,18 @@ public class studentInfo implements Serializable {
         private List<String> rightFuzzyStudentSex;
 
         public List<String> getRightFuzzyStudentSex(){return this.rightFuzzyStudentSex;}
-        private List<String> studentPhoneList;
+        private List<Long> studentPhoneList;
 
-        public List<String> getStudentPhoneList(){return this.studentPhoneList;}
+        public List<Long> getStudentPhoneList(){return this.studentPhoneList;}
 
+        private Long studentPhoneSt;
 
-        private List<String> fuzzyStudentPhone;
+        private Long studentPhoneEd;
 
-        public List<String> getFuzzyStudentPhone(){return this.fuzzyStudentPhone;}
+        public Long getStudentPhoneSt(){return this.studentPhoneSt;}
 
-        private List<String> rightFuzzyStudentPhone;
+        public Long getStudentPhoneEd(){return this.studentPhoneEd;}
 
-        public List<String> getRightFuzzyStudentPhone(){return this.rightFuzzyStudentPhone;}
         private List<Long> collegeIdList;
 
         public List<Long> getCollegeIdList(){return this.collegeIdList;}
@@ -960,29 +956,29 @@ public class studentInfo implements Serializable {
         public java.time.LocalDateTime getDataModifiedEd(){return this.dataModifiedEd;}
 
 
-        public ConditionBuilder   idBetWeen(Long   idSt,Long   idEd){
-            this.  idSt =   idSt;
-            this.  idEd =   idEd;
+        public ConditionBuilder idBetWeen(Long idSt,Long idEd){
+            this.idSt = idSt;
+            this.idEd = idEd;
             return this;
         }
 
-        public ConditionBuilder   idGreaterEqThan(Long   idSt){
-            this.  idSt =   idSt;
+        public ConditionBuilder idGreaterEqThan(Long idSt){
+            this.idSt = idSt;
             return this;
         }
-        public ConditionBuilder   idLessEqThan(Long   idEd){
-            this.  idEd =   idEd;
-            return this;
-        }
-
-
-        public ConditionBuilder   idList(Long ...   id){
-            this.  idList = solveNullList(  id);
+        public ConditionBuilder idLessEqThan(Long idEd){
+            this.idEd = idEd;
             return this;
         }
 
-        public ConditionBuilder   idList(List<Long>   id){
-            this.  idList =   id;
+
+        public ConditionBuilder idList(Long ... id){
+            this.idList = solveNullList(id);
+            return this;
+        }
+
+        public ConditionBuilder idList(List<Long> id){
+            this.idList = id;
             return this;
         }
 
@@ -1072,32 +1068,28 @@ public class studentInfo implements Serializable {
             return this;
         }
 
-        public ConditionBuilder fuzzyStudentPhone (List<String> fuzzyStudentPhone){
-            this.fuzzyStudentPhone = fuzzyStudentPhone;
+        public ConditionBuilder studentPhoneBetWeen(Long studentPhoneSt,Long studentPhoneEd){
+            this.studentPhoneSt = studentPhoneSt;
+            this.studentPhoneEd = studentPhoneEd;
             return this;
         }
 
-        public ConditionBuilder fuzzyStudentPhone (String ... fuzzyStudentPhone){
-            this.fuzzyStudentPhone = solveNullList(fuzzyStudentPhone);
+        public ConditionBuilder studentPhoneGreaterEqThan(Long studentPhoneSt){
+            this.studentPhoneSt = studentPhoneSt;
+            return this;
+        }
+        public ConditionBuilder studentPhoneLessEqThan(Long studentPhoneEd){
+            this.studentPhoneEd = studentPhoneEd;
             return this;
         }
 
-        public ConditionBuilder rightFuzzyStudentPhone (List<String> rightFuzzyStudentPhone){
-            this.rightFuzzyStudentPhone = rightFuzzyStudentPhone;
-            return this;
-        }
 
-        public ConditionBuilder rightFuzzyStudentPhone (String ... rightFuzzyStudentPhone){
-            this.rightFuzzyStudentPhone = solveNullList(rightFuzzyStudentPhone);
-            return this;
-        }
-
-        public ConditionBuilder studentPhoneList(String ... studentPhone){
+        public ConditionBuilder studentPhoneList(Long ... studentPhone){
             this.studentPhoneList = solveNullList(studentPhone);
             return this;
         }
 
-        public ConditionBuilder studentPhoneList(List<String> studentPhone){
+        public ConditionBuilder studentPhoneList(List<Long> studentPhone){
             this.studentPhoneList = studentPhone;
             return this;
         }
@@ -1276,14 +1268,14 @@ public class studentInfo implements Serializable {
 
     public static class Builder {
 
-        private studentInfo obj;
+        private StudentInfo obj;
 
         public Builder(){
-            this.obj = new studentInfo();
+            this.obj = new StudentInfo();
         }
 
-        public Builder   id(Long   id){
-            this.obj.setId(  id);
+        public Builder id(Long id){
+            this.obj.setId(id);
             return this;
         }
         public Builder studentNum(Integer studentNum){
@@ -1298,7 +1290,7 @@ public class studentInfo implements Serializable {
             this.obj.setStudentSex(studentSex);
             return this;
         }
-        public Builder studentPhone(String studentPhone){
+        public Builder studentPhone(Long studentPhone){
             this.obj.setStudentPhone(studentPhone);
             return this;
         }
@@ -1326,7 +1318,7 @@ public class studentInfo implements Serializable {
             this.obj.setDataModified(dataModified);
             return this;
         }
-        public studentInfo build(){return obj;}
+        public StudentInfo build(){return obj;}
     }
 
 }
