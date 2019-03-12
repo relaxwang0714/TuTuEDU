@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content ">
+    <div class="col-sm-12">
+        <div class="ibox">
+            <div class="ibox-body">
+                <div class="fixed-table-toolbar">
+                    <div class="columns pull-left">
+                        <button type="button" class="btn  btn-primary" onclick="add()">
+                            <i class="fa fa-plus" aria-hidden="true"></i>导出报表
+                        </button>
+                        <button shiro:hasPermission="oa:notify:batchRemove" type="button"
+                                class="btn  btn-danger hidden" onclick="batchRemove()">
+                            <i class="fa fa-trash" aria-hidden="true"></i>删除
+                        </button>
+                    </div>
+                    <div class="columns pull-right">
+                        <button class="btn btn-success" onclick="reLoad()">查询</button>
+                    </div>
+                    <div class="columns pull-right col-md-2 nopadding">
+                        <input id="searchName" type="text" class="form-control"
+                               placeholder="">
+                    </div>
+                </div>
+                <table id="classtable" data-mobile-responsive="true" class="table table-striped">
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--shiro控制bootstraptable行内按钮看见性 来自bootdo的创新方案 -->
+<div>
+    <script type="text/javascript">
+        var s_edit_h = 'hidden';
+        var s_remove_h = 'hidden';
+        var s_resetPwd_h = 'hidden';
+    </script>
+</div>
+<div shiro:hasPermission="oa:notify:edit">
+    <script type="text/javascript">
+        s_edit_h = '';
+    </script>
+</div>
+<div shiro:hasPermission="oa:notify:remove">
+    <script type="text/javascript">
+        var s_remove_h = '';
+    </script>
+</div>
+<div shiro:hasPermission="oa:notify:resetPwd">
+    <script type="text/javascript">
+        var s_resetPwd_h = '';
+    </script>
+</div>
+<div th:include="include :: footer"></div>
+<script>
+    function add() {
+        layer.open({
+            type : 2,
+            title : '新增班次',
+            maxmin : true,
+            shadeClose : false, // 点击遮罩关闭层
+            area : [ '800px', '520px' ],
+            content : '/common/class/add' // iframe的url
+        });
+    }
+
+    $(function() {
+        load();
+    });
+
+    function load() {
+        $('#classtable')
+            .bootstrapTable(
+                {
+                    // method : 'get', // 服务器数据的请求方式 get or post
+                    // url : prefix + "/list", // 服务器数据的加载地址
+                    	showRefresh : true,
+                    	showToggle : true,
+                    	showColumns : true,
+
+                    iconSize : 'outline',
+                    toolbar : '#exampleToolbar',
+                    striped : true, // 设置为true会有隔行变色效果
+                    dataType : "json", // 服务器返回的数据类型
+                    pagination : true, // 设置为true会在底部显示分页条
+                    // queryParamsType : "limit",
+                    // //设置为limit则会发送符合RESTFull格式的参数
+                    singleSelect : false, // 设置为true将禁止多选
+                    // contentType : "application/x-www-form-urlencoded",
+                    // //发送到服务器的数据编码类型
+                    pageSize : 10, // 如果设置了分页，每页数据条数
+                    pageNumber : 1, // 如果设置了分布，首页页码
+                    //search : true, // 是否显示搜索框
+                    showColumns : true, // 是否显示内容下拉框（选择显示的列）
+                    sidePagination : "server", // 设置在哪里进行分页，可选值为"client" 或者 "server"
+                    queryParams : function(params) {
+                        return {
+                            //说明：传入后台的参数包括offset开始索引，limit步长，sort排序列，order：desc或者,以及所有列的键值对
+                            limit : params.limit,
+                            offset : params.offset
+                            // name:$('#searchName').val(),
+                            // username:$('#searchName').val()
+                        };
+                    },
+                    // //请求服务器数据时，你可以通过重写参数的方式添加一些额外的参数，例如 toolbar 中的参数 如果
+                    // queryParamsType = 'limit' ,返回参数必须包含
+                    // limit, offset, search, sort, order 否则, 需要包含:
+                    // pageSize, pageNumber, searchText, sortName,
+                    // sortOrder.
+                    // 返回false将会终止请求
+                    data:[{
+                        "id":59,
+                        'name':'小王',
+                        "stuid":"16905538",
+                        "classid":"1692313",
+                        "teacherid":'161240',
+                        "chuqinday":24,
+                        'xiuxiday':6,
+                        'chidaocishu':5,
+                        'chidaoshichang':'2h10m',
+                        'kuangke':1
+                    },{
+                        "id":60,
+                        'name':'小梅',
+                        "stuid":"16905539",
+                        "classid":"1692313",
+                        "teacherid":'161240',
+                        "chuqinday":24,
+                        'xiuxiday':6,
+                        'chidaocishu':5,
+                        'chidaoshichang':'2h10m',
+                        'kuangke':1
+                    },
+                        {
+                            "id":61,
+                            'name':'老张',
+                            "stuid":"16905540",
+                            "classid":"1692313",
+                            "teacherid":'161240',
+                            "chuqinday":24,
+                            'xiuxiday':6,
+                            'chidaocishu':5,
+                            'chidaoshichang':'2h10m',
+                            'kuangke':1
+                        },
+                    ],
+                    columns : [
+                        {
+                            checkbox : true
+                        },
+                        {
+                            visible : true,
+                            field : 'id',
+                            title : '编号'
+
+                        },
+                        {
+                            visible :true,
+                            field : 'name',
+                            title : '姓名'
+                        },
+                        {
+                            visible :true,
+                            field : 'stuid',
+                            title : '学号'
+                        },
+                        {
+                            visible : true,
+                            field : 'classid',
+                            title : '班级号'
+
+                        },
+                        {
+                            visible :true,
+                            field : 'teacherid',
+                            title : '教工号'
+                        },
+                        {
+                            visible : true,
+                            field : 'chuqinday',
+                            title : '出勤天数'
+
+                        },
+                        {
+                            visible :true,
+                            field : 'xiuxiday',
+                            title : '休息天数'
+                        },
+                        {
+                            visible : true,
+                            field : 'chidaocishu',
+                            title : '迟到次数'
+
+                        },
+                        {
+                            visible :true,
+                            field : 'chidaoshichang',
+                            title : '迟到时长'
+                        },
+                        {
+                            visible :true,
+                            field : 'kuangke',
+                            title : '旷课次数'
+                        },
+                        {
+                            title : '操作',
+                            field : 'opera',
+                            align : 'center',
+                            formatter : function(value, row, index) {
+                                var e = '<a class="btn btn-primary btn-sm" href="#" mce_href="#" title="打开" onclick="read(\''
+                                    + row.id
+                                    + '\')"><i class="fa fa-book"></i></a> ';
+                                var d = '<a class="btn btn-warning btn-sm ' + s_remove_h + '" href="#" title="删除"  mce_href="#" onclick="remove(\''
+                                    + row.id
+                                    + '\')"><i class="fa fa-remove"></i></a> ';
+                                var f = '<a class="btn btn-success btn-sm" href="#" title="备用"  mce_href="#" onclick="resetPwd(\''
+                                    + row.id
+                                    + '\')"><i class="fa fa-key"></i></a> ';
+                                return e ;
+                            }
+                        } ]
+                });
+    }
+</script>
+</body>
+</html>
