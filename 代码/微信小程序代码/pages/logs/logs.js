@@ -6,7 +6,7 @@ Page({
    */
   data: {
     navDatas: [
-      { DataId: 0, navData: '智能推荐' }, { DataId: 1, navData: '我的关注' }
+      { DataId: 0, navData: '智能推荐' }, { DataId: 1, navData: '我的关注' },{DataId: 2,navData:'同校活动'}
     ],
     Group: [
       { group_id: 0,teamUrl:"../team/team", photo: '../../images/mainPic/8.png', name: '数学自由小组', types: '加入的小组',talkUrl:"../talk/talk", title: '来讨论阴影面积的解决方法', content: '不是30°呀 直角边4斜边8 才是30度 他这个是另外一条直角边8哎',pic:'../../images/mainPic/Pic1.png',answer:499,time:5 },
@@ -22,8 +22,12 @@ Page({
       { talk_id: 0, talkUrl:"../talk/talk",title: '来讨论阴影面积的解决方法', content: '不是30°呀 直角边4斜边8 才是30度 他这个是另外一条直角边8哎', pic: '../../images/mainPic/Pic1.png', answer: 499, time: 5 },
       { talk_id: 1, title: '来讨论阴影面积的解决方法', content: '不是30°呀 直角边4斜边8 才是30度 他这个是另外一条直角边8哎', pic: '../../images/mainPic/Pic1.png', answer: 499, time: 5 }
     ],
+    mainData: [{ mainIndex: 0, mainTitle: "全部" }, { mainIndex: 1, mainTitle: "学习" }, { mainIndex: 2, mainTitle: "聚会" }, { mainIndex: 3, mainTitle: "体育" }, { mainIndex: 4, mainTitle: "音乐" }, { mainIndex: 5, mainTitle: "旅行" }, { mainIndex: 6, mainTitle: "讲座"}],
+    navData: [{ navIndex: 0, navTitle: "全部" }, { navIndex: 1, navTitle: "今天" }, { navIndex: 2, navTitle: "明天" }, { navIndex: 3, navTitle: "周末" }, { navIndex: 4, navTitle: "最近一周" }, { navIndex: 5, navTitle: "常年" }, { navIndex: 6, navTitle: "最新上架" }],
     toView:'red',
     currentTab: 0,
+    maintab:0,
+    navtab:0,
     scrollLeft: 100
   },
   navbarTap: function (e) {
@@ -32,7 +36,20 @@ Page({
       currentTab: e.currentTarget.dataset.current
     })
   },
-  
+  mainBarChoose:function(e){
+    console.log('picker发送选择改变，携带值为', e)
+    var maincurrent = e.currentTarget.dataset.maincurrent;
+    this.setData({
+      maintab:maincurrent
+    })
+  },
+  navBarChoose: function (e) {
+    console.log('picker发送选择改变，携带值为', e)
+    var navcurrent = e.currentTarget.dataset.navcurrent;
+    this.setData({
+      navtab: navcurrent
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
