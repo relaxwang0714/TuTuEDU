@@ -1,0 +1,54 @@
+/* pages/evaluate/evaluate.wxss */
+
+.evaluate_top {
+  height: 130rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.evaluate_fontcolor {
+  font-size: 36rpx;
+  color: #eeb478;
+}
+
+.evaluate_box {
+  height: 214rpx;
+  width: 670rpx;
+  box-shadow: 6rpx 6rpx 70rpx #f0f0f0;
+  border-radius: 20rpx;
+  margin-left: 40rpx;
+  text-align: center;
+  padding-top: 20rpx;
+}
+
+.small_font {
+  font-size: 28rpx;
+  color: #7e7575;
+  margin-top: 20rpx;
+}
+
+.evaluate_button_off {
+  width: 230rpx;
+  height: 52rpx;
+  background-color: grey;
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  color: white;
+  margin-top: 20rpx;
+  margin-left: 220rpx;
+  padding-top: 10rpx;
+}
+
+.evaluate_button_on {
+  width: 230rpx;
+  height: 52rpx;
+  background-color: #eeb478;
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  color: white;
+  margin-top: 20rpx;
+  margin-left: 220rpx;
+  padding-top: 10rpx;
+}

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>百度ECHarts</title>
+    <title>在线课程访问量统计</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
 
@@ -25,104 +25,23 @@
             <div class="col-sm-6">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title" style="height: 67px;">
-                        <div class="col-sm-5">
-                            <h2>今日考勤统计：</h2>
-                        </div>
                         <div class="col-sm-7">
-                            <select data-placeholder="--选择类别--" name="type" id=""
+                            <h2>今日在线课程访问量统计：</h2>
+                        </div>
+                        <!--<div class="col-sm-7">
+                            <select data-placeholder="&#45;&#45;选择类别&#45;&#45;" name="type" id=""
                                     class="form-control chosen-select" tabindex="2" required>
                                 <option value="">计算机网络</option>
                                 <option value="">计算机组成原理及应用</option>
                                 <option value="">就业指导2</option>
                             </select>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="ibox-content">
-                        <h4>总打卡人数:45人</h4>
-                        <h4>缺勤人数:4人</h4>
-                        <h4>迟到人数:2人</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="ibox float-e-margins">
-                    <div class="ibox-title">
-                        <h5>柱状图</h5>
-                        <div class="ibox-tools">
-                            <a class="collapse-link">
-                                <i class="fa fa-chevron-up"></i>
-                            </a>
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="graph_flot.html#">
-                                <i class="fa fa-wrench"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-user">
-                                <li><a href="graph_flot.html#">选项1</a>
-                                </li>
-                                    <li><a href="graph_flot.html#">选项2</a>
-                                </li>
-                            </ul>
-                            <a class="close-link">
-                                <i class="fa fa-times"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="ibox-content">
-
-                        <div class="echarts" id="echarts-bar-chart"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="ibox float-e-margins">
-                    <div class="ibox-title">
-                        <h5>每日具体考勤情况</h5>
-                    </div>
-                    <div class="ibox-content">
-                        <table id="" data-mobile-responsive="true" class="table table-striped">
-                            <thead>
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">姓名</th>
-                                <th scope="col">课程</th>
-                                <th scope="col">打卡时间</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>王泽华</td>
-                                <td>计算机网络</td>
-                                <td>8：55</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>梅长旺</td>
-                                <td>计算机网络</td>
-                                <td>9：05</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>华某人</td>
-                                <td>计算机网络</td>
-                                <td>9：12</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>邵玉燕</td>
-                                <td>计算机网络</td>
-                                <td>8：52</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>张浙权</td>
-                                <td>计算机网络</td>
-                                <td>9：01</td>
-                            </tr>
-                            </tbody>
-
-                        </table>
+                        <h4>总访问人数:225人</h4>
+                        <h4>计算机网络:88人</h4>
+                        <h4>计算机组成原理及应用:56人</h4>
+                        <h4>就业指导2:49人</h4>
                     </div>
                 </div>
             </div>
@@ -154,6 +73,35 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>柱状图</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="graph_flot.html#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="graph_flot.html#">选项1</a>
+                                </li>
+                                <li><a href="graph_flot.html#">选项2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="echarts" id="echarts-bar-chart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- 全局js -->
     <script src="/js/jquery.min.js?v=2.1.4"></script>
@@ -165,20 +113,56 @@
     <!-- 自定义js -->
     <script src="/js/content.js?v=1.0.0"></script>
 
-
     <!-- ECharts demo data -->
     <!--<script src="/js/demo/echarts-demo.js"></script>-->
     <script>
+
+        var pieChart = echarts.init(document.getElementById("echarts-pie-chart"));
+        var pieoption = {
+            title : {
+                text: '本周在线课程访问量',
+                /*subtext: '纯属虚构',*/
+                x:'center'
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                orient : 'vertical',
+                x : 'left',
+                data:['计算机网络','离散数学','就业指导2','计算机组成原理及应用',"JavaEE企业级开发"]
+            },
+            calculable : true,
+            series : [
+                {
+                    name:'已考勤人数',
+                    type:'pie',
+                    radius : '55%',
+                    center: ['50%', '60%'],
+                    data:[
+                        {value:365, name:'计算机网络'},
+                        {value:210, name:'离散数学'},
+                        {value:269, name:'计算机组成原理及应用'},
+                        {value:338, name:'JavaEE企业级开发'},
+                        {value:163, name:'就业指导2'}
+                    ]
+                }
+            ]
+        };
+        pieChart.setOption(pieoption);
+        $(window).resize(pieChart.resize);
+
         var barChart = echarts.init(document.getElementById("echarts-bar-chart"));
         var baroption = {
             title : {
-                text: '每周考勤人数与缺勤人数'
+                text: '每月在线课程访问量与订阅量'
             },
             tooltip : {
                 trigger: 'axis'
             },
             legend: {
-                data:['考勤人数','缺勤人数']
+                data:['访问量','订阅量']
             },
             grid:{
                 x:30,
@@ -189,7 +173,8 @@
             xAxis : [
                 {
                     type : 'category',
-                    data : ['第1周','第2周','第3周','第4周','第5周','第6周','第7周','第8周','第9周','第10周']
+                    data : ['第1周','第2周','第3周','第4周','第5周','第6周','第7周','第8周','第9周','第10周','' +
+                    '第11周','第12周','第13周','第14周','第15周','第16周']
                 }
             ],
             yAxis : [
@@ -199,9 +184,9 @@
             ],
             series : [
                 {
-                    name:'考勤人数',
+                    name:'访问量',
                     type:'bar',
-                    data:[200,189,188,167,123,145,188,169,192,199],
+                    data:[223,256,188,167,88,145,188,112,192,265,147,199,301,291,146,201],
                     markPoint : {
                         data : [
                             {type : 'max', name: '最大值'},
@@ -215,9 +200,12 @@
                     }
                 },
                 {
-                    name:'缺勤人数',
+                    name:'订阅量',
                     type:'bar',
-                    data:[0,11,12,33,77,55,12,31,8,1],
+                    data:[45,65,88,125,102,
+                    156,123,188,265,199,
+                    203,165,187,205,188,
+                    230],
                     /*markPoint : {
                         data : [
                             {name : '年最高', value : 182.2, xAxis: 7, yAxis: 183, symbolSize:18},
@@ -235,42 +223,6 @@
         barChart.setOption(baroption);
 
         window.onresize = barChart.resize;
-        var pieChart = echarts.init(document.getElementById("echarts-pie-chart"));
-        var pieoption = {
-            title : {
-                text: '本周已考勤人数',
-                /*subtext: '纯属虚构',*/
-                x:'center'
-            },
-            tooltip : {
-                trigger: 'item',
-                formatter: "{a} <br/>{b} : {c} ({d}%)"
-            },
-            legend: {
-                orient : 'vertical',
-                x : 'left',
-                data:['周一计算机网络3、4节','周一计算机网络8、9节','周三离散数学1、2节','周三离散数学5、6节','周五计算机网络3、4节']
-            },
-            calculable : true,
-            series : [
-                {
-                    name:'已考勤人数',
-                    type:'pie',
-                    radius : '55%',
-                    center: ['50%', '60%'],
-                    data:[
-                        {value:110, name:'周一计算机网络3、4节'},
-                        {value:108, name:'周一计算机网络8、9节'},
-                        {value:45, name:'周三离散数学1、2节'},
-                        {value:40, name:'周三离散数学5、6节'},
-                        {value:150, name:'周五计算机网络3、4节'}
-                    ]
-                }
-            ]
-        };
-        pieChart.setOption(pieoption);
-        $(window).resize(pieChart.resize);
-
     </script>
 
 

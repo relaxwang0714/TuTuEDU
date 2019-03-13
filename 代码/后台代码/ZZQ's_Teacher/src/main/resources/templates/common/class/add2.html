@@ -11,10 +11,22 @@
 			<div class="col-sm-12">
 				<div class="ibox float-e-margins">
 					<div class="ibox-title" style="height: 64px;">
-						<label class="col-sm-2 control-label">班次名称:</label>
+
+						<label class="col-sm-2 control-label"><h3>班次名称:</h3></label>
 						<div class="col-sm-4">
 							<input id="name" name="name" class="form-control" type="text">
 						</div>
+
+                        <label class="col-sm-2 control-label"><h3>所属课程:</h3></label>
+                        <div class="col-sm-4">
+                            <select data-placeholder="--选择类别--" name="type" id=""
+                                    class="form-control chosen-select" tabindex="2" required>
+                                <option value="">--选择类别--</option>
+                                <option value="">计算机网络</option>
+                                <option value="">计算机组成原理及应用</option>
+                                <option value="">就业指导2</option>
+                            </select>
+                        </div>
 					</div>
 					<div class="ibox-content">
 						<form class="form-horizontal m-t" id="signupForm">
