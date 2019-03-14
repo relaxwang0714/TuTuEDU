@@ -1,11 +1,6 @@
-// pages/evaluate_teacher/evaluate_teacher.js
+// pages/evaluate_detail/evaluate_detail.js
 Page({
-  evaluate_detail: function () {
-    console.log("evaluate"),
-      wx.navigateTo({
-      url: '../evaluate_detail/evaluate_detail'
-      })
-  }, 
+
   /**
    * 页面的初始数据
    */

@@ -21,6 +21,7 @@
   margin-left: 40rpx;
   text-align: center;
   padding-top: 20rpx;
+  margin-bottom: 30rpx;
 }
 
 .small_font {

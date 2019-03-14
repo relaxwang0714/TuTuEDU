@@ -1,1 +1,30 @@
 <!--pages/evaluate_teacher/evaluate_teacher.wxml-->
+<!--pages/evaluate/evaluate.wxml-->
+<view class='evaluate_top'>
+    <text>学生对教师理论课教学质量评价表</text>
+</view>
+
+<view class='evaluate_sub_top'>
+    <text class='evaluate_mid_font'>请选择老师进行评价</text>
+</view>
+
+<view class='evaluate_box'>
+  <view class='row_box'>
+    <view class='evaluate_box_content'>张一老师（信息技术理论）</view>
+    <icon type="success" size="21"  color="#eeb478" class='icon'/> 
+  </view>
+</view>
+
+<view class='evaluate_box'>
+    <view class='evaluate_box_content'>张二老师（大学英语阅读一）</view>
+</view>
+<view class='evaluate_box'>
+    <view class='evaluate_box_content'>张一二老师（大学物理基础）</view>
+</view>
+<view class='evaluate_box'>
+    <view class='evaluate_box_content'>张四五老师（高等数学一）</view>
+</view>
+
+<view class='evaluate_submit'>
+  <view class='evaluate_button_on' bindtap='evaluate_detail'>提　交</view>
+</view>

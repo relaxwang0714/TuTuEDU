@@ -1,1 +1,84 @@
-/* pages/evaluate_teacher/evaluate_teacher.wxss */
+/* pages/evaluate/evaluate.wxss */
+
+.evaluate_top {
+  height: 130rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.evaluate_submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.evaluate_fontcolor {
+  font-size: 36rpx;
+  color: #eeb478;
+}
+
+.evaluate_box {
+  height: 94rpx;
+  width: 670rpx;
+  box-shadow: 6rpx 6rpx 70rpx #f0f0f0;
+  border-radius: 20rpx;
+  margin-left: 40rpx;
+  margin-bottom: 30rpx;
+}
+
+.evaluate_box_content {
+  font-size: 35rpx;
+  font: bold;
+  padding: 27rpx;
+}
+
+.small_font {
+  font-size: 28rpx;
+  color: #7e7575;
+  margin-top: 20rpx;
+}
+
+.evaluate_button_off {
+  width: 230rpx;
+  height: 52rpx;
+  background-color: grey;
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  color: white;
+  margin-top: 20rpx;
+  margin-left: 220rpx;
+  padding-top: 10rpx;
+}
+
+.evaluate_button_on {
+  width: 380rpx;
+  height: 60rpx;
+  background-color: #eeb478;
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  color: white;
+  margin-top: 34rpx;
+  padding-top: 15rpx;
+  text-align: center;
+}
+
+.evaluate_mid_font {
+  font-size: 35rpx;
+}
+
+.evaluate_sub_top {
+  margin-left: 50rpx;
+  margin-bottom: 20rpx;
+}
+
+.row_box {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon {
+  margin-left: 130rpx;
+  margin-top: 28rpx;
+}
