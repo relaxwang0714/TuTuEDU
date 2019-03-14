@@ -12,7 +12,7 @@
   <view class='class01_box'>
     <view class='box_row'>
       <view>
-        <image src='../../images/little/star1.png' class='add'></image>
+        <image src='../../images/little/ppt.jpg' class='add'></image>
       </view>
     </view>
     <view class='box_col'>
@@ -21,5 +21,5 @@
     </view>
   </view>
 
-  <view class='finish_study'>学完了，来答题</view>
+  <view class='finish_study' bindtap='answar'>学完了，来答题</view>
 </view>

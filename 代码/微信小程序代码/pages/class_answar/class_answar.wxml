@@ -1,0 +1,23 @@
+<!--pages/class_answar/class_answar.wxml-->
+<view class='class01_top'>
+  <text class='live_top_font'>第一章 课时1</text>
+  <view class='class01_small_font'>【视频】01别说你会Word，你可能用错了！</view>
+</view>
+
+<view class='answar_box'>
+  <view class='question_font'>如何裁剪图片</view>
+  <view class='question_box'>
+    A.图片——格式——裁剪——CTRL+X——背景格式——自动填充
+  </view>
+  <view class='question_box'>
+    B.格式——图片边框——线条
+  </view>
+  <view class='question_box'>
+    C.图片——格式——裁剪——CTRL+X（剪切）——CTRL+X——自动填充
+  </view>
+</view>
+
+
+<view class='evaluate_submit'>
+  <view class='evaluate_button_on' bindtap=''>完成作答</view>
+</view>
