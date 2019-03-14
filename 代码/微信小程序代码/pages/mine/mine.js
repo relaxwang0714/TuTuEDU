@@ -24,6 +24,12 @@ Page({
       { popular_id: 1, popular_pic: '../../images/mainPic/6.png', popular_name: '陈萨v', popular_number: 4490 }
     ]
   },
+  evaluate: function () {
+    console.log("evaluate"),
+      wx.navigateTo({
+        url: '../evaluate/evaluate'
+      })
+  }, 
   /**
    * 生命周期函数--监听页面加载
    */

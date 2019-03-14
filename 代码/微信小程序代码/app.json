@@ -1,24 +1,23 @@
 {
-  "pages": [  
+  "pages": [
+    "pages/main/main",
+    "pages/evaluate_teacher/evaluate_teacher",
+    "pages/evaluate/evaluate",
+    "pages/mine/mine",
+    "pages/evaluate_detail/evaluate_detail",
+    "pages/calendar/calendar",
+    "pages/modify/modify",
+    "pages/course/course",
     "pages/logs/logs",
     "pages/team/team",
     "pages/talk/talk",
-  
-    "pages/main/main",
     "pages/schedule/schedule",
     "pages/schedule1/schedule1",
     "pages/schedule2/schedule2",
     "pages/schedule3/schedule3",
     "pages/onlinevedio/onlinevedio",
-    "pages/class01/class01",
-    
-    "pages/calendar/calendar",
-    "pages/modify/modify",
-    "pages/course/course",
-    
-    "pages/mine/mine"
+    "pages/class01/class01"
   ],
-  
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
