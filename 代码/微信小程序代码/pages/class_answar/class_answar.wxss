@@ -1,0 +1,65 @@
+/* pages/class_answar/class_answar.wxss */
+
+.class01_top {
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+  height: 155rpx;
+}
+
+.video {
+  width: 100%;
+  height: 350rpx;
+  border-radius: 10px;
+}
+
+.live_top_font {
+  margin-top: 10rpx;
+  font-size: 48rpx;
+}
+
+.class01_small_font {
+  font-size: 32rpx;
+  margin-top: 15rpx;
+}
+
+.answar_box {
+  margin-left: 56rpx;
+  margin-top: 45rpx;
+}
+
+.question_font {
+  font-size: 41rpx;
+  color: #8a8383;
+  margin-bottom: 30rpx;
+}
+
+.question_box {
+  height: 86rpx;
+  width: 577rpx;
+  box-shadow: 6rpx 6rpx 70rpx #f0f0f0;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+  font-size: 30rpx;
+  color: #8a8383;
+  padding: 25rpx;
+  padding-left: 40rpx;
+}
+
+.evaluate_submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.evaluate_button_on {
+  width: 425rpx;
+  height: 68rpx;
+  background-color: #eeb478;
+  border-radius: 50rpx;
+  font-size: 40rpx;
+  color: white;
+  margin-top: 65rpx;
+  padding-top: 15rpx;
+  text-align: center;
+  margin-bottom: 40rpx;
+}

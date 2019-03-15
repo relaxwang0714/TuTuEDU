@@ -1,6 +1,11 @@
 // pages/class01/class01.js
 Page({
-
+  answar: function () {
+    console.log("evaluate"),
+      wx.navigateTo({
+      url: '../class_answar/class_answar'
+      })
+  }, 
   /**
    * 页面的初始数据
    */

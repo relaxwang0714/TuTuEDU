@@ -1,0 +1,17 @@
+<!--pages/evaluate/evaluate.wxml-->
+<view class='evaluate_top'>
+    <text class='evaluate_fontcolor'>2029374王大明</text>
+    <text>同学,你好</text>
+</view>
+
+<view class='evaluate_box'>
+  <view>学生对教师理论课教学质量评价表</view>
+  <view class='small_font'>评价时间：2019.07.03 12:00-2019.08.30 12:00</view>
+  <view class='evaluate_button_off'>已提交</view>
+</view>
+
+<view class='evaluate_box'>
+  <view>学生对教师理论课教学质量评价表</view>
+  <view class='small_font'>评价时间：2019.07.03 12:00-2019.08.30 12:00</view>
+  <view class='evaluate_button_on' bindtap='start_evaluate'>开始评价</view>
+</view>
