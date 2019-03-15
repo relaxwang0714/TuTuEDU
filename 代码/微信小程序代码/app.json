@@ -1,9 +1,11 @@
 {
   "pages": [  
     "pages/logs/logs",
+    "pages/ucDetail/ucDetail",
     "pages/team/team",
     "pages/talk/talk",
-  
+    "pages/edit/edit",
+
     "pages/main/main",
     "pages/schedule/schedule",
     "pages/schedule1/schedule1",
@@ -21,7 +23,7 @@
   
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#FFFFFF",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true
   },
