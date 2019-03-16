@@ -5,9 +5,45 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    answers:[
+      { id: 0, answer: 'A.图片——格式——裁剪——CTRL+X——背景格式——自动填充' },
+      { id: 1, answer: 'B.格式——图片边框——线条'},
+      { id: 2, answer: 'C.图片——格式——裁剪——CTRL + X（剪切）——CTRL + X——自动填充'}
+      ],
+      isToast:false,
+      isShowAnswer:false
   },
-
+  choose_answer:function(e){
+    console.log(e)
+    this.setData({
+      current_id:e.currentTarget.dataset.current_id
+    })
+  },
+  answer_commit:function(){
+    var that = this
+    if(that.data.current_id==0){
+      wx.showToast({
+        title: '回答正确',
+        icon: 'success',
+        duration: 2000,
+      })
+      that.setData({
+        isShowAnswer:true
+      })
+    }
+    else{
+      that.setData({
+        isToast: true,
+        isShowAnswer:true
+      })
+      setTimeout(function(){
+        that.setData({
+          isToast: false
+        })
+      },2000)
+      
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */

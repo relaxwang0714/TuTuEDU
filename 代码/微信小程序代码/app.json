@@ -1,11 +1,17 @@
 {
   "pages": [
+    "pages/book/book",
+    
     "pages/main/main",
     "pages/class01/class01",
     "pages/class_answar/class_answar",
     "pages/evaluate_teacher/evaluate_teacher",
     "pages/evaluate/evaluate",
     "pages/mine/mine",
+    "pages/mycourse/mycourse",
+    "pages/myclassroom/myclassroom",
+    "pages/mytest/mytest",
+    "pages/myschedule/myschedule",
     "pages/evaluate_detail/evaluate_detail",
     "pages/calendar/calendar",
     "pages/modify/modify",

@@ -34,7 +34,7 @@
     <image src='../../images/mainPic/8.png' class='user_img'></image>
     <view class='user_detail'>
       <text class='user_name'>lsjfldsjl</text>
-      <text class='user_sc'>杭州电子科技大学</text>
+      <text class='user_sc'>好好读书大学</text>
     </view>
     <text class='user_time'>3天前</text>
   </view>

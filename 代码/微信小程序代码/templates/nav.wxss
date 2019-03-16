@@ -45,7 +45,17 @@
   font-size: 24rpx;
   color: #959595;
 }
-
+.course_num{
+  font-size: 27rpx;
+  color: #959595;
+  margin-top: 15rpx;
+}
+/* .go{
+  position: relative;
+  right: -150rpx;
+  top: 70rpx;
+  color: goldenrod;
+} */
 .course_star{
   display: flex;
   flex-direction: row;
@@ -76,6 +86,11 @@
   height: 220rpx;
   margin: 10rpx;
 }
+.book_pic1{
+  width: 180rpx;
+  height: 220rpx;
+  margin: 10rpx;
+}
 .book_right{
   display: flex;
   flex-direction: column;
@@ -87,8 +102,18 @@
   margin-bottom: 10rpx;
   font-weight: bold;
 }
+.book_name1{
+  margin-top: 25rpx;
+  font-size: 34rpx;
+  margin-bottom: 10rpx;
+  font-weight: bold;
+}
 .book_author{
   font-size: 24rpx;
+  color: #959595;
+}
+.book_author1{
+  font-size: 30rpx;
   color: #959595;
 }
 .book_star{
@@ -99,9 +124,18 @@
 .book_grade{
   font-size: 30rpx;
 }
+.book_grade1{
+  font-size: 35rpx;
+}
 .book_star1{
   width: 25rpx;
   height: 25rpx;
+  justify-content: center;
+  margin-right: 10rpx;
+}
+.book_star2{
+  width: 35rpx;
+  height: 35rpx;
   justify-content: center;
   margin-right: 10rpx;
 }

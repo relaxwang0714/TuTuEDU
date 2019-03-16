@@ -6,18 +6,24 @@
 
 <view class='answar_box'>
   <view class='question_font'>如何裁剪图片</view>
-  <view class='question_box'>
-    A.图片——格式——裁剪——CTRL+X——背景格式——自动填充
-  </view>
-  <view class='question_box'>
-    B.格式——图片边框——线条
-  </view>
-  <view class='question_box'>
-    C.图片——格式——裁剪——CTRL+X（剪切）——CTRL+X——自动填充
-  </view>
+  <block wx:for="{{answers}}" wx:key="{{item.id}}">
+    <view class='{{item.id==current_id?"question_box1":"question_box"}}' data-current_id='{{item.id}}' bindtap='choose_answer'>
+      {{item.answer}}
+    </view>
+  </block>
 </view>
 
 
 <view class='evaluate_submit'>
-  <view class='evaluate_button_on' bindtap=''>完成作答</view>
+  <view wx:if="{{!isShowAnswer}}" class='evaluate_button_on' bindtap='answer_commit'>完成作答</view>
+  <view wx:if="{{isShowAnswer}}" class='evaluate_answer'>
+    <text style='color:#8a8383' wx:if="{{isShowAnswer}}">正确答案:A</text>  
+    <text style='color:#8a8383' wx:if="{{isShowAnswer}}">解析:A为正确裁剪图片的过程，B并不是裁剪图片的操作，所以B错误，C多了一个裁剪过程，因此C也错误，正确答案为A。</text>  
+  </view>
+</view>
+<view  wx:if='{{isToast}}' class='toast_box'>
+  <view class='toast'>
+    <image class='toast_img' src='../../images/little/wrong.png'></image>
+    <text class='toast_txt'>回答错误</text>
+  </view>
 </view>

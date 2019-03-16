@@ -1,0 +1,9 @@
+@import"../../templates/nav.wxss"; 
+@import"../onlinevedio/onlinevedio.wxss"; 
+.live_box_class1{
+  border-bottom:4rpx solid #f0f0f0; 
+  width: 90%;
+  color: #959595;
+  margin-bottom: 20rpx;
+  padding-bottom: 10rpx;
+}

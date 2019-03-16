@@ -27,7 +27,7 @@
       <view class='live_top_font'>课程概述</view>
       <view class='live_small_font'>1800分钟巨制Excel视频教程：认识Excel、Excel企业应用、Excel常用功能、Excel表格设计、Excel美化、Excel数据透视表、Excel函数、Excel图表、Excel动态图表。</view>
       <view class='live_small_font'>本套课程案例全部采集自真实企业环境中的应用。并您系统的规划好了每次课程的学时间共24讲</view>
-      <view class='live_injoin_button'>加入课程</view>
+      <view bindtap='join_course' wx:if="{{isJoin==true}}" class='live_injoin_button'>加入课程</view>
     </view>
   </view>
 

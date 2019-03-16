@@ -29,8 +29,8 @@ Page({
   },
   send: function (e) {
     var comments_new={
-      pic: "../../images/mainPic/10.png", 
-      name: "gbfsf", 
+      pic: "../../images/mainPic/UserPic.png", 
+      name: "Shawn", 
       comment: this.data.comment, 
       time: "1分钟"
     };

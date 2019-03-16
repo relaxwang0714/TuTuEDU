@@ -1,0 +1,13 @@
+/* pages/mycourse/mycourse.wxss */
+ @import"../../templates/nav.wxss"; 
+.bar{
+  width: 100%;
+  height: 100rpx;
+  color: white;
+  background-color: #eeb478;
+  margin-bottom: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+}
