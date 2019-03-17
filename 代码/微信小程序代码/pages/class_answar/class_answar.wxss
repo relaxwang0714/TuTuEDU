@@ -44,11 +44,24 @@
   padding: 25rpx;
   padding-left: 40rpx;
 }
+.question_box1 {
+  height: 86rpx;
+  width: 577rpx;
+  box-shadow: 6rpx 6rpx 70rpx #f0f0f0;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+  font-size: 30rpx;
+  color:white;
+  padding: 25rpx;
+  background-color: #eeb478;
+  padding-left: 40rpx;
+}
 
 .evaluate_submit {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 70rpx;
 }
 
 .evaluate_button_on {
@@ -62,4 +75,37 @@
   padding-top: 15rpx;
   text-align: center;
   margin-bottom: 40rpx;
+}
+.toast_box{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; 
+}
+.toast_box .toast{
+  position: fixed;
+  width: 30%;
+  height: 230rpx;
+  background: rgba(0, 0, 0, 0.4);
+  transform: translateY(150%) translateX(120%);
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.toast .toast_img{
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 50rpx;
+}
+.toast .toast_txt{
+  margin-top: 20rpx;
+}
+.evaluate_submit .evaluate_answer{
+  display: flex;
+  flex-direction: column;
 }

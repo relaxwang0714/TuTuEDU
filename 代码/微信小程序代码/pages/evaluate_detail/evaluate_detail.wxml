@@ -1,68 +1,68 @@
 <!--pages/evaluate_detail/evaluate_detail.wxml-->
 <view class='evaluate_top'>
-    <text>以下是对</text>
-    <text class='evaluate_fontcolor'>张一老师（信息技术理论）</text>
-    <text>的评价</text>
+  <text>以下是对</text>
+  <text class='evaluate_fontcolor'>张一老师（信息技术理论）</text>
+  <text>的评价</text>
 </view>
 
 <view class='content'>
+  <!-- <block wx:for="{{evaluates_box}}" wx:key="id">
+    <text>{{item.title}}</text>
+    <view class='content_father_box'>
+      <block wx:for="{{item.evaluates}}" wx:for-item="evaluates" wx:key="id">
+        <view bindtap='choose' data-currentChoose='{{item.mid}}{{evaluates.id}}' class="{{isChoose==item.mid+evaluates.id?'content_box1':'content_box'}}">{{evaluates.evaluate}}</view>
+      </block>
+    </view>
+  </block> -->
   <text>1对教学工作有热情，讲课认真、投入</text>
   <view class='content_father_box'>
-    <view class='content_box'>很满意</view>
-    <view class='content_box'>满意</view>
-    <view class='content_box'>一般</view>
-    <view class='content_box'>不满意</view>
+    <block wx:for="{{evaluates}}">
+      <view bindtap='choose1' data-currentChoose='0{{item.id}}' class='{{isChoose==(0+item.id)?"content_box1":"content_box"}}'>{{item.evaluate}}</view>
+    </block>
   </view>
-
   <text>2讲课思路清晰，阐述准确</text>
   <view class='content_father_box'>
-    <view class='content_box'>很满意</view>
-    <view class='content_box'>满意</view>
-    <view class='content_box'>一般</view>
-    <view class='content_box'>不满意</view>
+    <block wx:for="{{evaluates}}">
+      <view bindtap='choose2' data-currentChoose='1{{item.id}}' class='{{isChoose2==(1+item.id)?"content_box1":"content_box"}}'>{{item.evaluate}}</view>
+    </block>
   </view>
 
   <text>3讲课能够理论联系实际，注重内容更新</text>
   <view class='content_father_box'>
-    <view class='content_box'>很满意</view>
-    <view class='content_box'>满意</view>
-    <view class='content_box'>一般</view>
-    <view class='content_box'>不满意</view>
+    <block wx:for="{{evaluates}}">
+      <view bindtap='choose3' data-currentChoose='2{{item.id}}' class='{{isChoose3==(2+item.id)?"content_box1":"content_box"}}'>{{item.evaluate}}</view>
+    </block>
   </view>
 
   <text>4讲授内容能够突出重点，讲清难点</text>
   <view class='content_father_box'>
-    <view class='content_box'>很满意</view>
-    <view class='content_box'>满意</view>
-    <view class='content_box'>一般</view>
-    <view class='content_box'>不满意</view>
+    <block wx:for="{{evaluates}}">
+      <view bindtap='choose4' data-currentChoose='3{{item.id}}' class='{{isChoose4==(3+item.id)?"content_box1":"content_box"}}'>{{item.evaluate}}</view>
+    </block>
   </view>
 
   <text>5采用启发式、讨论式教学，鼓励提出问题和质疑</text>
   <view class='content_father_box'>
-    <view class='content_box'>很满意</view>
-    <view class='content_box'>满意</view>
-    <view class='content_box'>一般</view>
-    <view class='content_box'>不满意</view>
+    <block wx:for="{{evaluates}}">
+      <view bindtap='choose5' data-currentChoose='4{{item.id}}' class='{{isChoose5==(4+item.id)?"content_box1":"content_box"}}'>{{item.evaluate}}</view>
+    </block>
   </view>
 
   <text>6因材施教，注重学生创新意识和能力的培养</text>
   <view class='content_father_box'>
-    <view class='content_box'>很满意</view>
-    <view class='content_box'>满意</view>
-    <view class='content_box'>一般</view>
-    <view class='content_box'>不满意</view>
+    <block wx:for="{{evaluates}}">
+      <view bindtap='choose6' data-currentChoose='5{{item.id}}' class='{{isChoose6==(5+item.id)?"content_box1":"content_box"}}'>{{item.evaluate}}</view>
+    </block>
   </view>
 
   <text>7作业有利于学生自主学习，批改认真</text>
   <view class='content_father_box'>
-    <view class='content_box'>很满意</view>
-    <view class='content_box'>满意</view>
-    <view class='content_box'>一般</view>
-    <view class='content_box'>不满意</view>
+    <block wx:for="{{evaluates}}">
+      <view bindtap='choose7' data-currentChoose='6{{item.id}}' class='{{isChoose7==(6+item.id)?"content_box1":"content_box"}}'>{{item.evaluate}}</view>
+    </block>
   </view>
 </view>
 
 <view class='evaluate_submit'>
-  <view class='evaluate_button_on' bindtap=''>提　交</view>
+  <view class='evaluate_button_on' bindtap='submit'>提　交</view>
 </view>

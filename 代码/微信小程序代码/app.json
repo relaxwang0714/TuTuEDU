@@ -1,18 +1,27 @@
 {
   "pages": [
+    "pages/book/book",
+    
     "pages/main/main",
     "pages/class01/class01",
     "pages/class_answar/class_answar",
     "pages/evaluate_teacher/evaluate_teacher",
     "pages/evaluate/evaluate",
     "pages/mine/mine",
+    "pages/mycourse/mycourse",
+    "pages/myclassroom/myclassroom",
+    "pages/mytest/mytest",
+    "pages/myschedule/myschedule",
     "pages/evaluate_detail/evaluate_detail",
     "pages/calendar/calendar",
     "pages/modify/modify",
     "pages/course/course",
     "pages/logs/logs",
+    "pages/ucDetail/ucDetail",
     "pages/team/team",
     "pages/talk/talk",
+    "pages/edit/edit",
+    
     "pages/schedule/schedule",
     "pages/schedule1/schedule1",
     "pages/schedule2/schedule2",
@@ -21,7 +30,7 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#FFFFFF",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true
   },

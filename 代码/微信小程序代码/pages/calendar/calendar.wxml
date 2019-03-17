@@ -44,6 +44,27 @@
     </view>
   </view>
   <scheduleContent></scheduleContent>
+
+  <view class='im'>
+  <text class='im_title1'>网课</text>
+  <view class='im_bar'>
+    <view class='im_bar_statusBar'>
+      <view class='im_statusBar'>
+        <view class="im_status1"></view>
+         <text class='im_title'>计算机二级Office高级应用之文字处理专题</text>
+         <text class='im_teacher'>小黑课堂小黑老师</text>
+        <!--8:00-9:55-->
+      </view>
+      <!-- <view class='im_class' bindtap='courseDetail'>
+        
+      </view> -->
+    </view>
+    <view class='im_ka1'>
+      <view class='im_ka_btn1' bindtap='startLearn'>开始学习</view>
+    </view>
+  </view>
+</view>
+
 </view>
 <view wx:if='{{isFlag}}'class='modifyBoxs'>
   <view class='modifyBox'>

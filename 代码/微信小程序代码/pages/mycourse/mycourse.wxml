@@ -1,0 +1,5 @@
+<import src="../../templates/nav.wxml" />
+<view class='bar'>我的课程</view>
+<block wx:for="{{MainCourse}}" key="course_id">
+  <template is="list11" data="{{...item}}" />
+</block>
