@@ -2,12 +2,13 @@
 <html>
 <meta charset="utf-8">
 <head th:include="include :: header"></head>
+<link href="/css/zzqback.css" rel="stylesheet">
 <body class="gray-bg">
-	<div class="wrapper wrapper-content ">
+	<div class="wrapper">
 		<div class="row">
-			<div class="col-sm-12">
+			<div class="col-sm-7">
 				<div class="ibox float-e-margins">
-					<div class="ibox-content">
+					<div ><!--class="ibox-content"-->
 						<form class="form-horizontal m-t" id="signupForm">
 							<div class="form-group">
 								<label class="col-sm-3 control-label">课程名称:</label>
@@ -51,6 +52,12 @@
 								</div>
 							</div>
 							<div class="form-group">
+								<label class="col-sm-3 control-label">附件：</label>
+								<div class="col-sm-8">
+									<input id="files" name="files" class="form-control" type="file">
+								</div>
+							</div>
+							<div class="form-group">
 								<label class="col-sm-3 control-label">课程封面：</label>
 								<div class="col-sm-8">
 									<input id="files1" name="files" class="form-control" type="file">
@@ -86,10 +93,72 @@
 					</div>
 				</div>
 			</div>
+			<div class="col-sm-5">
+				<div class="row">
+					<div class="col-sm-10"><h2>章节设置</h2></div>
+					<div class="col-sm-2">
+						<a href="#" class="btn btn-info btn-lg"  onclick="addzhangjie()">
+							<span class="glyphicon glyphicon-plus"></span>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-8 nav_left_big_font suojin" >第一章 Word-01 Word篇课前导读</div>
+					<div class="col-sm-4">
+						<button type="button" class="btn btn-default btn-sm" onclick="addkeshi()">
+							<span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+				</div>
+				<div class="row nav_left_small_font">
+					<div>课时1 【视频】01别说你会Word，你可能用错了！</div>
+				</div>
+				<div class="row nav_left_small_font">
+					<div>课时2 【视频】02别说你会Word，你可能用错了！</div>
+				</div>
+				<div class="row nav_left_big_font">
+					<div class="col-sm-8 nav_left_big_font suojin" >第二章 Word-02 活动策划书，这样做简单又有范</div>
+					<div class="col-sm-4">
+						<button type="button" class="btn btn-default btn-sm">
+							<span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+				</div>
+				<div class="row nav_left_small_font">
+					<div>课时3 【视频】01三步搞定活动策划书排版</div>
+				</div>
+				<div class="row nav_left_small_font">
+					<div>课时2 【视频】02-2注重页面细节才专业</div>
+				</div>
+
+
+			</div>
 		</div>
 	</div>
 	<div th:include="include::footer"></div>
 	<script type="text/javascript" src="/js/appjs/common/dict/add.js">
 	</script>
+<script>
+    function addzhangjie() {
+        layer.open({
+            type : 2,
+            title : '创建章节',
+            maxmin : true,
+            shadeClose : false, // 点击遮罩关闭层
+            area : [ '800px', '520px' ],
+            content : '/common/sysFile/addzhangjie' // iframe的url
+        });
+    }
+    function addkeshi() {
+        layer.open({
+            type : 2,
+            title : '创建课时',
+            maxmin : true,
+            shadeClose : false, // 点击遮罩关闭层
+            area : [ '800px', '520px' ],
+            content : '/common/sysFile/addkeshi' // iframe的url
+        });
+    }
+</script>
 </body>
 </html>
