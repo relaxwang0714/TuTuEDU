@@ -1,0 +1,48 @@
+<view class='bar_box'>
+  <view class='user_box'>
+    <image class='img' src='../../images/mainPic/5.png'></image>
+    <view class='user'>
+      <text class='user_name'>小黑老师</text>
+      <view class='user_mark'>教师</view>
+    </view>
+    <view class='content'>
+      <view class='content_css'>关注 203</view>
+      <view class='content_css'>粉丝 12万</view>
+      <view class='content_css'>小组 5</view>
+    </view>
+  </view>
+  <view wx:if="{{isattention}}" class='isattention'>已关注</view>
+  <view wx:if="{{!isattention}}" bindtap='attention' class='isattention1'>关注</view>
+</view>
+<view class='list'>
+  <view class='list_content'>
+    <text>我的直播开始啦，同学们可以加入了。今日讲的是《计算机二级Office高级应用之文字处理专题》,有兴趣来听一听吧！</text>
+    <text bindtap='enter' class='enter'>进入直播间</text>
+  </view>
+  <view class='list_bottom'>
+    <text>10分钟前</text>
+   <view class='navbottom'>
+        <text>回复</text>
+        <image src='../../images/little/plun.png' class='plun'></image>
+        <text>324</text>
+        <image src='../../images/little/yizan.png' class='plun'></image>
+        <text>345</text>
+      </view>
+  </view>
+</view>
+<view class='list'>
+  <view class='list_content'>
+    <text>我的直播开始啦，同学们可以加入了。今日讲的是《计算机二级Office高级应用之文字处理专题》,有兴趣来听一听吧！</text>
+    <text bindtap='enter' class='enter'>进入直播间</text>
+  </view>
+  <view class='list_bottom'>
+    <text>2月26日</text>
+   <view class='navbottom'>
+        <text>回复</text>
+        <image src='../../images/little/plun.png' class='plun'></image>
+        <text>324</text>
+        <image src='../../images/little/yizan.png' class='plun'></image>
+        <text>345</text>
+      </view>
+  </view>
+</view>

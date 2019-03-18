@@ -1,0 +1,12 @@
+/* pages/bookpage/bookpage.wxss */
+.toNext{
+  display: flex;
+  justify-content: flex-end;
+  color: #eeb478;
+  text-decoration-line: underline;
+  /* border-bottom: 2rpx solid #eeb478; */
+  padding-bottom: 2rpx;
+  margin-bottom: 20rpx;
+  margin-right: 30rpx;
+  margin-top: 20rpx;
+}

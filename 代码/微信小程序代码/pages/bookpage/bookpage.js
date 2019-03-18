@@ -1,48 +1,19 @@
-// pages/ucDetail/ucDetail.js
+// pages/bookpage/bookpage.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    choose_page:0,
-    isStatus:true
+
   },
-  choose1:function(){
-    this.setData({
-      choose_page:0
-    })
-  },
-  choose2:function(){
-    this.setData({
-      choose_page: 1
-    })
-  },
-  join:function(){
-    var number = this.data.activityList.number+1
-    this.data.activityList.number = number
-    this.setData({
-      isStatus:false,
-      activityList:this.data.activityList
-    })
-    var activityList = JSON.stringify(activityList);
-    wx.showToast({
-      title: '加入成功',
-      icon: 'success',
-      duration: 2000,
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var list = JSON.parse(options.activityList)
-    console.log(list)
-    this.setData({
-      activityList:list
-    })
-  },
 
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -50,6 +21,7 @@ Page({
   onReady: function () {
 
   },
+
   /**
    * 生命周期函数--监听页面显示
    */

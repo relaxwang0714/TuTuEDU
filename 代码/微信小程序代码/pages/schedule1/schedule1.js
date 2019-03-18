@@ -23,6 +23,11 @@ Page({
       currentTab: e.currentTarget.dataset.current
     })
   },
+  check_teacher: function () {
+    wx.navigateTo({
+      url: '../attention/attention',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

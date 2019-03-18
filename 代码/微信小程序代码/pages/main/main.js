@@ -24,8 +24,8 @@ Page({
       { listen_id: 0, pic: '../../images/mainPic/7.png', name: '听电影原声学英式英语发音', teacher: 'Ian studio', star: 5, grade: '4.9' }
     ],
     MainPopular:[
-      { popular_id: 0, popular_pic: '../../images/mainPic/5.png', popular_name: '小黑老师', popular_number: 9890},
-      { popular_id: 1, popular_pic: '../../images/mainPic/6.png', popular_name: '陈萨v', popular_number: 4490 }
+      { popular_id: 0, popular_pic: '../../images/mainPic/5.png', popular_name: '小黑老师', popular_number: '12万'},
+      { popular_id: 1, popular_pic: '../../images/mainPic/6.png', popular_name: '陈萨v', popular_number: '14万' }
     ]
   },
   btnclick: function () {
