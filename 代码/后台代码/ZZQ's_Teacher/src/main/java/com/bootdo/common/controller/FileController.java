@@ -62,9 +62,20 @@ public class FileController extends BaseController {
 	@GetMapping("/edit")
 	// @RequiresPermissions("common:bComments")
 	String edit(Long id, Model model) {
-		FileDO sysFile = sysFileService.get(id);
-		model.addAttribute("sysFile", sysFile);
-		return "common/sysFile/edit";
+
+		return "common/file/edit";
+	}
+
+	@GetMapping("/addzhangjie")
+		// @RequiresPermissions("common:bComments")
+	String addzhangjie() {
+		return "common/file/addzhangjie";
+	}
+
+	@GetMapping("/addkeshi")
+		// @RequiresPermissions("common:bComments")
+	String addkeshi() {
+		return "common/file/addkeshi";
 	}
 
 	/**
