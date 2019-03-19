@@ -3,8 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tutu.edu.student.mapper.write.base.StudentInfoBaseWriteMapper">
 
-
-    <insert id="insertStudentInfo"  useGeneratedKeys="true" keyProperty="id">
+    <insert id="insertStudentInfo"  parameterType="com.tutu.edu.student.model.StudentInfo"  useGeneratedKeys="true" keyProperty="id">
         INSERT INTO `studentInfo`
         (
         <trim suffixOverrides=",">
