@@ -1,32 +1,45 @@
 {
   "pages": [
     "pages/main/main",
+    "pages/class01/class01",
+    "pages/class_answar/class_answar",
     "pages/evaluate_teacher/evaluate_teacher",
     "pages/evaluate/evaluate",
     "pages/mine/mine",
+    "pages/mycourse/mycourse",
+    "pages/myclassroom/myclassroom",
+    "pages/mytest/mytest",
+    "pages/myschedule/myschedule",
+    "pages/myattention/myattention",
+    "pages/mycollect/mycollect",
     "pages/evaluate_detail/evaluate_detail",
     "pages/calendar/calendar",
     "pages/modify/modify",
     "pages/course/course",
     "pages/logs/logs",
+    "pages/ucDetail/ucDetail",
     "pages/team/team",
     "pages/talk/talk",
+    "pages/edit/edit",
+    
     "pages/schedule/schedule",
     "pages/schedule1/schedule1",
     "pages/schedule2/schedule2",
     "pages/schedule3/schedule3",
     "pages/onlinevedio/onlinevedio",
-    "pages/class01/class01"
+    "pages/attention/attention",
+    "pages/bookpage/bookpage",
+    "pages/book/book"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#FFFFFF",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true
   },
   "tabBar": {
-    "backgroundColor": "white",
-    "color": "black",
+    "backgroundColor": "#ffffff",
+    "color": "#000000",
     "selectedColor": "#11cd6e",
     "borderStyle": "black",
     "list": [
@@ -40,6 +53,7 @@
         "selectedIconPath": "images/little/button-group2.png",
         "iconPath": "images/little/button-group.png",
         "pagePath": "pages/logs/logs",
+
         "text": "兴趣"
       },
       {

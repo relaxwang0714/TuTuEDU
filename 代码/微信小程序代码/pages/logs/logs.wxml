@@ -6,14 +6,14 @@
   </block>
 </view>
 <!--智能推荐-->
-<view hidden="{{currentTab!==2}}" style='margin-top:30rpx;'>
+<view hidden="{{currentTab!==0}}" style='margin-top:30rpx;padding:0 35rpx;'>
   <block wx:for="{{Group}}" key="group_id">
     <template is="list4" data="{{...item}}" />
   </block>
 </view>
 <!--我的关注-->
-<view hidden="{{currentTab!==1}}">
-  <scroll-view scroll-x="true" scroll-with-animation="{{true}}" scroll-left="{{scrollLeft}}" style='width:100%;display:flex;flex-direction:row;margin-bottom:30rpx;white-space: nowrap'>
+<view hidden="{{currentTab!==1}}" style='padding:0 35rpx;'>
+  <scroll-view scroll-x="true" style='width:100%;display:flex;flex-direction:row;margin-bottom:30rpx;white-space: nowrap'>
     <block wx:for="{{My_team}}" key="team_id">
       <template is="team" data="{{...item}}" />
     </block>
@@ -23,7 +23,8 @@
   </block>
 </view>
 <!--同校活动-->
-<view hidden="{{currentTab!==0}}">
+<view hidden="{{currentTab!==2}}">
+<image bindtap='edit' class='edit' src='../../images/little/edit.png'></image>
   <view class='activity_content'>
     <view class='choose_univercity'>
       <text class='my_univercity'>我的学校:</text>
@@ -45,38 +46,18 @@
   </view>
   <view hidden='{{maintab!==0}}'>
     <view hidden='{{navtab!==0}}'>
-      <view class='box'>
-        <image class='box_img' src='../../images/mainPic/pic1602.png'></image>
-        <view class='box_content'>
-          <text class='content_txt'>周末咖啡馆自律学习小组活动</text>
-          <text class='content_txt1'>时间：常年读书大学东区咖啡馆</text>
-          <text class='content_txt1'>地点：好好读书大学东区咖啡馆</text>
-          <text class='content_txt1'>发起人：好好读书Cafe</text>
-          <view class='content_number'>130人参加</view>
+      <block wx:for="{{boxContent}}" wx:key="this">
+        <view class='box' bindtap='todetail' data-id='{{item.id}}'>
+          <image class='box_img' src='{{item.pic}}'></image>
+          <view class='box_content'>
+            <text class='content_txt'>{{item.title}}</text>
+            <text class='content_txt1'>时间：{{item.time}}</text>
+            <text class='content_txt1'>地点：{{item.place}}</text>
+            <text class='content_txt1'>发起人：{{item.start}}</text>
+            <view class='content_number'>{{item.number}}人参加</view>
+          </view>
         </view>
-      </view>
-
-      <view class='box'>
-        <image class='box_img' src='../../images/mainPic/pic1625.png'></image>
-        <view class='box_content'>
-          <text class='content_txt'>除了读书，其他都不约</text>
-          <text class='content_txt1'>时间：常年</text>
-          <text class='content_txt1'>地点：好好读书大学自习室</text>
-          <text class='content_txt1'>发起人：学习自管会</text>
-          <view class='content_number'>345人参加</view>
-        </view>
-      </view>
-
-      <view class='box'>
-        <image class='box_img' src='../../images/mainPic/pic644.png'></image>
-        <view class='box_content'>
-          <text class='content_txt'>2019A市展览会</text>
-          <text class='content_txt1'>时间：2月19日 9：00-17：00</text>
-          <text class='content_txt1'>地点：A市国际会展中心</text>
-          <text class='content_txt1'>发起人：A市会展中心</text>
-          <view class='content_number'>139人参加</view>
-        </view>
-      </view>
+      </block>
     </view>
   </view>
 </view>

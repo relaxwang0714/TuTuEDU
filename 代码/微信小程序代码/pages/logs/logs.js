@@ -24,6 +24,11 @@ Page({
     ],
     mainData: [{ mainIndex: 0, mainTitle: "全部" }, { mainIndex: 1, mainTitle: "学习" }, { mainIndex: 2, mainTitle: "聚会" }, { mainIndex: 3, mainTitle: "体育" }, { mainIndex: 4, mainTitle: "音乐" }, { mainIndex: 5, mainTitle: "旅行" }, { mainIndex: 6, mainTitle: "讲座"}],
     navData: [{ navIndex: 0, navTitle: "全部" }, { navIndex: 1, navTitle: "今天" }, { navIndex: 2, navTitle: "明天" }, { navIndex: 3, navTitle: "周末" }, { navIndex: 4, navTitle: "最近一周" }, { navIndex: 5, navTitle: "常年" }, { navIndex: 6, navTitle: "最新上架" }],
+    boxContent: [
+      { id:0, pic:'../../images/mainPic/pic1602.png', title: '周末咖啡馆自律学习小组活动', time: '常年周末13:00-17:00', place: '好好读书大学东区咖啡馆', start: '好好读书Cafe', number: 130 }, 
+      { id: 1,pic: '../../images/mainPic/pic644.png',title: '除了读书，其他都不约', time: '常年', place: '好好读书大学自习室', start: '学习自管会', number: 345 },
+      { id: 2,pic: '../../images/mainPic/pic1625.png',title: '2019A市展览会', time: '2月19日 9：00-17：00', place: 'A市国际会展中心', start: 'A市会展中心', number: 139 },
+    ],
     toView:'red',
     currentTab: 0,
     maintab:0,
@@ -31,31 +36,44 @@ Page({
     scrollLeft: 100
   },
   navbarTap: function (e) {
-    console.log('picker发送选择改变，携带值为', e)
+    // console.log('picker发送选择改变，携带值为', e)
     this.setData({
       currentTab: e.currentTarget.dataset.current
     })
   },
   mainBarChoose:function(e){
-    console.log('picker发送选择改变，携带值为', e)
+    // console.log('picker发送选择改变，携带值为', e)
     var maincurrent = e.currentTarget.dataset.maincurrent;
     this.setData({
-      maintab:maincurrent
+      maintab:maincurrent,
+      navtab:0
     })
   },
   navBarChoose: function (e) {
-    console.log('picker发送选择改变，携带值为', e)
+    // console.log('picker发送选择改变，携带值为', e)
     var navcurrent = e.currentTarget.dataset.navcurrent;
     this.setData({
       navtab: navcurrent
     })
   },
-
+  todetail:function(e){
+    // console.log(e)
+    var id = e.currentTarget.dataset.id;
+    var activityList = JSON.stringify(this.data.boxContent[id])
+    wx.navigateTo({
+      url: '../ucDetail/ucDetail?activityList='+activityList
+    })
+  },
+  edit: function () {
+    wx.navigateTo({
+      url: '../edit/edit',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+      console.log("options:",options)
   },
 
   /**

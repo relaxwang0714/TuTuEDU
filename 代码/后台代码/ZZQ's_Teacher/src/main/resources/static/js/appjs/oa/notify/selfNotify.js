@@ -101,10 +101,6 @@ function load() {
 						title : '更新时间'
 					},
 					{
-						field : 'remarks',
-						title : '监考老师'
-					},
-					{
 						visible : false,
 						field : 'delFlag',
 						title : '删除标记'

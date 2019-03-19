@@ -51,6 +51,11 @@ Page({
       num:this.data.num+1
     })
   },
+  startLearn: function () {
+      wx.navigateTo({
+        url: '../onlinevedio/onlinevedio?isJoin=false',
+      })
+    },
   modifyFlag:function(){
     this.setData({
       isFlag:true

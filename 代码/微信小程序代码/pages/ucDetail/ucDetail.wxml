@@ -1,0 +1,89 @@
+<!--pages/ucDetail/ucDetail.wxml-->
+<image class='uc_img' src='../../images/mainPic/pic1905.png'></image>
+<view class='uc_content'>
+  <view class='uc_title'>
+    <text class='title'>{{activityList.title}}</text>
+    <view class='number'>{{activityList.number}}人参加</view>
+  </view>
+  <text class='content_txt'>时间：{{activityList.time}}</text>
+  <text class='content_txt'>地点：{{activityList.place}}</text>
+  <text class='content_txt'>发起人：{{activityList.start}}</text>
+  <view class='choose'>
+    <view class='choose_status {{choose_page==0?"active":""}}' bindtap='choose1'>简介</view>
+    <view class='choose_status {{choose_page==1?"active":""}}' bindtap='choose2'>评论(99)</view>
+  </view>
+  <view hidden='{{choose_page!==0}}'>
+    <block wx:for="{{activityList}}">
+      <view class='detail'>
+        <text class='detail_txt'>该活动好好读书Cafe与学校学习自管会组织合作。</text>
+        <text class='detail_txt'>凡是在每周规定学习活动时间内来店学习的好好学习大学学生，所有饮品一律免费续杯。</text>
+        <view class='detail_img_box'>
+          <image class='detail_img' src='../../images/mainPic/pic1906.png'></image>
+        </view>
+        <text class='detail_txt'>加入活动小组还有定期讲座、brainstorm、workshop活动等等。</text>
+      </view>
+    </block>
+  </view>
+
+  <view hidden='{{choose_page!==1}}' class='detail'>
+    <view class='live_box_comment'>
+      <view class='box_row'>
+        <view class='comment_right1'></view>
+        <view class='comment_left'>
+          <text class='comment_pupil'>皮皮怪</text>
+          <text class='comment_pupil'>02.20</text>
+          <text class='comment_content'>这个活动超赞的！</text>
+        </view>
+      </view>
+      <view class='comment_huifubox'>
+        <view class='box_row'>
+          <text class='huifu_pepo_font'>你皮我也皮：</text>
+          <text class='huifu_content_font'>烧烤否？</text>
+        </view>
+        <view class='box_row'>
+          <text class='huifu_pepo_font'>来了来了：</text>
+          <text class='huifu_content_font'>妙啊~</text>
+        </view>
+      </view>
+      <view class='navbottom'>
+        <text>回复</text>
+        <image src='../../images/little/plun.png' class='plun'></image>
+        <text>2</text>
+        <image src='../../images/little/yizan.png' class='plun'></image>
+        <text>1</text>
+      </view>
+    </view>
+
+    <view class='live_box_comment'>
+      <view class='box_row'>
+        <view class='comment_right2'></view>
+        <view class='comment_left'>
+          <text class='comment_pupil'>缘，妙不可言</text>
+          <text class='comment_pupil'>02.17</text>
+          <text class='comment_content'>终于回来了！</text>
+        </view>
+      </view>
+      <view class='comment_huifubox'>
+        <view class='box_row'>
+          <text class='huifu_pepo_font'>按时吃饭：</text>
+          <text class='huifu_content_font'>怎么样？</text>
+        </view>
+        <view class='box_row'>
+          <text class='huifu_pepo_font'>终于回来了：</text>
+          <text class='huifu_content_font'>回复</text>
+          <text class='huifu_pepo_font' space="emsp"> 鸡蛋壳：</text>
+          <text class='huifu_content_font'>可以的！精彩！</text>
+        </view>
+      </view>
+      <view class='navbottom'>
+        <text>回复</text>
+        <image src='../../images/little/plun.png' class='plun'></image>
+        <text>2</text>
+        <image src='../../images/little/zan.png' class='plun'></image>
+        <text>1</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:if='{{isStatus}}' class='join' bindtap='join'>加入该活动</view>
+<!-- <view wx:if='{{!isStatus}}' class='join1'>已加入该活动</view> -->

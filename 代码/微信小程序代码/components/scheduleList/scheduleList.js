@@ -51,9 +51,8 @@ Component({
       })
     },
     startLearn: function () {
-      this.setData({
-        isStatus:1,
-        kaTime:'1:40:00'
+      wx.navigateTo({
+        url: '../../pages/onlinevedio/onlinevedio',
       })
     }
   },

@@ -30,6 +30,43 @@ Page({
         url: '../evaluate/evaluate'
       })
   }, 
+  classrooms: function () {
+    console.log("evaluate"),
+      wx.navigateTo({
+        url: '../myclassroom/myclassroom'
+      })
+  },
+  grade: function () {
+    console.log("evaluate"),
+      wx.navigateTo({
+        url: '../myschedule/myschedule'
+      })
+  },
+  test: function () {
+    console.log("evaluate"),
+      wx.navigateTo({
+        url: '../mytest/mytest'
+      })
+  },
+  course: function () {
+    console.log("evaluate"),
+      wx.navigateTo({
+        url: '../mycourse/mycourse'
+      })
+  },
+  collect: function () {
+    console.log("evaluate"),
+      wx.navigateTo({
+        url: '../mycollect/mycollect'
+      })
+  },
+  attention: function () {
+    console.log("evaluate"),
+      wx.navigateTo({
+        url: '../myattention/myattention'
+      })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

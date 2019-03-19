@@ -6,7 +6,7 @@
       <text>Hey {{UserName}}!</text>
     </view>
     <view class='UserPic1'>
-      <image src='../../images//mainPic/UserPic.png' class='UserPic'></image>
+      <image src='../../images/mainPic/UserPic.png' class='UserPic'></image>
     </view>
   </view>
   <view class='MainButton'>

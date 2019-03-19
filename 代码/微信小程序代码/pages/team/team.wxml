@@ -13,6 +13,6 @@
 </view>
 <view class='maintalk'></view>
 <block wx:for="{{My_talk}}" key="talk_id">
-    <template is="talk" data="{{...item}}" />
-  </block>
-
+  <template is="talk" data="{{...item}}" />
+</block>
+<image bindtap='edit' class='edit' src='../../images/little/edit.png'></image>

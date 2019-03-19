@@ -1,0 +1,25 @@
+<view class='table_top'>
+  <text style='font-size:70rpx;'>考试安排</text>
+</view>
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">课程</view>
+    <view class="th">考试时间</view>
+    <view class="th">考试地点</view>
+    <view class="th">考试编号</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.course}}</view>
+      <view class="td">{{item.time}}</view>
+      <view class="td">{{item.place}}</view>
+      <view class="td">{{item.code}}</view>
+    </view>
+    <view class="tr" wx:else>
+     <view class="td">{{item.course}}</view>
+      <view class="td">{{item.time}}</view>
+      <view class="td">{{item.place}}</view>
+      <view class="td">{{item.code}}</view>
+    </view>
+  </block>
+</view>

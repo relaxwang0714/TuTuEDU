@@ -19,3 +19,26 @@
 .zzq_inline{
     display: inline-block;
 }
+.setpic{
+    height: 80px;
+    width: 80px;
+}
+.nav_left_big_font{
+    font-size: 20px;
+}
+.nav_left_small_font{
+    font-size: 16px;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.suojin{
+    margin-left: -15px;
+}
+.input_zzq{
+    margin-top: -5px;
+    margin-left: -72px;
+}
+.zzq_xuenian{
+    margin-top: -30px;
+}

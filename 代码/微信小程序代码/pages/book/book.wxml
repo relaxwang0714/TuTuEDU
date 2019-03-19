@@ -1,0 +1,95 @@
+<import src="../../templates/nav.wxml" />
+<block wx:for="{{MainBook}}" key="book_id">
+  <template is="list22" data="{{...item}}" />
+</block>
+<view class='video_bottom'>
+  <view class='navBar'>
+    <block wx:for="{{navDatas}}" wx:for-index="DataId" wx:key="DataId">
+      <view class="navItem {{currentTab == DataId ?'active':''}}" data-current="{{DataId}}" bindtap="navbarTap">{{item.navData}}</view>
+    </block>
+  </view>
+
+  <view hidden="{{currentTab!==0}}">
+    <view class='live_box'>
+      <view class='live_top_font'>内容简介</view>
+      <view class='live_small_font'>《海风中失落的血色馈赠》所收入的七个故事，有少年渴望摆脱家族在海岛世代挖煤的命运而在成年之际离家远行，有人到中年的大学教师回忆少年时他那心怀壮志但困居海岛打鱼为生的父亲，有散居各地的大家族在老祖母96岁生日之际齐聚老祖母寡居的海角……这些故事勾画了男女之间、父母与子女之间 紧密的纽带和难以逾越的鸿沟，既温柔又残酷。</view>
+      <view class='live_top_font'>作者简介</view>
+      <view class='live_small_font'>阿利斯泰尔•麦克劳德（1936-2014），加拿大著名短篇小说家。他生于加拿大萨斯喀彻温省北贝特尔福德市，但在十岁时随父母搬回世代居住的老家、位于加拿大东部省份新斯科舍省布雷顿角岛定居。他早年毕业于新斯科舍师范学院，成了一名学校教师，后来，他相继在新斯科舍省的圣方济各•沙勿略大学和新不伦瑞克大学攻读学士和硕士学位，1968年在美国圣母大学获得博士学位。年轻时为了维持学业，他做过伐木工、煤矿工人和渔夫。</view>
+      <view class='live_small_font'>1969年，在印第安纳大学英语系执教三年之后，他回到加拿大，在安大略省的温莎大学教授英文和写作，直至退休。麦克劳德创作低产，一生只出版两部短篇小说集《海风中失落的血色馈赠》（1976）、《当鸟儿带来太阳》</view>
+      <!-- <view bindtap='join_course' wx:if="{{isJoin==true}}" class='live_injoin_button'>加入课程</view> -->
+    </view>
+  </view>
+
+  <view hidden="{{currentTab!==1}}">
+    <view class='live_box_class1' bindtap='bookpage'>一、秋</view>
+    <view class='live_box_class1'>二、黑暗茫茫</view>
+
+    <view class='live_box_class1'>三、海风中失落的血色馈赠</view>
+    <view class='live_box_class1'>四、回乡</view>
+    <view class='live_box_class1'>五、灰白的金色馈赠</view>
+    <view class='live_box_class1'>六、船</view>
+    <view class='live_box_class1'>七、去乱岑角的路</view>
+    <view class='live_box_class1'>八、跋/乔伊斯•卡罗尔•欧茨</view>
+  </view>
+
+  <view hidden="{{currentTab!==2}}">
+    <view class='live_box_comment'>
+      <view class='box_row'>
+        <view class='comment_right11'></view>
+        <view class='comment_left'>
+          <text class='comment_pupil'>巨米雨</text>
+          <text class='comment_pupil'>2017-03-21</text>
+          <text class='comment_content'>我这一年来读过的最美的书，像被神亲吻过一样的散文，尤其是最后的两篇，要不是坐在火车上我一定会哭出来，我无法想象居然还会有关于家庭关系的付出牺牲纠葛的故事还能如此的打动到我。所有故事仿佛都发生在被世界遗忘的一角，然而这样的孤独又不会让人觉得陌生，因为我们所熟悉的生活本就是这样残酷和美好。这本短篇集之美，正是我心目中一直热爱的文字之美，而且也恰好证明了写作是需要过人的天赋的，只有像作者这样的人才能将文字之美展现得淋漓尽致（当然翻译也是）。以后要是有人再问我，读什么样的书会激发阅读的兴趣或者说有什么书值得推荐的，那么这本一定是其中之一，我不在意对方是否会抱有过高的期望，因为对我来说，这就是文字的至高享受。</text>
+        </view>
+      </view>
+      <view class='comment_huifubox'>
+        <view class='box_row'>
+          <text class='huifu_pepo_font'>快乐的女大学生：</text>
+          <text class='huifu_content_font'>深有同感</text>
+        </view>
+        <view class='box_row'>
+          <text class='huifu_pepo_font'>美梦成真：</text>
+          <text class='huifu_content_font'>说的真好！</text>
+        </view>
+          <text style='color:blue;font-size:30rpx;'>查看更多</text>
+      </view>
+      <view class='navbottom'>
+        <text>回复</text>
+        <image src='../../images/little/plun.png' class='plun'></image>
+        <text>5</text>
+        <image src='../../images/little/zan.png' class='plun'></image>
+        <text>56</text>
+      </view>
+    </view>
+
+    <view class='live_box_comment'>
+      <view class='box_row'>
+        <view class='comment_right2'></view>
+        <view class='comment_left'>
+          <text class='comment_pupil'>别的熊</text>
+          <text class='comment_pupil'>2015-10-06</text>
+          <text class='comment_content'>安妮普鲁的西部山脉，吴念真的九份矿区，麦卡勒斯的南方小镇，本作的布雷顿角……这些故事其实就如翁达杰所说，是地域的也是普世的。麦克劳德写的太好了，很少见到这样情绪喷薄饱满，还能掌控全篇的作品。有几个短篇里人们和外界发生了联系：《回乡》中在澡堂外等待的精英爸爸，将报纸铺在椅子上以免弄脏自己的西装；而最后一个故事里“我”认为回到故乡的自己，是一条“生病了、被污染的鲑鱼”，回到清澈的溪流里……这些细节对我这样的小城生人来说，意义重大。</text>
+        </view>
+      </view>
+      <view class='comment_huifubox'>
+        <view class='box_row'>
+          <text class='huifu_pepo_font'>按时吃饭：</text>
+          <text class='huifu_content_font'>nice</text>
+        </view>
+        <view class='box_row'>
+          <text class='huifu_pepo_font'>睡了吃吃：</text>
+          <text class='huifu_content_font'>回复</text>
+          <text class='huifu_pepo_font' space="emsp"> 鸡蛋壳：</text>
+          <text class='huifu_content_font'>挺好的啊！</text>
+        </view>
+      </view>
+      <view class='navbottom'>
+        <text>回复</text>
+        <image src='../../images/little/plun.png' class='plun'></image>
+        <text>2</text>
+        <image src='../../images/little/yizan.png' class='plun'></image>
+        <text>1</text>
+      </view>
+    </view>
+  </view>
+</view>
