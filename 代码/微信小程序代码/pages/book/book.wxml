@@ -21,7 +21,7 @@
   </view>
 
   <view hidden="{{currentTab!==1}}">
-    <view class='live_box_class1'>一、秋</view>
+    <view class='live_box_class1' bindtap='bookpage'>一、秋</view>
     <view class='live_box_class1'>二、黑暗茫茫</view>
 
     <view class='live_box_class1'>三、海风中失落的血色馈赠</view>

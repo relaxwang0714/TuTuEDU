@@ -128,3 +128,11 @@ page{
   right: 25rpx;
   bottom: 25rpx;
 }
+.edit{
+  position: fixed;
+  bottom: 20rpx;
+  right: 20rpx;
+  z-index: 1;
+  width: 105rpx;
+  height: 100rpx;
+}

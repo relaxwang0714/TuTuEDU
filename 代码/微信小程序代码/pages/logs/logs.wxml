@@ -24,6 +24,7 @@
 </view>
 <!--同校活动-->
 <view hidden="{{currentTab!==2}}">
+<image bindtap='edit' class='edit' src='../../images/little/edit.png'></image>
   <view class='activity_content'>
     <view class='choose_univercity'>
       <text class='my_univercity'>我的学校:</text>

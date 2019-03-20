@@ -26,6 +26,11 @@ Page({
       activityList:this.data.activityList
     })
     var activityList = JSON.stringify(activityList);
+    wx.showToast({
+      title: '加入成功',
+      icon: 'success',
+      duration: 2000,
+    })
   },
   /**
    * 生命周期函数--监听页面加载

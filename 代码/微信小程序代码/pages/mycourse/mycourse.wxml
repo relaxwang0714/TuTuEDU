@@ -1,5 +1,42 @@
 <import src="../../templates/nav.wxml" />
-<view class='bar'>我的课程</view>
-<block wx:for="{{MainCourse}}" key="course_id">
-  <template is="list11" data="{{...item}}" />
-</block>
+<view class='mainBar' style='margin-left:200rpx;'>
+  <block wx:for="{{mainData}}" wx:for-index="{{item.mainIndex}}" key="{{item.mainIndex}}">
+    <text class='mainTitle {{currentTab==item.mainIndex ?"active":""}}' data-mainCurrent='{{item.mainIndex}}' bindtap='mainBarChoose'>{{item.mainTitle}}</text>
+  </block>
+</view>
+<view style='margin:30rpx; 40rpx;'>
+  <view hidden="{{currentTab!==0}}">
+    <block wx:for="{{MainCourse}}" key="course_id">
+      <template is="list11" data="{{...item}}" />
+    </block>
+    <block wx:for="{{boxContent}}" wx:key="this">
+      <view class='box' bindtap='todetail' data-id='{{item.id}}'>
+        <image class='box_img' src='{{item.pic}}'></image>
+        <view class='box_content'>
+          <text class='content_txt'>{{item.title}}</text>
+          <text class='content_txt1'>时间：{{item.time}}</text>
+          <text class='content_txt1'>地点：{{item.place}}</text>
+          <text class='content_txt1'>发起人：{{item.start}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view hidden="{{currentTab!==1}}">
+    <block wx:for="{{MainCourse}}" key="course_id">
+      <template is="list11" data="{{...item}}" />
+    </block>
+  </view>
+  <view hidden="{{currentTab!==2}}">
+    <block wx:for="{{boxContent}}" wx:key="this">
+      <view class='box' bindtap='todetail' data-id='{{item.id}}'>
+        <image class='box_img' src='{{item.pic}}'></image>
+        <view class='box_content'>
+          <text class='content_txt'>{{item.title}}</text>
+          <text class='content_txt1'>时间：{{item.time}}</text>
+          <text class='content_txt1'>地点：{{item.place}}</text>
+          <text class='content_txt1'>发起人：{{item.start}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -64,7 +64,11 @@ Page({
       url: '../ucDetail/ucDetail?activityList='+activityList
     })
   },
-
+  edit: function () {
+    wx.navigateTo({
+      url: '../edit/edit',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

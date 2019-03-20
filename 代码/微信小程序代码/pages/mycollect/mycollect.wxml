@@ -1,0 +1,26 @@
+<import src="../../templates/nav.wxml" />
+<view class='mainBar' style='margin-left:100rpx;'>
+  <block wx:for="{{mainData}}" wx:for-index="{{item.mainIndex}}" key="{{item.mainIndex}}">
+    <text class='mainTitle {{currentTab==item.mainIndex ?"active":""}}' data-mainCurrent='{{item.mainIndex}}' bindtap='mainBarChoose'>{{item.mainTitle}}</text>
+  </block>
+</view>
+<view style='margin:30rpx; 40rpx;'>
+  <view hidden="{{currentTab!==0}}">
+    <block wx:for="{{MainBook}}" key="book_id">
+      <template is="list2" data="{{...item}}" />
+    </block>
+    <block wx:for="{{My_talk}}" key="talk_id">
+      <template is="talk1" data="{{...item}}" />
+    </block>
+  </view>
+  <view hidden="{{currentTab!==1}}">
+    <block wx:for="{{MainBook}}" key="book_id">
+      <template is="list2" data="{{...item}}" />
+    </block>
+  </view>
+  <view hidden="{{currentTab!==2}}">
+    <block wx:for="{{My_talk}}" key="talk_id">
+      <template is="talk1" data="{{...item}}" />
+    </block>
+  </view>
+</view>

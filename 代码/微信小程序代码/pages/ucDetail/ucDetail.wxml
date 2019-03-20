@@ -86,4 +86,4 @@
   </view>
 </view>
 <view wx:if='{{isStatus}}' class='join' bindtap='join'>加入该活动</view>
-<view wx:if='{{!isStatus}}' class='join1'>已加入该活动</view>
+<!-- <view wx:if='{{!isStatus}}' class='join1'>已加入该活动</view> -->
