@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/book/book",
-    
     "pages/main/main",
+    "pages/book/book",
+    "pages/zhibo_detail/zhibo_detail",
     "pages/class01/class01",
     "pages/class_answar/class_answar",
     "pages/evaluate_teacher/evaluate_teacher",
