@@ -1,0 +1,30 @@
+.zhibo_course{
+  position: relative;
+}
+.zhibo_course .course_pic{
+ width: 100%;
+ height: 100%;
+}
+.zhibo_course .course_hot{
+  width: 100%;
+  height: 34rpx;
+  border-bottom-right-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.course_content{
+  width: 276rpx;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  display:block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

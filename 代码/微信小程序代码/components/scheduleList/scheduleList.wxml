@@ -1,0 +1,22 @@
+<view class='im'>
+    <text wx:if='{{types=="学校"}}'class= 'im_title'>{{types}}</text>
+    <text wx:if='{{types=="网课"}}'class= 'im_title1'>{{types}}</text>
+    <view class='im_bar'>
+      <view class='im_bar_statusBar'>
+        <view class='im_statusBar'>
+          <view class='{{isStatus ? "im_status":"im_status1"}}'></view>
+          <view class='im_time'>{{time}}</view><!--8:00-9:55-->
+        </view>
+        <view class='im_class'>
+          <text class='im_class_name'>{{course}}</text><!--计算机应用基础-->
+          <text class='im_class_teacher'>{{place}} {{teacher}}</text><!--E203 陈云-->
+        </view>
+      </view>
+      <view class='im_ka'>
+        <view wx:if='{{!isStatus}}' class='im_ka_btn'>上课打卡</view>
+        <view wx:if='{{isStatus}}' class='im_ka_btn'>下课打卡</view>
+        <text wx:if="{{isStatus}}" class='im_ka_txt'>{{kaTime}}后可打卡</text>
+      </view>
+    </view>
+  </view>
+

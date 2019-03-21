@@ -1,0 +1,64 @@
+/* pages/course/course.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.course{
+  display: flex;
+  flex-direction: column;
+  margin: 40rpx;
+  padding: 30rpx;
+  box-shadow: 6rpx 6rpx 70rpx #f0f0f0;
+}
+.course .course_name{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.course_name .course_edit{
+  height: 35rpx;
+  width: 33rpx;
+  display: flex;
+}
+.event{
+  display: flex;
+  flex-direction: row;
+  margin: 40rpx;
+  padding: 30rpx;
+  justify-content: space-between;
+  box-shadow: 6rpx 6rpx 70rpx #f0f0f0;
+}
+.event .toEdit{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.toEdit .event_name{
+  color: #f4d7b8;
+  font-size: 32rpx;
+}
+.toEdit .return{
+  height: 30rpx;
+  width: 25rpx;
+  margin-left: 20rpx;
+}
+.delete{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.delete .delete_course{
+  width: 270rpx;
+  height: 90rpx;
+  background-color: #eeb478;
+  border-radius: 80rpx;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30rpx;
+}

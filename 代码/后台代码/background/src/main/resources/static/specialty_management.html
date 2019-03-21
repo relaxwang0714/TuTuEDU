@@ -73,7 +73,7 @@
 	            <td>010102</td>  
 	            <td>中国哲学</td>  
 	            <td>哲学系</td>
-	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
+	            <td><a id="test2" href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">查看</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">修改</div></a></td>
 	        </tr>  
 	        <tr>  
 	            <td class="tr_input"><input type="checkbox" /></td>  
@@ -161,6 +161,22 @@
             }  
         }  
 	</script>
+	<script src="js/jquery.js"></script>
+		<script src="layer/layer.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#test2").click(function(){
+					layer.open({
+						type: 2,
+						title:['详情—外国哲学','font-size:18px;'],
+					    area: ['520px', '280px'],
+					    shadeClose: true, //点击遮罩关闭
+					    content: 'specialtyInfo.html',
+					});
+					
+				});
+			});
+		</script>
 		
 	</body>
 </html>

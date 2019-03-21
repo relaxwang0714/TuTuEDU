@@ -17,6 +17,25 @@
 					$(".brush_s").click(function(){
 						$(".auditing").css({'display':'block'});
 					})
+					
+					$(".shenhe").click(function(){
+						$("#shenhe").css({'display':'none'});
+						var trHTML = "<tr>"  
+	            +"<td class='tr_input'><input type='checkbox' /></td>" 
+	            +"<td>00103001</td>"
+	            +"<td>00103001604</td>"  
+	            +"<td>第六章：决策树学习</td>"
+	            +"<td>决策树学习综合练习</td>" 
+	            +"<td>王老师</td>" 
+	            +"<td><b><font style='color: red;'>未审核</font></b></td>"
+	            +"<td><a href='#'><div style='float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;'>审核</div></a><a href='#'><div style='float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;'>详情</div></a></td>"
+	        	+"</tr>"
+						$(".auditing tr:eq(7)").after(trHTML);
+						$(".shenhe2").css({'display':'block'});
+//						setTimeout(function(){alert('审核成功！');},100);
+						alert('操作成功！')
+						
+					})
 				
 			})	
 		
@@ -68,7 +87,7 @@
 				<td class="th_font"><b>申请状态</b></td>
 				<td class="th_font"><b>操作</b></td>
 			</th>
-	        <tr>  
+	        <tr id="shenhe">  
 	            <td class="tr_input"><input type="checkbox" /></td>  
 	            <td>00103001</td>  
 	            <td>00103001503</td>  
@@ -76,7 +95,7 @@
 	            <td>M-P神经元模型</td> 
 	            <td>王老师</td> 
 	            <td><b><font style="color: red;">未审核</font></b></td>
-	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
+	            <td><a href="#" class="shenhe"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
 	        </tr>
 	        <tr>  
 	            <td class="tr_input"><input type="checkbox" /></td>  

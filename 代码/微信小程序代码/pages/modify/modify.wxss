@@ -1,0 +1,50 @@
+/* pages/calendar/calendar.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.event{
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx 40rpx;
+  padding: 30rpx;
+  justify-content: space-between;
+  box-shadow: 6rpx 6rpx 70rpx #f0f0f0;
+}
+.event .toEdit{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.toEdit .event_name{
+  color: #f4d7b8;
+  font-size: 32rpx;
+}
+.toEdit .event_name1{
+  color: gray;
+  font-size: 32rpx;
+}
+.toEdit .return{
+  height: 30rpx;
+  width: 27rpx;
+  margin-left: 20rpx;
+}
+.save{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.save .save_course{
+  width: 270rpx;
+  height: 90rpx;
+  background-color: #eeb478;
+  border-radius: 80rpx;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30rpx;
+}

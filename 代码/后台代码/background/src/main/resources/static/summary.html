@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+		<script src="js/echarts.common.min.js"></script>
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="css/summary.css" />
+		
+	</head>
+	<body>
+		
+		<!--时间点-->
+		<div id="times">
+			<div class="times1">
+				<h5></h5>
+				<span><b>今日</b></span>
+			</div>
+			
+			<div class="times2">
+				<h5></h5>
+				<span><b>本周</b></span>
+			</div>
+			
+			<div class="times3">
+				<h5></h5>
+				<span><b>本月</b></span>
+			</div>
+			
+			<div class="times4">
+				<h5></h5>
+				<span><b>本年</b></span>
+			</div>
+			
+		</div>
+		
+		<!--内容-->
+		<div id="concent">
+			<!--实时概况-->
+			<div id="real_time">
+				<div class="title">
+					<b>-&nbsp;&nbsp;实时概况</b>
+				</div>
+				
+				<div class="rt1">
+					<img src="img/tb1.png" />
+					<div class="rt1_top">
+						APP访问量（次）
+					</div>
+					<div class="rt1_bottem">
+						128
+					</div>
+				</div>
+				
+				<div class="rt2">
+					<img src="img/tb2.png" />
+					<div class="rt2_top">
+						今日直播数   (次)
+					</div>
+					<div class="rt2_bottem">
+						26
+					</div>
+				</div>
+				
+				<div class="rt3">
+					<img src="img/tb3.png" />
+					<div class="rt3_top">
+						教师端访问量（次）
+					</div>
+					<div class="rt3_bottem">
+						42
+					</div>
+				</div>
+				
+				<div class="rt4">
+					<img src="img/tb4.png" />
+					<div class="rt4_top">
+						今日课程学习量（次）
+					</div>
+					<div class="rt4_bottem">
+						67
+					</div>
+				</div>
+				
+				<div class="rt5">
+					<img src="img/rt5.png" />
+					<div class="rt5_top">
+						用户活跃度
+					</div>
+					<div class="rt5_bottem">
+						35
+					</div>
+				</div>
+			</div>
+			
+			<!--订单成交量-->
+			<div id="oders">
+				<div id="main_3" style="width: 600px;height:400px;display: inline-block;"></div>
+				<!--<div class="title">
+					<b>-&nbsp;&nbsp;各院系学生学习量</b>
+				</div>
+				<div class="od_con">-->
+					<!--<canvas id="myChart"></canvas>-->
+					
+				<!--</div>-->
+			</div>
+			
+
+			
+			<!--商品TOP10-->
+			<div id="ware">
+				<div class="title">
+					<b>-&nbsp;&nbsp;本校受欢迎的在线课程 TOP 10</b>
+				</div>
+				
+				<div class="ware_left">
+					<span style="position:absolute;list-style: none;color: gray;left: 43px;">
+						课程名称
+					</span>
+					<div class="ware_leftname">
+						<div>计算机二级Office高级应用之文字处理专题</div>
+						<div>跟学Excel视频教程-Excel实践</div>
+						<div>平面设计基础到精通实战</div>
+						<div>钢琴艺术赏析</div>
+						<div>流行音乐鉴赏</div>
+						<div>数字摄影技术与艺术</div>
+						<div>创新创业基础</div>
+						<div>花艺设计</div>
+						<div>高等数学</div>
+						<div>三维动画制作</div>
+					</div>
+					
+				</div>
+				
+				<div class="ware_right">
+					<span style="position:absolute;list-style: none;color: gray;left: 35px;">
+						访问量
+					</span>
+					<div class="ware_rigcon">
+						<div>288&nbsp;&nbsp;&nbsp;&nbsp;次</div>
+						<div>203&nbsp;&nbsp;&nbsp;&nbsp;次</div>
+						<div>200&nbsp;&nbsp;&nbsp;&nbsp;次</div>
+						<div>194&nbsp;&nbsp;&nbsp;&nbsp;次</div>
+						<div>170&nbsp;&nbsp;&nbsp;&nbsp;次</div>
+						<div>155&nbsp;&nbsp;&nbsp;&nbsp;次</div>
+						<div>140&nbsp;&nbsp;&nbsp;&nbsp;次</div>
+						<div>100&nbsp;&nbsp;&nbsp;&nbsp;次</div>
+						<div>97&nbsp;&nbsp;&nbsp;&nbsp;次</div>
+						<div>70&nbsp;&nbsp;&nbsp;&nbsp;次</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--回收站分布信息-->
+			<div id="distribute">
+				<div class="title">
+					<b>-&nbsp;&nbsp;本校受欢迎的直播访问 TOP 10</b>
+				</div>
+				
+				<div class="distribute_left">
+					<span style="position:absolute;list-style: none;color: gray;left: 43px;">
+						直播名称
+					</span>
+					<div class="distribute_leftname">
+						<div>高等数学极限详解</div>
+						<div>英语六级解题技巧</div>
+						<div>高效学习方法介绍</div>
+						<div>计算机网络强化复习</div>
+						<div>工程数学补习班</div>
+						<div>考研方向分析</div>
+						<div>互联网公司想要的设计师</div>
+						<div>手绘插画带来的视觉体验</div>
+						<div>高级Office应用</div>
+						<div>Python使用入门</div>
+
+					</div>
+					
+				</div>
+				
+				<div class="distribute_right">
+					<span style="position:absolute;list-style: none;color: gray;left: 35px;">
+						访问量
+					</span>
+					<div class="distribute_rigcon">
+						<div>124&nbsp;&nbsp;&nbsp;&nbsp;次</div>
+						<div>95&nbsp;&nbsp;&nbsp;&nbsp;次</div>
+						<div>77&nbsp;&nbsp;&nbsp;&nbsp;次</div>
+						<div>55&nbsp;&nbsp;&nbsp;&nbsp;次</div>
+						<div>40&nbsp;&nbsp;&nbsp;&nbsp;次</div>
+						<div>37&nbsp;&nbsp;&nbsp;&nbsp;次</div>
+						<div>20&nbsp;&nbsp;&nbsp;&nbsp;次</div>
+						<div>19&nbsp;&nbsp;&nbsp;&nbsp;次</div>
+						<div>10&nbsp;&nbsp;&nbsp;&nbsp;次</div>
+						<div>8&nbsp;&nbsp;&nbsp;&nbsp;次</div>
+					</div>
+				</div>
+				
+				
+			</div>
+			
+		</div>
+		
+	<script type="text/javascript">
+        var myChart_3 = echarts.init(document.getElementById('main_3'));
+
+        
+        option = {
+    title : {
+        text: '各院系学生学习量',
+        x:'center'
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        orient : 'vertical',
+        x : 'left',
+        data:['哲学系','经济学系','法学系','教育学系','文学系','历史学系','理学系','工学系','农学系','医学系','管理学系','艺术学系']
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {
+                show: true, 
+                type: ['pie', 'funnel'],
+                option: {
+                    funnel: {
+                        x: '25%',
+                        width: '50%',
+                        funnelAlign: 'left',
+                        max: 1548
+                    }
+                }
+            },
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    series : [
+        {
+            name:'访问来源',
+            type:'pie',
+            radius : '55%',
+            center: ['50%', '60%'],
+            data:[
+                {name: '哲学系', value: 32},
+                {name: '经济学系', value: 23},
+                {name: '法学系', value: 109},
+                {name: '教育学系', value: 212},
+                {name: '文学系', value: 23},
+                {name: '历史学系', value: 19},
+                {name: '理学系', value: 112},
+                {name: '工学系', value: 323},
+                {name: '农学系', value: 59},
+                {name: '医学系', value: 8},
+                {name: '管理学系', value: 223},
+				{name: '艺术学系', value: 89}
+            ]
+        }
+    ]
+};
+    myChart_3.setOption(option);                
+
+    </script>
+   
+	</body>
+</html>

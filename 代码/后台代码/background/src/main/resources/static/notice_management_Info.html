@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="layui/css/layui.css" media="all"/>
+	<link rel="stylesheet" href="css/notice_management.css" />
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<title></title>
+
+</head>
+<body>
+<blockquote class="layui-elem-quote">选择发布班级</blockquote>
+<blockquote class="layui-elem-quote layui-quote-nm">
+	<div class="select">
+		<label class="layui-form-label time"><b>所属院系:</b></label>
+		<div class="layui-inline"> <!-- 注意：这一层元素并不是必须的 -->
+			<select class="student_management_select_3" id="test_1">
+				<option value=""></option>
+				                <option value="计算机系">计算机系</option>
+				            	<option value="金融系">金融系</option>
+				<option value="英语系">英语系</option>
+				            </select>
+		</div>
+	</div>
+	<div class="select_2">
+		<label class="layui-form-label time"><b>所属专业:</b></label>
+		<div class="layui-inline"> <!-- 注意：这一层元素并不是必须的 -->
+			<select class="student_management_select_3" id="test_2">
+				<option value=""></option>
+				                <option value="计算机科学与技术">计算机科学与技术</option>
+				            	<option value="软件工程">软件工程</option>
+				<option value="物联网">物联网</option>
+				            </select>
+		</div>
+	</div>
+	<div class="select_3">
+		<label class="layui-form-label time"><b>所属班级:</b></label>
+		<div class="layui-inline"> <!-- 注意：这一层元素并不是必须的 -->
+			<select class="student_management_select_3" id="test_3">
+				<option value=""></option>
+				                <option value="1">1班</option>
+				            	<option value="2">2班</option>
+				<option value="3">3班</option>
+				<option value="4">4班</option>
+			</select>
+		</div>
+		<button class="layui-btn" lay-submit="" lay-filter="demo2">确定</button>
+	</div>
+	<div id="con">
+		<div class="keyven1"></div>
+		<div class="keyven2"></div>
+		<div class="keyven3"></div>
+	</div>
+</blockquote>
+
+<blockquote class="layui-elem-quote">填写发布内容</blockquote>
+<blockquote class="layui-elem-quote layui-quote-nm">
+	<div class="layui-input-block">
+		<textarea placeholder="请输入发布的内容" class="layui-textarea"></textarea>
+	</div>
+</blockquote>
+
+<blockquote class="layui-elem-quote">选择发布时间</blockquote>
+<blockquote class="layui-elem-quote layui-quote-nm">
+	<label class="layui-form-label time" style="margin-top: 8px;"><b>发布的时间为:</b></label>
+	<div class="layui-field-box">
+		<div class="layui-input-inline">
+			<input type="text" class="layui-input" id="test5" placeholder="点我进行时间选择">
+		</div>
+	</div>
+</blockquote>
+
+
+<div class="layui-form-item setting_button">
+	<a href="notice_management_Info.html"><button class="layui-btn" lay-submit="" lay-filter="demo2">保存并提交</button></a>
+	<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+</div>
+
+
+<script>
+    var s1 = 0;
+    var s2 = 0;
+    var s3_a = 1;
+    var s3_b = 2;
+    var s3_c = 3;
+    $('#test_1').change(function(){
+        var a = $('#test_1').val();
+        // if(a != ''){
+        //     if (s1 == 0){
+        //         $('.keyven1').append("<div class='alert alert-success alert-dismissable' id='keyven_1'><button type='button' class='close' onclick='Iclose1()' title='删除'>&times;</button>"+a+"</div>");
+        //         s1 += 1;
+        //     }
+        // }
+
+    })
+    function Iclose1(){
+        if (s1 == 1){
+            $("#keyven_1").remove();
+            s1 -= 1;
+        }
+
+    }
+    $('#test_2').change(function(){
+        var b = $('#test_2').val();
+        if(b != ''){
+            $('#test_3').change(function(){
+                var c = $('#test_3').val();
+                $('.keyven2').append("<div class='alert alert-success alert-dismissable' id='keyven_2'><button type='button' class='close' onclick='Iclose2()' title='删除'>&times;</button>"+b+c+"班</div>");
+                s2 += 1;
+            })
+//					s2 += 1;
+        }
+//					if (s2 == 0){
+//						if (s1 == 0){
+//							$('.keyven1').append("<div class='alert alert-success alert-dismissable' id='keyven_2'><button type='button' class='close' onclick='Iclose2()' title='删除'>&times;</button>"+b+"</div>");
+//						}
+//						else{
+//							$('.keyven2').append("<div class='alert alert-success alert-dismissable' id='keyven_2'><button type='button' class='close' onclick='Iclose2()' title='删除'>&times;</button>"+b+"</div>");
+//						}
+//						s2 += 1;
+//					}
+
+
+    })
+    function Iclose2(){
+        if (s2 >= 0){
+            $("#keyven_2").remove();
+            s2 -= 1;
+        }
+
+    }
+    //			$('#test_3').change(function(){
+    //				var c = $('#test_3').val();
+    //				if(c != ''){
+    //					c = parseInt($('#test_3').val());
+    //					var t = document.getElementById("keyven_2").innerHTML+c+"班";
+    //					$("#keyven_2").remove();
+    //					s2 -= 1;
+    //					if (c == 1){
+    //						if (s2 == 0 && s1 == 0){
+    //							$('.keyven1').append("<div class='alert alert-success alert-dismissable' id='keyven_3'><button type='button' class='close' onclick='Iclose3()' title='删除'>&times;</button>"+c+"</div>");
+    //						}
+    //						if (s2 == 0 && s1 == 1){
+    //							$('.keyven2').append("<div class='alert alert-success alert-dismissable' id='keyven_3'><button type='button' class='close' onclick='Iclose3()' title='删除'>&times;</button>"+c+"</div>");
+    //						}
+    //						if (s2 == 1){
+    //							$('.keyven3').append("<div class='alert alert-success alert-dismissable' id='keyven_3'><button type='button' class='close' onclick='Iclose3()' title='删除'>&times;</button>"+c+"</div>");
+    //							alert("1123");
+    //							alert(document.getElementById("keyven_2").innerHTML+c+"班");
+    //							var t = document.getElementById("keyven_2").innerHTML+c+"班";
+    //							$("#keyven_2").remove();
+    //							s2 -= 1;
+    //							$('.keyven2').append("<div class='alert alert-success alert-dismissable' id='keyven_3'>"+t);
+    //
+    ////						}
+    //						s3_a += 1;
+    //					}
+    //				}
+
+    //			})
+    //			function Iclose3(){
+    //				if (s3_a == 1){
+    //					$("#keyven_3").remove();
+    //					s3_a -= 1;
+    //				}
+    //
+    //			}
+</script>
+<script src="layui/layui.js"></script>
+<script>
+    layui.use(['form','laydate'], function(){
+        var form = layui.form;
+
+        //监听提交
+        form.on('submit(demo1)', function(data){
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#test5'
+            ,type: 'datetime'
+            ,format: 'yyyy年MM月dd日 HH时mm分ss秒'
+            ,range: false //或 range: '~' 来自定义分割字符
+        });
+    });
+</script>
+
+</body>
+</html>
+

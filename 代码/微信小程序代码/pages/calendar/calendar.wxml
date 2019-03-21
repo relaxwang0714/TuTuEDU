@@ -1,0 +1,57 @@
+<!--pages/calendar/calendar.wxml-->
+<view class='calendar_box'>
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="bindDateChange">
+    <view class='calendar_adds'>
+      <image src='../../images/little/add.png' class='calendar_add'></image>
+    </view>
+  </picker>
+
+  <view class='calendar'>
+    <view class='calendar_month'>{{NowMon}}月</view>
+    <view class='calendar_week'>
+      <view style='display: flex;flex-direction: row;'>
+        <block wx:for='{{ weekArr }}' wx:key="that">
+          <view style='margin-right:45rpx;width:35rpx;text-align:center;'>
+            {{item}}
+          </view>
+        </block>
+      </view>
+      <view style='display: flex;flex-direction: row;margin-top:10rpx;'>
+        <block wx:for='{{weekDay}}' wx:key="that">
+          <view data-id='{{index}}' class='{{index == j ? "dateOn" : "dateOff"}}' bindtap='choose'>
+            {{item}}
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='containers'>
+  <view class='item'>
+    <view class='item_bar' bindtap='modifyFlag'>
+      <view class='item_title'>
+        我的Flag
+      </view>
+      <view class='item_flag'>
+        <text class='item_flag_txt'>{{Flag}}</text>
+        <image class='item_flag_img' src='../../images/little/modify.png'></image>
+      </view>
+    </view>
+    <view class='item_ka'>
+      <view wx:if='{{!ka}}' class='item_ka_btn' bindtap='ka'>打卡</view>
+      <view wx:if='{{ka}}' class='item_ka_btn1'>打卡成功</view>
+      <text class='item_ka_txt'>今日打卡人数：{{num}}</text>
+    </view>
+  </view>
+  <scheduleContent></scheduleContent>
+</view>
+<view wx:if='{{isFlag}}'class='modifyBoxs'>
+  <view class='modifyBox'>
+    <text class='flag_txt'>请输入您的目标:</text>
+    <input bindblur='ModifyInputEvent' class='flag_input' value='{{Flag}}'></input>
+    <view class='ModifyBox'>
+      <view class='sure' bindtap='ModifySure'>确定</view>
+      <view class='cancle' bindtap='ModifyCancle'>取消</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<!--pages/class01/class01.wxml-->
+<view class='class01_top'>
+    <text class='live_top_font'>第一章 课时1</text>
+    <view class='class01_small_font'>【视频】01别说你会Word，你可能用错了！</view>
+</view>
+
+<video src="https://apd-279e0de1c083fc38dbf26df3e2dda116.v.smtcdns.com/vedu.tc.qq.com/AngXw-tBWLGU-AAjYzDDVDaId-xjmEk-Hj3XayeW31n4/k1412yk19hu.p701.1.mp4?sha=EC821E1C74576B1F63BF8A80DAA92E2EE17366CD&sdtfrom=v1101&guid=9787852fa9ea421b57c69a282ca48b83&vkey=6DCFD42A1558C441052068680888333F07099411C6608F519F439AF9C6EC6DD81071A1F176C41943EF382C5158A8B596DBD764864F54B626B2961E7FE33ABC1C369CBEF9BC421EBD648F5A2EBCDC1064D6E315C5E8076BD909F093CA245A354F346E2A54DCDE87136D847B9B93E44DC7&ocid=359817993&ocid=3405256876&ocid=2299869450" binderror="videoErrorCallback" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls class='video'></video>
+
+<view class='class01_bottom'>
+    <view class='pic_font'>图文资料</view>
+    <view class='class01_box'>
+      <view class='box_row'>
+         <view><image src='../../images/little/star1.png' class='add'></image></view>
+      </view>
+      <view class='box_col'>
+          <view>01 别说你会Word，你可能用错了！</view>
+          <view class='file_big'>45.3M</view>
+      </view>
+    </view>
+
+    <view class='finish_study'>学完了，来答题</view>
+</view>

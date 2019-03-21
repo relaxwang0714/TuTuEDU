@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="layui/css/layui.css" media="all"/>
+		<link rel="stylesheet" href="css/classify_management_top.css" />
+		<link rel="stylesheet" type="text/css" href="css/zxf_page.css"/>
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="js/zxf_page.js"></script>
+		<style>
+			.layui-input-block{
+				height: auto;
+				margin-left: 0px;
+			}
+			#keyven_1{
+				/*float: left;*/
+				display: inline-block;
+				margin-top: ;
+				margin-left: 0px;
+				width: auto;
+				text-align: center;
+				font-weight: bold;
+			}
+			.alert-success{
+				background-color: white;
+				border-color: white;
+			}
+			div.zxf_pagediv{
+				margin-left: -400px;
+				padding: 15px 20px 30px 0;
+			}
+			body{
+				background-color: white;
+			}  
+			
+    		.layui-btn{
+    			position: absolute;
+    			top: 52px;
+    			left: 68px;
+    		}
+    		.s_course{
+    			position: absolute;
+    			top: 132px;
+    			left: 68px;
+    		}
+    		.auditing{
+    			display: none;
+    		}
+		</style>
+		<script>
+		$(function(){
+				var b = 1;
+				$(".out_order").click(function(){
+					$(".brush_4").css({'display':'block'});
+				})
+				
+				$(".out_order_2").click(function(){
+					$(".brush_5").css({'display':'block'});
+				})
+				
+				$(".big_course").click(function(){
+					$(".big_c").append("<div class='alert alert-success alert-dismissable' id='keyven_1'><button type='button' class='close' onclick='Iclose1()' title='删除'>&times;</button><a href='#'>金融学</a></div>");
+					$(".brush_4").css({'display':'none'});
+				})
+				
+				$(".s_course").click(function(){
+					var trHTML = "<tr>  <td class='tr_input'><input type='checkbox' /></td>  <td>10005</td>  <td>PHP语言</td>  <td>计算机</td><td>1</td><td><a href='#'><div style='float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;'>修改</div></a><a href='#'><div style='float:left;width:45px;height: 23px;background-color: red;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;'>删除</div></a></td></tr>";
+					$(".auditing tr:eq(4)").after(trHTML);
+					$(".brush_5").css({'display':'none'});
+				})
+				
+				$(".course_1").click(function(){
+//					var a = $(this).text();
+					if(b == 1){
+//						alert("123");
+						$(".course_child").append(' > 计算机');
+						$(".auditing").css({'display':'block'});
+						b -= 1;
+					}
+				})
+			
+		})	
+		
+		</script>
+	</head>
+	<body>
+		<div class="header">
+                <ul>
+                    <li><a href="#"><div class="top_nav1" style="border-bottom: 4px solid #364154;"><font style="font-size: large;"><b>课程分类管理</b></font></div></a></li>
+                </ul>
+        </div>
+        <div style="width: 100%;height: 20px;background-color: white;"></div>
+        <a href="#"><div class="out_order">添加大类课程</div></a>
+		<div class="layui-anim layui-anim-up layui-anim-scale brush_4">
+				大类名称<input type="text" class="text" style="margin-left: 10px;">
+				<button class="layui-btn big_course" lay-submit="" lay-filter="demo2">保存并添加</button>
+		</div>
+		<!--<div class="background"></div>-->
+		
+		<blockquote class="layui-elem-quote">课程分类大纲</blockquote>
+			<blockquote class="layui-elem-quote layui-quote-nm">
+				<div class='alert alert-success alert-dismissable' id='keyven_1'>
+		    		<button type='button' class='close' onclick='Iclose1()' title='删除'>&times;</button>
+		    		<a href="#"  class="course_1">计算机</a>
+		    	</div>
+		    	<div class='alert alert-success alert-dismissable' id='keyven_1'>
+		    		<button type='button' class='close' onclick='Iclose1()' title='删除'>&times;</button>
+		    		<a href="#">经济学</a>
+		    	</div>
+		    	<div class='alert alert-success alert-dismissable' id='keyven_1'>
+		    		<button type='button' class='close' onclick='Iclose1()' title='删除'>&times;</button>
+		    		<a href="#">法学</a>
+		    	</div>
+		    	<div class='alert alert-success alert-dismissable' id='keyven_1'>
+		    		<button type='button' class='close' onclick='Iclose1()' title='删除'>&times;</button>
+		    		<a href="#">管理学</a>
+		    	</div>
+		    	<span class="big_c"></span>
+			</blockquote>
+		
+		
+		<!--<br />-->
+		<blockquote class="layui-elem-quote course_child"><font style="font-size: large;">下级课程</font><a href="#"><div class="out_order_2">添加小类课程</div></a></blockquote>
+		
+		<div id="brush_class">
+			<div class="brush_1">
+				分类ID<input type="text" class="text" style="margin-left: 10px;">
+			</div>
+			<div class="brush_2">
+				分类名称<input type="text" class="text">
+			</div>
+			<div class="brush_score3">
+				<input type="submit" class="brush_s" value="">
+					
+			</div>
+			<!--</a>-->
+			<!--<img src="img/search.png" />
+					<input type="submit" class="brush_7" value="">-->
+		</div>
+		<div class="layui-anim layui-anim-up layui-anim-scale brush_5">
+				上级名称<input type="text" class="text" style="margin-left: 10px;"><br />
+				本级名称<input type="text" class="text" style="margin-left: 10px;">
+				<button class="layui-btn s_course" lay-submit="" lay-filter="demo2">保存并添加</button>
+		</div>
+		<!--表格-->
+		<div class="auditing">
+		<table border="1" cellspacing="20" class="scor_student" style="border-collapse:separate;border-spacing:0px 16px;"> 
+			<th>
+				<td class="th_font"><b>分类ID</b></td>
+				<td class="th_font"><b>分类名称</b></td>
+				<td class="th_font"><b>上级分类</b></td>
+				<td class="th_font"><b>层级</b></td>
+				<td class="th_font"><b>操作</b></td>
+			</th>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>10001</td>  
+	            <td>Java语言</td>  
+	            <td>计算机</td>
+	            <td>1</td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;">修改</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: red;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">删除</div></a></td>
+	        </tr>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>10002</td>  
+	            <td>C语言</td>  
+	            <td>计算机</td>
+	            <td>1</td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;">修改</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: red;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">删除</div></a></td>
+	        </tr>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>10003</td>  
+	            <td>C++语言</td>  
+	            <td>计算机</td>
+	            <td>1</td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;">修改</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: red;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">删除</div></a></td>
+	        </tr>
+	        <tr>  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>10004</td>  
+	            <td>Python语言</td>  
+	            <td>计算机</td>
+	            <td>1</td>
+	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;">修改</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: red;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">删除</div></a></td>
+	        </tr>
+	        
+	    </table>  
+	    <div class="zxf_pagediv"></div>
+	
+	</body>
+	<script src="layui/layui.js"></script>
+	<script>
+//注意：折叠面板 依赖 element 模块，否则无法进行功能性操作
+layui.use('element', function(){
+  var element = layui.element;
+  
+  //…
+});
+</script>
+<script type="text/javascript">
+		//翻页
+		$(".zxf_pagediv").createPage({
+			pageNum: 1,
+			current: 1,
+			backfun: function(e) {
+				//console.log(e);//回调
+			}
+		});
+		
+		//checkbox 全选/取消全选  
+        var isCheckAll = false;  
+        function swapCheck() {  
+            if (isCheckAll) {  
+                $("input[type='checkbox']").each(function() {  
+                    this.checked = false;  
+                });  
+                isCheckAll = false;  
+            } else {  
+                $("input[type='checkbox']").each(function() {  
+                    this.checked = true;  
+                });  
+                isCheckAll = true;  
+            }  
+        }  
+	</script>
+</html>

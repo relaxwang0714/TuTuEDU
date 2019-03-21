@@ -1,0 +1,8 @@
+<view style='width: {{Width}}rpx;height: {{Height}}rpx;' class='zhibo_course'>
+  <image class='course_pic' src='{{picUrl}}'></image>
+  <view class='course_hot'>
+    <text style='font-size:24rpx;margin-left:10rpx;'>{{teacher}}</text>
+    <text style='font-size:24rpx;margin-right:10rpx;'>{{hot}}万</text>
+  </view>
+</view>
+<text class='course_content'>{{content}}</text>

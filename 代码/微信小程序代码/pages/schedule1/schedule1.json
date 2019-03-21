@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "zhibo": "/components/zhibo/zhibo"
+  }
+}

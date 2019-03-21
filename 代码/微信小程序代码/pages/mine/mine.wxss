@@ -142,7 +142,45 @@
   height:42px;
   margin-left:32px;
   margin-top:40rpx;
-  
+}
+.evaluate1{
+width:34px;
+height:44px;
+margin-left:32px;
+margin-top:35rpx;
+}
+.evaluate2{
+width:44px;
+height:38px;
+margin-left:32px;
+margin-top:48rpx;
+
+
+}
+.evaluate3{
+  width:39px;
+  height:42px;
+  margin-left:32px;
+  margin-top:40rpx;
+}
+.evaluate6{
+  width:35px;
+  height:42px;
+  margin-left:32px;
+  margin-top:40rpx;
+}
+.evaluate7{
+  width:43px;
+  height:40px;
+  margin-left:32px;
+  margin-top:47rpx;
+}
+.evaluate8{
+  width:46px;
+  height:42px;
+  margin-left:26px;
+  margin-top:40rpx;
+
 }
 .school-font{
     font-weight:bold;

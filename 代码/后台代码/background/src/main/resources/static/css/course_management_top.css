@@ -9,7 +9,6 @@ body{
 .header {
     height: 56px;
     width: 100%;
-    margin-top: 20px;
     background-color: white;
     border-bottom: 1px solid #585958;
 }
@@ -76,7 +75,7 @@ li:nth-child(6):hover~ .move{
 
 .out_order{
 	position: absolute;
-	top: 42px;
+	top: 22px;
 	right: 45px;
 	width: 150px;
 	height: 35px;

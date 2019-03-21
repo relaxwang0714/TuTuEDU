@@ -49,7 +49,8 @@ body{
 				width: 0px;
 				height: 30px;
 				text-indent:8px;
-				top: -20px;
+				/*top: -20px;*/
+				top: 2px;
 				left: 5px;
 				border-top-left-radius:3px;
 				border-top-right-radius:3px;
@@ -330,10 +331,9 @@ body{
 			#ware{
 				position: relative;
 				display: inline-block;
-				width: 420px;
+				width: 644px;
 				height: 540px;
 				margin-top: 20px;
-				margin-left: 30px;
 				background-color: white;
 			}
 			#ware .title{
@@ -351,6 +351,7 @@ body{
 				height: 450px;
 				float: left;
 				margin-top: 70px;
+				margin-left: 15px;
 				/*background-color: yellow;*/
 			}
 			#ware .ware_right{
@@ -359,6 +360,7 @@ body{
 				height: 450px;
 				float: left;
 				margin-top: 70px;
+				margin-left: 100px;
 				/*background-color: green;*/
 			}
 			#ware .ware_left .ware_leftname{
@@ -379,10 +381,10 @@ body{
 			/*回收站分布信息*/
 			#distribute{
 				position: relative;
-				top: -130px;
+				top: 0px;
 				display: inline-block;
-				width: 420px;
-				height: 410px;
+				width: 650px;
+				height: 540px;
 				margin-left: 30px;
 				background-color: white;
 			}
@@ -403,6 +405,9 @@ body{
 				margin-top: 70px;
 				/*background-color: yellow;*/
 			}
+			.distribute_left div{
+				color: black;
+			}
 			#distribute .distribute_right{
 				position: relative;
 				width: 210px;
@@ -421,7 +426,7 @@ body{
 			}
 			#distribute .distribute_right .distribute_rigcon{
 				position: absolute;
-				
+				line-height: 40px;
 				top: 32px;
 				left: 35px;
 				font-family: "微软雅黑	";

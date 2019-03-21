@@ -4,18 +4,49 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" href="css/top.css" />
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<style>
+			.admin{
+				margin-left: 985px;
+			}
+		</style>
 	</head>
 	<body>
 		<!--标题栏，信息栏-->
-		<div id="head">
+		<!--<div id="head">
 			<div class="h_left">
 				<h3><p class="h_p1">Tutu教育后台管理系统</p></h3>
 			</div>
 			<div class="h_right">
 				<div class="person"><b>管理员：</b>yonghu188882222<div id="triangle-down"></div></div>
-				<!--<div id="triangle-down"></div>-->
+				
 				<a href="#"><img src="img/logout.png" class="h_img_2"/></a>
 			</div>
-		</div>
+		</div>-->
+		<ul class="layui-nav">
+  <li class="layui-nav-item">
+    <font>Tutu教育后台管理系统</font>
+  </li>
+  <li class="layui-nav-item admin">
+    <a href="">个人中心<span class="layui-badge-dot"></span></a>
+  </li>
+  <li class="layui-nav-item" lay-unselect="">
+    <a href="javascript:;"><img src="img/head.jpg" class="layui-nav-img">admin1</a>
+  </li>
+  <li class="layui-nav-item"><a href="">退出&nbsp;<img src="img/exit.png" style="width:25px;height: 25px;" /></a></li>
+</ul>
+<script type="text/javascript" src="layui/layui.js" ></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+layui.use('element', function(){
+  var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+  
+  //监听导航点击
+  element.on('nav(demo)', function(elem){
+    //console.log(elem)
+    layer.msg(elem.text());
+  });
+});
+</script>
 	</body>
 </html>

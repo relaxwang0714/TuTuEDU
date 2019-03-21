@@ -25,13 +25,13 @@
 		background-color: white;
 		border-radius: 50%;
 		overflow: hidden;
-	]}
+	}
 	.top .head_pic img{
 		position: absolute;
-		top: -18px;
-		left: -93px;
-		width: 290px;
-		height: 170px;
+		    top: -18px;
+    left: -5px;
+    width: 160px;
+    height: 160px;
 	}
 	.bottom_1{
 		width: 100%;

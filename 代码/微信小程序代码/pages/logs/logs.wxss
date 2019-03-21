@@ -1,5 +1,4 @@
 /* pages/logs/logs.wxss */
-
 @import"../../templates/nav.wxss"; 
 page{  
   display: flex;  

@@ -1,12 +1,19 @@
 {
   "pages": [
+    "pages/schedule1/schedule1",
+    "pages/schedule/schedule",
     "pages/main/main",
-    "pages/talk/talk",    
-    "pages/team/team",    
+    "pages/calendar/calendar",
     "pages/logs/logs",
+    "pages/team/team",
+    "pages/talk/talk",
     "pages/mine/mine",
-    "pages/schedule/schedule"
+    "pages/modify/modify",    
+    "pages/course/course",    
+    "pages/onlinevedio/onlinevedio",
+    "pages/class01/class01"
   ],
+  
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
@@ -34,7 +41,7 @@
       {
         "selectedIconPath": "images/little/button-schedule2.png",
         "iconPath": "images/little/button-schedule.png",
-        "pagePath": "pages/schedule/schedule",
+        "pagePath": "pages/calendar/calendar",
         "text": "课表"
       },
       {
