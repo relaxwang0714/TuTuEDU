@@ -8,11 +8,11 @@
 			<div class="col-sm-12">
 				<div class="ibox float-e-margins">
 					<div class="ibox-content">
-						<form class="form-horizontal m-t" id="signupForm">
+						<form class="form-horizontal m-t" id="7">
 							<div class="form-group">
 								<label class="col-sm-3 control-label">所属章节：</label>
 								<div class="col-sm-8">
-									<input id="name1" name="name" class="form-control" type="text" value="第一章 Word-01 Word篇课前导读" readonly>
+									<input id="name1" name="name" class="form-control" type="text" value="第三章 Word-03 标题这样写，这样才高大上" readonly>
 								</div>
 							</div>
 							<div class="form-group">
@@ -56,7 +56,7 @@
 						</form>
 					</div>
 					<div class="ibox-content">
-						<form class="form-horizontal m-t" id="">
+						<form class="form-horizontal m-t" id="signupForm">
 							<div class="form-group">
 								<div class="col-sm-1">
 									<a href="#" class="btn btn-info btn-lg"  onclick="">
@@ -77,30 +77,30 @@
 								<div class="col-sm-4">
 									<select data-placeholder="--选择类别--" name="type" id="type"
 											class="form-control chosen-select" tabindex="2" required>
-										<option value="">题目单选</option>
-										<option value="">题目多选</option>
-										<option value="">题目简答</option>
+										<option value="2">题目单选</option>
+										<option value="3">题目多选</option>
+										<option value="4">题目简答</option>
 									</select>
 								</div>
 								<label class="col-sm-3 control-label">题目分值：</label>
 								<div class="col-sm-2">
 									<select data-placeholder="--选择类别--" name="type" id=""
 											class="form-control chosen-select" tabindex="2" required>
-										<option value="">5</option>
-										<option value="">10</option>
-										<option value="">20</option>
+										<option value="5">5</option>
+										<option value="6">10</option>
+										<option value="7">20</option>
 									</select>
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-3 control-label">选项文字1</label>
 								<div class="col-sm-5">
-									<input id="" name="type" class="form-control" type="text">
+									<input id="6" name="type" class="form-control" type="text">
 								</div>
 								<label class="col-sm-3 control-label">正确答案</label>
 								<div class="switch  col-sm-1">
 									<div class="onoffswitch">
-										<input id="status" name="status" checked="" type="checkbox"
+										<input id="5" name="status" checked="" type="checkbox"
 											   value="1" class="onoffswitch-checkbox"> <label
 											class="onoffswitch-label" for="status"> <span
 											class="onoffswitch-inner"></span> <span
@@ -112,12 +112,12 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">选项文字2</label>
 								<div class="col-sm-5">
-									<input id="" name="type" class="form-control" type="text">
+									<input id="4" name="type" class="form-control" type="text">
 								</div>
 								<label class="col-sm-3 control-label">正确答案</label>
 								<div class="switch  col-sm-1">
 									<div class="onoffswitch">
-										<input id="status" name="status" checked="" type="checkbox"
+										<input id="3" name="status" checked="" type="checkbox"
 											   value="1" class="onoffswitch-checkbox"> <label
 											class="onoffswitch-label" for="status"> <span
 											class="onoffswitch-inner"></span> <span
@@ -129,12 +129,12 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">选项文字3</label>
 								<div class="col-sm-5">
-									<input id="" name="type" class="form-control" type="text">
+									<input id="1" name="type" class="form-control" type="text">
 								</div>
 								<label class="col-sm-3 control-label">正确答案</label>
 								<div class="switch  col-sm-1">
 									<div class="onoffswitch">
-										<input id="status" name="status" checked="" type="checkbox"
+										<input id="2" name="status" checked="" type="checkbox"
 											   value="1" class="onoffswitch-checkbox"> <label
 											class="onoffswitch-label" for="status"> <span
 											class="onoffswitch-inner"></span> <span
@@ -157,12 +157,56 @@
 		</div>
 	</div>
 	<div th:include="include::footer"></div>
-	<script type="text/javascript" src="/js/appjs/common/dict/add.js">
+<script>
+        function update() {
+            console.log("!!!!!!!");
+            parent.layer.msg("操作成功");
+
+            var index = parent.layer.getFrameIndex(window.name); // 获取窗口索引
+            parent.layer.close(index);
+
+            sessionStorage.setItem("signal",2);
+            console.log("222222");
+
+
+        }
+        $().ready(function() {
+           $('.summernote').summernote({
+                height : '220px',
+                lang : 'zh-CN',
+                callbacks: {
+                    onImageUpload: function(files, editor, $editable) {
+                        sendFile(files);
+                    }
+                }
+            });
+            validateRule();
+        });
+
+        $.validator.setDefaults({
+            submitHandler : function() {
+                update();
+                console.log("!!");
+            }
+        });
+        function validateRule() {
+            var icon = "<i class='fa fa-times-circle'></i> ";
+            $("#signupForm").validate({
+                rules : {
+                    name : {
+                        required : true
+                    }
+                },
+                messages : {
+                    name : {
+                        required : icon + "请输入名字"
+                    }
+                }
+            })
+        }
 	</script>
 
 
-	<script type="text/javascript" src="/js/appjs/blog/bContent/add.js">
 
-	</script>
 </body>
 </html>

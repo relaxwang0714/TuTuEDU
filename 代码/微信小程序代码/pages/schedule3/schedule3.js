@@ -1,6 +1,11 @@
 // pages/schedule2/schedule2.js
 Page({
-
+  btnclick: function () {
+    console.log("evaluate"),
+      wx.navigateTo({
+      url: '../FM_detail/FM_detail'
+      })
+  }, 
   /**
    * 页面的初始数据
    */

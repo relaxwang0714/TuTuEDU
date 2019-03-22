@@ -1,7 +1,10 @@
 {
   "pages": [
-    "pages/main/main",
-    "pages/book/book",
+        "pages/main/main",
+        "pages/FM_play/FM_play",
+    "pages/schedule3/schedule3",
+    "pages/FM_detail/FM_detail",
+
     "pages/zhibo_detail/zhibo_detail",
     "pages/class01/class01",
     "pages/class_answar/class_answar",
@@ -23,11 +26,10 @@
     "pages/team/team",
     "pages/talk/talk",
     "pages/edit/edit",
-    
     "pages/schedule/schedule",
     "pages/schedule1/schedule1",
     "pages/schedule2/schedule2",
-    "pages/schedule3/schedule3",
+
     "pages/onlinevedio/onlinevedio",
     "pages/attention/attention",
     "pages/bookpage/bookpage",

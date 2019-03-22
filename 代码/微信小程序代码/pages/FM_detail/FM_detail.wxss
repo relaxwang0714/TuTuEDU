@@ -1,0 +1,95 @@
+/* pages/FM_detail/FM_detail.wxss */
+
+.FM_box {
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx;
+  border-radius: 18rpx;
+  box-shadow: 6rpx 6rpx 70rpx #f0f0f0;
+}
+
+.FM_box_right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+
+.FM_pic {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 10rpx;
+}
+
+.FM_font {
+  margin-top: 25rpx;
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+  font-weight: bold;
+  width: 350rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.course_star {
+  display: flex;
+  flex-direction: row;
+  margin-top: 25rpx;
+}
+
+.course_grade {
+  font-size: 30rpx;
+}
+
+.course_star1 {
+  width: 25rpx;
+  height: 25rpx;
+  justify-content: center;
+  margin-right: 10rpx;
+}
+
+.FM_button1 {
+  width: 317rpx;
+  height: 62rpx;
+  border:2rpx solid gray;
+  border-radius: 14rpx;
+  font-size: 34rpx;
+  color: black;
+  padding-top: 12rpx;
+  margin-right: 40rpx;
+  text-align: center;
+}
+
+.FM_button2 {
+  width: 317rpx;
+  height: 62rpx;
+  background-color: #df4313;
+  border-radius: 14rpx;
+  font-size: 34rpx;
+  color: white;
+  padding-top: 12rpx;
+    text-align: center;
+}
+
+.FM_button {
+  display: flex;
+  flex-direction: row;
+  margin: 30rpx;
+}
+.live_box_class{
+  margin-top:25rpx;
+  margin-left:0rpx;
+  box-shadow:3px 3px 6px #f0f0f0;
+  border-radius:10rpx;
+  width:651rpx;
+  padding:20rpx;
+  height: 122rpx;
+  font-size:32rpx;
+  margin-bottom: 30rpx;
+}
+.FM_detail_box{
+  margin: 20rpx;
+}
+.live_box_class view{
+  padding: 13rpx;
+}
