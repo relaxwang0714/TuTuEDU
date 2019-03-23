@@ -54,17 +54,17 @@
             </div>
             <div class="row tab-content" >
                 <div class="col-sm-12 tab-pane fade in active" id="pass">
-                    <div class="file-box" v-for="row in rows">
+                    <div class="file-box">
                         <div class="file">
                             <a href="#">
                                 <span class="corner"></span>
                                 <div class="image">
-                                    <img src="../img/class_1.jpg" onclick="edit()">
+                                    <img src="../img/class_03.jpg" onclick="edit()" style="height: 203px;width: 329px;">
                                 </div>
                                 <div class="file-name">
                                     <br/>
-                                    <h3>JavaScript版 数据结构与算法</h3>
-                                    <h5>实战&nbsp; &nbsp; &nbsp; 中级&nbsp; &nbsp; &nbsp; 已选人数：847</h5>
+                                    <h3>跟学Excel视频教程-Excel实战1800分钟</h3>
+                                    <h5>实战&nbsp; &nbsp; &nbsp; 初级&nbsp; &nbsp; &nbsp; 已选人数：566</h5>
                                 </div>
                                 <div class="class_bottom">
                                         &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
@@ -77,20 +77,42 @@
                             </a>
                         </div>
                     </div>
-                    <div id=""></div>
+                    <div class="file-box">
+                        <div class="file">
+                            <a href="#">
+                                <span class="corner"></span>
+                                <div class="image">
+                                    <img src="../img/class_02.jpg" onclick="edit()" style="height: 203px;width: 329px;">
+                                </div>
+                                <div class="file-name">
+                                    <br/>
+                                    <h3>计算机二级Office高级之文字处理专题</h3>
+                                    <h5>实战&nbsp; &nbsp; &nbsp; 高级&nbsp; &nbsp; &nbsp; 已选人数：1517</h5>
+                                </div>
+                                <div class="class_bottom">
+                                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+                                    &nbsp; &nbsp; &nbsp; <button
+                                        class="btn btn-warning btn-xs copy" :url="row.url">编辑课程
+                                </button>&nbsp; &nbsp; &nbsp; &nbsp;<button class="btn btn-danger btn-xs"
+                                                                            @click="remove(row.id)">删除课程
+                                </button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-sm-12 tab-pane fade" id="nopass">
-                    <div class="file-box" v-for="row in rows">
+                    <div class="file-box">
                         <div class="file">
                             <a href="#">
                                 <span class="corner"></span>
                                 <div class="image">
-                                    <img src="../img/class_1.jpg">
+                                    <img src="../img/class_99.jpg" onclick="edit()" style="height: 203px;width: 329px;">
                                 </div>
                                 <div class="file-name">
                                     <br/>
-                                    <h3>aaaaaaaaaaaaaa</h3>
-                                    <h5>实战&nbsp; &nbsp; &nbsp; 中级&nbsp; &nbsp; &nbsp; 已选人数：847</h5>
+                                    <h3>设计法则——平面设计的视觉语言语法</h3>
+                                    <h5>实战&nbsp; &nbsp; &nbsp; 中级&nbsp; &nbsp; &nbsp; </h5>
                                 </div>
                                 <div class="class_bottom">
                                     &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
@@ -103,20 +125,19 @@
                             </a>
                         </div>
                     </div>
-                    <div id=""></div>
                 </div>
                 <div class="col-sm-12 tab-pane fade" id="onpass" >
-                    <div class="file-box" v-for="row in rows">
+                    <div class="file-box">
                         <div class="file">
                             <a href="#">
                                 <span class="corner"></span>
                                 <div class="image">
-                                    <img src="../img/class_1.jpg">
+                                    <img src="../img/class_1.jpg" onclick="edit()">
                                 </div>
                                 <div class="file-name">
                                     <br/>
-                                    <h3>JavaScript版 bbbbbbbbbbbbbb</h3>
-                                    <h5>实战&nbsp; &nbsp; &nbsp; 中级&nbsp; &nbsp; &nbsp; 已选人数：847</h5>
+                                    <h3>JavaScript版 数据结构与算法</h3>
+                                    <h5>实战&nbsp; &nbsp; &nbsp; 中级&nbsp; &nbsp; &nbsp; </h5>
                                 </div>
                                 <div class="class_bottom">
                                     &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
@@ -129,7 +150,6 @@
                             </a>
                         </div>
                     </div>
-                    <div id=""></div>
                 </div>
             </div>
             <div>
@@ -151,90 +171,6 @@
 <script src="/js/vue.min.js"></script>
 
 <script>
-    var app = new Vue({
-        el: '#app',
-        data: {
-            limit: 12,
-            offset: 0,
-            total: 0,
-            file: '',
-            type: '',
-            rows: '',
-        },
-        methods: {
-            getData: function () {
-                $.getJSON("/common/sysFile/list", {
-                    limit: this.limit,
-                    offset: this.offset,
-                    type: this.type
-                }, function (r) {
-                    app.total = r.total;
-                    app.rows = r.rows;
-                    app.page();
-                });
-            },
-            page: function () {
-                var options = {
-                    currentPage: app.offset / 12 + 1, //当前页
-                    totalPages: app.total / (12 + 1) + 1, //总页数
-                    numberofPages: 4, //显示的页数
-                    bootstrapMajorVersion: 3,
-                    alignment: 'center',
-                    size: 'large',
-                    shouldShowPage: true,
-                    itemTexts: function (type, page, current) { //修改显示文字
-                        switch (type) {
-                            case "first":
-                                return "首页";
-                            case "prev":
-                                return "上一页";
-                            case "next":
-                                return "下一页";
-                            case "last":
-                                return "尾页";
-                            case "page":
-                                return page;
-                        }
-                    },
-                    onPageClicked: function (event, originalEvent, type, page) {
-                        app.offset = (page - 1) * 12;
-                        app.getData();
-                    }
-                };
-                $('#page').bootstrapPaginator(options);
-            },
-            remove: function (id) {
-                layer.confirm('确定要删除选中的记录？', {
-                    btn: ['确定', '取消']
-                }, function () {
-                    $.ajax({
-                        url: "/common/sysFile/remove",
-                        type: "post",
-                        data: {
-                            'id': id
-                        },
-                        success: function (r) {
-                            if (r.code == 0) {
-                                layer.msg(r.msg);
-                                app.getData();
-                            } else {
-                                layer.msg(r.msg);
-                                app.getData();
-                            }
-                        }
-                    });
-                })
-            },
-            changeType: function (i) {
-                this.type = i;
-                this.offset = 0;
-                this.getData();
-            }
-        },
-        created: function () {
-            this.changeType('')
-        }
-    });
 </script>
 <script type="text/javascript">
     var clipboard = new Clipboard('button.copy', {

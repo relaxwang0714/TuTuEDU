@@ -1,0 +1,21 @@
+<view class="audio">
+  <audio src="{{current.src}}" poster="{{current.poster}}" name="{{current.name}}" author="{{current.author}}" action="{{audioAction}}" bindplay="audioPlayed" bindtimeupdate="audioTimeUpdated" controls></audio>
+
+</view>
+
+<view class="body-view">
+  <slider bindchange="timeSliderChanged" left-icon="cancel" right-icon="success_no_circle" />
+</view>
+
+<view class='tool_bar'>
+  <view>
+    <image src='../../images/audio/audio3.png'></image>
+  </view>
+  <view>
+    <image wx:if='{{bofang}}' src='../../images/audio/audio1.png' bindtap="playAudio"></image>
+    <image wx:if='{{!bofang}}' src='../../images/audio/audio2.png' bindtap="pauseAudio"></image>
+  </view>
+  <view>
+    <image src='../../images/audio/audio4.png'></image>
+  </view>
+</view>

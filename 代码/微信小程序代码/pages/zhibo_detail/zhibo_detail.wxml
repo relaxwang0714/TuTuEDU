@@ -1,0 +1,55 @@
+<!--pages/zhibo_detail/zhibo_detail.wxml-->
+<video src="https://apd-279e0de1c083fc38dbf26df3e2dda116.v.smtcdns.com/vedu.tc.qq.com/AngXw-tBWLGU-AAjYzDDVDaId-xjmEk-Hj3XayeW31n4/k1412yk19hu.p701.1.mp4?sha=EC821E1C74576B1F63BF8A80DAA92E2EE17366CD&sdtfrom=v1101&guid=9787852fa9ea421b57c69a282ca48b83&vkey=6DCFD42A1558C441052068680888333F07099411C6608F519F439AF9C6EC6DD81071A1F176C41943EF382C5158A8B596DBD764864F54B626B2961E7FE33ABC1C369CBEF9BC421EBD648F5A2EBCDC1064D6E315C5E8076BD909F093CA245A354F346E2A54DCDE87136D847B9B93E44DC7&ocid=359817993&ocid=3405256876&ocid=2299869450"
+  binderror="videoErrorCallback" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls class='video'></video>
+
+<view class='video_bottom'>
+  <view class='live_top'>大学数学第一课</view>
+  <view class='live_teacher'>小黑课堂小黑老师</view>
+  <view class='course_star'>
+    <image src='../../images/little/star1.png' class='course_star1'></image>
+    <image src='../../images/little/star1.png' class='course_star1'></image>
+    <image src='../../images/little/star1.png' class='course_star1'></image>
+    <image src='../../images/little/star1.png' class='course_star1'></image>
+    <image src='../../images/little/star1.png' class='course_star1'></image>
+    <text class='course_grade'>4.9</text>
+  </view>
+</view>
+
+<view class='live_box'>
+  <view class='live_box_box'>
+    <text class='blue_font'>床前明月光</text>
+    <text>　欢迎来到本直播间</text>
+  </view>
+  <view class='live_box_box'>
+    <text class='blue_font'>睡了吃吃</text>
+    <text>　欢迎来到本直播间</text>
+  </view>
+  <view class='live_box_box'>
+    <text class='blue_font'>床前明月光:</text>
+    <text>　小黑老师你好！</text>
+  </view>
+  <view class='live_box_box'>
+    <text class='blue_font'>六级不过不改名：</text>
+    <text>　老师讲的好好，受益匪浅</text>
+  </view>
+  <view class='live_box_box'>
+    <text class='blue_font'>睡了吃吃：</text>
+    <text>　小黑老师刚才那个知识点能重新讲一遍吗？</text>
+  </view>
+  <view class='live_box_box'>
+    <text class='blue_font'>红烧帝王蟹：</text>
+    <text>　6666666666</text>
+  </view>
+  <view class='live_box_box'>
+    <text class='blue_font'>Devil：</text>
+    <text>　我三岁开飞机你们呢</text>
+  </view>
+</view>
+
+<view class="page-section">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <input class="weui-input" maxlength="10" placeholder="在此输入弹幕" confirm-type ="send" />
+    </view>
+  </view>
+</view>

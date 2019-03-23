@@ -18,7 +18,7 @@
       </view>
       <image class='go' src='../../images/little/return.png'></image>
     </view>
-    <view class='zhibo_detail'>
+    <view class='zhibo_detail' bindtap='zhibo_detail'>
       <zhibo style="margin-left:20rpx;" picUrl="../../images/zhibo/pic1457.png" hot="10" Width="244" Height="164"></zhibo>
       <view class='zhibo_teacher' bindtap='check_teacher'>
         <image class='teacher_pic' src='../../images/mainPic/5.png'></image>

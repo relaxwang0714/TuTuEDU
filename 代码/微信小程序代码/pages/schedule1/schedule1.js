@@ -1,6 +1,11 @@
 // pages/schedule/schedule.js
 Page({
-
+  zhibo_detail: function () {
+    console.log("zhibo_detail"),
+      wx.navigateTo({
+      url: '../zhibo_detail/zhibo_detail'
+      })
+  }, 
   /**
    * 页面的初始数据
    */

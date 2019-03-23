@@ -13,19 +13,19 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">课程名称:</label>
 								<div class="col-sm-8">
-									<input id="name" name="name" class="form-control" type="text">
+									<input id="name" name="name" class="form-control" type="text" value="跟学Excel视频教程-Excel实战1800分钟">
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-3 control-label">任课老师:</label>
 								<div class="col-sm-8">
-									<input id="value" name="value" class="form-control" type="text">
+									<input id="value" name="value" class="form-control" type="text" value="王佩丰">
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-3 control-label">课时设置</label>
 								<div class="col-sm-8">
-									<input id="type" name="type" class="form-control" type="text">
+									<input id="type" name="type" class="form-control" type="text" value="20">
 								</div>
 							</div>
 							<div class="form-group">
@@ -33,34 +33,21 @@
 								<div class="col-sm-8">
 									<select data-placeholder="--选择类别--" name="type" id="type"
 											class="form-control chosen-select" tabindex="2" required>
-										<option value="">--选择类别--</option>
+										<option value="">计算机类</option>
 									</select>
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-3 control-label">教师简介：</label>
 								<div class="col-sm-8">
-									<textarea id="description" name="description" class="form-control"
-									></textarea>
+									<textarea id="description" name="description" class="form-control" style="height: 74px;">长期从事微软Office系列软件的推广、教学及二次开发工作，出版《没那么复杂》Excel函数图书，在Office课程中帮助众多跨国企业解决数据报表处理中的疑难问题，并在互联网上发布大量教学视频。</textarea>
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-3 control-label">课程简介：</label>
 								<div class="col-sm-8">
 									<textarea id="description1" name="description" class="form-control"
-									></textarea>
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-sm-3 control-label">附件：</label>
-								<div class="col-sm-8">
-									<input id="files" name="files" class="form-control" type="file">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-sm-3 control-label">课程封面：</label>
-								<div class="col-sm-8">
-									<input id="files1" name="files" class="form-control" type="file">
+									style="height: 74px;">【王佩丰Excel 2010系列视频教程】从最基础的内容开始,涵盖Excel2010常用工具、函数、透视表、图表等工作中的常用工具，帮助用户系统学习Excel在工作中的常见应用,本教程提供王佩丰Excel 2010课件下载。</textarea>
 								</div>
 							</div>
 							<div class="form-group">
@@ -131,7 +118,17 @@
 					<div>课时2 【视频】02-2注重页面细节才专业</div>
 				</div>
 
-
+				<div class="row" style="display:none;" id="zhangjie1">
+					<div class="col-sm-8 nav_left_big_font suojin" >第三章 Word-03 标题这样写，这样高大上</div>
+					<div class="col-sm-4">
+						<button type="button" class="btn btn-default btn-sm" onclick="addkeshi()">
+							<span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
+				</div>
+				<div class="row nav_left_small_font" style="display:none;" id="keshi1">
+					<div>课时1 【视频】01-1标题要越大越炫酷</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -139,6 +136,19 @@
 	<script type="text/javascript" src="/js/appjs/common/dict/add.js">
 	</script>
 <script>
+	var sign=sessionStorage.getItem("signal");
+    $(document).ready(function() {
+        if (sign == 1) {
+            console.log("000000000000");
+            $("#zhangjie1").attr('style', 'display:block');
+        }
+        if (sign == 2) {
+            console.log("33333333");
+            $("#zhangjie1").attr('style', 'display:block');
+            $("#keshi1").attr('style', 'display:block');
+        }
+    });
+
     function addzhangjie() {
         layer.open({
             type : 2,
@@ -155,7 +165,7 @@
             title : '创建课时',
             maxmin : true,
             shadeClose : false, // 点击遮罩关闭层
-            area : [ '800px', '520px' ],
+            area : [ '1100px', '650px' ],
             content : '/common/sysFile/addkeshi' // iframe的url
         });
     }
