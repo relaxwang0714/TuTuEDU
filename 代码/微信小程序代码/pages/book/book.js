@@ -6,7 +6,7 @@ Page({
    */
   data: {
     MainBook: [
-      { book_id: 0, book_pic: '../../images/mainPic/4.png', book_name: '海风中失落的血色馈赠', book_author: '[加拿大]阿利斯泰尔.麦克劳德', book_star: 5, book_grade: '4.9', book_content: '因为我们知道，那些深埋到眼泪都融发不了的情感，并不是只有能说会道的人才有。'}
+      { book_id: 0, book_pic: '../../images/mainPic/4.png', book_name: '海风中失落的血色馈赠', book_author: '[加拿大]阿利斯泰尔.麦克劳德', book_star: 5, book_grade: '4.9', book_content: '因为我们知道，那些深埋到眼泪都融发不了的情感，并不是只有能说会道的人才有。', isShoucang: false}
     ], 
     navDatas: [
       { DataId: 0, navData: '简介' }, { DataId: 1, navData: '目录' },
@@ -26,6 +26,17 @@ Page({
     console.log('123');
     wx.navigateTo({
       url: '../class01/class01'
+    })
+  },
+  collect:function(){
+    this.data.MainBook[0].isShoucang = true;
+    this.setData({
+      MainBook: this.data.MainBook
+    })
+    wx.showToast({
+      title: '收藏成功',
+      icon: 'success',
+      duration: 2000,
     })
   },
   join_course: function () {

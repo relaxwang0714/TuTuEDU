@@ -12,7 +12,7 @@ Page({
   chooseImg:function(e){
     var that = this;
     wx.chooseImage({
-      count:3,
+      count:1,
       sizeType: ['original', 'compressed'],//可选择原图或压缩后的图片
       sourceType: ['album', 'camera'],//可选择开放访问相册、相机
       
@@ -27,7 +27,23 @@ Page({
         // //限制最多只能留下三张照片
         // this.data.images = images.length <= 3 ? images : images.slice(0, 3)
         let tempFilePaths = res.tempFilePaths;
-        console.log("temFilePaths:"+tempFilePaths)
+        var content = that.data.content;
+        var title = that.data.title;
+        wx.uploadFile({
+          url: 'http://192.168.43.29:8812/group/topic/publish',
+          filePath: tempFilePaths[0],
+          name: 'file1',
+          formData: {
+            content: content,
+            title: title,
+            groupId: 1100001,
+            userId: 11000001
+          },
+          success(res) {
+            const data = res.data
+            console.log("data:",data)
+          }
+        })
         that.setData({
           tempFilePaths:tempFilePaths
         })
@@ -45,6 +61,16 @@ Page({
     console.log("e:", e)
     this.setData({
       content:e.detail.value
+    })
+  },
+  submit: function (e) {
+    wx.showToast({
+      title: '发表成功',
+      icon: 'success',
+      duration: 2000,
+    })
+    wx.navigateBack({
+      delta: 1,
     })
   },
   /**

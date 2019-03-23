@@ -9,18 +9,23 @@ Page({
       { DataId: 0, navData: '智能推荐' }, { DataId: 1, navData: '我的关注' },{DataId: 2,navData:'同校活动'}
     ],
     Group: [
-      { group_id: 0,teamUrl:"../team/team", photo: '../../images/mainPic/8.png', name: '数学自由小组', types: '加入的小组',talkUrl:"../talk/talk", title: '来讨论阴影面积的解决方法', content: '不是30°呀 直角边4斜边8 才是30度 他这个是另外一条直角边8哎',pic:'../../images/mainPic/Pic1.png',answer:499,time:5 },
-      { group_id: 1, photo: '../../images/mainPic/9.png', name: '电影鉴赏组', types: '基于“英语电影”推荐', title: '《人工智能》观后感', content: '朗朗是人类创造出来的 人却无法爱他最费力的成长留在树上的只有壳，最狰狞的伤口留在皮肤的只有伤疤。最动人的烟火在空中看...', pic: '../../images/mainPic/Pic2.png', answer: 499, time: 6 },
-      { group_id: 2, photo: '../../images/mainPic/10.png', name: '考研必上岸组', types: '热门小组', title: '考研狗的日常', content: '明明是人类创造出来的 人却无法爱他最费力的成长留在树上的只有壳，最狰狞的伤口留在皮肤的只有伤疤。最动人的烟火在空中看...', pic: '../../images/mainPic/Pic3.png', answer: 499, time: 5 }
+      { group_id: 0,teamUrl:"../team/team", photo: '../../images/mainPic/8.png', name: '数学自由小组', types: '加入的小组',talkUrl:"../talk/talk", title: '来讨论阴影面积的解决方法', content: '不是30°呀 直角边4斜边8 才是30度 他这个是另外一条直角边8哎',pic:'../../images/mainPic/Pic1.png',answer:49,time:5 },
+      { group_id: 1, photo: '../../images/mainPic/9.png', name: '电影鉴赏组', types: '基于“英语电影”推荐', title: '《人工智能》观后感', content: '朗朗是人类创造出来的 人却无法爱他最费力的成长留在树上的只有壳，最狰狞的伤口留在皮肤的只有伤疤。最动人的烟火在空中看...', pic: '../../images/mainPic/Pic2.png', answer: 4, time: 6 },
+      { group_id: 2, photo: '../../images/mainPic/10.png', name: '考研必上岸组', types: '热门小组', title: '考研狗的日常', content: '明明是人类创造出来的 人却无法爱他最费力的成长留在树上的只有壳，最狰狞的伤口留在皮肤的只有伤疤。最动人的烟火在空中看...', pic: '../../images/mainPic/Pic3.png', answer: 99, time: 5 }
     ],
     My_team:[
-      { team_id: 0, teamUrl: "../team/team", photo: '../../images/mainPic/8.png', name: '数学自由小组', num: 7492 },
-      { team_id: 1, photo: '../../images/mainPic/8.png', name: '数学自由小组', num: 7492 },
-      { team_id: 2, photo: '../../images/mainPic/8.png', name: '数学自由小组', num: 7492 }
+      { team_id: 0, teamUrl: "../team/team", photo: '../../images/mainPic/8.png', name: '数学自由小组', num: 8492 },
+      { team_id: 1, photo: '../../images/mainPic/9.png', name: '艺术鉴赏小组', num: 7492 },
+      { team_id: 2, photo: '../../images/mainPic/10.png', name: '金融小组', num: 7492 }
     ],
     My_talk: [
-      { talk_id: 0, talkUrl:"../talk/talk",title: '来讨论阴影面积的解决方法', content: '不是30°呀 直角边4斜边8 才是30度 他这个是另外一条直角边8哎', pic: '../../images/mainPic/Pic1.png', answer: 499, time: 5 },
-      { talk_id: 1, title: '来讨论阴影面积的解决方法', content: '不是30°呀 直角边4斜边8 才是30度 他这个是另外一条直角边8哎', pic: '../../images/mainPic/Pic1.png', answer: 499, time: 5 }
+      {talk_id: 0, talkUrl: "../talk/talk", title: '不亚于陀思妥耶夫斯基的数学', content: ' 宫崎学长预约巴黎93省Bobigny长居3个月以后，终于来到了警察局的27号窗口前，整个流程在1分钟内结束，像是他从日超买好了食材，花了3个小时准备丰盛的料理，然后一个人5分钟内吃完了便当，看着灶台上没有成就感的尖头筷子。\n 93省是巴黎郊区的移民大省，难民，黑户，按照萨科齐的说法：社会渣滓，让这里成了恐袭和骚乱的代名词。尽管预约时间是当天早上十点，宫崎依然等到下午四点才挪到窗口前，这期间他百无聊赖地看着大屏幕上滚动的传唤数字，警局改造后如何高效便捷的好评，撩开胸脯给孩子喂奶的撒哈拉以南，捧着可兰经不知道嘀咕什么的撒哈拉以北。\n 六个小时后，他贴着玻璃对着像在坐监的工作人员，听口音像是外省来的法国中年妇女喊话，递材料那一刻，他不知道谁的手里瘫痪着谁的自由。“想干的事还多得很，不想死。不过，肯定不行了！明天早晨就没命喽！这回可是运算错误。” \n 据说这是冈洁的遗言。我不知道冈洁是怎样的人，但他看起来真真像个白痴，高中时因为想看看不刷牙有什么后果，索性整个三年都没刷过牙。福楼拜能写出《庸见词典》在于相比那些“半吊子的白痴”，他是真真“家庭的白痴”。世上真真有梅什金公爵这样的人吗？读者一度以为他是个基督式的人物，无条件地娶纳斯塔霞为妻，直到他领悟到基督的爱对这个世界也毫无作用。', answer: 2, time: '1分钟前' },
+      { talk_id: 1, talkUrl:"../talk/talk",title: '来讨论阴影面积的解决方法', content: '不是30°呀 直角边4斜边8 才是30度 他这个是另外一条直角边8哎', pic: '../../images/mainPic/Pic1.png', answer: 49, time: '5分钟前' },
+      {
+        talk_id: 2, title: '美丽的空间几何雕塑', content: '德国艺术家Peter Dahmen将折纸与剪纸结合创作出美丽的空间几何雕塑', pic: 'http://192.168.43.29:8812/img/Pic14.png', answer: 23, time: '15分钟前' },
+      {
+        talk_id: 3, title: '求问这题怎么做？', content: '如图，求教！', pic: 'http://192.168.43.29:8812/img/Pic11.png', answer: 3, time: '19分钟前'
+      }
     ],
     mainData: [{ mainIndex: 0, mainTitle: "全部" }, { mainIndex: 1, mainTitle: "学习" }, { mainIndex: 2, mainTitle: "聚会" }, { mainIndex: 3, mainTitle: "体育" }, { mainIndex: 4, mainTitle: "音乐" }, { mainIndex: 5, mainTitle: "旅行" }, { mainIndex: 6, mainTitle: "讲座"}],
     navData: [{ navIndex: 0, navTitle: "全部" }, { navIndex: 1, navTitle: "今天" }, { navIndex: 2, navTitle: "明天" }, { navIndex: 3, navTitle: "周末" }, { navIndex: 4, navTitle: "最近一周" }, { navIndex: 5, navTitle: "常年" }, { navIndex: 6, navTitle: "最新上架" }],
@@ -67,6 +72,13 @@ Page({
   edit: function () {
     wx.navigateTo({
       url: '../edit/edit',
+    })
+  },
+  changeMyData: function (num) {
+    this.data.boxContent[0].number = num
+    console.log('this.data.boxContent', this.data.boxContent)
+    this.setData({
+      boxContent: this.data.boxContent
     })
   },
   /**

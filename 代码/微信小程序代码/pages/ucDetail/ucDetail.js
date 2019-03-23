@@ -40,7 +40,7 @@ Page({
     console.log(list)
     this.setData({
       activityList:list
-    })
+    }) 
   },
 
 
@@ -61,14 +61,22 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    //获取页面栈
+    var pages = getCurrentPages();
+    if (pages.length > 1) {
+      //上一个页面实例对象
+      var prePage = pages[pages.length - 2];
+      //关键在这里
+      prePage.changeMyData(this.data.activityList.number)
+      console.log(this.data.activityList.number)
+    }
   },
 
   /**

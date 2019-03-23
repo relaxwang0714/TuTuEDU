@@ -12,7 +12,7 @@
     <image class='pic_show' src='{{item}}' data-index='{{index}}'></image>
   </block>
 </view>
-<view class='fabiao_box'>
+<view class='fabiao_box' bindtap='submit'>
 <!-- <input class='fabiao' value='发表' cursor-spacing='100'></input> -->
 <text>发表</text>
 </view>

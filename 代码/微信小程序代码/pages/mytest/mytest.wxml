@@ -1,5 +1,6 @@
 <view class='table_top'>
   <text style='font-size:70rpx;'>考试安排</text>
+  <text style='font-size:30rpx;margin-top:20rpx;'>2018-2019学年第一学期</text>
 </view>
 <view class="table">
   <view class="tr bg-w">

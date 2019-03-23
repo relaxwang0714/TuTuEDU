@@ -3,7 +3,7 @@
 </view>
 <view class="table">
   <view class="tr bg-w">
-    <view class="th">课程</view>
+    <view class="th">教室</view>
     <view class="th">剩余座位号</view>
     <view class="th">教室</view>
     <view class="th">剩余座位数</view>

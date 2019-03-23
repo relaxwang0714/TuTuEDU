@@ -1,5 +1,5 @@
 {
-  "pages": [
+  "pages": [    
     "pages/main/main",
     "pages/class01/class01",
     "pages/class_answar/class_answar",
@@ -12,6 +12,7 @@
     "pages/myschedule/myschedule",
     "pages/myattention/myattention",
     "pages/mycollect/mycollect",
+    "pages/myfabu/myfabu",
     "pages/evaluate_detail/evaluate_detail",
     "pages/calendar/calendar",
     "pages/modify/modify",

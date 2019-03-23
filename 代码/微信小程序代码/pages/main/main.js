@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    UserName:'Shawn',
+    UserName:'夏同学',
     MainButton:[
       { id: 0, mainBtnUrl:"../schedule/schedule", circle_image:'../../images/little/top-ecourse.png',name:'精品网课'},
       { id: 1, mainBtnUrl: "../schedule2/schedule2",  circle_image: '../../images/little/top-ebook.png',name:'在线图书' },

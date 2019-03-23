@@ -78,7 +78,7 @@
       <text class='school-font'>我的收藏</text>
     </view>
     <view class='school-fuction'>
-      <image src='../../images/minePic/Subscribe.png' class='evaluate7'></image>
+      <image src='../../images/minePic/Subscribe.png' class='evaluate7' bindtap='fabu'></image>
       <text class='school-font'>我的发布</text>
     </view>
     <view class='school-fuction'>

@@ -1,5 +1,6 @@
 <view class='table_top'>
   <text style='font-size:40rpx;'>GPAI:4.489  GPAII:4.489</text>
+  <text style='font-size:30rpx;margin-top:20rpx;'>2017-2018学年第二学期</text>
 </view>
 <view class="table">
   <view class="tr bg-w">

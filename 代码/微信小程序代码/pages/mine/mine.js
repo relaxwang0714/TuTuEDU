@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    UserName: 'Shawn',
+    UserName: '夏同学',
     intro:'好好读书大学',
     list:3,
     MainCourse: [
@@ -52,6 +52,11 @@ Page({
     console.log("evaluate"),
       wx.navigateTo({
         url: '../mycourse/mycourse'
+      })
+  },
+  fabu: function () {
+      wx.navigateTo({
+        url: '../myfabu/myfabu'
       })
   },
   collect: function () {

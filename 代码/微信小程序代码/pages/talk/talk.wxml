@@ -3,7 +3,7 @@
   <view wx:if="{{isShow}}" class='box_content'>
     <view class='box' bindtap='comment'>
       <image class='box_img' src='../../images/little/plun.png'></image>
-      <text class='box_txt'>{{comments.length}}</text>
+      <text class='box_txt'>{{answer}}</text>
     </view>
     <view class='box' bindtap='zan'>
       <image wx:if="{{!isZan}}" class='box_img' src='../../images/little/zan.png'></image>
@@ -11,13 +11,13 @@
       <text class='box_txt'>{{zan}}</text>
     </view>
     <view class='box' bindtap='collect'>
-      <image wx:if="{{!isCollect}}"  class='box_img' src='../../images/little/shouc.png'></image>
-      <image wx:if="{{isCollect}}"  class='box_img' src='../../images/little/yishouc.png'></image>
+      <image wx:if="{{!isCollect}}" class='box_img' src='../../images/little/shouc.png'></image>
+      <image wx:if="{{isCollect}}" class='box_img' src='../../images/little/yishouc.png'></image>
       <text class='box_txt'>{{collection}}</text>
     </view>
     <view class='box'>
       <image class='box_img' src='../../images/little/share.png'></image>
-      <text class='box_txt'>4</text>
+      <text class='box_txt'>{{share}}</text>
     </view>
   </view>
   <view class='comment_box' wx:if="{{!isShow}}">
@@ -42,9 +42,10 @@
     <text style='font-size:35rpx;'>
       {{article}}
        </text>
+    <image style='margin-top:30rpx;' src='{{pic}}'></image>
     <text style='font-size:30rpx;color:#909090;'>@版权归作者所有，任何形式转载请联系作者 </text>
   </view>
-  <text style='margin-top:20rpx;margin-bottom:20rpx;margin-left: 40rpx;margin-right: 40rpx;'>评论（{{comments.length}}）</text>
+  <text style='margin-top:20rpx;margin-bottom:20rpx;margin-left: 40rpx;margin-right: 40rpx;'>评论（{{answer}}）</text>
   <block wx:for="{{comments}}">
     <view class='msg'>
       <view class='msg_left'>
