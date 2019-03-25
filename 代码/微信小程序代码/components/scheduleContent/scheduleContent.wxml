@@ -1,8 +1,7 @@
 <view class='containers'>
-  <scheduleList types="学校" isStatus="{{true}}" time="8:00-9:55" course="计算机应用基础" place="E203" teacher="陈云" kaTime="0:30:00"></scheduleList>
-  <scheduleList types="学校" isStatus="{{false}}" time="13:20-15:05" course="应用文写作" place="E242" teacher="陈丰"></scheduleList>
-  <scheduleList types="网课" isStatus="{{false}}" time="15:05-16:45" course="电工与电子技术" teacher="何科文"></scheduleList>
-  <scheduleList types="学校" isStatus="{{false}}" time="18:20-20:00" course="企业网综合管理" place="E242" teacher="董枫树"></scheduleList>
+  <scheduleList types="学校" isStatus="1" time="8:00-9:55" course="计算机应用基础" place="E203" teacher="陈云" kaTime="0:30:00"></scheduleList>
+  <scheduleList types="学校" isStatus="0" time="13:20-15:05" course="应用文写作" place="E242" teacher="陈丰"></scheduleList>
+  <scheduleList types="学校" isStatus="0" time="18:20-20:00" course="企业网综合管理" place="E242" teacher="董枫树"></scheduleList>
   <!-- <view class='im'>
     <text class='im_title'>学校</text>
     <view class='im_bar'>

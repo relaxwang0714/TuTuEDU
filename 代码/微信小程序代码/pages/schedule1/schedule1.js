@@ -1,6 +1,11 @@
 // pages/schedule/schedule.js
 Page({
-
+  zhibo_detail: function () {
+    console.log("zhibo_detail"),
+      wx.navigateTo({
+      url: '../zhibo_detail/zhibo_detail'
+      })
+  }, 
   /**
    * 页面的初始数据
    */
@@ -21,6 +26,11 @@ Page({
     console.log('picker发送选择改变，携带值为', e)
     this.setData({
       currentTab: e.currentTarget.dataset.current
+    })
+  },
+  check_teacher: function () {
+    wx.navigateTo({
+      url: '../attention/attention',
     })
   },
   /**

@@ -33,48 +33,139 @@
         </div>
     </div>
     <div class="row">
-        <!--   <div class="col-sm-3">
-             <div class="ibox float-e-margins">
-                <div class="ibox-content">
-                 <div class="file-manager">
-
-                        <div class="hr-line-dashed"></div>
-                    </div>
-                </div>
-            </div>
-
-         </div>-->
-        <div class="col-sm-12 animated fadeInRight">
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="active"><a href="#pass" data-toggle="tab">正在直播</a></li>
+                <li><a href="#nopass" data-toggle="tab">未直播</a></li>
+                <li><a href="#onpass" data-toggle="tab">已结束的直播</a></li>
+            </ul>
+    </div>
+    <div class="row tab-content">
+        <div class="col-sm-12 tab-pane fade in active" id="pass">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="file-box">
-
+                        <div class="file">
                             <a href="#">
-                                    <span class="corner"></span>
-                                    <div class="image123 image">
-                                        <img src="../img/blank.png" class="blankpic">
-                                    </div>
-                                    <div class="file-name">
-                                        <br/>
-                                    <h3></h3>
-                                    <h5></h5>
+                                <span class="corner"></span>
+                                <div class="image">
+                                    <img src="../img/live_01.png" onclick="edit()" style="height: 203px;width: 329px;">
                                 </div>
-                               <!-- <div class="class_bottom">
-                                        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+                                <div class="file-name">
+                                    <br/>
+                                    <h3>大学数学第一课</h3>
+                                    <h5>小黑老师</h5>
+                                </div>
+                                <div class="class_bottom">
+                                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
                                     &nbsp; &nbsp; &nbsp; <button
-                                            class="btn btn-warning btn-xs copy" :url="row.url">编辑课程
-                                    </button>&nbsp; &nbsp; &nbsp; &nbsp;<button class="btn btn-danger btn-xs"
-                                                                                @click="remove(row.id)">删除课程
-                                    </button>
-                                </div>-->
+                                        class="btn btn-warning btn-xs copy" :url="row.url">编辑直播
+                                </button>&nbsp; &nbsp; &nbsp; &nbsp;<button class="btn btn-danger btn-xs"
+                                                                            @click="remove(row.id)">删除直播
+                                </button>
+                                </div>
                             </a>
                         </div>
-
-                    <div id="incomeNum"></div>
+                    </div>
+                    <div class="file-box">
+                        <div class="file">
+                            <a href="#">
+                                <span class="corner"></span>
+                                <div class="image">
+                                    <img src="../img/live_02.png" onclick="edit()" style="height: 203px;width: 329px;">
+                                </div>
+                                <div class="file-name">
+                                    <br/>
+                                    <h3>【奇妙的化学】在线做橙汁</h3>
+                                    <h5>化学硫老三</h5>
+                                </div>
+                                <div class="class_bottom">
+                                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+                                    &nbsp; &nbsp; &nbsp; <button
+                                        class="btn btn-warning btn-xs copy" :url="row.url">编辑直播
+                                </button>&nbsp; &nbsp; &nbsp; &nbsp;<button class="btn btn-danger btn-xs"
+                                                                            @click="remove(row.id)">删除直播
+                                </button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="file-box">
+                        <div class="file">
+                            <a href="#">
+                                <span class="corner"></span>
+                                <div class="image">
+                                    <img src="../img/live_03.png" onclick="edit()" style="height: 203px;width: 329px;">
+                                </div>
+                                <div class="file-name">
+                                    <br/>
+                                    <h3>每日半小时考研英语,清华北大任你读</h3>
+                                    <h5>August小八</h5>
+                                </div>
+                                <div class="class_bottom">
+                                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+                                    &nbsp; &nbsp; &nbsp; <button
+                                        class="btn btn-warning btn-xs copy" :url="row.url">编辑直播
+                                </button>&nbsp; &nbsp; &nbsp; &nbsp;<button class="btn btn-danger btn-xs"
+                                                                            @click="remove(row.id)">删除直播
+                                </button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div>
                 <ul id="page"></ul>
+            </div>
+        </div>
+        <div class="col-sm-12 tab-pane fade" id="nopass">
+            <!--<div class="file-box">-->
+                <!--<div class="file">-->
+                    <!--<a href="#">-->
+                        <!--<span class="corner"></span>-->
+                        <!--<div class="image">-->
+                            <!--<img src="../img/class_04.jpg" onclick="edit()" style="height: 203px;width: 329px;">-->
+                        <!--</div>-->
+                        <!--<div class="file-name">-->
+                            <!--<br/>-->
+                            <!--<h3>Vue2.5从零基础入门到实战项目</h3>-->
+                            <!--<h5>实战&nbsp; &nbsp; &nbsp; 中级&nbsp; &nbsp; &nbsp; </h5>-->
+                        <!--</div>-->
+                        <!--<div class="class_bottom">-->
+                            <!--&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;-->
+                            <!--&nbsp; &nbsp; &nbsp; <button-->
+                                <!--class="btn btn-warning btn-xs copy" :url="row.url">编辑课程-->
+                        <!--</button>&nbsp; &nbsp; &nbsp; &nbsp;<button class="btn btn-danger btn-xs"-->
+                                                                    <!--@click="remove(row.id)">删除课程-->
+                        <!--</button>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="col-sm-12 tab-pane fade" id="onpass" >
+            <div class="file-box">
+                <div class="file">
+                    <a href="#">
+                        <span class="corner"></span>
+                        <div class="image">
+                            <img src="../img/live_04.png" onclick="edit()" style="height: 203px;width: 329px;">
+                        </div>
+                        <div class="file-name">
+                            <br/>
+                            <h3>全球T10大学公开排名，公开透明</h3>
+                            <h5>环球留学资讯 </h5>
+                        </div>
+                        <div class="class_bottom">
+                            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; <button
+                                class="btn btn-warning btn-xs copy" :url="row.url">编辑直播
+                        </button>&nbsp; &nbsp; &nbsp; &nbsp;<button class="btn btn-danger btn-xs"
+                                                                    @click="remove(row.id)">删除直播
+                        </button>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

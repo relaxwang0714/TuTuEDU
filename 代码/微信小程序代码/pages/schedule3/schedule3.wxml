@@ -1,0 +1,28 @@
+<import src="../../templates/nav.wxml" />
+<view class='search_bar'>
+  <input class='search'></input>
+</view>
+<view class='mainBar'>
+  <block wx:for="{{mainData}}" wx:for-index="{{item.mainIndex}}" key="{{item.mainIndex}}">
+    <text class='mainTitle {{currentTab==item.mainIndex ?"active":""}}' data-mainCurrent='{{item.mainIndex}}' bindtap='mainBarChoose'>{{item.mainTitle}}</text>
+  </block>
+</view>
+<view class='navBar' mainCurrent="{{currentTab}}">
+  <block wx:for="{{navData}}" wx:for-index="{{item.navIndex}}" key="{{item.navIndex}}">
+    <text class='navtitle {{current_tab==item.navIndex ?"active":""}}' data-navCurrent='{{item.navIndex}}' bindtap='navBarChoose'>{{item.navTitle}}</text>
+  </block>
+</view>
+<view style='margin:0 40rpx;'>
+  <view hidden="{{currentTab!==0}}">
+    <view hidden="{{current_tab!==0}}">
+      <block wx:for="{{MainListen}}" key="listen_id">
+        <template is="list1" data="{{...item}}" />
+      </block>
+    </view>
+    <view hidden="{{current_tab!==1}}">
+      <block wx:for="{{Listen}}" key="listen_id">
+        <template is="list1" data="{{...item}}" />
+      </block>
+    </view>
+  </view>
+</view>

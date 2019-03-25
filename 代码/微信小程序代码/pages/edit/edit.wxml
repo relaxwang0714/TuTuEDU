@@ -1,0 +1,18 @@
+<!--pages/edit/edit.wxml-->
+<view class='top'>
+  <view class='title_pic'>
+    <input placeholder='添加标题' bindinput='titleInput'></input>
+    <image class='pick' bindtap='chooseImg' src='../../images/little/picture.png'></image>
+  </view>
+  <view style='background-color:grey;height:1rpx;margin-right:100rpx;margin-top:30rpx;margin-bottom:30rpx;'></view>
+</view>
+<textarea placeholder='添加内容' bindinput='contentInput'></textarea>
+<view class='pic_box'>
+  <block wx:for="{{tempFilePaths}}" key="{{index}}">
+    <image class='pic_show' src='{{item}}' data-index='{{index}}'></image>
+  </block>
+</view>
+<view class='fabiao_box' bindtap='submit'>
+<!-- <input class='fabiao' value='发表' cursor-spacing='100'></input> -->
+<text>发表</text>
+</view>

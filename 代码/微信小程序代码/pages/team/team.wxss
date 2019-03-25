@@ -2,7 +2,6 @@
 @import"../../templates/nav.wxss"; 
 page{
   width: 100%;
-  height: 100%;
   box-sizing: border-box;
 }
 .mainteam{
@@ -54,4 +53,12 @@ page{
 .maintalk{
   margin-left: 40rpx;
   margin-right: 40rpx;
+}
+.edit{
+  position: fixed;
+  bottom: 20rpx;
+  right: 20rpx;
+  z-index: 1;
+  width: 105rpx;
+  height: 100rpx;
 }

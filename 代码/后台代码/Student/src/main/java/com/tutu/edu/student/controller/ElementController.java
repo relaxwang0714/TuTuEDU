@@ -22,6 +22,7 @@ public class ElementController {
         StudentInfo studentinfo = new StudentInfo();
         return elementService.insertstudentInfo(studentinfo);
     }
+
 //    @GetMapping("/all")
 //    @Cacheable(value = "business")
 //    public ArrayList<Business> searchAll(){

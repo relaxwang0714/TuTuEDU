@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    UserName: 'Shawn',
+    UserName: '夏同学',
     intro:'好好读书大学',
     list:3,
     MainCourse: [
@@ -24,6 +24,54 @@ Page({
       { popular_id: 1, popular_pic: '../../images/mainPic/6.png', popular_name: '陈萨v', popular_number: 4490 }
     ]
   },
+  evaluate: function () {
+    console.log("evaluate"),
+      wx.navigateTo({
+        url: '../evaluate/evaluate'
+      })
+  }, 
+  classrooms: function () {
+    console.log("evaluate"),
+      wx.navigateTo({
+        url: '../myclassroom/myclassroom'
+      })
+  },
+  grade: function () {
+    console.log("evaluate"),
+      wx.navigateTo({
+        url: '../myschedule/myschedule'
+      })
+  },
+  test: function () {
+    console.log("evaluate"),
+      wx.navigateTo({
+        url: '../mytest/mytest'
+      })
+  },
+  course: function () {
+    console.log("evaluate"),
+      wx.navigateTo({
+        url: '../mycourse/mycourse'
+      })
+  },
+  fabu: function () {
+      wx.navigateTo({
+        url: '../myfabu/myfabu'
+      })
+  },
+  collect: function () {
+    console.log("evaluate"),
+      wx.navigateTo({
+        url: '../mycollect/mycollect'
+      })
+  },
+  attention: function () {
+    console.log("evaluate"),
+      wx.navigateTo({
+        url: '../myattention/myattention'
+      })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

@@ -4,7 +4,7 @@
 <mapper namespace="com.tutu.edu.student.mapper.write.base.StudentCourseBaseWriteMapper">
 
 
-    <insert id="insertStudentCourse"  useGeneratedKeys="true" keyProperty="id">
+    <insert id="insertStudentCourse"  useGeneratedKeys="true" keyProperty="id" >
         INSERT INTO `student_course`
         (
         <trim suffixOverrides=",">

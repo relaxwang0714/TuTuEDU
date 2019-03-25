@@ -1,0 +1,45 @@
+<!--pages/FM_detail/FM_detail.wxml-->
+<view class='FM_box'>
+  <view class='FM_box_left'>
+    <image src='../../images/mainPic/7.png' class='FM_pic'></image>
+  </view>
+  <view class='FM_box_right'>
+    <text class='FM_font'>听电影原声学英式英语发音</text>
+    <view class='course_star'>
+    <image src='../../images/little/star1.png' class='course_star1'></image>
+    <image src='../../images/little/star1.png' class='course_star1'></image>
+    <image src='../../images/little/star1.png' class='course_star1'></image>
+    <image src='../../images/little/star1.png' class='course_star1'></image>
+    <image src='../../images/little/star1.png' class='course_star1'></image>
+    <text class='course_grade'>4.9</text>
+  </view>
+  </view>
+</view>
+
+<view class='FM_button'>
+  <view class='FM_button1'>分享给好友</view>
+  <view class='FM_button2'>收藏</view>
+</view>
+
+<view class='FM_detail_box'>
+    <view class='live_box_class' bindtap='FM_play'>
+      <view>用英语浅谈公平交易Fair Trade</view>
+      <view>1小时16分55秒</view>
+    </view>
+        <view class='live_box_class'>
+      <view>雅思口语测试，看看你有几分</view>
+      <view>2小时45分39秒</view>
+    </view>
+        <view class='live_box_class'>
+      <view>奥林匹克运动知道少</view>
+      <view>1小时28分22秒</view>
+    </view>
+        <view class='live_box_class'>
+      <view>西蒙告诉你怎么用英语打电话</view>
+      <view>1小时5分38秒</view>
+    </view>
+        <view class='live_box_class'>
+      <view>职场英语学一学（美版杜拉拉升职小技巧）</view>
+      <view>1小时50分23秒</view>
+    </view>
+</view>

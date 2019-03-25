@@ -1,0 +1,80 @@
+/* pages/evaluate_detail/evaluate_detail.wxss */
+
+.evaluate_top {
+  height: 130rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 33rpx;
+}
+
+.evaluate_fontcolor {
+  color: #eeb478;
+}
+
+.evaluate_box {
+  height: 214rpx;
+  width: 670rpx;
+  box-shadow: 6rpx 6rpx 70rpx #f0f0f0;
+  border-radius: 20rpx;
+  margin-left: 40rpx;
+  text-align: center;
+  padding-top: 20rpx;
+}
+
+.content {
+  font-size: 31rpx;
+  margin-left: 50rpx;
+}
+
+.content_box {
+  height: 46rpx;
+  width: 136rpx;
+  box-shadow: 6rpx 6rpx 70rpx #f0f0f0;
+  border-radius: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32rpx;
+  margin-right: 34rpx;
+  padding: 10rpx;
+  margin-bottom: 40rpx; 
+}
+.content_box1 {
+  height: 46rpx;
+  width: 136rpx;
+  background-color: #eeb478;
+  color: white;
+  border-radius: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32rpx;
+  margin-right: 34rpx;
+  padding: 10rpx;
+  margin-bottom: 40rpx; 
+}
+
+.content_father_box {
+  display: flex;
+  flex-direction: row;
+}
+.evaluate_submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.evaluate_button_on {
+  width: 380rpx;
+  height: 60rpx;
+  background-color: #eeb478;
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  color: white;
+  margin-top: 10rpx;
+  padding-top: 15rpx;
+  text-align: center;
+  margin-bottom: 40rpx;
+}

@@ -1,7 +1,6 @@
 /* pages/talk/talk.wxss */
 page{
   width: 100%;
-  height: 100%;
 }
 
 .bar{
@@ -14,7 +13,12 @@ page{
   border-top:2rpx solid #f0f0f0; 
   background: white; 
 }
-.bar .box{
+.bar .box_content{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.box_content .box{
   width: 25%;
   height: 100%;
   display: flex;
@@ -30,6 +34,28 @@ page{
   margin-left: 20rpx;
   font-size: 30rpx;
   text-align: center;
+}
+.bar .comment_box{
+  display:flex;
+  flex-direction:row;
+  width:100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center; 
+}
+.comment_box .comment{
+  width:75%;
+  height: 50%;
+  padding: 10rpx;
+  margin-bottom: 30rpx;
+  border-radius: 20rpx;
+  background-color: white;
+  box-shadow: 6rpx 6rpx 72rpx #f0f0f0;
+  margin-top: 25rpx;
+}
+.comment_box .go{
+  color: grey;
+  margin-left: 20rpx;
 }
 .content{
   display: flex;
@@ -101,6 +127,9 @@ page{
   flex-direction: column;
   box-shadow: 6rpx 6rpx 12rpx #f0f0f0;
   padding: 20rpx;
+  width: 100%;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
 }
 .msg_right .msg_response{
   font-size: 30rpx;

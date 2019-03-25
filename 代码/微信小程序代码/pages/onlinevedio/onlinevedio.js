@@ -1,6 +1,6 @@
 // pages/onlinevedio/onlinevedio.js
 Page({
-
+  
   /**
    * 页面的初始数据
    */
@@ -10,6 +10,7 @@ Page({
       { DataId: 3, navData: '评论（99)' }
       
     ],
+    isJoin:true,
     currentTab: 0,
   },
   navbarTap: function (e) {
@@ -24,11 +25,24 @@ Page({
       url: '../class01/class01'
     })
   },
+  join_course:function(){
+    this.setData({
+      isJoin:false
+    })
+    wx.showToast({
+      title: '加入成功',
+      icon: 'success',
+      duration: 3000
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
+    this.setData({
+      isJoin:options.isJoin
+    })
   },
 
   /**

@@ -1,0 +1,29 @@
+<view class='table_top'>
+  <text style='font-size:40rpx;'>GPAI:4.489  GPAII:4.489</text>
+  <text style='font-size:30rpx;margin-top:20rpx;'>2017-2018学年第二学期</text>
+</view>
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">课程</view>
+    <view class="th">类型</view>
+    <view class="th">学分</view>
+    <view class="th">成绩</view>
+    <view class="th">单科绩点</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.course}}</view>
+      <view class="td">{{item.types}}</view>
+      <view class="td">{{item.xuefen}}</view>
+      <view class="td">{{item.sorce}}</view>
+      <view class="td">{{item.jidian}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.course}}</view>
+      <view class="td">{{item.types}}</view>
+      <view class="td">{{item.xuefen}}</view>
+      <view class="td">{{item.sorce}}</view>
+      <view class="td">{{item.jidian}}</view>
+    </view>
+  </block>
+</view>

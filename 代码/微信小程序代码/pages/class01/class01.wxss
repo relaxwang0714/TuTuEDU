@@ -1,3 +1,4 @@
+
 /* pages/class01/class01.wxss */
 .class01_top{
   margin-left: 30rpx;
@@ -28,8 +29,9 @@
   border-radius:18rpx;
   box-shadow:10rpx 10rpx 12rpx #f0f0f0;
   margin-top: 40rpx;
-  height: 200rpx;
+  height: 185rpx;
   width: 672rpx;
+  padding-top: 30rpx;
 }
 .pic_font{
   margin-left: 30rpx;

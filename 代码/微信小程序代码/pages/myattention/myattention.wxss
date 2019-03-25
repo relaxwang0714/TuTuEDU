@@ -1,0 +1,2 @@
+@import"../../templates/nav.wxss"; 
+@import"../schedule2/schedule2.wxss"; 

@@ -1,0 +1,21 @@
+<import src="../../templates/nav.wxml" />
+<view class='mainBar' style='margin-left:200rpx;'>
+  <block wx:for="{{mainData}}" wx:for-index="{{item.mainIndex}}" key="{{item.mainIndex}}">
+    <text class='mainTitle {{currentTab==item.mainIndex ?"active":""}}' data-mainCurrent='{{item.mainIndex}}' bindtap='mainBarChoose'>{{item.mainTitle}}</text>
+  </block>
+</view>
+<view style='margin:30rpx; 40rpx;'>
+  <view hidden="{{currentTab!==0}}">
+    <block wx:for="{{MainPopular}}" key="popular_id">
+      <template is="list3" data="{{...item}}" />
+    </block>
+  </view>
+  <view hidden="{{currentTab!==1}}">
+     <block wx:for="{{MainPopular}}" key="popular_id">
+      <template is="list3" data="{{...item}}" />
+    </block>
+  </view>
+  <view hidden="{{currentTab!==2}}">
+   
+  </view>
+</view>

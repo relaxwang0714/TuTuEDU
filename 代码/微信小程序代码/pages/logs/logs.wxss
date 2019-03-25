@@ -1,24 +1,23 @@
 /* pages/logs/logs.wxss */
 @import"../../templates/nav.wxss"; 
 page{  
-  display: flex;  
-  flex-direction: column;  
-  height: 100%;  
-  width: 100%;
+  display: flex; 
+  width: 100%; 
   box-sizing: border-box;
-  padding-top:33rpx; 
-  padding-right: 50rpx;
-  padding-left: 50rpx;
+  margin-right: 40rpx;
+  flex-direction: column;    
 }  
 .navBar{
     height: 80rpx;
     width: 100%;
     display: flex;
     flex-direction: row;
+    padding-top:33rpx; 
+    padding-left: 50rpx;
 }
 .navItem{
-  margin-right: 30rpx;
-  width: 30%;
+  margin-right: 10rpx;
+  width: 28%;
   height: 60rpx;
   text-align: center;
   box-shadow: 3rpx 3rpx 12rpx #f0f0f0;
@@ -32,4 +31,108 @@ page{
   color: white;
   background-color: #eeb478;
 }
-
+.activity_content{
+  display: flex;
+  flex-direction: column;
+}
+.activity_content .choose_univercity{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20rpx 0;
+  padding-left: 50rpx;
+}
+.choose_univercity .my_univercity{
+  font-size: 30rpx;
+}
+.choose_univercity .univercity{
+  font-size: 30rpx;
+  color: #eeb478;
+  margin: 0 20rpx;
+}
+.choose_univercity .choose_return{
+  width: 25rpx;
+  height: 30rpx;
+}
+.activity_content .mainBar{
+  display: flex;
+  flex-direction: row;
+  padding-left: 25rpx;
+  box-shadow: 12rpx 12rpx 62rpx #f0f0f0;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  white-space: nowrap;
+  align-items: center;
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.mainBar .mainBar_txt{
+  font-size: 32rpx;
+  /* margin-right: 40rpx; */
+  display: inline-block;
+  width: 120rpx;
+  color: grey;
+  text-align: center;
+}
+.mainBar .mainBar_txt.active{
+  font-size: 32rpx;
+  /* margin-right: 40rpx; */
+  display: inline-block;
+  width: 120rpx;
+  color: #eeb478;
+  text-align: center;
+}
+.box{
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx 50rpx;
+  padding: 50rpx 20rpx;
+  border-radius: 25rpx;
+  box-shadow: 0rpx 10rpx 50rpx 10rpx #f0f0f0;
+  position: relative;
+}
+.box .box_img{
+  width: 158rpx;
+  height: 158rpx;
+  margin-right: 20rpx;
+}
+.box .box_content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} 
+.box_content .content_txt{
+  font-size: 27rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  }
+.box_content .content_txt1{
+  font-size: 25rpx;
+  color: grey;
+  margin-bottom: 10rpx;
+}
+.box_content .content_number{
+  width: 158rpx;
+  height: 46rpx;
+  border-radius: 30rpx;
+  color: white;
+  background-color: #eeb478;
+  font-size: 25rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 25rpx;
+  bottom: 25rpx;
+}
+.edit{
+  position: fixed;
+  bottom: 20rpx;
+  right: 20rpx;
+  z-index: 1;
+  width: 105rpx;
+  height: 100rpx;
+}

@@ -4,19 +4,13 @@ Page({
   /**
    * 页面的初始数据
    */
-  btnclick: function () {
-    console.log('123');
-    wx.navigateTo({
-      url: '../onlinevedio/onlinevedio'
-    })
-  },
   data: {
-    UserName:'Shawn',
+    UserName:'夏同学',
     MainButton:[
-      { id: 0, circle_image:'../../images/little/top-ecourse.png',name:'精品网课'},
-      { id: 1, circle_image: '../../images/little/top-ebook.png',name:'在线图书' },
-      { id: 2, circle_image: '../../images/little/top-liveshow.png',name:'名师直播'},
-      { id: 3, circle_image: '../../images/little/top-FMradio.png', name: 'FM电台' }
+      { id: 0, mainBtnUrl:"../schedule/schedule", circle_image:'../../images/little/top-ecourse.png',name:'精品网课'},
+      { id: 1, mainBtnUrl: "../schedule2/schedule2",  circle_image: '../../images/little/top-ebook.png',name:'在线图书' },
+      { id: 2, mainBtnUrl: "../schedule1/schedule1",  circle_image: '../../images/little/top-liveshow.png',name:'名师直播'},
+      { id: 3, mainBtnUrl: "../schedule3/schedule3",  circle_image: '../../images/little/top-FMradio.png', name: 'FM电台' }
     ],
     MainCourse:[
       { course_id: 0, pic: '../../images/mainPic/1.png', name: '计算机二级Office高级应用之文字处理专题', teacher: '小黑课堂小黑老师', star: 5, grade: '4.9'},
@@ -30,9 +24,20 @@ Page({
       { listen_id: 0, pic: '../../images/mainPic/7.png', name: '听电影原声学英式英语发音', teacher: 'Ian studio', star: 5, grade: '4.9' }
     ],
     MainPopular:[
-      { popular_id: 0, popular_pic: '../../images/mainPic/5.png', popular_name: '小黑老师', popular_number: 9890},
-      { popular_id: 1, popular_pic: '../../images/mainPic/6.png', popular_name: '陈萨v', popular_number: 4490 }
+      { popular_id: 0, popular_pic: '../../images/mainPic/5.png', popular_name: '小黑老师', popular_number: '12万'},
+      { popular_id: 1, popular_pic: '../../images/mainPic/6.png', popular_name: '陈萨v', popular_number: '14万' }
     ]
+  },
+  btnclick: function () {
+    wx.navigateTo({
+      url: '../onlinevedio/onlinevedio'
+    })
+  },
+  mainBtn: function(e){
+    console.log("e的值",e)
+    // wx.navigateTo({
+    //   url: '../onlinevedio/onlinevedio'
+    // })
   },
   // zhouqi:function(){
   //   wx:wx.navigateTo({
