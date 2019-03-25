@@ -18,6 +18,24 @@
 						$(".auditing").css({'display':'block'});
 					})
 				
+				$(".shenhe").click(function(){
+						$("#shenhe").css({'display':'none'});
+						var trHTML = "<tr>"  
+	            +"<td class='tr_input'><input type='checkbox' /></td>" 
+	            +"<td>王老师</td>"
+	            +"<td>互联网</td>"  
+	            +"<td>Python简洁却强大、简单却专业，它是当今世界最受欢迎的编程语言，学好它终身受用。</td>"
+	            +"<td>2019-02-28</td>"
+	            +"<td><b><font style='color: red;'>未审核</font></b></td>"
+	            +"<td><a href='#'><div style='float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;'>审核</div></a><a href='#'><div style='float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;'>详情</div></a></td>"
+	        	+"</tr>"
+						$(".auditing tr:eq(2)").after(trHTML);
+						$(".shenhe2").css({'display':'block'});
+//						setTimeout(function(){alert('审核成功！');},100);
+						alert('操作成功！')
+						
+					})
+				
 			})	
 		
 		</script>
@@ -67,6 +85,19 @@
 				<td class="th_font"><b>申请状态</b></td>
 				<td class="th_font"><b>操作</b></td>
 			</th>
+			<tr id="shenhe">  
+	            <td class="tr_input"><input type="checkbox" /></td>  
+	            <td>王老师</td>  
+	            <td>互联网</td>
+	            <td>
+	            	掌握文件的基本概念.
+	            	要学会使用文件读写函数，分别实现文件的按字符读写、按字符串读写、
+	            	按数据块读写和按格式读写；还有文件当前状态的测试函数等。
+	            </td>  
+	            <td>2019-02-26</td>
+	            <td><b><font style="color: red;">未审核</font></b></td>
+	            <td><a href="#" class="shenhe"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
+	        </tr>
 	        <tr>  
 	            <td class="tr_input"><input type="checkbox" /></td>  
 	            <td>王老师</td>  
@@ -81,7 +112,8 @@
 	            <td><b><font style="color: red;">未审核</font></b></td>
 	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
 	        </tr>
-	        <tr>  
+	        
+	        <!--<tr>  
 	            <td class="tr_input"><input type="checkbox" /></td>  
 	            <td>王老师</td>  
 	            <td>互联网</td>
@@ -91,7 +123,7 @@
 	            <td>2019-02-28</td>
 	            <td><b><font style="color: red;">未审核</font></b></td>
 	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
-	        </tr>
+	        </tr>-->
 	        
 	    </table>  
 	    <div class="zxf_pagediv"></div>

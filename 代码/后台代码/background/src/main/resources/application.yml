@@ -19,12 +19,12 @@ spring:
       max-idle: 8
       max-wait: -1
       min-idle: 0
-eureka:
-  client:
-    service-url:
-      daefaultZone: http://localhost:8761/eureka/
-  instance:
-    prefer-ip-address: true
+#eureka:
+#  client:
+#    service-url:
+#      daefaultZone: http://localhost:8761/eureka/
+#  instance:
+#    prefer-ip-address: true
 server:
   port: 8811
 mybatis:

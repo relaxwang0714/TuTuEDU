@@ -10,6 +10,10 @@
 			.auditing{
 				display: none;
 			}
+			.wu{
+				margin-left: 600px;
+				display: none;
+			}
 		</style>
 		<script>
 			$(function(){
@@ -20,6 +24,8 @@
 					
 					$(".shenhe").click(function(){
 						$("#shenhe").css({'display':'none'});
+                        $(".zxf_pagediv").css({'display':'none'});
+                        $(".wu").css({'display':'block'});
 						var trHTML = "<tr>"  
 	            +"<td class='tr_input'><input type='checkbox' /></td>" 
 	            +"<td>00103001</td>"
@@ -32,6 +38,7 @@
 	        	+"</tr>"
 						$(".auditing tr:eq(7)").after(trHTML);
 						$(".shenhe2").css({'display':'block'});
+
 //						setTimeout(function(){alert('审核成功！');},100);
 						alert('操作成功！')
 						
@@ -82,90 +89,92 @@
 				<td class="th_font"><b>课程号</b></td>
 				<td class="th_font"><b>课时号</b></td>
 				<td class="th_font"><b>对应章节</b></td>
-				<td class="th_font"><b>课时简介</b></td>
+				<td class="th_font"><b>课时名称</b></td>
 				<td class="th_font"><b>申请人</b></td>
 				<td class="th_font"><b>申请状态</b></td>
 				<td class="th_font"><b>操作</b></td>
 			</th>
 	        <tr id="shenhe">  
-	            <td class="tr_input"><input type="checkbox" /></td>  
-	            <td>00103001</td>  
-	            <td>00103001503</td>  
-	            <td>第五章：神经网络学习</td>
-	            <td>M-P神经元模型</td> 
-	            <td>王老师</td> 
+	            <td class="tr_input"><input type="checkbox" /></td>
+				<td>00103010</td>
+				<td>00103010031</td>
+				<td>第三章 Word-03 标题这样写，这样高大上</td>
+				<td>【视频】01-1标题要越大越炫酷</td>
+				<td>王佩丰</td>
 	            <td><b><font style="color: red;">未审核</font></b></td>
 	            <td><a href="#" class="shenhe"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
 	        </tr>
-	        <tr>  
-	            <td class="tr_input"><input type="checkbox" /></td>  
-	            <td>00103001</td>  
-	            <td>00103001504</td>  
-	            <td>第五章：神经网络学习</td>
-	            <td>单层感知机</td> 
-	            <td>王老师</td> 
-	            <td><b><font style="color: red;">未审核</font></b></td>
-	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
-	        </tr>
-	        <tr>  
-	            <td class="tr_input"><input type="checkbox" /></td>  
-	            <td>00103001</td>  
-	            <td>00103001505</td>  
-	            <td>第五章：神经网络学习</td>
-	            <td>多层前馈神经网络</td> 
-	            <td>王老师</td> 
-	            <td><b><font style="color: red;">未审核</font></b></td>
-	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
-	        </tr>
-	        <tr>  
-	            <td class="tr_input"><input type="checkbox" /></td>  
-	            <td>00103001</td>  
-	            <td>00103001506</td>  
-	            <td>第五章：神经网络学习</td>
-	            <td>深层神经网络</td> 
-	            <td>王老师</td> 
-	            <td><b><font style="color: red;">未审核</font></b></td>
-	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
-	        </tr>
-	        <tr>  
-	            <td class="tr_input"><input type="checkbox" /></td>  
-	            <td>00103001</td>  
-	            <td>00103001601</td>  
-	            <td>第六章：决策树学习</td>
-	            <td>决策树学习基础知识</td> 
-	            <td>王老师</td> 
-	            <td><b><font style="color: red;">未审核</font></b></td>
-	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
-	        </tr>
-	        <tr>  
-	            <td class="tr_input"><input type="checkbox" /></td>  
-	            <td>00103001</td>  
-	            <td>00103001602</td>  
-	            <td>第六章：决策树学习</td>
-	            <td>决策树学习基本算法</td> 
-	            <td>王老师</td> 
-	            <td><b><font style="color: red;">未审核</font></b></td>
-	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
-	        </tr>
-	        <tr>  
-	            <td class="tr_input"><input type="checkbox" /></td>  
-	            <td>00103001</td>  
-	            <td>00103001603</td>  
-	            <td>第六章：决策树学习</td>
-	            <td>决策树学习常见问题</td> 
-	            <td>王老师</td> 
-	            <td><b><font style="color: red;">未审核</font></b></td>
-	            <td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>
-	        </tr>
+	        <!--<tr>  -->
+	            <!--<td class="tr_input"><input type="checkbox" /></td>  -->
+	            <!--<td>00103001</td>  -->
+	            <!--<td>00103001504</td>  -->
+	            <!--<td>第五章：神经网络学习</td>-->
+	            <!--<td>单层感知机</td> -->
+	            <!--<td>王老师</td> -->
+	            <!--<td><b><font style="color: red;">未审核</font></b></td>-->
+	            <!--<td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>-->
+	        <!--</tr>-->
+	        <!--<tr>  -->
+	            <!--<td class="tr_input"><input type="checkbox" /></td>  -->
+	            <!--<td>00103001</td>  -->
+	            <!--<td>00103001505</td>  -->
+	            <!--<td>第五章：神经网络学习</td>-->
+	            <!--<td>多层前馈神经网络</td> -->
+	            <!--<td>王老师</td> -->
+	            <!--<td><b><font style="color: red;">未审核</font></b></td>-->
+	            <!--<td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>-->
+	        <!--</tr>-->
+	        <!--<tr>  -->
+	            <!--<td class="tr_input"><input type="checkbox" /></td>  -->
+	            <!--<td>00103001</td>  -->
+	            <!--<td>00103001506</td>  -->
+	            <!--<td>第五章：神经网络学习</td>-->
+	            <!--<td>深层神经网络</td> -->
+	            <!--<td>王老师</td> -->
+	            <!--<td><b><font style="color: red;">未审核</font></b></td>-->
+	            <!--<td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>-->
+	        <!--</tr>-->
+	        <!--<tr>  -->
+	            <!--<td class="tr_input"><input type="checkbox" /></td>  -->
+	            <!--<td>00103001</td>  -->
+	            <!--<td>00103001601</td>  -->
+	            <!--<td>第六章：决策树学习</td>-->
+	            <!--<td>决策树学习基础知识</td> -->
+	            <!--<td>王老师</td> -->
+	            <!--<td><b><font style="color: red;">未审核</font></b></td>-->
+	            <!--<td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>-->
+	        <!--</tr>-->
+	        <!--<tr>  -->
+	            <!--<td class="tr_input"><input type="checkbox" /></td>  -->
+	            <!--<td>00103001</td>  -->
+	            <!--<td>00103001602</td>  -->
+	            <!--<td>第六章：决策树学习</td>-->
+	            <!--<td>决策树学习基本算法</td> -->
+	            <!--<td>王老师</td> -->
+	            <!--<td><b><font style="color: red;">未审核</font></b></td>-->
+	            <!--<td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>-->
+	        <!--</tr>-->
+	        <!--<tr>  -->
+	            <!--<td class="tr_input"><input type="checkbox" /></td>  -->
+	            <!--<td>00103001</td>  -->
+	            <!--<td>00103001603</td>  -->
+	            <!--<td>第六章：决策树学习</td>-->
+	            <!--<td>决策树学习常见问题</td> -->
+	            <!--<td>王老师</td> -->
+	            <!--<td><b><font style="color: red;">未审核</font></b></td>-->
+	            <!--<td><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #33AAFF;text-align: center;line-height: 23px;color: white;margin-top: 5px;">审核</div></a><a href="#"><div style="float:left;width:45px;height: 23px;background-color: #FFD770;text-align: center;line-height: 23px;color: white;margin-top: 5px;margin-left: 15px;">详情</div></a></td>-->
+	        <!--</tr>-->
 	        
 	    </table>  
 	    <div class="zxf_pagediv"></div>
 	   </div>
-	    
+		<div class="wu">
+			没有找到匹配的记录
+		</div>
 	    <script type="text/javascript">
 		//翻页
 		$(".zxf_pagediv").createPage({
-			pageNum: 10,
+			pageNum: 1,
 			current: 1,
 			backfun: function(e) {
 				//console.log(e);//回调

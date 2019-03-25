@@ -331,7 +331,7 @@ body{
 			#ware{
 				position: relative;
 				display: inline-block;
-				width: 644px;
+				width: 420px;
 				height: 540px;
 				margin-top: 20px;
 				background-color: white;
@@ -351,7 +351,7 @@ body{
 				height: 450px;
 				float: left;
 				margin-top: 70px;
-				margin-left: 15px;
+				/*margin-left: 15px;*/
 				/*background-color: yellow;*/
 			}
 			#ware .ware_right{
@@ -360,7 +360,7 @@ body{
 				height: 450px;
 				float: left;
 				margin-top: 70px;
-				margin-left: 100px;
+				margin-left: 0px;
 				/*background-color: green;*/
 			}
 			#ware .ware_left .ware_leftname{
@@ -383,7 +383,7 @@ body{
 				position: relative;
 				top: 0px;
 				display: inline-block;
-				width: 650px;
+				width: 420px;
 				height: 540px;
 				margin-left: 30px;
 				background-color: white;
@@ -448,4 +448,58 @@ body{
 				background-color: #F9F9F9;
 				-webkit-appearance:none;
 				appearance:none;
+			}
+			
+			
+			#xiaozu{
+				position: relative;
+				top: 0px;
+				display: inline-block;
+				width: 420px;
+				height: 540px;
+				margin-left: 30px;
+				background-color: white;
+			}
+			#xiaozu .title{
+				position: absolute;
+				width: 420px;
+				height: 70px;
+				line-height: 70px;
+				font-size: 18px;
+				padding-left: 27px;
+				/*background-color: blue;*/
+			}
+			#xiaozu .xiaozu_left{
+				position: relative;
+				width: 210px;
+				height: 450px;
+				float: left;
+				margin-top: 70px;
+				/*background-color: yellow;*/
+			}
+			.xiaozu_left div{
+				color: black;
+			}
+			#xiaozu .xiaozu_right{
+				position: relative;
+				width: 210px;
+				height: 450px;
+				float: left;
+				margin-top: 70px;
+				/*background-color: green;*/
+			}
+			#xiaozu .xiaozu_left .xiaozu_leftname{
+				position: absolute;
+				line-height: 40px;
+				top: 32px;
+				left: 42px;
+				font-family: "微软雅黑";
+				color: dimgray;
+			}
+			#xiaozu .xiaozu_right .xiaozu_rigcon{
+				position: absolute;
+				line-height: 40px;
+				top: 32px;
+				left: 35px;
+				font-family: "微软雅黑	";
 			}

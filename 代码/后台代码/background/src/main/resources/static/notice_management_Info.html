@@ -74,7 +74,7 @@
 
 
 <div class="layui-form-item setting_button">
-	<a href="notice_management_Info.html"><button class="layui-btn" lay-submit="" lay-filter="demo2">保存并提交</button></a>
+	<a href="notice_management_Info.html"><button class="layui-btn tijiao" lay-submit="" lay-filter="demo2">保存并提交</button></a>
 	<button type="reset" class="layui-btn layui-btn-primary">重置</button>
 </div>
 
@@ -188,6 +188,15 @@
             ,range: false //或 range: '~' 来自定义分割字符
         });
     });
+    $(function(){
+
+        $(".tijiao").click(function(){
+            //			让当前被点击的背景变颜色
+            alert("提交成功！");
+            window.location.reload();
+        })
+
+    })
 </script>
 
 </body>
