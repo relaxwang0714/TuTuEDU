@@ -9,6 +9,30 @@
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/login.css">
+    <script>
+        $(function(){
+            var num = 0;
+            //加鼠标单击事件
+            $(".jiaowu").click(function(){
+                num = $(".jiaowu").val();
+
+            })
+
+            $(".yunying").click(function(){
+                num = $(".yunying").val();
+            })
+
+            $(".btn-success").click(function(){
+                if(num == 1){
+                    location.href = "main.html";
+                }
+                if(num == 2){
+                    location.href = "main2.html";
+                }
+            })
+
+        })
+    </script>
 
 </head>
 <body>
@@ -33,12 +57,12 @@
                             <input class="form-control required" type="password" placeholder="Password" id="password" name="password" maxlength="8"/>
                     </div>
                     <div class="form-group">
-                        <label><input type="radio" name="sex" value="男生">教务</label>
-		&nbsp;&nbsp;<label><input type="radio" name="sex" value="女生">运营</label>
+                        <label><input type="radio" name="sex" value="1" class="jiaowu">教务</label>
+		&nbsp;&nbsp;<label><input type="radio" name="sex" value="2" class="yunying">运营</label>
 
                     </div>
                     <div class="form-group col-md-offset-9" style="float: left;">
-                    	<a href="main.html">
+                    	<a href="#">
                         	<button type="submit" class="btn btn-success pull-right" name="submit">登录</button>
                     	</a>
                     </div>

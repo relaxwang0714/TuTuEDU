@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="layui/css/layui.css">
+	<script src="layui/layui.js"></script>
+	<title></title>
+	<style>
+		body{
+			margin: 0;
+			width: 200px;
+
+		}
+		.navs{
+			position: fixed;
+
+			/*width: 230px;*/
+			height: 100%;
+		}
+		.nav_top{
+			margin-top: 80px;
+		}
+	</style>
+</head>
+<body>
+<ul class="layui-nav layui-nav-tree navs" lay-filter="test" lay-shrink="all">
+	<div class="nav_top">
+
+	</div>
+	<!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+	<li class="layui-nav-item">
+		<a href="summary.html" target="con">首页概览</a>
+	</li>
+	<li class="layui-nav-item">
+	<a href="javascript:;">基本信息管理</a>
+	<dl class="layui-nav-child">
+	<dd><a href="student_management.html" target="con">学生管理</a></dd>
+	<dd><a href="teacher_management.html" target="con">教师管理</a></dd>
+	<dd><a href="specialty_management.html" target="con">专业管理</a></dd>
+	<dd><a href="class_management.html" target="con">班级管理</a></dd>
+	</dl>
+	</li>
+	<li class="layui-nav-item">
+	<a href="javascript:;">教学管理</a>
+	<dl class="layui-nav-child">
+	<dd><a href="course_management.html" target="con">课表管理</a></dd>
+	<dd><a href="exam_management.html" target="con">考试管理</a></dd>
+	<dd><a href="score_management.html" target="con">成绩管理</a></dd>
+	<dd><a href="maluation_management.html" target="con">教学考评</a></dd>
+	</dl>
+	</li>
+	<!--<li class="layui-nav-item">-->
+		<!--<a href="javascript:;">在线课程管理</a>-->
+		<!--<dl class="layui-nav-child">-->
+			<!--<dd><a href="auditing_management.html" target="con">课时审核管理</a></dd>-->
+			<!--<dd><a href="publish_management.html" target="con">课程发布管理</a></dd>-->
+			<!--<dd><a href="classify_management.html" target="con">课程分类管理</a></dd>-->
+			<!--<dd><a href="zhibo_management.html" target="con">直播间管理</a></dd>-->
+			<!--<dd><a href="forum_management.html" target="con">课程讨论区管理</a></dd>-->
+			<!--<dd><a href="evaluate_management.html" target="con">课程评价管理</a></dd>-->
+		<!--</dl>-->
+	<!--</li>-->
+	<!--<li class="layui-nav-item">-->
+		<!--<a href="javascript:;">后台小组管理</a>-->
+		<!--<dl class="layui-nav-child">-->
+			<!--<dd><a href="group_management.html" target="con">小组审核管理</a></dd>-->
+			<!--<dd><a href="post_management.html" target="con">帖子管理</a></dd>-->
+			<!--<dd><a href="groupAdmin_management.html" target="con">小组管理员管理</a></dd>-->
+			<!--<dd><a href="groupSurvey_management.html" target="con">小组概览管理</a></dd>-->
+		<!--</dl>-->
+	<!--</li>-->
+	<li class="layui-nav-item">
+	<a href="javascript:;">后台通知管理</a>
+	<dl class="layui-nav-child">
+	<dd><a href="notice_management.html" target="con">通知发布管理</a></dd>
+	<dd><a href="noticeSurvey_management.html" target="con">通知概览管理</a></dd>
+	</dl>
+	</li>
+	<!--<li class="layui-nav-item">-->
+		<!--<a href="javascript:;">违规管理</a>-->
+		<!--<dl class="layui-nav-child">-->
+			<!--<dd><a href="sensitive_management.html" target="con">敏感词过滤管理</a></dd>-->
+			<!--<dd><a href="userClosure_management.html" target="con">用户封禁管理</a></dd>-->
+		<!--</dl>-->
+	<!--</li>-->
+	<li class="layui-nav-item">
+		<a href="javascript:;">后台数据统计分析</a>
+		<dl class="layui-nav-child">
+			<dd><a href="#" target="con">在线课程统计</a></dd>
+			<dd><a href="#" target="con">考勤统计</a></dd>
+			<dd><a href="#" target="con">用户访问量统计</a></dd>
+			<dd><a href="#" target="con">问答社区统计</a></dd>
+			<dd><a href="#" target="con">专业人数统计</a></dd>
+		</dl>
+	</li>
+</ul>
+<script>
+    layui.use('element', function(){
+        var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+        //监听导航点击
+        element.on('nav(demo)', function(elem){
+            //console.log(elem)
+            layer.msg(elem.text());
+        });
+    });
+</script>
+</body>
+</html>
